@@ -7,7 +7,7 @@ function App() {
       <div>
           <img src={balenthiranLogo} className="logo" alt="Vite logo" />
       </div>
-      <h1>Balenthiran.co.uk</h1>
+      <h1 className='title'>Balenthiran.co.uk</h1>
     </>
   )
 }
