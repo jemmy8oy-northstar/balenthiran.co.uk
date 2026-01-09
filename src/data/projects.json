@@ -4,6 +4,7 @@
         "title": "APEify",
         "status": "Ongoing",
         "category": "Main App",
+        "path": "/projects/apeify",
         "description": "A character tracking and progression app.",
         "longDescription": "APEify is a character tracking and progression app that allows users to manage their character data, save progress via Firebase, and interact with a premium UI. It remains one of the core active projects in the ecosystem.",
         "links": {
@@ -37,6 +38,7 @@
         "title": "Ten Beer Plan",
         "status": "60k+ Downloads",
         "category": "Main App",
+        "path": "/projects/tenbeerplan",
         "description": "A high-traction social coordination app.",
         "longDescription": "Ten Beer Plan has been my most successful venture to date, reaching over 60,000 downloads. It proved that a simple, focused utility can find a significant audience.",
         "links": {

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import ThemeToggle from './ThemeToggle';
 
@@ -10,20 +9,16 @@ const Navbar: React.FC = () => {
       left: '50%',
       transform: 'translateX(-50%)',
       width: 'max-content',
-      minWidth: '400px',
       padding: '12px 32px',
       display: 'flex',
-      justifyContent: 'space-between',
+      justifyContent: 'center',
       alignItems: 'center',
       zIndex: 1000,
       backdropFilter: 'blur(20px)',
       background: 'rgba(255, 255, 255, 0.03)',
       borderColor: 'rgba(255, 255, 255, 0.1)'
     }}>
-      <Link to="/" style={{ fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.05em' }}>
-        JB
-      </Link>
-      <div style={{ display: 'flex', gap: '24px', fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-secondary)', alignItems: 'center' }}>
+      <div style={{ display: 'flex', gap: '32px', fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-secondary)', alignItems: 'center' }}>
         <HashLink smooth to="/#projects" style={{ color: 'var(--text-primary)' }}>Projects</HashLink>
         <HashLink smooth to="/#about">About</HashLink>
         <HashLink smooth to="/#strategy">Strategy</HashLink>
