@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar: React.FC = () => {
   return (
@@ -18,13 +20,14 @@ const Navbar: React.FC = () => {
       background: 'rgba(255, 255, 255, 0.03)',
       borderColor: 'rgba(255, 255, 255, 0.1)'
     }}>
-      <div style={{ fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.05em' }}>
+      <Link to="/" style={{ fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.05em' }}>
         JB
-      </div>
+      </Link>
       <div style={{ display: 'flex', gap: '24px', fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-secondary)' }}>
-        <a href="#projects" style={{ color: 'var(--text-primary)' }}>Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <HashLink smooth to="/#projects" style={{ color: 'var(--text-primary)' }}>Projects</HashLink>
+        <HashLink smooth to="/#about">About</HashLink>
+        <HashLink smooth to="/#strategy">Strategy</HashLink>
+        <HashLink smooth to="/#contact">Contact</HashLink>
       </div>
     </nav>
   );

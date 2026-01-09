@@ -20,6 +20,7 @@
         "title": "Germy",
         "status": "Success (Retired)",
         "category": "Flutter Debut",
+        "path": "/projects/germy",
         "description": "My first ever app—a Pandemic-era Tetris inspired experiment.",
         "longDescription": "Started in 2020, Germy was the project where I taught myself Flutter. Originally a pandemic-themed game, it faced multiple App Store rejections due to sensitivity policies and gameplay similarities. Despite not hitting Apple's store, it reached the Play Store and serves as the technical foundation for everything I build today.",
         "links": {
@@ -28,7 +29,7 @@
         },
         "media": {
             "icon": "/assets/images/germy/virus.svg",
-            "youtube": "https://www.youtube.com/watch?v=8H3MIFCKje8"
+            "youtube": "https://www.youtube.com/watch?v=oAu9jSV_72Y"
         }
     },
     {

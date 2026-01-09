@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 const Hero: React.FC = () => {
     return (
@@ -25,23 +26,25 @@ const Hero: React.FC = () => {
                 Crafting digital experiences, building ambitious app ideas, and documenting the journey from concept to MVP.
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-                <a href="#projects" className="glass" style={{
+                <HashLink smooth to="/#projects" className="glass" style={{
                     padding: '16px 32px',
                     background: 'var(--accent-primary)',
                     color: '#fff',
                     fontWeight: 600,
                     borderRadius: '50px',
-                    border: 'none'
+                    border: 'none',
+                    textDecoration: 'none'
                 }}>
                     Explore Projects
-                </a>
-                <a href="#about" className="glass" style={{
+                </HashLink>
+                <HashLink smooth to="/#about" className="glass" style={{
                     padding: '16px 32px',
                     fontWeight: 600,
-                    borderRadius: '50px'
+                    borderRadius: '50px',
+                    textDecoration: 'none'
                 }}>
                     About Me
-                </a>
+                </HashLink>
             </div>
         </section>
     );
