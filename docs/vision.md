@@ -4,9 +4,10 @@
 This website serves as a central hub for "all things me" (James Balenthiran), primarily focusing on coding projects, app ideas, and personal branding. It transitions from a simple HTML site to a modern React-based experience.
 
 ## Core Objectives
-1. **Showcase Projects**: A comprehensive portfolio of personal projects, both ongoing and retired.
-2. **App Ideas Nursery**: A place to document app ideas, gauge interest via email signups, and track their development lifecycle.
-3. **Personal Brand**: A space to share "who I am", my goals, and potentially other work like modeling.
+1. **The Million User Dream**: Building and documenting the journey of an application that reaches massive global scale.
+2. **Project Showcase**: A transparent portfolio of personal projects, sharing both successes and failures.
+3. **App Ideas Nursery**: A place to gauge interest and navigate the "whole story" of development—from idea to marketing.
+4. **Personal Narrative**: Bridging the gap between professional software engineering and independent building.
 
 ## Content Strategy & Design Decisions
 
@@ -18,12 +19,11 @@ We will visualize the progress of an app idea using a clear lifecycle:
 - **MVP**: Initial release.
 - **Ongoing/Retired**: Maintenance or sunset phases.
 
-### YouTube Integration
-Each project/idea may have varying levels of video content:
-- **No Video**: Project exists without video (placeholder or simple text description).
-- **Single Video**: A featured overview or demo.
-- **Series**: A full playlist or series documenting the journey.
-*Design Note*: The UI must adapt gracefully to these cases, providing a rich media experience when available and a clean informational layout when not.
+### YouTube Strategy & Transparency
+As inspired by creators like Code Bullet, the mission is to share the "good, the bad, and the ugly." 
+- **Start to Finish**: Documenting every stage, including design, coding hurdles, and App Store politics.
+- **Variable Media**: Projects will feature anything from a single demo to full developmental series.
+- **Community Interaction**: Learning from and teaching the community of like-minded builders.
 
 ### Interest Registration
 App ideas will feature a prominent call-to-action for interest registration (email capture). While the backend is deferred for now, the frontend should be ready to handle these inputs.
