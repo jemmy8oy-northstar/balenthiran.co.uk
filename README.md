@@ -1,75 +1,50 @@
-# React + TypeScript + Vite
+# balenthiran.co.uk - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the home of "all things me" (James Balenthiran). This project is a modern, React-based portfolio designed to showcase personal coding projects, ongoing app ideas, and professional work.
 
-Currently, two official plugins are available:
+## Project Purpose
+The goal of this website is to provide a comprehensive look at my professional and personal journey in tech. It features:
+- **Project Showcase**: A portfolio of completed and ongoing coding projects.
+- **App Ideas Nursery**: A space for documenting new ideas and gauging interest.
+- **Personal Background**: Information about who I am, my goals, and my modeling work.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **Frontend**: React (Vite) + TypeScript
+- **Styling**: Vanilla CSS (Premium, modern aesthetic)
+- **Backend**: (Planned) To handle email interest registration.
 
-## React Compiler
+## Documentation & Design Decisions
+In-depth documentation and design decisions are stored in the `docs/` directory:
+- [Vision & Goals](docs/vision.md): High-level project objectives and content strategy.
+- [AI Instructions](docs/ai-instructions.md): Specific guidelines for Antigravity AI interactions.
+- [Task Tracking](.gemini/antigravity/brain/6f6d2989-8706-4bdb-9db5-1086ddabf68b/task.md): Current development tasks and progress.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Installation & Running Locally
 
-Note: This will impact Vite dev & build performances.
+### Prerequisites
+- Node.js (Latest LTS recommended)
+- npm or yarn
 
-## Expanding the ESLint configuration
+### Setup
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## File Structure
+- `src/`: Application source code.
+  - `components/`: Reusable UI components.
+  - `pages/`: Page-level components.
+  - `assets/`: Static assets (images, fonts).
+- `docs/`: In-depth documentation and design plans.
+- `public/`: Publicly accessible static files.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## High-Level Design Decisions
+- **Modern Aesthetic**: Focused on a premium feel with vibrant colors, glassmorphism, and smooth animations.
+- **Lifecycle Visualization**: App ideas are categorized by their stage (Idea, Candidate, In Development, MVP, etc.).
+- **Media-Ready**: Built to accommodate various levels of video content, from single demos to full YouTube series.
