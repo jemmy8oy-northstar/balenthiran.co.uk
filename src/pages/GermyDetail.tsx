@@ -67,7 +67,10 @@ const GermyDetail: React.FC = () => {
                     <section>
                         <h2 style={{ fontSize: '1.8rem', marginBottom: '16px' }}>The Verdict</h2>
                         <p style={{ color: 'var(--text-secondary)' }}>
-                            While the Apple App Store remained out of reach, Germy successfully launched on the **Google Play Store**. More importantly, it was the project where I learned **Flutter**—the foundational skill for every app I've built since.
+                            While the Apple App Store remained out of reach, Germy did successfully launch on the **Google Play Store**. However, as I shifted my focus to newer projects, the app was eventually removed from the store due to a lack of active maintenance.
+                        </p>
+                        <p style={{ color: 'var(--text-secondary)', marginTop: '16px' }}>
+                            Despite its removal, Germy remains the project where I learned **Flutter**—the foundational skill for every app I've built since.
                         </p>
                     </section>
                 </div>
