@@ -1,7 +1,32 @@
 import { HashLink } from 'react-router-hash-link';
 import ThemeToggle from './ThemeToggle';
+import useScrollSpy from '../hooks/useScrollSpy';
 
 const Navbar: React.FC = () => {
+  const activeSection = useScrollSpy(['about', 'strategy', 'projects', 'contact']);
+
+  const getLinkStyle = (id: string) => ({
+    color: activeSection === id ? 'var(--accent-primary)' : 'var(--text-secondary)',
+    fontWeight: activeSection === id ? 700 : 500,
+    transition: 'all 0.3s ease',
+    position: 'relative' as const,
+    display: 'flex',
+    flexDirection: 'column' as const,
+    alignItems: 'center'
+  });
+
+  const ActiveDot = () => (
+    <div style={{
+      position: 'absolute',
+      bottom: '-8px',
+      width: '4px',
+      height: '4px',
+      borderRadius: '50%',
+      background: 'var(--accent-primary)',
+      boxShadow: '0 0 8px var(--accent-primary)'
+    }} />
+  );
+
   return (
     <nav className="glass" style={{
       position: 'fixed',
@@ -15,14 +40,26 @@ const Navbar: React.FC = () => {
       alignItems: 'center',
       zIndex: 1000,
       backdropFilter: 'blur(20px)',
-      background: 'rgba(255, 255, 255, 0.03)',
-      borderColor: 'rgba(255, 255, 255, 0.1)'
+      background: 'var(--bg-card)',
+      borderColor: 'var(--glass-border)'
     }}>
-      <div style={{ display: 'flex', gap: '32px', fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-secondary)', alignItems: 'center' }}>
-        <HashLink smooth to="/#projects" style={{ color: 'var(--text-primary)' }}>Projects</HashLink>
-        <HashLink smooth to="/#about">About</HashLink>
-        <HashLink smooth to="/#strategy">Strategy</HashLink>
-        <HashLink smooth to="/#contact">Contact</HashLink>
+      <div style={{ display: 'flex', gap: '32px', fontSize: '0.9rem', alignItems: 'center' }}>
+        <HashLink smooth to="/#about" style={getLinkStyle('about')}>
+          About
+          {activeSection === 'about' && <ActiveDot />}
+        </HashLink>
+        <HashLink smooth to="/#strategy" style={getLinkStyle('strategy')}>
+          Strategy
+          {activeSection === 'strategy' && <ActiveDot />}
+        </HashLink>
+        <HashLink smooth to="/#projects" style={getLinkStyle('projects')}>
+          Projects
+          {activeSection === 'projects' && <ActiveDot />}
+        </HashLink>
+        <HashLink smooth to="/#contact" style={getLinkStyle('contact')}>
+          Contact
+          {activeSection === 'contact' && <ActiveDot />}
+        </HashLink>
         <ThemeToggle />
       </div>
     </nav>
