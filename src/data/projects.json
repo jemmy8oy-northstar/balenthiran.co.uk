@@ -1,0 +1,66 @@
+[
+    {
+        "id": "apeify",
+        "title": "APEify",
+        "status": "Ongoing",
+        "category": "Main App",
+        "description": "A character tracking and progression app.",
+        "longDescription": "APEify is a character tracking and progression app that allows users to manage their character data, save progress via Firebase, and interact with a premium UI. It features Google AdMob integration and a robust privacy policy.",
+        "links": {
+            "appStore": "https://apps.apple.com/us/app/id1523829414",
+            "playStore": "https://play.google.com/store/apps/details?id=com.muyiwaaruna.apeifymark2"
+        },
+        "media": {
+            "icon": "/assets/images/apeify/apeify.png",
+            "youtube": null
+        }
+    },
+    {
+        "id": "germy",
+        "title": "Germy",
+        "status": "Ongoing",
+        "category": "Main App",
+        "description": "An interactive experience involving germ-themed graphics.",
+        "longDescription": "Germy provides an interactive experience centered around germ-themed graphics and animations. It includes a dedicated privacy policy and is designed for a smooth user experience.",
+        "links": {
+            "appStore": null,
+            "playStore": null
+        },
+        "media": {
+            "icon": "/assets/images/germy/virus.svg",
+            "youtube": null
+        }
+    },
+    {
+        "id": "tenbeerplan",
+        "title": "Ten Beer Plan",
+        "status": "Ongoing",
+        "category": "Main App",
+        "description": "A plan-based application for social activities.",
+        "longDescription": "Ten Beer Plan helps users organize and track social plans. It features a clean interface and specifically focuses on ease of use for social coordination.",
+        "links": {
+            "appStore": null,
+            "playStore": null
+        },
+        "media": {
+            "icon": "/assets/images/tenbeerplan/tenbeerplan.png",
+            "youtube": null
+        }
+    },
+    {
+        "id": "project-alpha",
+        "title": "Project Alpha",
+        "status": "Idea",
+        "category": "App Idea",
+        "description": "Revolutionizing specific workflow with automated insights.",
+        "longDescription": "A conceptual tool designed to automate insights for a specific workflow, gauging interest for a potential MVP.",
+        "links": {
+            "appStore": null,
+            "playStore": null
+        },
+        "media": {
+            "icon": "/balenthiran.svg",
+            "youtube": null
+        }
+    }
+]
