@@ -4,10 +4,10 @@
 This website serves as a central hub for "all things me" (James Balenthiran), primarily focusing on coding projects, app ideas, and personal branding. It transitions from a simple HTML site to a modern React-based experience.
 
 ## Core Objectives
-1. **The Million User Dream**: Building and documenting the journey of an application that reaches massive global scale.
-2. **Project Showcase**: A transparent portfolio of personal projects, sharing both successes and failures.
-3. **App Ideas Nursery**: A place to gauge interest and navigate the "whole story" of development—from idea to marketing.
-4. **Personal Narrative**: Bridging the gap between professional software engineering and independent building.
+1. **The 100k User Northstar**: Building and documenting the journey to 100,000 monthly active users, milestone by milestone.
+2. **User-First Strategy**: Pivoting from "isolated MVP building" to "demand-driven development"—building software only after confirming interest.
+3. **Transparent Build-in-Public**: Sharing the bi-weekly standups, quarterly reviews, and the technical hurdles of scaling a self-hosted Kubernetes cluster.
+4. **Holistic Success**: Balancing technical mastery with physical consistency (500km year) and personal growth.
 
 ## Content Strategy & Design Decisions
 

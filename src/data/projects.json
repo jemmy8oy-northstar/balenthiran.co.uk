@@ -5,45 +5,61 @@
         "status": "Ongoing",
         "category": "Main App",
         "description": "A character tracking and progression app.",
-        "longDescription": "APEify is a character tracking and progression app that allows users to manage their character data, save progress via Firebase, and interact with a premium UI. It features Google AdMob integration and a robust privacy policy.",
+        "longDescription": "APEify is a character tracking and progression app that allows users to manage their character data, save progress via Firebase, and interact with a premium UI. It remains one of the core active projects in the ecosystem.",
         "links": {
             "appStore": "https://apps.apple.com/us/app/id1523829414",
             "playStore": "https://play.google.com/store/apps/details?id=com.muyiwaaruna.apeifymark2"
         },
         "media": {
             "icon": "/assets/images/apeify/apeify.png",
-            "youtube": null
+            "youtube": "https://www.youtube.com/watch?v=8H3MIFCKje8"
         }
     },
     {
         "id": "germy",
         "title": "Germy",
-        "status": "Ongoing",
-        "category": "Main App",
-        "description": "An interactive experience involving germ-themed graphics.",
-        "longDescription": "Germy provides an interactive experience centered around germ-themed graphics and animations. It includes a dedicated privacy policy and is designed for a smooth user experience.",
+        "status": "Success (Retired)",
+        "category": "Flutter Debut",
+        "description": "My first ever app—a Pandemic-era Tetris inspired experiment.",
+        "longDescription": "Started in 2020, Germy was the project where I taught myself Flutter. Originally a pandemic-themed game, it faced multiple App Store rejections due to sensitivity policies and gameplay similarities. Despite not hitting Apple's store, it reached the Play Store and serves as the technical foundation for everything I build today.",
         "links": {
             "appStore": null,
-            "playStore": null
+            "playStore": "https://play.google.com/store/apps/details?id=com.jamesbalenthiran.germy"
         },
         "media": {
             "icon": "/assets/images/germy/virus.svg",
-            "youtube": null
+            "youtube": "https://www.youtube.com/watch?v=8H3MIFCKje8"
         }
     },
     {
         "id": "tenbeerplan",
         "title": "Ten Beer Plan",
-        "status": "Ongoing",
+        "status": "60k+ Downloads",
         "category": "Main App",
-        "description": "A plan-based application for social activities.",
-        "longDescription": "Ten Beer Plan helps users organize and track social plans. It features a clean interface and specifically focuses on ease of use for social coordination.",
+        "description": "A high-traction social coordination app.",
+        "longDescription": "Ten Beer Plan has been my most successful venture to date, reaching over 60,000 downloads. It proved that a simple, focused utility can find a significant audience.",
         "links": {
             "appStore": null,
             "playStore": null
         },
         "media": {
             "icon": "/assets/images/tenbeerplan/tenbeerplan.png",
+            "youtube": null
+        }
+    },
+    {
+        "id": "house-price-alerts",
+        "title": "House Price Alerts",
+        "status": "95% Complete",
+        "category": "Pending Validation",
+        "description": "Real-time alerts for property market shifts.",
+        "longDescription": "Technically complete but strategically paused. Following the 'User-First' philosophy of Project Northstar, this app's release is pending proven user demand to ensure the development effort matches market interest.",
+        "links": {
+            "appStore": null,
+            "playStore": null
+        },
+        "media": {
+            "icon": "/balenthiran.svg",
             "youtube": null
         }
     },

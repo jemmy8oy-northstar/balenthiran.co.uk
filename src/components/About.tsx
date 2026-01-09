@@ -6,32 +6,32 @@ const About: React.FC = () => {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '64px', alignItems: 'center' }}>
                 <div>
                     <h2 style={{ fontSize: '3rem', marginBottom: '24px', lineHeight: 1.1 }}>
-                        The Journey to <span style={{ color: 'var(--accent-primary)' }}>Millions</span>
+                        Engineering My <span style={{ color: 'var(--accent-primary)' }}>Future</span>
                     </h2>
                     <div style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', display: 'flex', flexDirection: 'column', gap: '20px' }}>
                         <p>
-                            I've been writing code since I was 10 years old. What started as curiosity evolved into a professional career as a software engineer and a lifelong passion for building digital products.
+                            Hey, I'm **Jemmy8oy**. I've been writing code since I was 10, but my journey is about more than just the IDE. I'm a builder, a lifelong learner, and an aspiring founder.
                         </p>
                         <p>
-                            My philosophy is simple: **transparency**. On my <a href="https://www.youtube.com/@JamesBalenthiran" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-primary)', textDecoration: 'underline' }}>YouTube channel</a>, I share the "good, the bad, and the ugly" of mobile app development. I'm not just here to show the final product; I'm here to document the whole story—from the first spark of an idea to marketing and navigating the hurdles of the App Store.
+                            Beyond the day job, I'm scaling my own universe. From migrating my entire stack from AWS to a custom **Kubernetes cluster on Oracle Cloud** to running 500km a year and maintaining a bi-weekly "standup" rhythm on YouTube.
                         </p>
                         <p>
-                            I've built four mobile apps so far, with one reaching over **60,000 downloads**. But I'm just getting started. My ultimate goal is the "Million User" dream—building an application that creates massive value for millions of people worldwide.
+                            I believe in the "whole story"—not just the successful launches, but the App Store rejections (looking at you, Germy), the 95% complete projects, and the pivots that lead to true user-driven growth.
                         </p>
                     </div>
 
                     <div style={{ marginTop: '40px', display: 'flex', gap: '32px' }}>
                         <div>
-                            <div style={{ fontSize: '2rem', fontWeight: 800, color: '#fff' }}>60k+</div>
-                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Downloads</div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: '#fff' }}>500km</div>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Running Goal '26</div>
                         </div>
                         <div>
-                            <div style={{ fontSize: '2rem', fontWeight: 800, color: '#fff' }}>4</div>
-                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Apps Built</div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: '#fff' }}>26</div>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Standups Planned</div>
                         </div>
                         <div>
-                            <div style={{ fontSize: '2rem', fontWeight: 800, color: '#fff' }}>15+</div>
-                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Years Coding</div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: '#fff' }}>K8s</div>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Infrastructure</div>
                         </div>
                     </div>
                 </div>

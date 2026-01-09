@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import ProjectGrid from './components/ProjectGrid'
 import InterestForm from './components/InterestForm'
 import About from './components/About'
+import Northstar from './components/Northstar'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Northstar />
         <ProjectGrid />
         <InterestForm />
       </main>
