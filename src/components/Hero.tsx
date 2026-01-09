@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
             <h1 style={{
                 fontSize: 'clamp(3rem, 8vw, 6rem)',
                 marginBottom: '24px',
-                background: 'linear-gradient(to bottom right, #fff 30%, rgba(255,255,255,0.5))',
+                background: 'linear-gradient(to bottom right, var(--text-primary) 30%, rgba(148, 163, 184, 0.5))',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
             }}>
@@ -39,6 +39,7 @@ const Hero: React.FC = () => {
                 </HashLink>
                 <HashLink smooth to="/#about" className="glass" style={{
                     padding: '16px 32px',
+                    color: 'var(--text-primary)',
                     fontWeight: 600,
                     borderRadius: '50px',
                     textDecoration: 'none'

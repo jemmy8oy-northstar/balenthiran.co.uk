@@ -22,15 +22,15 @@ const About: React.FC = () => {
 
                     <div style={{ marginTop: '40px', display: 'flex', gap: '32px' }}>
                         <div>
-                            <div style={{ fontSize: '2rem', fontWeight: 800, color: '#fff' }}>500km</div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)' }}>500km</div>
                             <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Running Goal '26</div>
                         </div>
                         <div>
-                            <div style={{ fontSize: '2rem', fontWeight: 800, color: '#fff' }}>26</div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)' }}>26</div>
                             <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Standups Planned</div>
                         </div>
                         <div>
-                            <div style={{ fontSize: '2rem', fontWeight: 800, color: '#fff' }}>K8s</div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)' }}>K8s</div>
                             <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Infrastructure</div>
                         </div>
                     </div>
@@ -39,28 +39,29 @@ const About: React.FC = () => {
                 <div className="glass" style={{
                     padding: '40px',
                     position: 'relative',
-                    overflow: 'hidden'
+                    overflow: 'hidden',
+                    color: 'var(--text-primary)'
                 }}>
                     <h3 style={{ marginBottom: '24px' }}>My Core Values</h3>
                     <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '24px' }}>
                         <li style={{ display: 'flex', gap: '16px' }}>
                             <span style={{ color: 'var(--accent-primary)', fontWeight: 700 }}>01</span>
                             <div>
-                                <strong style={{ display: 'block', color: '#fff' }}>Lifelong Learning</strong>
+                                <strong style={{ display: 'block', color: 'var(--text-primary)' }}>Lifelong Learning</strong>
                                 <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>I don't claim to know it all. I am committed to learning and growing alongside my community.</span>
                             </div>
                         </li>
                         <li style={{ display: 'flex', gap: '16px' }}>
                             <span style={{ color: 'var(--accent-primary)', fontWeight: 700 }}>02</span>
                             <div>
-                                <strong style={{ display: 'block', color: '#fff' }}>Authentic Storytelling</strong>
+                                <strong style={{ display: 'block', color: 'var(--text-primary)' }}>Authentic Storytelling</strong>
                                 <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Documenting the roadblocks and overcome challenges, inspired by the transparency of creators like Code Bullet.</span>
                             </div>
                         </li>
                         <li style={{ display: 'flex', gap: '16px' }}>
                             <span style={{ color: 'var(--accent-primary)', fontWeight: 700 }}>03</span>
                             <div>
-                                <strong style={{ display: 'block', color: '#fff' }}>Holistic Development</strong>
+                                <strong style={{ display: 'block', color: 'var(--text-primary)' }}>Holistic Development</strong>
                                 <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Focusing on the entire lifecycle: idea, design, code, user testing, and marketing.</span>
                             </div>
                         </li>

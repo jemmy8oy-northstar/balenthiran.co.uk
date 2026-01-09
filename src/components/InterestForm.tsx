@@ -19,10 +19,10 @@ const InterestForm: React.FC = () => {
             <div className="glass" style={{
                 padding: '64px',
                 textAlign: 'center',
-                background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%)',
+                background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%)',
                 border: '1px solid var(--accent-primary)'
             }}>
-                <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Have an Idea or Interested?</h2>
+                <h2 style={{ fontSize: '2.5rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Have an Idea or Interested?</h2>
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
                     I'm always working on new concepts. If you're interested in being an early adopter for Project Alpha or have your own ideas, drop your email below.
                 </p>
@@ -44,9 +44,9 @@ const InterestForm: React.FC = () => {
                                 flex: 1,
                                 padding: '16px 24px',
                                 borderRadius: '50px',
-                                background: 'rgba(255,255,255,0.05)',
+                                background: 'var(--bg-card)',
                                 border: '1px solid var(--glass-border)',
-                                color: '#fff',
+                                color: 'var(--text-primary)',
                                 fontSize: '1rem',
                                 outline: 'none'
                             }}

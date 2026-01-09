@@ -9,10 +9,10 @@ const GermyDetail: React.FC = () => {
                     ← Back to Portfolio
                 </Link>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '24px', marginBottom: '16px' }}>
-                    <div style={{ width: '80px', height: '80px', borderRadius: '20px', background: 'rgba(255,255,255,0.05)', padding: '15px' }}>
+                    <div style={{ width: '80px', height: '80px', borderRadius: '20px', background: 'var(--bg-card)', padding: '15px' }}>
                         <img src="/assets/images/germy/virus.svg" alt="Germy" style={{ width: '100%', height: '100%' }} />
                     </div>
-                    <h1 style={{ fontSize: '3.5rem' }}>Germy</h1>
+                    <h1 style={{ fontSize: '3.5rem', color: 'var(--text-primary)' }}>Germy</h1>
                 </div>
                 <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '800px' }}>
                     My first ever mobile app. A story of technical triumph, pandemic-era creativity, and the harsh realities of App Store gatekeeping.
@@ -22,14 +22,14 @@ const GermyDetail: React.FC = () => {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '64px', marginBottom: '80px' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
                     <section>
-                        <h2 style={{ fontSize: '1.8rem', marginBottom: '16px' }}>The Origin Story (2020)</h2>
+                        <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The Origin Story (2020)</h2>
                         <p style={{ color: 'var(--text-secondary)' }}>
                             Germy started at the beginning of the 2020 lockdown. With extra time and a burning curiosity, I challenged myself to build my very first mobile app. The concept actually predates the pandemic—it began as a school work experience project designed to attract people to a convention stand.
                         </p>
                     </section>
 
                     <section className="glass" style={{ padding: '32px' }}>
-                        <h2 style={{ fontSize: '1.8rem', marginBottom: '16px' }}>Game Mechanics</h2>
+                        <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Game Mechanics</h2>
                         <p style={{ color: 'var(--text-secondary)' }}>
                             Unlike traditional Tetris, Germy features a 360-degree challenge. Walls are "broken down" by viruses from four different directions. The player must use Tetris pieces (originally toilet rolls in the lockdown version) to rebuild the defenses and stop the spread.
                         </p>
@@ -38,26 +38,26 @@ const GermyDetail: React.FC = () => {
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
                     <section>
-                        <h2 style={{ fontSize: '1.8rem', marginBottom: '16px' }}>The Rejection Saga</h2>
+                        <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The Rejection Saga</h2>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                             <div style={{ display: 'flex', gap: '16px' }}>
                                 <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>01</span>
                                 <div>
-                                    <strong>Apple Sensitivity</strong>
+                                    <strong style={{ color: 'var(--text-primary)' }}>Apple Sensitivity</strong>
                                     <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Rejected because of the COVID-19 theme during a time of high policy sensitivity.</p>
                                 </div>
                             </div>
                             <div style={{ display: 'flex', gap: '16px' }}>
                                 <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>02</span>
                                 <div>
-                                    <strong>The "Computer Virus" Pivot</strong>
+                                    <strong style={{ color: 'var(--text-primary)' }}>The "Computer Virus" Pivot</strong>
                                     <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Rebranded the theme to satisfy policies, focusing on a digital virus attacking a system.</p>
                                 </div>
                             </div>
                             <div style={{ display: 'flex', gap: '16px' }}>
                                 <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>03</span>
                                 <div>
-                                    <strong>"Duplication" Final Blow</strong>
+                                    <strong style={{ color: 'var(--text-primary)' }}>"Duplication" Final Blow</strong>
                                     <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Finally rejected for being too similar to Tetris—a common hurdle for indie innovators.</p>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@ const GermyDetail: React.FC = () => {
                     </section>
 
                     <section>
-                        <h2 style={{ fontSize: '1.8rem', marginBottom: '16px' }}>The Verdict</h2>
+                        <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The Verdict</h2>
                         <p style={{ color: 'var(--text-secondary)' }}>
                             While the Apple App Store remained out of reach, Germy did successfully launch on the **Google Play Store**. However, as I shifted my focus to newer projects, the app was eventually removed from the store due to a lack of active maintenance.
                         </p>
@@ -77,7 +77,7 @@ const GermyDetail: React.FC = () => {
             </div>
 
             <section className="glass" style={{ padding: '40px', textAlign: 'center' }}>
-                <h2 style={{ marginBottom: '32px' }}>Watch the Post-Mortem</h2>
+                <h2 style={{ marginBottom: '32px', color: 'var(--text-primary)' }}>Watch the Post-Mortem</h2>
                 <div style={{
                     position: 'relative',
                     paddingBottom: '56.25%',
