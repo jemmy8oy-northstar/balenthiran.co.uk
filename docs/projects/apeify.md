@@ -18,4 +18,4 @@ The app's growth was entirely organic—a true "built it and they will come" sto
 ## learnings & Evolution
 - **User Impact**: This was my first real experience creating something that people genuinely used and enjoyed in their daily lives.
 - **Maintenance Balance**: The project highlighted the challenge of balancing a successful app with the demands of life (first University, then a full-time 9-5 career).
-- **Current Status**: The app is currently live on the iOS App Store under **Ongoing - Passive** maintenance. It was removed from Google Play due to non-active maintenance requirements.
+- **Current Status**: The app remains an **Ongoing - Passive** project, used daily by users on their iPhones and available via the iOS App Store.

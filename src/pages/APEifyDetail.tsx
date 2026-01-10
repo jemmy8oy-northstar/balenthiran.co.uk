@@ -52,7 +52,7 @@ const APEifyDetail: React.FC = () => {
                         <section>
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '24px' }}>The Reality of Maintenance</h2>
                             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                                Maintaining a successful app alongside life—first University and now a full-time 9-5 job—is a skill in itself. While the app is no longer actively maintained and has been removed from Google Play, its legacy lives on in the tens of thousands of characters still out there in the digital world.
+                                Maintaining a successful app alongside life—first University and now a full-time 9-5 job—is a skill in itself. While I've moved into a more passive maintenance phase, APEify is still used daily by people on their iPhones and remains available globally on the iOS App Store. It's a project that proved its resilience by continuing to find an audience long after the initial lockdown spark.
                             </p>
                         </section>
                     </div>
