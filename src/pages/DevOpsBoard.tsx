@@ -4,8 +4,8 @@ import KanbanBoard from '../components/KanbanBoard';
 
 const DevOpsBoard: React.FC = () => {
     return (
-        <div className="container section-padding" style={{ marginTop: '80px' }}>
-            <header style={{ marginBottom: '48px' }}>
+        <div className="section-padding" style={{ marginTop: '80px', width: '100%' }}>
+            <header className="container" style={{ marginBottom: '48px' }}>
                 <Link to="/" style={{ color: 'var(--accent-primary)', display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '24px', fontWeight: 600 }}>
                     ← Back to Portfolio
                 </Link>

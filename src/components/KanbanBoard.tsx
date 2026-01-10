@@ -6,7 +6,6 @@ import devopsData from '../data/devops.json';
 const PROJECT_COLUMNS = [
     'Backlog',
     'Planning',
-    'In Progress',
     'On Hold',
     'On Going - Active',
     'On Going - Passive',
@@ -36,7 +35,6 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
     }, [initialType]);
 
     const filteredItems = useMemo(() => {
-        // Project board uses 'kanbanStatus', DevOps board uses 'status'
         const statusKey = initialType === 'project' ? 'kanbanStatus' : 'status';
         return data.reduce((acc, item: any) => {
             const status = item[statusKey];
@@ -47,44 +45,88 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
     }, [data, initialType]);
 
     return (
-        <section id="kanban" style={{ width: '100%' }}>
+        <div style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)', overflow: 'hidden' }}>
+            {/* Board Switcher */}
+            <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '16px',
+                marginBottom: '32px',
+                padding: '0 4vw',
+                justifyContent: 'flex-start'
+            }}>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Switch View:</span>
+                <div className="glass" style={{ display: 'flex', padding: '4px', gap: '4px', borderRadius: '12px' }}>
+                    <Link to="/roadmap/projects" style={{ textDecoration: 'none' }}>
+                        <div style={{
+                            padding: '6px 16px',
+                            fontSize: '0.8rem',
+                            fontWeight: 600,
+                            background: initialType === 'project' ? 'var(--accent-primary)' : 'transparent',
+                            color: initialType === 'project' ? '#fff' : 'var(--text-secondary)',
+                            borderRadius: '8px',
+                            transition: 'all 0.3s ease'
+                        }}>
+                            Project Board
+                        </div>
+                    </Link>
+                    <Link to="/roadmap/devops" style={{ textDecoration: 'none' }}>
+                        <div style={{
+                            padding: '6px 16px',
+                            fontSize: '0.8rem',
+                            fontWeight: 600,
+                            background: initialType === 'devops' ? 'var(--accent-primary)' : 'transparent',
+                            color: initialType === 'devops' ? '#fff' : 'var(--text-secondary)',
+                            borderRadius: '8px',
+                            transition: 'all 0.3s ease'
+                        }}>
+                            Engineering Board
+                        </div>
+                    </Link>
+                </div>
+            </div>
+
             <div
                 ref={scrollContainerRef}
                 style={{
                     display: 'flex',
-                    gap: '24px',
+                    gap: '20px',
                     overflowX: 'auto',
-                    paddingBottom: '24px',
-                    scrollbarWidth: 'auto'
+                    padding: '0 4vw 40px 4vw',
+                    scrollbarWidth: 'auto',
+                    WebkitOverflowScrolling: 'touch',
                 }}
             >
                 {columns.map(col => (
                     <div key={col} style={{
-                        flex: '0 0 320px',
+                        flex: '0 0 260px',
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: '16px'
+                        gap: '12px'
                     }}>
                         <div style={{
                             display: 'flex',
                             justifyContent: 'space-between',
                             alignItems: 'center',
-                            padding: '0 12px'
+                            padding: '0 8px',
+                            marginBottom: '4px'
                         }}>
                             <h3 style={{
-                                fontSize: '0.9rem',
+                                fontSize: '0.8rem',
                                 textTransform: 'uppercase',
                                 letterSpacing: '0.1em',
-                                color: 'var(--text-secondary)'
+                                color: 'var(--text-secondary)',
+                                fontWeight: 700
                             }}>
                                 {col}
                             </h3>
                             <span style={{
-                                fontSize: '0.7rem',
+                                fontSize: '0.65rem',
                                 color: 'var(--text-secondary)',
                                 background: 'var(--bg-card)',
                                 padding: '2px 8px',
-                                borderRadius: '10px'
+                                borderRadius: '10px',
+                                border: '1px solid var(--glass-border)'
                             }}>
                                 {filteredItems[col]?.length || 0}
                             </span>
@@ -93,7 +135,7 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
                         <div style={{
                             display: 'flex',
                             flexDirection: 'column',
-                            gap: '16px',
+                            gap: '12px',
                             minHeight: '100px'
                         }}>
                             {filteredItems[col]?.map(item => (
@@ -111,38 +153,39 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
                     </div>
                 ))}
             </div>
-        </section>
+        </div>
     );
 };
 
 const KanbanCard: React.FC<{ item: any }> = ({ item }) => (
     <div className="glass glass-hover" style={{
-        padding: '20px',
+        padding: '16px',
         display: 'flex',
         flexDirection: 'column',
-        gap: '12px',
-        borderLeft: item.status === 'Ongoing' || item.status === 'In Progress' ? '4px solid var(--accent-primary)' : '1px solid var(--glass-border)'
+        gap: '10px',
+        borderLeft: item.status === 'Ongoing' || item.status === 'In Progress' ? '3px solid var(--accent-primary)' : '1px solid var(--glass-border)'
     }}>
-        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
             {item.media?.icon && (
                 <img
                     src={item.media.icon}
                     alt=""
-                    style={{ width: '24px', height: '24px', borderRadius: '4px' }}
+                    style={{ width: '20px', height: '20px', borderRadius: '4px' }}
                     onError={(e) => { (e.target as HTMLImageElement).src = '/balenthiran.svg'; }}
                 />
             )}
-            <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)' }}>{item.title}</h4>
+            <h4 style={{ fontSize: '0.9rem', color: 'var(--text-primary)', fontWeight: 600 }}>{item.title}</h4>
         </div>
-        <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
+        <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
             {item.description}
         </p>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '4px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2px' }}>
             <span style={{
-                fontSize: '0.65rem',
+                fontSize: '0.6rem',
                 color: 'var(--accent-primary)',
                 fontWeight: 700,
-                textTransform: 'uppercase'
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
             }}>
                 {item.category}
             </span>

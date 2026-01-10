@@ -14,20 +14,16 @@ const Home: React.FC = () => {
             <Northstar />
 
             <section id="projects-section">
-                <ProjectGrid />
-                <div className="container" style={{ textAlign: 'center', marginTop: '-40px', marginBottom: '80px' }}>
-                    <Link to="/roadmap/projects" className="glass" style={{
-                        padding: '12px 24px',
-                        fontSize: '0.9rem',
-                        fontWeight: 600,
-                        color: 'var(--accent-primary)',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '8px'
-                    }}>
-                        View Full Project Roadmap →
-                    </Link>
+                <div className="container" style={{ marginBottom: '32px' }}>
+                    <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Projects & Ideas</h2>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px' }}>
+                        <p style={{ color: 'var(--text-secondary)' }}>Ongoing apps, retired projects, and experiments.</p>
+                        <Link to="/roadmap/projects" style={{ color: 'var(--accent-primary)', fontWeight: 600, fontSize: '0.9rem' }}>
+                            View Full Roadmap →
+                        </Link>
+                    </div>
                 </div>
+                <ProjectGrid />
             </section>
 
             <section id="infrastructure" className="container section-padding">
