@@ -75,9 +75,9 @@
         "id": "earn-your-drinks",
         "title": "Earn Your Drinks",
         "status": "Idea",
-        "category": "Social & Fitness",
+        "category": "Just for Fun",
         "kanbanStatus": "Backlog",
-        "description": "Log your drinks and earn them back through exercise (KMs).",
+        "description": "Log your drinks and earn them back through exercise (running or cycling).",
         "longDescription": "A simple offline app built for a friend. Log your drinks in real-time and commit to a corresponding run or cycle. Designed for iterative testing and community-driven feature ideas.",
         "links": {
             "appStore": null,
@@ -92,9 +92,9 @@
         "id": "habit-tracker",
         "title": "Personal Habit Tracker",
         "status": "Idea",
-        "category": "Personal Utility",
+        "category": "Just for Fun",
         "kanbanStatus": "Backlog",
-        "description": "A custom, subscription-free habit tracker built specifically for my own workflow.",
+        "description": "A custom habit tracker built specifically for my own workflow.",
         "longDescription": "A personalized tool to manage daily rhythms and goals without the clutter of generic habit apps. Built for personal utility first, focusing on speed and specific goal tracking.",
         "links": {
             "appStore": null,
