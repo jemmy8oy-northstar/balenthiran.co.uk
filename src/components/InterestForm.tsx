@@ -24,7 +24,7 @@ const InterestForm: React.FC = () => {
             }}>
                 <h2 style={{ fontSize: '2.5rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Have an Idea or Interested?</h2>
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
-                    I'm always working on new concepts. If you're interested in being an early adopter for Project Alpha or have your own ideas, drop your email below.
+                    I'm always working on new concepts. If you're interested in being an early adopter or have your own ideas, drop your email below.
                 </p>
 
                 {!submitted ? (

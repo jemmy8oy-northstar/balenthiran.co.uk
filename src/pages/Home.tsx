@@ -13,7 +13,7 @@ const Home: React.FC = () => {
             <About />
             <Northstar />
 
-            <section id="projects-section" className="section-padding">
+            <section id="projects" className="section-padding">
                 <div className="container">
                     <div style={{ marginBottom: '64px' }}>
                         <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Projects & Ideas</h2>

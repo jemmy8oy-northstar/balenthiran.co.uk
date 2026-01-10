@@ -26,24 +26,46 @@ const Hero: React.FC = () => {
                 Crafting digital experiences, building ambitious app ideas, and documenting the journey from concept to MVP.
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-                <HashLink smooth to="/#projects" className="glass" style={{
-                    padding: '16px 32px',
-                    background: 'var(--accent-primary)',
-                    color: '#fff',
-                    fontWeight: 600,
-                    borderRadius: '50px',
-                    border: 'none',
-                    textDecoration: 'none'
-                }}>
+                <HashLink
+                    replace
+                    smooth
+                    to="/#projects"
+                    scroll={(el) => {
+                        const yOffset = -100; // Offset for fixed navbar
+                        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                    }}
+                    className="glass"
+                    style={{
+                        padding: '16px 32px',
+                        background: 'var(--accent-primary)',
+                        color: '#fff',
+                        fontWeight: 600,
+                        borderRadius: '50px',
+                        border: 'none',
+                        textDecoration: 'none'
+                    }}
+                >
                     Explore Projects
                 </HashLink>
-                <HashLink smooth to="/#about" className="glass" style={{
-                    padding: '16px 32px',
-                    color: 'var(--text-primary)',
-                    fontWeight: 600,
-                    borderRadius: '50px',
-                    textDecoration: 'none'
-                }}>
+                <HashLink
+                    replace
+                    smooth
+                    to="/#about"
+                    scroll={(el) => {
+                        const yOffset = -100;
+                        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                    }}
+                    className="glass"
+                    style={{
+                        padding: '16px 32px',
+                        color: 'var(--text-primary)',
+                        fontWeight: 600,
+                        borderRadius: '50px',
+                        textDecoration: 'none'
+                    }}
+                >
                     About Me
                 </HashLink>
             </div>

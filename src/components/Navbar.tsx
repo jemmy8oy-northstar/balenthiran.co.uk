@@ -3,7 +3,7 @@ import ThemeToggle from './ThemeToggle';
 import useScrollSpy from '../hooks/useScrollSpy';
 
 const Navbar: React.FC = () => {
-  const activeSection = useScrollSpy(['about', 'strategy', 'projects-section', 'infrastructure', 'contact']);
+  const activeSection = useScrollSpy(['about', 'strategy', 'projects', 'infrastructure', 'contact']);
 
   const getLinkStyle = (id: string) => ({
     color: activeSection === id ? 'var(--accent-primary)' : 'var(--text-secondary)',
@@ -14,6 +14,12 @@ const Navbar: React.FC = () => {
     flexDirection: 'column' as const,
     alignItems: 'center'
   });
+
+  const scrollWithOffset = (el: HTMLElement) => {
+    const yOffset = -100; // Offset for fixed navbar
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
 
   const ActiveDot = () => (
     <div style={{
@@ -44,23 +50,23 @@ const Navbar: React.FC = () => {
       borderColor: 'var(--glass-border)'
     }}>
       <div style={{ display: 'flex', gap: '24px', fontSize: '0.85rem', alignItems: 'center' }}>
-        <HashLink smooth to="/#about" style={getLinkStyle('about')}>
+        <HashLink replace smooth to="/#about" scroll={scrollWithOffset} style={getLinkStyle('about')}>
           About
           {activeSection === 'about' && <ActiveDot />}
         </HashLink>
-        <HashLink smooth to="/#strategy" style={getLinkStyle('strategy')}>
+        <HashLink replace smooth to="/#strategy" scroll={scrollWithOffset} style={getLinkStyle('strategy')}>
           Strategy
           {activeSection === 'strategy' && <ActiveDot />}
         </HashLink>
-        <HashLink smooth to="/#projects-section" style={getLinkStyle('projects-section')}>
+        <HashLink replace smooth to="/#projects" scroll={scrollWithOffset} style={getLinkStyle('projects')}>
           Projects
-          {activeSection === 'projects-section' && <ActiveDot />}
+          {activeSection === 'projects' && <ActiveDot />}
         </HashLink>
-        <HashLink smooth to="/#infrastructure" style={getLinkStyle('infrastructure')}>
+        <HashLink replace smooth to="/#infrastructure" scroll={scrollWithOffset} style={getLinkStyle('infrastructure')}>
           Infrastructure
           {activeSection === 'infrastructure' && <ActiveDot />}
         </HashLink>
-        <HashLink smooth to="/#contact" style={getLinkStyle('contact')}>
+        <HashLink replace smooth to="/#contact" scroll={scrollWithOffset} style={getLinkStyle('contact')}>
           Contact
           {activeSection === 'contact' && <ActiveDot />}
         </HashLink>
