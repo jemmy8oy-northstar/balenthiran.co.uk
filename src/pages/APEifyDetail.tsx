@@ -8,7 +8,7 @@ const APEifyDetail: React.FC = () => {
                 ← Back to Portfolio
             </Link>
 
-            <div style={{ maxWidth: '900px' }}>
+            <div style={{ maxWidth: '1100px' }}>
                 <header style={{ marginBottom: '64px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '24px', marginBottom: '24px' }}>
                         <img
@@ -27,7 +27,7 @@ const APEifyDetail: React.FC = () => {
                     </div>
                 </header>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '64px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr', gap: '64px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
                         <section>
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '24px' }}>The lockdown success story</h2>
