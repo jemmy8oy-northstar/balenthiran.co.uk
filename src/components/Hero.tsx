@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             }}>
                 Crafting digital experiences, building ambitious app ideas, and documenting the journey from concept to MVP.
             </p>
-            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+            <div className="hero-actions" style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
                 <HashLink
                     replace
                     smooth

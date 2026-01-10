@@ -58,9 +58,61 @@
         "title": "House Price Alerts",
         "status": "95% Complete",
         "category": "Pending Validation",
+        "path": "/projects/house-price-alerts",
         "kanbanStatus": "On Hold",
         "description": "Real-time alerts for property market shifts.",
         "longDescription": "Technically complete but strategically paused. Following the 'User-First' philosophy of Project Northstar, this app's release is pending proven user demand to ensure the development effort matches market interest.",
+        "links": {
+            "appStore": null,
+            "playStore": null
+        },
+        "media": {
+            "icon": "/balenthiran.svg",
+            "youtube": null
+        }
+    },
+    {
+        "id": "earn-your-drinks",
+        "title": "Earn Your Drinks",
+        "status": "In Development",
+        "category": "Social & Fitness",
+        "kanbanStatus": "On Going - Passive",
+        "description": "Log your drinks and earn them back through exercise (KMs).",
+        "longDescription": "A simple offline app built for a friend. Log your drinks in real-time and commit to a corresponding run or cycle. Designed for iterative testing and community-driven feature ideas.",
+        "links": {
+            "appStore": null,
+            "playStore": null
+        },
+        "media": {
+            "icon": "/balenthiran.svg",
+            "youtube": null
+        }
+    },
+    {
+        "id": "habit-tracker",
+        "title": "Personal Habit Tracker",
+        "status": "Planning",
+        "category": "Personal Utility",
+        "kanbanStatus": "Planning",
+        "description": "A custom, subscription-free habit tracker built specifically for my own workflow.",
+        "longDescription": "A personalized tool to manage daily rhythms and goals without the clutter of generic habit apps. Built for personal utility first, focusing on speed and specific goal tracking.",
+        "links": {
+            "appStore": null,
+            "playStore": null
+        },
+        "media": {
+            "icon": "/balenthiran.svg",
+            "youtube": null
+        }
+    },
+    {
+        "id": "commuter-house-search",
+        "title": "Commuter House Search",
+        "status": "Idea",
+        "category": "Real Estate",
+        "kanbanStatus": "Backlog",
+        "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance.",
+        "longDescription": "A potential disruption to traditional real estate searching. Instead of radius-based searches, users can find properties based on their actual commute duration to work or other key locations.",
         "links": {
             "appStore": null,
             "playStore": null

@@ -6,7 +6,7 @@ const ProjectGrid: React.FC = () => {
     return (
         <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
             gap: '32px'
         }}>
             {projects.map((project) => {

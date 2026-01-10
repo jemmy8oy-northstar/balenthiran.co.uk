@@ -20,7 +20,7 @@ const GermyDetail: React.FC = () => {
                     </p>
                 </header>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr', gap: '64px', marginBottom: '80px' }}>
+                <div className="detail-grid" style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr', gap: '64px', marginBottom: '80px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
                         <section>
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The Origin Story (2020)</h2>

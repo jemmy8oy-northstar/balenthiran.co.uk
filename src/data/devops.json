@@ -38,5 +38,21 @@
         "description": "Isolated staging and local development environments.",
         "longDescription": "Setting up a mirrored dev environment to test features safely before production rollout.",
         "category": "DevOps"
+    },
+    {
+        "id": "newsletter-infrastructure",
+        "title": "Per-App Newsletters",
+        "status": "Backlog",
+        "description": "Targeted updates and subscription management for individual projects.",
+        "longDescription": "Infrastructure to handle segmented email lists, allowing users to follow specific apps or the general ecosystem.",
+        "category": "Engineering"
+    },
+    {
+        "id": "user-ideas-page",
+        "title": "User Idea Submission",
+        "status": "Backlog",
+        "description": "A transparent board for users to post and vote on new app features or project ideas.",
+        "longDescription": "Closing the feedback loop by allowing the community to directly influence the nursery roadmap and prioritize new builds.",
+        "category": "Product"
     }
 ]

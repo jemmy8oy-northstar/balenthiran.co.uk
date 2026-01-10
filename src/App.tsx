@@ -9,6 +9,8 @@ import ProjectBoard from './pages/ProjectBoard'
 import DevOpsBoard from './pages/DevOpsBoard'
 import ScrollToTop from './components/ScrollToTop'
 import { ThemeProvider } from './context/ThemeContext'
+import YouTubeDetail from './pages/YouTubeDetail'
+import HousePriceAlertsDetail from './pages/HousePriceAlertsDetail'
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
               <Route path="/projects/tenbeerplan" element={<TenBeerPlanDetail />} />
               <Route path="/roadmap/projects" element={<ProjectBoard />} />
               <Route path="/roadmap/devops" element={<DevOpsBoard />} />
+              <Route path="/projects/house-price-alerts" element={<HousePriceAlertsDetail />} />
+              <Route path="/youtube" element={<YouTubeDetail />} />
             </Routes>
           </main>
 
@@ -36,7 +40,7 @@ function App() {
             color: 'var(--text-secondary)',
             fontSize: '0.9rem'
           }}>
-            <p>© {new Date().getFullYear()} James Balenthiran. Built with React & Antigravity.</p>
+            <p>© {new Date().getFullYear()} James Balenthiran.</p>
           </footer>
         </div>
       </Router>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
     return (
@@ -13,7 +14,7 @@ const About: React.FC = () => {
                             Hey, I'm **Jemmy8oy**. I've been writing code since I was 10, but my journey is about more than just the IDE. I'm a builder, a lifelong learner, and an aspiring founder.
                         </p>
                         <p>
-                            Beyond the day job, I'm scaling my own universe. From migrating my entire stack from AWS to a custom **Kubernetes cluster on Oracle Cloud** to running 500km a year and maintaining a bi-weekly "standup" rhythm on YouTube.
+                            Beyond the day job, I'm scaling my own universe. From migrating my entire stack from AWS to a custom **Kubernetes cluster on Oracle Cloud** to running 500km a year and maintaining a bi-weekly "standup" rhythm on <Link to="/youtube" style={{ color: 'var(--accent-primary)', fontWeight: 600 }}>YouTube</Link>.
                         </p>
                         <p>
                             I believe in the "whole story"—not just the successful launches, but the App Store rejections (looking at you, Germy), the 95% complete projects, and the pivots that lead to true user-driven growth.
