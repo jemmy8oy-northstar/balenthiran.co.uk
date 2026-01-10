@@ -46,16 +46,59 @@ const TenBeerPlanDetail: React.FC = () => {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
                         <section>
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The "Meme to MVP" Journey</h2>
+
+                            <div className="glass" style={{
+                                marginBottom: '32px',
+                                overflow: 'hidden',
+                                borderRadius: '24px',
+                                maxWidth: '500px',
+                                margin: '0 auto 32px'
+                            }}>
+                                <img
+                                    src="/assets/images/tenbeerplan/tbp-meme.jpeg"
+                                    alt="Ten Beer Plan Meme"
+                                    style={{ width: '100%', display: 'block' }}
+                                />
+                                <div style={{ padding: '16px', background: 'rgba(0,0,0,0.4)', color: 'white', fontSize: '0.9rem', textAlign: 'center', backdropFilter: 'blur(10px)' }}>
+                                    The original meme that sparked the project
+                                </div>
+                            </div>
+
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
                                 It all started with a simple meme from a friend: a photo of a beer fridge with the quote, <strong>"Where do you see yourself 10 beers from now? What is your 10 beer plan?"</strong>
                             </p>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
                                 What started as a joke between friends turned into a vision for a social utility similar to "Beer Buddy"—a way for friends to coordinate and share their nights out in real-time. I built an MVP and tested it with a group of 15 alpha users, iterating until we had a functional, real-time social app.
                             </p>
-                            <h3 style={{ fontSize: '1.4rem', marginTop: '32px', marginBottom: '16px', color: 'var(--text-primary)' }}>The Apple Roadblock</h3>
-                            <p style={{ color: 'var(--text-secondary)' }}>
-                                After months of development, the project hit a major wall: the App Store Review. Apple rejected the app under policies regarding "encouraging excessive consumption of alcohol." Rather than fighting a policy battle, I decided to take the massive technical learnings from the project and move forward.
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
+                                This project was a massive technical leap for me. It was the first time I moved away from "backend-as-a-service" and built everything from scratch. I was managing user authentication, real-time location sharing, and a relational database—all hosted on AWS.
                             </p>
+                            <h3 style={{ fontSize: '1.4rem', marginTop: '32px', marginBottom: '16px', color: 'var(--text-primary)' }}>The Apple Roadblock</h3>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
+                                After months of development and successful alpha testing, the project hit a major wall: the App Store Review. Apple rejected the app multiple times, citing policies regarding "encouraging excessive consumption of alcohol."
+                            </p>
+                            <p style={{ color: 'var(--text-secondary)' }}>
+                                Despite our arguments that the app was about "coordination and safety," Apple's gatekeepers were firm. The "Ten Beer Plan" name and the associated meme humor were inherently at odds with their strict safety guidelines. Rather than stripping the project of its identity to fit a policy box, I decided to retire the app and preserve its technical legacy.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 style={{ fontSize: '1.8rem', marginBottom: '24px', color: 'var(--text-primary)' }}>Product Interface</h2>
+                            <div style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))',
+                                gap: '20px'
+                            }}>
+                                {[1, 2, 3, 4, 5].map((num) => (
+                                    <div key={num} className="glass" style={{ borderRadius: '16px', overflow: 'hidden', height: '350px' }}>
+                                        <img
+                                            src={`/assets/images/tenbeerplan/tbp-screen-${num}.png`}
+                                            alt={`Ten Beer Plan Screen ${num}`}
+                                            style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
                         </section>
 
                         <section className="glass" style={{ padding: '32px' }}>

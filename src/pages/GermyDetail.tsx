@@ -80,6 +80,8 @@ const GermyDetail: React.FC = () => {
                 <section className="glass" style={{ padding: '40px', textAlign: 'center' }}>
                     <h2 style={{ marginBottom: '32px', color: 'var(--text-primary)' }}>Watch the Post-Mortem</h2>
                     <div style={{
+                        maxWidth: '800px',
+                        margin: '0 auto',
                         position: 'relative',
                         paddingBottom: '56.25%',
                         height: 0,
