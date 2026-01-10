@@ -10,8 +10,12 @@ const HousePriceAlertsDetail: React.FC = () => {
                         ← Back to Portfolio
                     </Link>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '24px', marginBottom: '16px' }}>
-                        <div style={{ width: '80px', height: '80px', borderRadius: '20px', background: 'var(--bg-card)', padding: '15px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            <h1 style={{ margin: 0, fontSize: '2rem' }}>🏠</h1>
+                        <div style={{ width: '80px', height: '80px', borderRadius: '20px', background: 'var(--bg-card)', padding: '12px', display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' }}>
+                            <img
+                                src="/assets/images/house-price-alerts/logo.svg"
+                                alt="House Price Alerts"
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                            />
                         </div>
                         <h1 style={{ fontSize: '3.5rem', color: 'var(--text-primary)' }}>House Price Alerts</h1>
                     </div>
