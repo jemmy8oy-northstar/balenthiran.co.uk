@@ -7,7 +7,7 @@ APEify was my second ever mobile app, born during the unique circumstances of th
 The app's growth was entirely organic—a true "built it and they will come" story.
 - **Downloads**: 70k+ as of January 2026.
 - **Social Impact**: Users adopted their APEify characters as social media profile pictures.
-- **Virality**: Several TikTok trends centered around the app, including users going to Uniqlo to print their custom characters onto T-shirts ([Example of app blowing up on TikTok](https://www.tiktok.com/@alyanat_/video/7479151008266898734?lang=en)).
+- **Virality**: Viral TikTok trends saw users taking their digital characters into the real world as custom-printed apparel, with one notable video hitting **2M+ views** ([See it on TikTok](https://www.tiktok.com/@alyanat_/video/7479151008266898734?lang=en)).
 
 ## Technical Architecture
 - **UI Framework**: Flutter

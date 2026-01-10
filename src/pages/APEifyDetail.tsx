@@ -32,19 +32,35 @@ const APEifyDetail: React.FC = () => {
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '1.1rem', lineHeight: '1.8' }}>
                                 What followed was a true lesson in organic growth. We didn't spend a penny on marketing, yet the app found its audience naturally. People didn't just use the app; they identified with it, adopting their custom-created characters as profile pictures across social media.
                             </p>
-                            <div className="glass" style={{ padding: '32px', borderLeft: '4px solid var(--accent-primary)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                                <p style={{ fontStyle: 'italic', color: 'var(--text-primary)', fontSize: '1.1rem', margin: 0 }}>
-                                    "I've seen viral TikToks of users heading to Uniqlo specifically to print their APEify characters onto t-shirts. It was my first experience of making something that people actually lived with."
-                                </p>
-                                <a
-                                    href="https://www.tiktok.com/@alyanat_/video/7479151008266898734?lang=en"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    style={{ color: 'var(--accent-primary)', fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
-                                >
-                                    <span>View example of the app blowing up on TikTok ↗</span>
-                                </a>
-                            </div>
+                            <a
+                                href="https://www.tiktok.com/@alyanat_/video/7479151008266898734?lang=en"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="glass glass-hover"
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '16px',
+                                    padding: '24px',
+                                    color: 'var(--text-primary)',
+                                    textDecoration: 'none',
+                                    fontWeight: 600,
+                                    borderRadius: '16px',
+                                    border: '1px solid rgba(255,255,255,0.1)',
+                                    marginTop: '16px'
+                                }}
+                            >
+                                <span style={{ fontSize: '1.5rem' }}>🔥</span>
+                                <div style={{ flex: 1 }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
+                                        <div style={{ fontSize: '0.8rem', color: 'var(--accent-primary)', textTransform: 'uppercase' }}>Viral Moment</div>
+                                        <span style={{ fontSize: '0.7rem', background: 'rgba(255, 59, 48, 0.1)', color: '#ff3b30', padding: '2px 8px', borderRadius: '4px' }}>2M+ Views</span>
+                                    </div>
+                                    <div style={{ fontSize: '1.1rem', lineHeight: '1.4' }}>
+                                        APEify characters being printed onto physical apparel ↗
+                                    </div>
+                                </div>
+                            </a>
                         </section>
 
                         <section>
