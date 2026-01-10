@@ -7,12 +7,14 @@ import APEifyDetail from './pages/APEifyDetail'
 import TenBeerPlanDetail from './pages/TenBeerPlanDetail'
 import ProjectBoard from './pages/ProjectBoard'
 import DevOpsBoard from './pages/DevOpsBoard'
+import ScrollToTop from './components/ScrollToTop'
 import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop />
         <div className="app-container">
           <Navbar />
           <main>
