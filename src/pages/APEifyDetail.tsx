@@ -11,7 +11,12 @@ const APEifyDetail: React.FC = () => {
             <div style={{ maxWidth: '900px' }}>
                 <header style={{ marginBottom: '64px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '24px', marginBottom: '24px' }}>
-                        <img src="/balenthiran.svg" alt="APEify" style={{ width: '80px', height: '80px', borderRadius: '20px' }} />
+                        <img
+                            src="/assets/images/apeify/apeify.png"
+                            alt="APEify"
+                            style={{ width: '80px', height: '80px', borderRadius: '20px', objectFit: 'cover' }}
+                            onError={(e) => { (e.target as HTMLImageElement).src = '/balenthiran.svg'; }}
+                        />
                         <div>
                             <h1 style={{ fontSize: '3.5rem', marginBottom: '8px' }}>APEify</h1>
                             <div style={{ display: 'flex', gap: '12px' }}>

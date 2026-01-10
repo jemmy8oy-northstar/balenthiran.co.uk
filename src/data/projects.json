@@ -10,7 +10,7 @@
         "longDescription": "APEify is a character tracking and progression app that allows users to manage their character data, save progress via Firebase, and interact with a premium UI. It remains one of the core active projects in the ecosystem.",
         "links": {
             "appStore": "https://apps.apple.com/us/app/id1523829414",
-            "playStore": "https://play.google.com/store/apps/details?id=com.muyiwaaruna.apeifymark2"
+            "playStore": null
         },
         "media": {
             "icon": "/assets/images/apeify/apeify.png",
