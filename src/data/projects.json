@@ -5,6 +5,7 @@
         "status": "Ongoing",
         "category": "Main App",
         "path": "/projects/apeify",
+        "kanbanStatus": "On Going - Active",
         "description": "A character tracking and progression app.",
         "longDescription": "APEify is a character tracking and progression app that allows users to manage their character data, save progress via Firebase, and interact with a premium UI. It remains one of the core active projects in the ecosystem.",
         "links": {
@@ -22,6 +23,7 @@
         "status": "Success (Retired)",
         "category": "Flutter Debut",
         "path": "/projects/germy",
+        "kanbanStatus": "Retired",
         "description": "My first ever app—a Pandemic-era Tetris inspired experiment.",
         "longDescription": "Started in 2020, Germy was the project where I taught myself Flutter. Originally a pandemic-themed game, it faced multiple App Store rejections due to sensitivity policies and gameplay similarities. Despite not hitting Apple's store, it reached the Play Store and serves as the technical foundation for everything I build today.",
         "links": {
@@ -39,6 +41,7 @@
         "status": "60k+ Downloads",
         "category": "Main App",
         "path": "/projects/tenbeerplan",
+        "kanbanStatus": "On Going - Passive",
         "description": "A high-traction social coordination app.",
         "longDescription": "Ten Beer Plan has been my most successful venture to date, reaching over 60,000 downloads. It proved that a simple, focused utility can find a significant audience.",
         "links": {
@@ -55,6 +58,7 @@
         "title": "House Price Alerts",
         "status": "95% Complete",
         "category": "Pending Validation",
+        "kanbanStatus": "On Hold",
         "description": "Real-time alerts for property market shifts.",
         "longDescription": "Technically complete but strategically paused. Following the 'User-First' philosophy of Project Northstar, this app's release is pending proven user demand to ensure the development effort matches market interest.",
         "links": {
@@ -71,6 +75,7 @@
         "title": "Project Alpha",
         "status": "Idea",
         "category": "App Idea",
+        "kanbanStatus": "Backlog",
         "description": "Revolutionizing specific workflow with automated insights.",
         "longDescription": "A conceptual tool designed to automate insights for a specific workflow, gauging interest for a potential MVP.",
         "links": {

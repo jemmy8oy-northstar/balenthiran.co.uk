@@ -1,0 +1,42 @@
+[
+    {
+        "id": "k8s-cluster",
+        "title": "Oracle K8s Cluster",
+        "status": "Done",
+        "description": "Custom Kubernetes environment on Oracle Cloud Infrastructure.",
+        "longDescription": "The foundation for the new ecosystem. A fully functional K8s cluster providing scalable and cost-effective hosting.",
+        "category": "Infrastructure"
+    },
+    {
+        "id": "dotnet-migration",
+        "title": "Move to .NET",
+        "status": "In Progress",
+        "description": "Migrating core services to .NET for improved performance and scalability.",
+        "longDescription": "Transitioning the backend architecture to .NET to leverage its robust ecosystem and performance benefits.",
+        "category": "Backend"
+    },
+    {
+        "id": "template-project",
+        "title": "Create Template Project",
+        "status": "In Progress",
+        "description": "Standardizing project starts with a robust template.",
+        "longDescription": "Building a reusable template that includes authentication, logging, and deployment configs to speed up new app development.",
+        "category": "Engineering"
+    },
+    {
+        "id": "cd-pipeline",
+        "title": "Continuous Deployment",
+        "status": "Backlog",
+        "description": "Automated pipelines for seamless updates.",
+        "longDescription": "Implementing CI/CD pipelines to automatically deploy changes to the K8s cluster upon code commit.",
+        "category": "DevOps"
+    },
+    {
+        "id": "dev-env",
+        "title": "Dev Environment",
+        "status": "Backlog",
+        "description": "Isolated staging and local development environments.",
+        "longDescription": "Setting up a mirrored dev environment to test features safely before production rollout.",
+        "category": "DevOps"
+    }
+]

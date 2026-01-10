@@ -5,6 +5,8 @@ import Home from './pages/Home'
 import GermyDetail from './pages/GermyDetail'
 import APEifyDetail from './pages/APEifyDetail'
 import TenBeerPlanDetail from './pages/TenBeerPlanDetail'
+import ProjectBoard from './pages/ProjectBoard'
+import DevOpsBoard from './pages/DevOpsBoard'
 import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
               <Route path="/projects/germy" element={<GermyDetail />} />
               <Route path="/projects/apeify" element={<APEifyDetail />} />
               <Route path="/projects/tenbeerplan" element={<TenBeerPlanDetail />} />
+              <Route path="/roadmap/projects" element={<ProjectBoard />} />
+              <Route path="/roadmap/devops" element={<DevOpsBoard />} />
             </Routes>
           </main>
 

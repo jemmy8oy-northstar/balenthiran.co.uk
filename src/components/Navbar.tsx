@@ -3,7 +3,7 @@ import ThemeToggle from './ThemeToggle';
 import useScrollSpy from '../hooks/useScrollSpy';
 
 const Navbar: React.FC = () => {
-  const activeSection = useScrollSpy(['about', 'strategy', 'projects', 'contact']);
+  const activeSection = useScrollSpy(['about', 'strategy', 'projects-section', 'infrastructure', 'contact']);
 
   const getLinkStyle = (id: string) => ({
     color: activeSection === id ? 'var(--accent-primary)' : 'var(--text-secondary)',
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
       background: 'var(--bg-card)',
       borderColor: 'var(--glass-border)'
     }}>
-      <div style={{ display: 'flex', gap: '32px', fontSize: '0.9rem', alignItems: 'center' }}>
+      <div style={{ display: 'flex', gap: '24px', fontSize: '0.85rem', alignItems: 'center' }}>
         <HashLink smooth to="/#about" style={getLinkStyle('about')}>
           About
           {activeSection === 'about' && <ActiveDot />}
@@ -52,9 +52,13 @@ const Navbar: React.FC = () => {
           Strategy
           {activeSection === 'strategy' && <ActiveDot />}
         </HashLink>
-        <HashLink smooth to="/#projects" style={getLinkStyle('projects')}>
+        <HashLink smooth to="/#projects-section" style={getLinkStyle('projects-section')}>
           Projects
-          {activeSection === 'projects' && <ActiveDot />}
+          {activeSection === 'projects-section' && <ActiveDot />}
+        </HashLink>
+        <HashLink smooth to="/#infrastructure" style={getLinkStyle('infrastructure')}>
+          Infrastructure
+          {activeSection === 'infrastructure' && <ActiveDot />}
         </HashLink>
         <HashLink smooth to="/#contact" style={getLinkStyle('contact')}>
           Contact
