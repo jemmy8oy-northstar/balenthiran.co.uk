@@ -13,6 +13,7 @@ The app's growth was entirely organic—a true "built it and they will come" sto
 - **UI Framework**: Flutter
 - **Database**: NoSQL Firebase DB
 - **Backend**: None (Firebase served as the service layer)
+- **Availability**: [iOS App Store](https://apps.apple.com/us/app/id1523829414) (App Store Exclusive)
 - **Reflections**: From an engineering perspective, APEify is an important reflection because of its architectural simplicity. As inexperienced developers at the time, we relied on Google's ecosystem (Flutter/Firebase) to bridge the gap and scale to 70k+ users without a traditional backend.
 
 ## learnings & Evolution

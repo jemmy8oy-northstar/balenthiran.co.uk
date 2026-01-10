@@ -100,7 +100,17 @@ const APEifyDetail: React.FC = () => {
                                 </div>
                                 <div>
                                     <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase' }}>Status</div>
-                                    <div style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--accent-primary)' }}>Ongoing (Passive)</div>
+                                    <div style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--accent-primary)', marginBottom: '16px' }}>Ongoing (Passive)</div>
+                                    <a
+                                        href="https://apps.apple.com/us/app/id1523829414"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{ display: 'inline-block', transition: 'transform 0.2s ease' }}
+                                        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                                        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                                    >
+                                        <img src="/assets/images/shared/app_store.svg" alt="Download on App Store" style={{ height: '40px' }} />
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +121,7 @@ const APEifyDetail: React.FC = () => {
                                 <span style={{ background: 'rgba(99, 102, 241, 0.1)', color: 'var(--accent-primary)', padding: '4px 12px', borderRadius: '100px', fontSize: '0.8rem', fontWeight: 600 }}>Flutter</span>
                                 <span style={{ background: 'rgba(99, 102, 241, 0.1)', color: 'var(--accent-primary)', padding: '4px 12px', borderRadius: '100px', fontSize: '0.8rem', fontWeight: 600 }}>Firebase</span>
                                 <span style={{ background: 'rgba(99, 102, 241, 0.1)', color: 'var(--accent-primary)', padding: '4px 12px', borderRadius: '100px', fontSize: '0.8rem', fontWeight: 600 }}>NoSQL</span>
-                                <span style={{ background: 'rgba(99, 102, 241, 0.1)', color: 'var(--accent-primary)', padding: '4px 12px', borderRadius: '100px', fontSize: '0.8rem', fontWeight: 600 }}>App Store only</span>
+                                <span style={{ background: 'rgba(255, 255, 255, 0.05)', color: 'var(--text-secondary)', padding: '4px 12px', borderRadius: '100px', fontSize: '0.8rem', fontWeight: 600 }}>iOS Exclusive</span>
                             </div>
                         </div>
                     </aside>
