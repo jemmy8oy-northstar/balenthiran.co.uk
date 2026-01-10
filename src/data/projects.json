@@ -69,22 +69,5 @@
             "icon": "/balenthiran.svg",
             "youtube": null
         }
-    },
-    {
-        "id": "project-alpha",
-        "title": "Project Alpha",
-        "status": "Idea",
-        "category": "App Idea",
-        "kanbanStatus": "Backlog",
-        "description": "Revolutionizing specific workflow with automated insights.",
-        "longDescription": "A conceptual tool designed to automate insights for a specific workflow, gauging interest for a potential MVP.",
-        "links": {
-            "appStore": null,
-            "playStore": null
-        },
-        "media": {
-            "icon": "/balenthiran.svg",
-            "youtube": null
-        }
     }
 ]
