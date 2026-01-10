@@ -7,13 +7,13 @@ APEify was my second ever mobile app, born during the unique circumstances of th
 The app's growth was entirely organic—a true "built it and they will come" story.
 - **Downloads**: 70k+ as of January 2026.
 - **Social Impact**: Users adopted their APEify characters as social media profile pictures.
-- **Virality**: Several TikTok trends centered around the app, including users going to Uniqlo to print their custom characters onto T-shirts.
+- **Virality**: Several TikTok trends centered around the app, including users going to Uniqlo to print their custom characters onto T-shirts ([Example of app blowing up on TikTok](https://www.tiktok.com/@alyanat_/video/7479151008266898734?lang=en)).
 
 ## Technical Architecture
 - **UI Framework**: Flutter
 - **Database**: NoSQL Firebase DB
 - **Backend**: None (Firebase served as the service layer)
-- **Reflections**: Looking back as a software engineer, the lack of a dedicated backend is an interesting architectural choice that served the project well for its scale and speed of development.
+- **Reflections**: From an engineering perspective, APEify is an important reflection because of its architectural simplicity. As inexperienced developers at the time, we relied on Google's ecosystem (Flutter/Firebase) to bridge the gap and scale to 70k+ users without a traditional backend.
 
 ## learnings & Evolution
 - **User Impact**: This was my first real experience creating something that people genuinely used and enjoyed in their daily lives.

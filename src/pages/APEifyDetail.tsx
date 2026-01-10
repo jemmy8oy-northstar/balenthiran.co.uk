@@ -32,20 +32,28 @@ const APEifyDetail: React.FC = () => {
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '1.1rem', lineHeight: '1.8' }}>
                                 What followed was a true lesson in organic growth. We didn't spend a penny on marketing, yet the app found its audience naturally. People didn't just use the app; they identified with it, adopting their custom-created characters as profile pictures across social media.
                             </p>
-                            <div className="glass" style={{ padding: '32px', borderLeft: '4px solid var(--accent-primary)' }}>
-                                <p style={{ fontStyle: 'italic', color: 'var(--text-primary)', fontSize: '1.1rem' }}>
+                            <div className="glass" style={{ padding: '32px', borderLeft: '4px solid var(--accent-primary)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                                <p style={{ fontStyle: 'italic', color: 'var(--text-primary)', fontSize: '1.1rem', margin: 0 }}>
                                     "I've seen viral TikToks of users heading to Uniqlo specifically to print their APEify characters onto t-shirts. It was my first experience of making something that people actually lived with."
                                 </p>
+                                <a
+                                    href="https://www.tiktok.com/@alyanat_/video/7479151008266898734?lang=en"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ color: 'var(--accent-primary)', fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
+                                >
+                                    <span>View example of the app blowing up on TikTok ↗</span>
+                                </a>
                             </div>
                         </section>
 
                         <section>
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '24px' }}>Technical Reflection</h2>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                                From an engineering perspective, APEify is fascinating because it has no traditional backend. We used <strong>Flutter</strong> for the UI and <strong>Firebase</strong> as a "backend-as-a-service." The NoSQL database handled everything we needed.
+                                From an engineering perspective, APEify is an important reflection because it has no traditional backend. We used **Flutter** for the UI and **Firebase** as a "backend-as-a-service," with the NoSQL database handling everything we needed.
                             </p>
                             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                                Looking back, it's an interesting reflection on efficiency vs. complexity. For a project that hit 70k+ users, the Firebase-only stack proved remarkably resilient, allowing us to focus entirely on the user experience rather than server maintenance.
+                                It is an interesting reflection on how powerful these tools can be for those starting out. Google's ecosystem effectively bridged the gap for us as inexperienced developers, allowing us to build a production-ready app that handled 70k+ organic users by focusing entirely on what the user sees.
                             </p>
                         </section>
 
