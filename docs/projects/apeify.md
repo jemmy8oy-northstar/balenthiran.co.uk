@@ -15,7 +15,7 @@ The app's growth was entirely organic—a true "built it and they will come" sto
 - **Backend**: None (Firebase served as the service layer)
 - **Reflections**: Looking back as a software engineer, the lack of a dedicated backend is an interesting architectural choice that served the project well for its scale and speed of development.
 
-## Learnings & Evolution
+## learnings & Evolution
 - **User Impact**: This was my first real experience creating something that people genuinely used and enjoyed in their daily lives.
 - **Maintenance Balance**: The project highlighted the challenge of balancing a successful app with the demands of life (first University, then a full-time 9-5 career).
-- **Current Status**: The app is currently not actively maintained and has been removed from the Google Play Store for that reason.
+- **Current Status**: The app is currently live on the iOS App Store under **Ongoing - Passive** maintenance. It was removed from Google Play due to non-active maintenance requirements.

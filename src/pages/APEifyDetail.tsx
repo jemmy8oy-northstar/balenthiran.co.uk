@@ -71,7 +71,7 @@ const APEifyDetail: React.FC = () => {
                                 </div>
                                 <div>
                                     <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase' }}>Status</div>
-                                    <div style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--accent-primary)' }}>Retired</div>
+                                    <div style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--accent-primary)' }}>Ongoing (Passive)</div>
                                 </div>
                             </div>
                         </div>

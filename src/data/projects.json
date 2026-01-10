@@ -2,10 +2,10 @@
     {
         "id": "apeify",
         "title": "APEify",
-        "status": "Retired (App Store Only)",
+        "status": "Ongoing (App Store)",
         "category": "Social & Creative",
         "path": "/projects/apeify",
-        "kanbanStatus": "On Going - Active",
+        "kanbanStatus": "On Going - Passive",
         "description": "My first major success story. An avatar creator that grew to 70k+ organic downloads through viral social trends.",
         "longDescription": "APEify is a character tracking and progression app that allows users to manage their character data, save progress via Firebase, and interact with a premium UI. It remains one of the core active projects in the ecosystem.",
         "links": {
