@@ -22,16 +22,16 @@ const About: React.FC = () => {
 
                     <div style={{ marginTop: '40px', display: 'flex', gap: '32px' }}>
                         <div>
-                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)' }}>500km</div>
-                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Running Goal '26</div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)' }}>70k+</div>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Organic Downloads</div>
                         </div>
                         <div>
-                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)' }}>26</div>
-                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Standups Planned</div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)' }}>100k</div>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Northstar Goal</div>
                         </div>
                         <div>
-                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)' }}>K8s</div>
-                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Infrastructure</div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)' }}>User-First</div>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Philosophy</div>
                         </div>
                     </div>
                 </div>
