@@ -13,17 +13,19 @@ const Home: React.FC = () => {
             <About />
             <Northstar />
 
-            <section id="projects-section">
-                <div className="container" style={{ marginBottom: '32px' }}>
-                    <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Projects & Ideas</h2>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px' }}>
-                        <p style={{ color: 'var(--text-secondary)' }}>Ongoing apps, retired projects, and experiments.</p>
-                        <Link to="/roadmap/projects" style={{ color: 'var(--accent-primary)', fontWeight: 600, fontSize: '0.9rem' }}>
-                            View Full Roadmap →
-                        </Link>
+            <section id="projects-section" className="section-padding">
+                <div className="container">
+                    <div style={{ marginBottom: '64px' }}>
+                        <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Projects & Ideas</h2>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px' }}>
+                            <p style={{ color: 'var(--text-secondary)' }}>Ongoing apps, retired projects, and experiments.</p>
+                            <Link to="/roadmap/projects" style={{ color: 'var(--accent-primary)', fontWeight: 600, fontSize: '0.9rem' }}>
+                                View Full Roadmap →
+                            </Link>
+                        </div>
                     </div>
+                    <ProjectGrid />
                 </div>
-                <ProjectGrid />
             </section>
 
             <section id="infrastructure" className="container section-padding">
