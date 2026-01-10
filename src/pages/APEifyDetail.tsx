@@ -4,89 +4,90 @@ import { Link } from 'react-router-dom';
 const APEifyDetail: React.FC = () => {
     return (
         <div className="container section-padding" style={{ marginTop: '80px' }}>
-            <header style={{ marginBottom: '64px' }}>
-                <Link to="/" style={{ color: 'var(--accent-primary)', display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '24px', fontWeight: 600 }}>
-                    ← Back to Portfolio
-                </Link>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '24px', marginBottom: '16px' }}>
-                    <div style={{ width: '80px', height: '80px', borderRadius: '20px', background: 'var(--bg-card)', padding: '15px' }}>
-                        <img src="/assets/images/apeify/apeify.png" alt="APEify" style={{ width: '100%', height: '100%' }} />
+            <Link to="/" style={{ color: 'var(--accent-primary)', display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '32px', fontWeight: 600 }}>
+                ← Back to Portfolio
+            </Link>
+
+            <div style={{ maxWidth: '900px' }}>
+                <header style={{ marginBottom: '64px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '24px', marginBottom: '24px' }}>
+                        <img src="/balenthiran.svg" alt="APEify" style={{ width: '80px', height: '80px', borderRadius: '20px' }} />
+                        <div>
+                            <h1 style={{ fontSize: '3.5rem', marginBottom: '8px' }}>APEify</h1>
+                            <div style={{ display: 'flex', gap: '12px' }}>
+                                <span className="glass" style={{ padding: '4px 12px', fontSize: '0.8rem', color: 'var(--accent-primary)', fontWeight: 600 }}>70,000+ Downloads</span>
+                                <span className="glass" style={{ padding: '4px 12px', fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Flutter & Firebase</span>
+                            </div>
+                        </div>
                     </div>
-                    <h1 style={{ fontSize: '3.5rem', color: 'var(--text-primary)' }}>APEify</h1>
-                </div>
-                <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '800px' }}>
-                    A robust character tracking and progression application built for power users.
-                </p>
-            </header>
+                </header>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '64px', marginBottom: '80px' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-                    <section>
-                        <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Overview</h2>
-                        <p style={{ color: 'var(--text-secondary)' }}>
-                            APEify is designed to handle complex character data with ease. Whether you're tracking stats, progression milestones, or gear, APEify provides a streamlined, premium interface to manage your digital assets.
-                        </p>
-                    </section>
-
-                    <section className="glass" style={{ padding: '32px' }}>
-                        <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Tech Stack</h2>
-                        <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)' }}>
-                            <li>• **Frontend**: High-performance mobile UI built with Flutter.</li>
-                            <li>• **Backend**: Real-time data sync and authentication via Firebase.</li>
-                            <li>• **UX**: Focus on speed, reliability, and "at a glance" information.</li>
-                        </ul>
-                    </section>
-                </div>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-                    <section>
-                        <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Key Features</h2>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                            <div style={{ display: 'flex', gap: '16px' }}>
-                                <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>✓</span>
-                                <div>
-                                    <strong style={{ color: 'var(--text-primary)' }}>Cloud Sync</strong>
-                                    <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Your data is always with you, synced across devices in real-time.</p>
-                                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '64px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+                        <section>
+                            <h2 style={{ fontSize: '1.8rem', marginBottom: '24px' }}>The lockdown success story</h2>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                APEify was my second major project, born during the COVID-19 lockdown. A close friend from school had the initial spark for an avatar creator and had begun development, but reached out for technical support to take it to the next level.
+                            </p>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                What followed was a true lesson in organic growth. We didn't spend a penny on marketing, yet the app found its audience naturally. People didn't just use the app; they identified with it, adopting their custom-created characters as profile pictures across social media.
+                            </p>
+                            <div className="glass" style={{ padding: '32px', borderLeft: '4px solid var(--accent-primary)' }}>
+                                <p style={{ fontStyle: 'italic', color: 'var(--text-primary)', fontSize: '1.1rem' }}>
+                                    "I've seen viral TikToks of users heading to Uniqlo specifically to print their APEify characters onto t-shirts. It was my first experience of making something that people actually lived with."
+                                </p>
                             </div>
-                            <div style={{ display: 'flex', gap: '16px' }}>
-                                <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>✓</span>
+                        </section>
+
+                        <section>
+                            <h2 style={{ fontSize: '1.8rem', marginBottom: '24px' }}>Technical Reflection</h2>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                From an engineering perspective, APEify is fascinating because it has no traditional backend. We used <strong>Flutter</strong> for the UI and <strong>Firebase</strong> as a "backend-as-a-service." The NoSQL database handled everything we needed.
+                            </p>
+                            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                Looking back, it's an interesting reflection on efficiency vs. complexity. For a project that hit 70k+ users, the Firebase-only stack proved remarkably resilient, allowing us to focus entirely on the user experience rather than server maintenance.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 style={{ fontSize: '1.8rem', marginBottom: '24px' }}>The Reality of Maintenance</h2>
+                            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                Maintaining a successful app alongside life—first University and now a full-time 9-5 job—is a skill in itself. While the app is no longer actively maintained and has been removed from Google Play, its legacy lives on in the tens of thousands of characters still out there in the digital world.
+                            </p>
+                        </section>
+                    </div>
+
+                    <aside style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                        <div className="glass" style={{ padding: '24px' }}>
+                            <h3 style={{ fontSize: '1.1rem', marginBottom: '16px' }}>Project Stats</h3>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                                 <div>
-                                    <strong style={{ color: 'var(--text-primary)' }}>Premium UI</strong>
-                                    <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>A clean, modern aesthetic that makes tracking a joy, not a chore.</p>
+                                    <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase' }}>Downloads</div>
+                                    <div style={{ fontSize: '1.2rem', fontWeight: 700 }}>70k+ (Organic)</div>
                                 </div>
-                            </div>
-                            <div style={{ display: 'flex', gap: '16px' }}>
-                                <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>✓</span>
                                 <div>
-                                    <strong style={{ color: 'var(--text-primary)' }}>Progression Insights</strong>
-                                    <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Visualize your growth with detailed character breakdowns.</p>
+                                    <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase' }}>Timeline</div>
+                                    <div style={{ fontSize: '1.2rem', fontWeight: 700 }}>Lockdown 2020</div>
+                                </div>
+                                <div>
+                                    <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase' }}>Status</div>
+                                    <div style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--accent-primary)' }}>Retired</div>
                                 </div>
                             </div>
                         </div>
-                    </section>
+
+                        <div className="glass" style={{ padding: '24px' }}>
+                            <h3 style={{ fontSize: '1.1rem', marginBottom: '16px' }}>Tech Stack</h3>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                <span style={{ background: 'rgba(99, 102, 241, 0.1)', color: 'var(--accent-primary)', padding: '4px 12px', borderRadius: '100px', fontSize: '0.8rem', fontWeight: 600 }}>Flutter</span>
+                                <span style={{ background: 'rgba(99, 102, 241, 0.1)', color: 'var(--accent-primary)', padding: '4px 12px', borderRadius: '100px', fontSize: '0.8rem', fontWeight: 600 }}>Firebase</span>
+                                <span style={{ background: 'rgba(99, 102, 241, 0.1)', color: 'var(--accent-primary)', padding: '4px 12px', borderRadius: '100px', fontSize: '0.8rem', fontWeight: 600 }}>NoSQL</span>
+                                <span style={{ background: 'rgba(99, 102, 241, 0.1)', color: 'var(--accent-primary)', padding: '4px 12px', borderRadius: '100px', fontSize: '0.8rem', fontWeight: 600 }}>App Store only</span>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
             </div>
-
-            <section className="glass" style={{ padding: '40px', textAlign: 'center' }}>
-                <h2 style={{ marginBottom: '32px', color: 'var(--text-primary)' }}>Development Insights</h2>
-                <div style={{
-                    position: 'relative',
-                    paddingBottom: '56.25%',
-                    height: 0,
-                    overflow: 'hidden',
-                    borderRadius: '16px',
-                    background: '#000'
-                }}>
-                    <iframe
-                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
-                        src="https://www.youtube.com/embed/8H3MIFCKje8"
-                        title="APEify - Project Showcase"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
-                </div>
-            </section>
         </div>
     );
 };
