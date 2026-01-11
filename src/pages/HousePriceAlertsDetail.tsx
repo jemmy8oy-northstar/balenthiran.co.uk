@@ -57,6 +57,18 @@ const HousePriceAlertsDetail: React.FC = () => {
                                 I built a custom ingestion engine that scrapes and monitors property listings at the source. This system identifies price reductions minutes after they are updated, providing a distinct competitive edge for buyers and renters waiting for the right entry point.
                             </p>
                         </section>
+                        <section>
+                            <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Infrastructure Evolution</h2>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
+                                As this project grew, I hit a technical wall with my initial hosting strategy. While **Ten Beer Plan** was running on AWS Elastic Beanstalk, I found it wasn't designed for running multiple independent applications side-by-side efficiently.
+                            </p>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
+                                I initially pivoted toward AWS ECS and started managing scheduled scrapers and new databases, but it became increasingly difficult to stay within the AWS Free Tier. Knowing that the free tier would eventually expire, and with my cloud knowledge expanding, I decided to take full control.
+                            </p>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
+                                This was the catalyst for moving away from managed vendor services and building my own **Cloud Cluster**. It gave me the flexibility to run complex scheduled jobs and multiple databases without the constraints of a specific vendor's ecosystem.
+                            </p>
+                        </section>
 
                         <section>
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The "User-First" Pause</h2>
