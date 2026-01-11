@@ -30,5 +30,13 @@
         "description": "Establish a newsletter for deep-dives and regular updates.",
         "longDescription": "Configuring Substack to host a bi-weekly or monthly newsletter for more in-depth technical and philosophical discussions.",
         "category": "Content"
+    },
+    {
+        "id": "refine-youtube-channel",
+        "title": "Refine YouTube Channel",
+        "status": "Backlog",
+        "description": "Optimize the YouTube channel presence.",
+        "longDescription": "Refining the channel description, designing a new cover photo, and ensuring consistent branding across the jemmy8oy YouTube page.",
+        "category": "Brand"
     }
 ]
