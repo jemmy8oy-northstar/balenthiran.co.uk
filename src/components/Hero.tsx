@@ -7,12 +7,23 @@ const Hero: React.FC = () => {
             textAlign: 'center',
             marginTop: '60px'
         }}>
+            <img
+                src="/balenthiran.svg"
+                alt="James Balenthiran Logo"
+                style={{
+                    width: '160px',
+                    height: '160px',
+                    display: 'inline-block',
+                    filter: 'drop-shadow(0 0 20px rgba(var(--accent-primary-rgb), 0.2))'
+                }}
+            />
             <h1 style={{
-                fontSize: 'clamp(3rem, 8vw, 6rem)',
+                fontSize: 'clamp(3.5rem, 8vw, 6rem)',
                 marginBottom: '24px',
                 background: 'linear-gradient(to bottom right, var(--text-primary) 30%, rgba(148, 163, 184, 0.5))',
                 WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
+                WebkitTextFillColor: 'transparent',
+                lineHeight: 1.1
             }}>
                 James Balenthiran
             </h1>
