@@ -10,7 +10,7 @@
     {
         "id": "dotnet-migration",
         "title": "Move to .NET",
-        "status": "In Progress",
+        "status": "Backlog",
         "description": "Migrating core services to .NET for improved performance and scalability.",
         "longDescription": "Transitioning the backend architecture to .NET to leverage its robust ecosystem and performance benefits.",
         "category": "Backend"
@@ -18,7 +18,7 @@
     {
         "id": "template-project",
         "title": "Create Template Project",
-        "status": "In Progress",
+        "status": "Backlog",
         "description": "Standardizing project starts with a robust template.",
         "longDescription": "Building a reusable template that includes authentication, logging, and deployment configs to speed up new app development.",
         "category": "Engineering"
