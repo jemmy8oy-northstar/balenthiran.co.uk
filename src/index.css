@@ -51,6 +51,10 @@ body {
   transition: var(--theme-transition);
 }
 
+main {
+  padding-top: 120px;
+}
+
 h1,
 h2,
 h3,
@@ -115,6 +119,10 @@ body::before {
 @media (max-width: 768px) {
   .section-padding {
     padding: 64px 0;
+  }
+
+  section {
+    margin-bottom: 24px;
   }
 
   .container {
