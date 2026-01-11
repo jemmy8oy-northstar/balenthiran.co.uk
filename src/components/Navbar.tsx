@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
-import { HashLink } from 'react-router-hash-link';
+import { Link, useLocation } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
-import useScrollSpy from '../hooks/useScrollSpy';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const activeSection = useScrollSpy(['about', 'strategy', 'projects', 'infrastructure', 'contact']);
+  const location = useLocation();
 
-  const getLinkStyle = (id: string) => ({
-    color: activeSection === id ? 'var(--accent-primary)' : 'var(--text-secondary)',
-    fontWeight: activeSection === id ? 700 : 500,
-    transition: 'all 0.3s ease',
-    position: 'relative' as const,
-    display: 'flex',
-    flexDirection: 'column' as const,
-    alignItems: 'center'
-  });
-
-  const scrollWithOffset = (el: HTMLElement) => {
-    const yOffset = -100; // Offset for fixed navbar
-    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({ top: y, behavior: 'smooth' });
+  const getLinkStyle = (path: string) => {
+    const isActive = location.pathname === path || (path === '/roadmap/projects' && location.pathname.startsWith('/roadmap'));
+    return {
+      color: isActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
+      fontWeight: isActive ? 700 : 500,
+      transition: 'all 0.3s ease',
+      position: 'relative' as const,
+      display: 'flex',
+      flexDirection: 'column' as const,
+      alignItems: 'center'
+    };
   };
+
+  const isActive = (path: string) => location.pathname === path || (path === '/roadmap/projects' && location.pathname.startsWith('/roadmap'));
+
 
   const ActiveDot = () => (
     <div style={{
@@ -64,26 +63,18 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className={`nav-links ${isMenuOpen ? 'open' : ''}`} style={{ display: 'flex', gap: '24px', fontSize: '0.85rem', alignItems: 'center' }}>
-        <HashLink replace smooth to="/#about" scroll={scrollWithOffset} style={getLinkStyle('about')}>
-          About
-          {activeSection === 'about' && <ActiveDot />}
-        </HashLink>
-        <HashLink replace smooth to="/#strategy" scroll={scrollWithOffset} style={getLinkStyle('strategy')}>
-          Strategy
-          {activeSection === 'strategy' && <ActiveDot />}
-        </HashLink>
-        <HashLink replace smooth to="/#projects" scroll={scrollWithOffset} style={getLinkStyle('projects')}>
-          Projects
-          {activeSection === 'projects' && <ActiveDot />}
-        </HashLink>
-        <HashLink replace smooth to="/#infrastructure" scroll={scrollWithOffset} style={getLinkStyle('infrastructure')}>
-          Infrastructure
-          {activeSection === 'infrastructure' && <ActiveDot />}
-        </HashLink>
-        <HashLink replace smooth to="/#contact" scroll={scrollWithOffset} style={getLinkStyle('contact')}>
-          Contact
-          {activeSection === 'contact' && <ActiveDot />}
-        </HashLink>
+        <Link to="/" onClick={() => setIsMenuOpen(false)} style={getLinkStyle('/')}>
+          Home
+          {isActive('/') && <ActiveDot />}
+        </Link>
+        <Link to="/roadmap/projects" onClick={() => setIsMenuOpen(false)} style={getLinkStyle('/roadmap/projects')}>
+          Boards
+          {isActive('/roadmap/projects') && <ActiveDot />}
+        </Link>
+        <Link to="/youtube" onClick={() => setIsMenuOpen(false)} style={getLinkStyle('/youtube')}>
+          YouTube
+          {isActive('/youtube') && <ActiveDot />}
+        </Link>
         <ThemeToggle />
       </div>
     </nav>
