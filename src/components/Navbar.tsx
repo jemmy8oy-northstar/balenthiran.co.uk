@@ -1,8 +1,10 @@
+import React, { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import ThemeToggle from './ThemeToggle';
 import useScrollSpy from '../hooks/useScrollSpy';
 
 const Navbar: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const activeSection = useScrollSpy(['about', 'strategy', 'projects', 'infrastructure', 'contact']);
 
   const getLinkStyle = (id: string) => ({
@@ -47,9 +49,21 @@ const Navbar: React.FC = () => {
       zIndex: 1000,
       backdropFilter: 'blur(20px)',
       background: 'var(--bg-card)',
-      borderColor: 'var(--glass-border)'
+      borderColor: 'var(--glass-border)',
+      flexDirection: 'column' as const
     }}>
-      <div style={{ display: 'flex', gap: '24px', fontSize: '0.85rem', alignItems: 'center' }}>
+      <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ fontWeight: 800, fontSize: '1.2rem', color: 'var(--text-primary)', display: 'none' }} className="mobile-logo">J8.</div>
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          style={{ display: 'none', color: 'var(--text-primary)', fontSize: '1.5rem', padding: '4px' }}
+          className="mobile-toggle"
+        >
+          {isMenuOpen ? '✕' : '☰'}
+        </button>
+      </div>
+
+      <div className={`nav-links ${isMenuOpen ? 'open' : ''}`} style={{ display: 'flex', gap: '24px', fontSize: '0.85rem', alignItems: 'center' }}>
         <HashLink replace smooth to="/#about" scroll={scrollWithOffset} style={getLinkStyle('about')}>
           About
           {activeSection === 'about' && <ActiveDot />}

@@ -10,7 +10,7 @@ const Northstar: React.FC = () => {
 
     return (
         <section id="strategy" className="container section-padding">
-            <div className="glass" style={{
+            <div className="glass mobile-tight-padding" style={{
                 padding: '64px',
                 background: 'linear-gradient(225deg, rgba(99, 102, 241, 0.03) 0%, rgba(168, 85, 247, 0.03) 100%)',
             }}>
@@ -43,8 +43,8 @@ const Northstar: React.FC = () => {
 
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <h3 style={{ marginBottom: '32px', fontSize: '1.2rem', color: 'var(--text-primary)' }}>Milestones to 100k Monthly Users</h3>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', position: 'relative', padding: '0 10px' }}>
-                            <div style={{
+                        <div className="milestones-container" style={{ display: 'flex', justifyContent: 'space-between', position: 'relative', padding: '0 10px' }}>
+                            <div className="milestones-connector" style={{
                                 position: 'absolute',
                                 top: '20px',
                                 left: '0',

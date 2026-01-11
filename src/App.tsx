@@ -11,6 +11,7 @@ import ScrollToTop from './components/ScrollToTop'
 import { ThemeProvider } from './context/ThemeContext'
 import YouTubeDetail from './pages/YouTubeDetail'
 import HousePriceAlertsDetail from './pages/HousePriceAlertsDetail'
+import YouTubeBoard from './pages/YouTubeBoard'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route path="/projects/tenbeerplan" element={<TenBeerPlanDetail />} />
               <Route path="/roadmap/projects" element={<ProjectBoard />} />
               <Route path="/roadmap/devops" element={<DevOpsBoard />} />
+              <Route path="/roadmap/youtube" element={<YouTubeBoard />} />
               <Route path="/projects/house-price-alerts" element={<HousePriceAlertsDetail />} />
               <Route path="/youtube" element={<YouTubeDetail />} />
             </Routes>

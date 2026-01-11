@@ -2,6 +2,7 @@ import React, { useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import projectsData from '../data/projects.json';
 import devopsData from '../data/devops.json';
+import youtubeData from '../data/youtube.json';
 
 const PROJECT_COLUMNS = [
     'Backlog',
@@ -19,19 +20,30 @@ const DEVOPS_COLUMNS = [
     'Done'
 ];
 
+const YOUTUBE_COLUMNS = [
+    'Backlog',
+    'Needs Editing',
+    'Needs Thumbnail',
+    'Uploaded'
+];
+
 interface KanbanBoardProps {
-    initialType: 'project' | 'devops';
+    initialType: 'project' | 'devops' | 'youtube';
 }
 
 const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     const columns = useMemo(() => {
-        return initialType === 'project' ? PROJECT_COLUMNS : DEVOPS_COLUMNS;
+        if (initialType === 'project') return PROJECT_COLUMNS;
+        if (initialType === 'devops') return DEVOPS_COLUMNS;
+        return YOUTUBE_COLUMNS;
     }, [initialType]);
 
     const data = useMemo(() => {
-        return initialType === 'project' ? projectsData : devopsData;
+        if (initialType === 'project') return projectsData;
+        if (initialType === 'devops') return devopsData;
+        return youtubeData;
     }, [initialType]);
 
     const filteredItems = useMemo(() => {
@@ -81,6 +93,19 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
                             transition: 'all 0.3s ease'
                         }}>
                             Engineering Board
+                        </div>
+                    </Link>
+                    <Link to="/roadmap/youtube" style={{ textDecoration: 'none' }}>
+                        <div style={{
+                            padding: '6px 16px',
+                            fontSize: '0.8rem',
+                            fontWeight: 600,
+                            background: initialType === 'youtube' ? 'var(--accent-primary)' : 'transparent',
+                            color: initialType === 'youtube' ? '#fff' : 'var(--text-secondary)',
+                            borderRadius: '8px',
+                            transition: 'all 0.3s ease'
+                        }}>
+                            Content Board
                         </div>
                     </Link>
                 </div>

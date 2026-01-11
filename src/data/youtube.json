@@ -1,0 +1,44 @@
+[
+    {
+        "id": "intro-video",
+        "title": "Channel Intro: Building in Public",
+        "status": "Uploaded",
+        "description": "An introduction to the jemmy8oy channel and the Project Northstar philosophy.",
+        "category": "Strategy"
+    },
+    {
+        "id": "germy-post-mortem",
+        "title": "Germy: My First Ever App Rejection",
+        "status": "Uploaded",
+        "description": "Deep dive into the 2020 lockdown project and why it didn't make it to the App Store.",
+        "category": "Story"
+    },
+    {
+        "id": "oracle-k8s-setup",
+        "title": "Free K8s: Setting up Oracle Cloud Infrastructure",
+        "status": "Needs Thumbnail",
+        "description": "Technical walkthrough of setting up a 4-node ARM cluster for free.",
+        "category": "Tutorial"
+    },
+    {
+        "id": "ten-beer-plan-logic",
+        "title": "The Ten Beer Plan: Coding the Logic",
+        "status": "Needs Editing",
+        "description": "Behind the scenes of the drink logging and running conversion engine.",
+        "category": "Engineering"
+    },
+    {
+        "id": "house-price-scrapers",
+        "title": "Scraping the Property Market",
+        "status": "Backlog",
+        "description": "How I built the ingestion engine for House Price Alerts.",
+        "category": "Engineering"
+    },
+    {
+        "id": "apeify-scaling",
+        "title": "70k Users with Zero Backend",
+        "status": "Backlog",
+        "description": "Reflecting on the technical success of using Firebase for APEify.",
+        "category": "Story"
+    }
+]

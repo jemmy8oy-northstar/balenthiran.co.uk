@@ -28,7 +28,7 @@ const InterestForm: React.FC = () => {
                 </p>
 
                 {!submitted ? (
-                    <form onSubmit={handleSubmit} style={{
+                    <form onSubmit={handleSubmit} className="contact-form" style={{
                         display: 'flex',
                         gap: '12px',
                         maxWidth: '500px',

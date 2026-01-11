@@ -29,20 +29,23 @@ const Home: React.FC = () => {
             </section>
 
             <section id="infrastructure" className="container section-padding">
-                <div className="glass" style={{ padding: '64px', textAlign: 'center' }}>
+                <div className="glass mobile-tight-padding" style={{ padding: '64px', textAlign: 'center' }}>
                     <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Engineering & DevOps</h2>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
                         The engine room of the ecosystem. I'm building a robust, transparent infrastructure for all my current and future apps.
                     </p>
-                    <Link to="/roadmap/devops" className="glass" style={{
-                        padding: '16px 32px',
-                        background: 'var(--accent-primary)',
-                        color: '#fff',
-                        fontWeight: 600,
-                        borderRadius: '50px'
-                    }}>
-                        View Engineering Roadmap
-                    </Link>
+                    <div className="hero-actions" style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Link to="/roadmap/devops" className="glass" style={{
+                            padding: '16px 32px',
+                            background: 'var(--accent-primary)',
+                            color: '#fff',
+                            fontWeight: 600,
+                            borderRadius: '50px',
+                            display: 'inline-block'
+                        }}>
+                            View Engineering Roadmap
+                        </Link>
+                    </div>
                 </div>
             </section>
 
