@@ -20,4 +20,5 @@ These instructions are tailored for Antigravity AI to ensure consistency and qua
 ## Workflow Rules
 - **Task Tracking**: Always update `task.md` before starting a new phase.
 - **Planning**: Create/update `implementation_plan.md` for any non-trivial architectural changes.
-- **Verification**: Summarize work in `walkthrough.md` with proof of testing (screenshots/recordings where possible).
+- **Verification**: Summarize work in `walkthrough.md` with proof of testing (code snippets/explanation). **Do not use the browser tool for verification** unless explicitly requested.
+- **Strictly No Browser**: Avoid `browser_subagent` or `read_browser_page` tools.
