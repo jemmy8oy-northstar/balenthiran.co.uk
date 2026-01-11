@@ -49,12 +49,22 @@ const HousePriceAlertsDetail: React.FC = () => {
                 <div className="detail-grid" style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr', gap: '64px', marginBottom: '80px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
                         <section>
-                            <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The "User-First" Pause</h2>
-                            <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
-                                Technically, House Price Alerts is almost at the finish line. The core engine—which tracks price fluctuations and sends notifications—is functional. However, in line with the Project Northstar philosophy, I've chosen to pause development until there's proven user demand.
+                            <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Project Overview</h2>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
+                                While most property portals excel at alerting users to new listings, they often fail to provide transparency when an existing listing drops in price. **House Price Alerts** fills this specific market gap by tracking fluctuations that typical vendors overlook.
                             </p>
-                            <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
-                                This project is designed to be a heavy lifter in terms of background processing and real-time data ingestion. To ensure the engineering effort matches market interest, the official release is pending community validation.
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
+                                I built a custom ingestion engine that scrapes and monitors property listings at the source. This system identifies price reductions minutes after they are updated, providing a distinct competitive edge for buyers and renters waiting for the right entry point.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The "User-First" Pause</h2>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
+                                Technically, the core engine is 95% functional. It tracks fluctuations and manages notification queues effectively. However, in line with my **Project Northstar** philosophy, I have paused the final deployment.
+                            </p>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
+                                To avoid "over-engineering in a vacuum," I am waiting for proven community interest before scaling the background processing infrastructure required for a public launch.
                             </p>
                         </section>
 
