@@ -61,10 +61,10 @@ const HousePriceAlertsDetail: React.FC = () => {
                         <section>
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The "User-First" Pause</h2>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
-                                Technically, the core engine is 95% functional. It tracks fluctuations and manages notification queues effectively. However, in line with my **Project Northstar** philosophy, I have paused the final deployment.
+                                Technically, the core engine is 95% functional. It tracks fluctuations and manages notification queues effectively. However, as I approached deployment, I realized that building the technology was only half the battle. Pushing to release without an audience felt like an exercise in over-engineering without direction.
                             </p>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
-                                To avoid "over-engineering in a vacuum," I am waiting for proven community interest before scaling the background processing infrastructure required for a public launch.
+                                This specific moment was the birth of **Project Northstar**. I recognized that before launching more standalone products, I needed to build a platform to discover user interest, market my ideas, and ensure my development effort is always driven by where the community's demand actually lies.
                             </p>
                         </section>
 
