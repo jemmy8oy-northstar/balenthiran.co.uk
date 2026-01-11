@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import projectsData from '../data/projects.json';
 import devopsData from '../data/devops.json';
 import youtubeData from '../data/youtube.json';
+import adminData from '../data/admin.json';
 
 const PROJECT_COLUMNS = [
     'Backlog',
@@ -27,8 +28,14 @@ const YOUTUBE_COLUMNS = [
     'Uploaded'
 ];
 
+const ADMIN_COLUMNS = [
+    'Backlog',
+    'In Progress',
+    'Done'
+];
+
 interface KanbanBoardProps {
-    initialType: 'project' | 'devops' | 'youtube';
+    initialType: 'project' | 'devops' | 'youtube' | 'admin';
 }
 
 const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
@@ -37,12 +44,14 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
     const columns = useMemo(() => {
         if (initialType === 'project') return PROJECT_COLUMNS;
         if (initialType === 'devops') return DEVOPS_COLUMNS;
+        if (initialType === 'admin') return ADMIN_COLUMNS;
         return YOUTUBE_COLUMNS;
     }, [initialType]);
 
     const data = useMemo(() => {
         if (initialType === 'project') return projectsData;
         if (initialType === 'devops') return devopsData;
+        if (initialType === 'admin') return adminData;
         return youtubeData;
     }, [initialType]);
 
@@ -106,6 +115,19 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
                             transition: 'all 0.3s ease'
                         }}>
                             Content Board
+                        </div>
+                    </Link>
+                    <Link to="/roadmap/admin" style={{ textDecoration: 'none' }}>
+                        <div style={{
+                            padding: '6px 16px',
+                            fontSize: '0.8rem',
+                            fontWeight: 600,
+                            background: initialType === 'admin' ? 'var(--accent-primary)' : 'transparent',
+                            color: initialType === 'admin' ? '#fff' : 'var(--text-secondary)',
+                            borderRadius: '8px',
+                            transition: 'all 0.3s ease'
+                        }}>
+                            Platform Board
                         </div>
                     </Link>
                 </div>

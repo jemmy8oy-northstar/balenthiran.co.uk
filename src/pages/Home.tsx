@@ -13,7 +13,7 @@ const Home: React.FC = () => {
             <About />
             <Northstar />
 
-            <section id="projects" className="section-padding">
+            <section id="projects">
                 <div className="container">
                     <div style={{ marginBottom: '64px' }}>
                         <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Projects & Ideas</h2>
@@ -30,11 +30,11 @@ const Home: React.FC = () => {
 
             <section id="infrastructure" className="container">
                 <div className="glass mobile-tight-padding" style={{ padding: '64px', textAlign: 'center' }}>
-                    <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Engineering & DevOps</h2>
+                    <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Engineering & Platform</h2>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
-                        The engine room of the ecosystem. I'm building a robust, transparent infrastructure for all my current and future apps.
+                        The engine room of the ecosystem. Tracking technical infrastructure and jemmy8oy brand growth.
                     </p>
-                    <div className="hero-actions" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <div className="hero-actions" style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
                         <Link to="/roadmap/devops" className="glass" style={{
                             padding: '16px 32px',
                             background: 'var(--accent-primary)',
@@ -44,6 +44,17 @@ const Home: React.FC = () => {
                             display: 'inline-block'
                         }}>
                             View Engineering Roadmap
+                        </Link>
+                        <Link to="/roadmap/admin" className="glass" style={{
+                            padding: '16px 32px',
+                            background: 'rgba(255, 255, 255, 0.05)',
+                            color: 'var(--text-primary)',
+                            fontWeight: 600,
+                            borderRadius: '50px',
+                            display: 'inline-block',
+                            border: '1px solid var(--glass-border)'
+                        }}>
+                            View Platform Roadmap
                         </Link>
                     </div>
                 </div>

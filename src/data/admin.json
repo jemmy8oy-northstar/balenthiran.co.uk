@@ -1,0 +1,34 @@
+[
+    {
+        "id": "setup-tiktok",
+        "title": "Setup TikTok",
+        "status": "Backlog",
+        "description": "Establish a presence on TikTok for short-form video content.",
+        "longDescription": "Creating and configuring the jemmy8oy TikTok account to reach a broader audience with bitesize engineering and lifestyle content.",
+        "category": "Brand"
+    },
+    {
+        "id": "setup-instagram",
+        "title": "Setup Instagram",
+        "status": "Backlog",
+        "description": "Establish a presence on Instagram for visual storytelling.",
+        "longDescription": "Setting up the Instagram profile to share behind-the-scenes content, milestones, and community engagement.",
+        "category": "Brand"
+    },
+    {
+        "id": "setup-x",
+        "title": "Setup X (Twitter)",
+        "status": "Backlog",
+        "description": "Establish a presence on X for real-time updates and networking.",
+        "longDescription": "Creating the X account to engage with the tech community, share quick thoughts, and provide project updates.",
+        "category": "Networking"
+    },
+    {
+        "id": "setup-substack",
+        "title": "Setup Substack",
+        "status": "Backlog",
+        "description": "Establish a newsletter for deep-dives and regular updates.",
+        "longDescription": "Configuring Substack to host a bi-weekly or monthly newsletter for more in-depth technical and philosophical discussions.",
+        "category": "Content"
+    }
+]
