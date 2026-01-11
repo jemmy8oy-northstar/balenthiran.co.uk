@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
     return (
-        <section id="about" className="container section-padding">
+        <section id="about" className="container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '64px', alignItems: 'center' }}>
                 <div>
                     <h2 style={{ fontSize: '3rem', marginBottom: '24px', lineHeight: 1.1 }}>
