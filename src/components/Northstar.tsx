@@ -9,7 +9,7 @@ const Northstar: React.FC = () => {
     ];
 
     return (
-        <section id="strategy" className="container section-padding">
+        <section id="strategy" className="container">
             <div className="glass mobile-tight-padding" style={{
                 padding: '64px',
                 background: 'linear-gradient(225deg, rgba(99, 102, 241, 0.03) 0%, rgba(168, 85, 247, 0.03) 100%)',

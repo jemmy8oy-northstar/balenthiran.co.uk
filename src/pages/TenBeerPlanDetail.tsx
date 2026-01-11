@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const TenBeerPlanDetail: React.FC = () => {
     return (
-        <div className="container section-padding" style={{ marginTop: '80px' }}>
+        <div className="container" style={{ marginTop: '80px' }}>
             <div style={{ maxWidth: '1100px' }}>
                 <header style={{ marginBottom: '64px' }}>
                     <Link to="/" style={{ color: 'var(--accent-primary)', display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '24px', fontWeight: 600 }}>

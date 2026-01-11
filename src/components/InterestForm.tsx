@@ -15,7 +15,7 @@ const InterestForm: React.FC = () => {
     };
 
     return (
-        <section id="contact" className="container section-padding">
+        <section id="contact" className="container">
             <div className="glass" style={{
                 padding: '64px',
                 textAlign: 'center',

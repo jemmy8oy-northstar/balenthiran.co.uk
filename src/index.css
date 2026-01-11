@@ -114,16 +114,8 @@ body::before {
   padding: 0 24px;
 }
 
-.section-padding {
-  padding: 120px 0;
-}
-
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .section-padding {
-    padding: 64px 0;
-  }
-
   section {
     margin-bottom: 24px;
   }

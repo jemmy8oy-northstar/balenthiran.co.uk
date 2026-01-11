@@ -3,7 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 
 const Hero: React.FC = () => {
     return (
-        <section className="container section-padding" style={{
+        <section className="container" style={{
             textAlign: 'center',
             marginTop: '60px'
         }}>

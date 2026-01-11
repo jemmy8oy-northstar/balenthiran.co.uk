@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const APEifyDetail: React.FC = () => {
     return (
-        <div className="container section-padding" style={{ marginTop: '80px' }}>
+        <div className="container" style={{ marginTop: '80px' }}>
             <Link to="/" style={{ color: 'var(--accent-primary)', display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '32px', fontWeight: 600 }}>
                 ← Back to Portfolio
             </Link>

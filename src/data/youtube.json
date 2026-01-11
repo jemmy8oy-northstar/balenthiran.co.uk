@@ -1,14 +1,14 @@
 [
     {
         "id": "intro-video",
-        "title": "Channel Intro: Building in Public",
+        "title": "Welcome To My Channel",
         "status": "Uploaded",
         "description": "An introduction to the jemmy8oy channel and the Project Northstar philosophy.",
         "category": "Strategy"
     },
     {
-        "id": "germy-post-mortem",
-        "title": "Germy: My First Ever App Rejection",
+        "id": "germy-video",
+        "title": "Germy - My First Ever App!",
         "status": "Uploaded",
         "description": "Deep dive into the 2020 lockdown project and why it didn't make it to the App Store.",
         "category": "Story"
@@ -16,14 +16,14 @@
     {
         "id": "oracle-k8s-setup",
         "title": "Free K8s: Setting up Oracle Cloud Infrastructure",
-        "status": "Needs Thumbnail",
+        "status": "Backlog",
         "description": "Technical walkthrough of setting up a 4-node ARM cluster for free.",
         "category": "Tutorial"
     },
     {
         "id": "ten-beer-plan-logic",
         "title": "The Ten Beer Plan: Coding the Logic",
-        "status": "Needs Editing",
+        "status": "Backlog",
         "description": "Behind the scenes of the drink logging and running conversion engine.",
         "category": "Engineering"
     },

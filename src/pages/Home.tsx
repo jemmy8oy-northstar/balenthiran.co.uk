@@ -28,7 +28,7 @@ const Home: React.FC = () => {
                 </div>
             </section>
 
-            <section id="infrastructure" className="container section-padding">
+            <section id="infrastructure" className="container">
                 <div className="glass mobile-tight-padding" style={{ padding: '64px', textAlign: 'center' }}>
                     <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Engineering & DevOps</h2>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
