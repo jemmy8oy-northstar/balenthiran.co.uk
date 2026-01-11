@@ -51,7 +51,7 @@ const HousePriceAlertsDetail: React.FC = () => {
                         <section>
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Project Overview</h2>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
-                                While most property portals excel at alerting users to new listings, they often fail to provide transparency when an existing listing drops in price. **House Price Alerts** fills this specific market gap by tracking fluctuations that typical vendors overlook.
+                                While most property portals excel at alerting users to new listings, they often fail to provide transparency when an existing listing drops in price. <strong>House Price Alerts</strong> fills this specific market gap by tracking fluctuations that typical vendors overlook.
                             </p>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
                                 I built a custom ingestion engine that scrapes and monitors property listings at the source. This system identifies price reductions minutes after they are updated, providing a distinct competitive edge for buyers and renters waiting for the right entry point.
@@ -60,13 +60,13 @@ const HousePriceAlertsDetail: React.FC = () => {
                         <section>
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Infrastructure Evolution</h2>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
-                                As this project grew, I hit a technical wall with my initial hosting strategy. While **Ten Beer Plan** was running on AWS Elastic Beanstalk, I found it wasn't designed for running multiple independent applications side-by-side efficiently.
+                                As this project grew, I hit a technical wall with my initial hosting strategy. While <strong>Ten Beer Plan</strong> was running on AWS Elastic Beanstalk, I found it wasn't designed for running multiple independent applications side-by-side efficiently.
                             </p>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
                                 I initially pivoted toward AWS ECS and started managing scheduled scrapers and new databases, but it became increasingly difficult to stay within the AWS Free Tier. Knowing that the free tier would eventually expire, and with my cloud knowledge expanding, I decided to take full control.
                             </p>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
-                                This was the catalyst for moving away from managed vendor services and building my own **Cloud Cluster**. It gave me the flexibility to run complex scheduled jobs and multiple databases without the constraints of a specific vendor's ecosystem.
+                                This was the catalyst for moving away from managed vendor services and building my own <strong>Cloud Cluster</strong>. It gave me the flexibility to run complex scheduled jobs and multiple databases without the constraints of a specific vendor's ecosystem.
                             </p>
                         </section>
 
@@ -76,7 +76,7 @@ const HousePriceAlertsDetail: React.FC = () => {
                                 Technically, the core engine is 95% functional. It tracks fluctuations and manages notification queues effectively. However, as I approached deployment, I realized that building the technology was only half the battle. Pushing to release without an audience felt like an exercise in over-engineering without direction.
                             </p>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
-                                This specific moment was the birth of **Project Northstar**. I recognized that before launching more standalone products, I needed to build a platform to discover user interest, market my ideas, and ensure my development effort is always driven by where the community's demand actually lies.
+                                This specific moment was the birth of <strong>Project Northstar</strong>. I recognized that before launching more standalone products, I needed to build a platform to discover user interest, market my ideas, and ensure my development effort is always driven by where the community's demand actually lies.
                             </p>
                         </section>
 

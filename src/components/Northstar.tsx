@@ -27,7 +27,7 @@ const Northstar: React.FC = () => {
                         </span>
                         <h2 style={{ fontSize: '2.5rem', marginTop: '16px', marginBottom: '24px', color: 'var(--text-primary)' }}>Project Northstar</h2>
                         <p style={{ color: 'var(--text-secondary)', marginBottom: '24px' }}>
-                            Building software is secondary to building user interest. Project Northstar is my commitment to being **user-driven**. No more building in isolation—I'm focusing on demand-first development.
+                            Building software is secondary to building user interest. Project Northstar is my commitment to being <strong>user-driven</strong>. No more building in isolation—I'm focusing on demand-first development.
                         </p>
                         <div style={{ display: 'flex', gap: '24px' }}>
                             <div className="glass" style={{ padding: '16px 24px', flex: 1 }}>

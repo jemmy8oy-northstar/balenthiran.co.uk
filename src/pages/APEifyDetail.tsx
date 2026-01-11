@@ -71,7 +71,7 @@ const APEifyDetail: React.FC = () => {
                         <section>
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '24px' }}>Technical Reflection</h2>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                                From an engineering perspective, APEify is an important reflection because it has no traditional backend. We used **Flutter** for the UI and **Firebase** as a "backend-as-a-service," with the NoSQL database handling everything we needed.
+                                From an engineering perspective, APEify is an important reflection because it has no traditional backend. We used <strong>Flutter</strong> for the UI and <strong>Firebase</strong> as a "backend-as-a-service," with the NoSQL database handling everything we needed.
                             </p>
                             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8' }}>
                                 It is an interesting reflection on how powerful these tools can be for those starting out. Google's ecosystem effectively bridged the gap for us as inexperienced developers, allowing us to build a production-ready app that handled 70k+ organic users by focusing entirely on what the user sees.
