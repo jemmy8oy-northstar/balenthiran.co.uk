@@ -74,9 +74,9 @@
     {
         "id": "earn-your-drinks",
         "title": "Earn Your Drinks",
-        "status": "Idea",
+        "status": "In Development",
         "category": "Just for Fun",
-        "kanbanStatus": "Backlog",
+        "kanbanStatus": "On Going - Active",
         "description": "Log your drinks and earn them back through exercise (running or cycling).",
         "longDescription": "A simple offline app built for a friend. Log your drinks in real-time and commit to a corresponding run or cycle. Designed for iterative testing and community-driven feature ideas.",
         "links": {
