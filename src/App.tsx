@@ -13,6 +13,7 @@ import YouTubeDetail from './pages/YouTubeDetail'
 import HousePriceAlertsDetail from './pages/HousePriceAlertsDetail'
 import YouTubeBoard from './pages/YouTubeBoard'
 import AdminBoard from './pages/AdminBoard'
+import EarnYourDrinksDetail from './pages/EarnYourDrinksDetail'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               <Route path="/roadmap/youtube" element={<YouTubeBoard />} />
               <Route path="/roadmap/admin" element={<AdminBoard />} />
               <Route path="/projects/house-price-alerts" element={<HousePriceAlertsDetail />} />
+              <Route path="/projects/earn-your-drinks" element={<EarnYourDrinksDetail />} />
               <Route path="/youtube" element={<YouTubeDetail />} />
             </Routes>
           </main>
