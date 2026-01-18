@@ -13,7 +13,7 @@ const EarnYourDrinksDetail: React.FC = () => {
                         <div style={{ width: '80px', height: '80px', borderRadius: '20px', background: 'var(--bg-card)', padding: '15px' }}>
                             <img src="/balenthiran.svg" alt="Earn Your Drinks" style={{ width: '100%', height: '100%' }} />
                         </div>
-                        <h1 style={{ fontSize: '3.5rem', color: 'var(--text-primary)' }}>Earn Your Drinks</h1>
+                        <h1 style={{ fontSize: '3.5rem', color: 'var(--text-primary)' }}>Earn Your Beers</h1>
                     </div>
                     <div style={{ display: 'flex', gap: '12px', marginBottom: '24px' }}>
                         <span style={{
@@ -48,13 +48,13 @@ const EarnYourDrinksDetail: React.FC = () => {
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The Origin Story</h2>
 
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
-                                This project started, as many great (and drinking-related) ideas do, with a simple ritual. Every time I have a drink, I log it in my notes app. Then, I offset those drinks by running or cycling.
+                                This project started, as many great (and drinking-related) ideas do, with a conversation. My friend James has a unique ritual: every time he has a drink, he logs it in his notes app. Then, he offsets those drinks by running or cycling.
                             </p>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
-                                It's a simple exchange economy: <strong>5 pints might cost me a 5k run or a 20k cycle</strong>.
+                                It's a simple exchange economy: <strong>5 pints might cost him a 5k run or a 20k cycle</strong>.
                             </p>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
-                                I jokingly mentioned turning this manual process into an app, and then thought, "Why not?" It’s a perfect, low-stakes project to kick off the year. No complex business logic, no investors—just a fun utility to solve a very specific problem.
+                                He jokingly mentioned turning this manual process into an app, and I thought, "Why not?" It’s a perfect, low-stakes project to kick off the year. No complex business logic—just a fun utility to solve a very specific problem for one person.
                             </p>
                         </section>
 
@@ -64,7 +64,7 @@ const EarnYourDrinksDetail: React.FC = () => {
                                 I know what you're thinking. <em>"Doesn't Garmin already do this? Doesn't Strava track calories?"</em>
                             </p>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
-                                Yes. Absolutely. You can track net calories on a dozen different platforms. But that’s not the point. This isn't about perfectly accurate caloric deficit tracking; it’s about the <strong>fun of the trade-off</strong>. It's about looking at your phone and seeing exactly how many kilometers I "owe" the beer gods.
+                                Yes. Absolutely. You can track net calories on a dozen different platforms. But that’s not the point. This isn't about perfectly accurate caloric deficit tracking; it’s about the <strong>fun of the trade-off</strong>. It's about looking at your phone and seeing exactly how many kilometers you "owe" the beer gods.
                             </p>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '0' }}>
                                 Sometimes, you just build things because you can. That’s enough of a reason.
@@ -74,7 +74,7 @@ const EarnYourDrinksDetail: React.FC = () => {
                         <section>
                              <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>What's Next?</h2>
                              <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
-                                I'm building this out as a simple MVP. If it turns out other people want to "earn their beers" too, I might expand it with more features. For now, watch this space (and my GitHub) for updates.
+                                I'm building this out as a simple MVP. If it turns out other people want to "earn their beers" too, I might expand it with more features. For now, watch this space for updates.
                              </p>
                         </section>
 
@@ -104,7 +104,7 @@ const EarnYourDrinksDetail: React.FC = () => {
                 </div>
 
                 <section className="glass" style={{ padding: '40px', textAlign: 'center' }}>
-                    <h2 style={{ marginBottom: '32px', color: 'var(--text-primary)' }}>Project Update</h2>
+                    <h2 style={{ marginBottom: '32px', color: 'var(--text-primary)' }}>Announcing First Project of the Year</h2>
                     <div style={{
                         maxWidth: '800px',
                         margin: '0 auto',
@@ -118,7 +118,7 @@ const EarnYourDrinksDetail: React.FC = () => {
                         <iframe
                             style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
                             src="https://www.youtube.com/embed/gPzL90ZtClA?si=DM-xDLS6qnXCmLOi"
-                            title="Earn Your Drinks Update"
+                            title="Announcing First Project of the Year - Earn Your Beers!"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         ></iframe>
