@@ -54,5 +54,13 @@
         "description": "A transparent board for users to post and vote on new app features or project ideas.",
         "longDescription": "Closing the feedback loop by allowing the community to directly influence the nursery roadmap and prioritize new builds.",
         "category": "Product"
+    },
+    {
+        "id": "sprint-status-history",
+        "title": "Sprint Status History",
+        "status": "Backlog",
+        "description": "Indicate changes in task status between sprints on the website.",
+        "longDescription": "Implement a feature on the website to visualize how tasks move between statuses across sprints, providing historical context and progress tracking.",
+        "category": "DevOps"
     }
 ]
