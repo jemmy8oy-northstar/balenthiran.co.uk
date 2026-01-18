@@ -54,5 +54,12 @@
         "status": "Needs Thumbnail",
         "description": "Revealing the concept for 'Earn Your Beers' and how it tracks fitness vs. social goals.",
         "category": "Announcement"
+    },
+    {
+        "id": "codemagic-mobile-cicd",
+        "title": "Using Codemagic for Mobile CICD",
+        "status": "Backlog",
+        "description": "Guide on how to use Codemagic for automating mobile app builds and deployments.",
+        "category": "Tutorial"
     }
 ]
