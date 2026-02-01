@@ -61,5 +61,12 @@
         "status": "Backlog",
         "description": "Guide on how to use Codemagic for automating mobile app builds and deployments.",
         "category": "Tutorial"
+    },
+    {
+        "id": "eyb-eyv-pivot",
+        "title": "Earn Your Beers → Earn Your Vices: The Pivot",
+        "status": "Backlog",
+        "description": "Documenting the decision to expand the 'Earn Your Beers' concept into a broader vice-tracking ecosystem.",
+        "category": "Story"
     }
 ]
