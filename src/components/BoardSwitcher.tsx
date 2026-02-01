@@ -16,7 +16,7 @@ const BoardSwitcher: React.FC<BoardSwitcherProps> = ({ initialType }) => {
         }}>
             <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Switch View:</span>
             <div className="glass" style={{ display: 'flex', padding: '4px', gap: '4px', borderRadius: '12px' }}>
-                <Link to="/roadmap/projects" style={{ textDecoration: 'none' }}>
+                <Link to="/roadmap/projects" state={{ noScroll: true }} style={{ textDecoration: 'none' }}>
                     <div style={{
                         padding: '6px 16px',
                         fontSize: '0.8rem',
@@ -29,7 +29,7 @@ const BoardSwitcher: React.FC<BoardSwitcherProps> = ({ initialType }) => {
                         Project Board
                     </div>
                 </Link>
-                <Link to="/roadmap/devops" style={{ textDecoration: 'none' }}>
+                <Link to="/roadmap/devops" state={{ noScroll: true }} style={{ textDecoration: 'none' }}>
                     <div style={{
                         padding: '6px 16px',
                         fontSize: '0.8rem',
@@ -42,7 +42,7 @@ const BoardSwitcher: React.FC<BoardSwitcherProps> = ({ initialType }) => {
                         Engineering Board
                     </div>
                 </Link>
-                <Link to="/roadmap/youtube" style={{ textDecoration: 'none' }}>
+                <Link to="/roadmap/youtube" state={{ noScroll: true }} style={{ textDecoration: 'none' }}>
                     <div style={{
                         padding: '6px 16px',
                         fontSize: '0.8rem',
@@ -55,7 +55,7 @@ const BoardSwitcher: React.FC<BoardSwitcherProps> = ({ initialType }) => {
                         Content Board
                     </div>
                 </Link>
-                <Link to="/roadmap/admin" style={{ textDecoration: 'none' }}>
+                <Link to="/roadmap/admin" state={{ noScroll: true }} style={{ textDecoration: 'none' }}>
                     <div style={{
                         padding: '6px 16px',
                         fontSize: '0.8rem',
