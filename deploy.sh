@@ -8,11 +8,18 @@ REPO_NAME="balenthiran"
 COMPARTMENT_ID="ocid1.tenancy.oc1..aaaaaaaazzb6zpefjmtxcgbr2ws5xtd265wa7o47o6j2bjkgznynazqhwmxa"
 REPO_URL="$REGION.ocir.io/$NAMESPACE/$REPO_NAME"
 
-# 1. Prepare Versioning
+KUBERNETES_NAMESPACE="balenthiran"
+KUBERNETES_DEPLOYMENT="balenthiran-balenthiranhelm-main"
+
+# 1. Checking deployment status
+echo "⚡️ Checking deployment status..."
+kubectl rollout status deploy $KUBERNETES_DEPLOYMENT -n $KUBERNETES_NAMESPACE
+
+# 2. Prepare Versioning
 TAG=$(git rev-parse --short HEAD)
 echo "🚀 Starting Deployment for version: $TAG"
 
-# 2. Build and Push
+# 3. Build and Push
 echo "🏗️  Building ARM64 Docker image..."
 docker buildx build \
     --platform linux/arm64 \
@@ -20,7 +27,7 @@ docker buildx build \
     -t $REPO_URL:latest \
     --push .
 
-# 3. Verify the upload and get the Timestamp
+# 4. Verify the upload and get the Timestamp
 echo "🔍 Verifying registry and fetching timestamp..."
 # Added a tiny sleep to ensure OCI indexing is finished
 sleep 3
@@ -40,7 +47,7 @@ BUFFER_TIME=$(echo "$TARGET_TIME" | cut -c 1-16)
 
 echo "🛡️  Safety buffer (Minute-level): $BUFFER_TIME"
 
-# 4. Cleanup (The "Purge" phase)
+# 5. Cleanup (The "Purge" phase)
 echo "🧹 Purging artifacts created BEFORE $BUFFER_TIME..."
 
 # We use the 'starts_with' logic to protect the current minute's builds
@@ -59,5 +66,6 @@ else
     echo "✅ Registry is already clean."
 fi
 
-# 5. Done
-echo "✅ Success! Version $TAG is live. Keel will now update OKE."
+# 6. Done
+echo "✅ Success! Version $TAG is live. Restarting the deployment..."
+kubectl rollout restart deploy $KUBERNETES_DEPLOYMENT -n $KUBERNETES_NAMESPACE
