@@ -62,5 +62,13 @@
         "description": "Indicate changes in task status between sprints on the website.",
         "longDescription": "Implement a feature on the website to visualize how tasks move between statuses across sprints, providing historical context and progress tracking.",
         "category": "DevOps"
+    },
+    {
+        "id": "newsletter-beta-onboarding",
+        "title": "Newsletter-to-Beta Automation",
+        "status": "Backlog",
+        "description": "Automated public beta onboarding via newsletter signup.",
+        "longDescription": "Mechanism where users signing up to the newsletter are automatically added to iOS/Android beta groups via App Store Connect and Play Store APIs.",
+        "category": "Engineering"
     }
 ]
