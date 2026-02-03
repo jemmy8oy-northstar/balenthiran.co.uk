@@ -670,12 +670,6 @@
     ],
     "changes": [
       {
-        "itemId": "cd-pipeline",
-        "board": "devops",
-        "from": "Backlog",
-        "to": "Done"
-      },
-      {
         "itemId": "earn-your-drinks",
         "board": "project",
         "from": "Backlog",
@@ -713,6 +707,12 @@
         "field": "title",
         "from": "Continuous Deployment",
         "to": "Local Continuous Deployment"
+      },
+      {
+        "itemId": "cd-pipeline",
+        "board": "devops",
+        "from": "Backlog",
+        "to": "Done"
       }
     ],
     "boardSnapshots": {
