@@ -2,7 +2,8 @@
   {
     "id": "26Q1W1/2",
     "startDate": "2026-01-01",
-    "endDate": "2026-01-14",
+    "endDate": "2026-01-11",
+    "standupUrl": "https://www.youtube.com/watch?v=E5R4BzWT_XA",
     "goals": [
       "[x] Launch initial portfolio website"
     ],
@@ -98,16 +99,6 @@
         }
       },
       {
-        "itemId": "earn-your-beers-reveal",
-        "board": "youtube",
-        "from": null,
-        "to": {
-          "status": "Uploaded",
-          "title": "Announcing First Project of the Year - Earn Your Beers!",
-          "description": "Building the first utility app of 2026."
-        }
-      },
-      {
         "itemId": "k8s-cluster",
         "board": "devops",
         "from": null,
@@ -155,6 +146,46 @@
           "status": "Backlog",
           "title": "Dev Environment",
           "description": "Isolated staging and local development environments."
+        }
+      },
+      {
+        "itemId": "setup-tiktok",
+        "board": "admin",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "TikTok Presence",
+          "description": "Create new account."
+        }
+      },
+      {
+        "itemId": "setup-instagram",
+        "board": "admin",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Instagram Presence",
+          "description": "Create new account."
+        }
+      },
+      {
+        "itemId": "setup-x",
+        "board": "admin",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Twitter Brand Presence",
+          "description": "Create new account."
+        }
+      },
+      {
+        "itemId": "setup-substack",
+        "board": "admin",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Substack Presence",
+          "description": "Create new account."
         }
       }
     ],
@@ -215,12 +246,6 @@
           "status": "Uploaded",
           "title": "Finally built my online portfolio!",
           "description": "Revealing the new roadmap and ecosystem."
-        },
-        {
-          "id": "earn-your-beers-reveal",
-          "status": "Uploaded",
-          "title": "Announcing First Project of the Year - Earn Your Beers!",
-          "description": "Building the first utility app of 2026."
         }
       ],
       "devops": [
@@ -285,12 +310,23 @@
   },
   {
     "id": "26Q1W3/4",
-    "startDate": "2026-01-15",
-    "endDate": "2026-01-28",
+    "startDate": "2026-01-12",
+    "endDate": "2026-01-25",
+    "standupUrl": "https://www.youtube.com/watch?v=wud972scg6s",
     "goals": [
       "[x] Begin 'Earn Your Beers' development"
     ],
     "changes": [
+      {
+        "itemId": "earn-your-beers-reveal",
+        "board": "youtube",
+        "from": null,
+        "to": {
+          "status": "Uploaded",
+          "title": "Announcing First Project of the Year - Earn Your Beers!",
+          "description": "Building the first utility app of 2026."
+        }
+      },
       {
         "itemId": "apeify",
         "board": "project",
@@ -367,6 +403,16 @@
           "status": "Backlog",
           "title": "User Idea Submission",
           "description": "A transparent board for users to post and vote on new app features or project ideas."
+        }
+      },
+      {
+        "itemId": "sprint-status-history",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Sprint Status History",
+          "description": "Indicate changes in task status between sprints on the website."
         }
       }
     ],
@@ -533,8 +579,8 @@
   },
   {
     "id": "26Q1W5/6",
-    "startDate": "2026-01-29",
-    "endDate": "2026-02-11",
+    "startDate": "2026-01-26",
+    "endDate": "2026-02-08",
     "goals": [
       "Begin Earn Your Vices App Store onboarding",
       "Begin to move Earn Your Vices into beta testing",
@@ -598,16 +644,6 @@
         }
       },
       {
-        "itemId": "sprint-status-history",
-        "board": "devops",
-        "from": null,
-        "to": {
-          "status": "Backlog",
-          "title": "Sprint Status History",
-          "description": "Indicate changes in task status between sprints on the website."
-        }
-      },
-      {
         "itemId": "newsletter-beta-onboarding",
         "board": "devops",
         "from": null,
@@ -616,6 +652,12 @@
           "title": "Newsletter-to-Beta Automation",
           "description": "Automated public beta onboarding via newsletter signup."
         }
+      },
+      {
+        "itemId": "sprint-status-history",
+        "board": "devops",
+        "from": "Backlog",
+        "to": "Done"
       }
     ],
     "boardSnapshots": {
@@ -782,7 +824,7 @@
         },
         {
           "id": "sprint-status-history",
-          "status": "Backlog",
+          "status": "Done",
           "title": "Sprint Status History",
           "description": "Indicate changes in task status between sprints on the website."
         },
@@ -823,17 +865,10 @@
   },
   {
     "id": "26Q1W7/8",
-    "startDate": "2026-02-12",
-    "endDate": "2026-02-25",
+    "startDate": "2026-02-09",
+    "endDate": "2026-02-22",
     "goals": [],
-    "changes": [
-      {
-        "itemId": "sprint-status-history",
-        "board": "devops",
-        "from": "Backlog",
-        "to": "Done"
-      }
-    ],
+    "changes": [],
     "boardSnapshots": {
       "project": [
         {

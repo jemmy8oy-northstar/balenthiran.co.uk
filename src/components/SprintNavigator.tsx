@@ -2,7 +2,7 @@ import React from 'react';
 import { useSprint } from '../context/SprintContext';
 
 const SprintNavigator: React.FC = () => {
-    const { activeSprintId, setActiveSprintId, sprints, isLatest } = useSprint();
+    const { activeSprintId, setActiveSprintId, sprints } = useSprint();
 
     const allSprintIds = sprints.map(s => s.id);
     const currentIndex = allSprintIds.indexOf(activeSprintId);
@@ -19,9 +19,7 @@ const SprintNavigator: React.FC = () => {
         }
     };
 
-    // Derived flags for labeling
     const currentSprint = sprints.find(s => s.id === activeSprintId);
-    const hasGoals = currentSprint && currentSprint.goals && currentSprint.goals.length > 0;
     
     // Find the latest sprint with goals
     const latestWithGoals = [...sprints].reverse().find(s => s.goals && s.goals.length > 0);
@@ -29,19 +27,23 @@ const SprintNavigator: React.FC = () => {
 
     let headerLabel = 'Previous Sprint';
     if (currentIndex === latestWithGoalsIndex) {
-        headerLabel = 'Current Sprint (current)';
+        headerLabel = 'Current Sprint';
     } else if (currentIndex > latestWithGoalsIndex) {
-        headerLabel = 'Next Sprint (planning)';
+        headerLabel = 'Next Sprint';
     }
 
     const standupUrl = currentSprint?.standupUrl;
+    const formatDate = (dateStr: string) => {
+        const date = new Date(dateStr);
+        return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+    };
 
     return (
         <div style={{
             display: 'flex',
-            flexDirection: 'column' as const,
+            flexDirection: 'column',
             alignItems: 'center',
-            gap: '12px',
+            gap: '16px',
             marginBottom: '48px',
             justifyContent: 'center',
             padding: '0 8px'
@@ -65,7 +67,7 @@ const SprintNavigator: React.FC = () => {
                     ←
                 </button>
 
-                <div style={{ textAlign: 'center', minWidth: '180px' }}>
+                <div style={{ textAlign: 'center', minWidth: '220px' }}>
                     <div style={{ 
                         fontSize: '0.7rem', 
                         textTransform: 'uppercase', 
@@ -79,10 +81,21 @@ const SprintNavigator: React.FC = () => {
                     <div style={{ 
                         fontSize: '1.2rem', 
                         color: 'var(--accent-primary)', 
-                        fontWeight: 800 
+                        fontWeight: 800,
+                        lineHeight: '1.1',
+                        marginBottom: '4px'
                     }}>
                         Sprint {activeSprintId}
                     </div>
+                    {currentSprint && (
+                        <div style={{ 
+                            fontSize: '0.75rem', 
+                            color: 'var(--text-secondary)',
+                            fontWeight: 500
+                        }}>
+                            {formatDate(currentSprint.startDate)} – {formatDate(currentSprint.endDate)}
+                        </div>
+                    )}
                 </div>
 
                 <button 
@@ -114,17 +127,18 @@ const SprintNavigator: React.FC = () => {
                         display: 'flex',
                         alignItems: 'center',
                         gap: '8px',
-                        padding: '6px 16px',
-                        borderRadius: '20px',
+                        padding: '8px 20px',
+                        borderRadius: '24px',
                         textDecoration: 'none',
-                        fontSize: '0.75rem',
+                        fontSize: '0.8rem',
                         color: 'var(--text-primary)',
                         fontWeight: 600,
                         border: '1px solid var(--glass-border)',
-                        transition: 'all 0.3s ease'
+                        transition: 'all 0.3s ease',
+                        marginTop: '4px'
                     }}
                 >
-                    <span style={{ color: '#ff0000', fontSize: '1rem' }}>▶</span> Watch Sprint Stand-up
+                    <span style={{ color: '#ff0000', fontSize: '1.1rem' }}>▶</span> Watch Sprint Stand-up
                 </a>
             )}
         </div>
