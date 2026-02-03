@@ -45,6 +45,8 @@ const Board: React.FC = () => {
 
                 <SprintGoals />
 
+                <BoardSwitcher currentType={boardType} onTypeChange={setBoardType} />
+
                 <div style={{ marginBottom: '48px' }}>
                     <h1 style={{ fontSize: '3.5rem', color: 'var(--text-primary)', marginBottom: '16px' }}>{metadata.title}</h1>
                     <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.6' }}>
@@ -53,8 +55,6 @@ const Board: React.FC = () => {
 
                     <SprintHistory boardFilter={boardType} sprintId={activeSprintId} />
                 </div>
-
-                <BoardSwitcher currentType={boardType} onTypeChange={setBoardType} />
             </header>
 
             <KanbanBoard initialType={boardType} />

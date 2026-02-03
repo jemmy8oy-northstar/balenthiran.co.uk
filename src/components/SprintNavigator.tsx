@@ -29,16 +29,19 @@ const SprintNavigator: React.FC = () => {
 
     let headerLabel = 'Previous Sprint';
     if (currentIndex === latestWithGoalsIndex) {
-        headerLabel = 'Current Sprint';
+        headerLabel = 'Current Sprint (current)';
     } else if (currentIndex > latestWithGoalsIndex) {
-        headerLabel = 'Next Sprint (Planning)';
+        headerLabel = 'Next Sprint (planning)';
     }
+
+    const standupUrl = currentSprint?.standupUrl;
 
     return (
         <div style={{
             display: 'flex',
+            flexDirection: 'column' as const,
             alignItems: 'center',
-            gap: '16px',
+            gap: '12px',
             marginBottom: '48px',
             justifyContent: 'center',
             padding: '0 8px'
@@ -74,11 +77,11 @@ const SprintNavigator: React.FC = () => {
                         {headerLabel}
                     </div>
                     <div style={{ 
-                        fontSize: '1.1rem', 
+                        fontSize: '1.2rem', 
                         color: 'var(--accent-primary)', 
                         fontWeight: 800 
                     }}>
-                        Sprint {activeSprintId} {isLatest && '(current)'}
+                        Sprint {activeSprintId}
                     </div>
                 </div>
 
@@ -100,6 +103,30 @@ const SprintNavigator: React.FC = () => {
                     →
                 </button>
             </div>
+
+            {standupUrl && (
+                <a 
+                    href={standupUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="glass glass-hover"
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        padding: '6px 16px',
+                        borderRadius: '20px',
+                        textDecoration: 'none',
+                        fontSize: '0.75rem',
+                        color: 'var(--text-primary)',
+                        fontWeight: 600,
+                        border: '1px solid var(--glass-border)',
+                        transition: 'all 0.3s ease'
+                    }}
+                >
+                    <span style={{ color: '#ff0000', fontSize: '1rem' }}>▶</span> Watch Sprint Stand-up
+                </a>
+            )}
         </div>
     );
 };

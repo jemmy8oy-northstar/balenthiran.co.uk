@@ -2,21 +2,18 @@ import React from 'react';
 import { useSprint } from '../context/SprintContext';
 
 const SprintGoals: React.FC = () => {
-    const { currentSprint, sprints, activeSprintId } = useSprint();
+    const { currentSprint } = useSprint();
 
     if (!currentSprint) return null;
 
     const hasGoals = currentSprint.goals && currentSprint.goals.length > 0;
     
     // Derived labels
-    const latestWithGoals = [...sprints].reverse().find(s => s.goals && s.goals.length > 0);
-    const isCurrent = activeSprintId === latestWithGoals?.id;
-    const isPlanning = !hasGoals && sprints.indexOf(currentSprint) > (latestWithGoals ? sprints.indexOf(latestWithGoals) : -1);
 
     return (
         <div className="glass" style={{ padding: '24px', marginBottom: '48px', borderLeft: '4px solid var(--accent-primary)' }}>
             <h2 style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginBottom: '16px', fontWeight: 700 }}>
-                Sprint {currentSprint.id} {isCurrent ? '(current)' : isPlanning ? '(planning)' : ''} Goals
+                Sprint {currentSprint.id} Goals
             </h2>
             
             {hasGoals ? (

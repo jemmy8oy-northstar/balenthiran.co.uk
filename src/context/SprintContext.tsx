@@ -5,6 +5,7 @@ interface Sprint {
     id: string;
     startDate: string;
     endDate: string;
+    standupUrl?: string;
     goals: string[];
     changes: any[];
     boardSnapshots: Record<string, any[]>;
