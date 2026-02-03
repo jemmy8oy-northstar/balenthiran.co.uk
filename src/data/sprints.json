@@ -23,7 +23,7 @@
         "board": "project",
         "from": null,
         "to": {
-          "status": "On Going - Active",
+          "status": "On Going - Passive",
           "title": "APEify",
           "description": "My first major success story. An avatar creator that grew to 70k+ organic downloads through viral social trends."
         }
@@ -199,7 +199,7 @@
         },
         {
           "id": "apeify",
-          "status": "On Going - Active",
+          "status": "On Going - Passive",
           "title": "APEify",
           "description": "My first major success story. An avatar creator that grew to 70k+ organic downloads through viral social trends."
         },
@@ -326,12 +326,6 @@
           "title": "Announcing First Project of the Year - Earn Your Beers!",
           "description": "Building the first utility app of 2026."
         }
-      },
-      {
-        "itemId": "apeify",
-        "board": "project",
-        "from": "On Going - Active",
-        "to": "On Going - Passive"
       },
       {
         "itemId": "earn-your-drinks",
