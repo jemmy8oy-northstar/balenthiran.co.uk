@@ -21,18 +21,28 @@ const SprintGoals: React.FC = () => {
             
             {hasGoals ? (
                 <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    {currentSprint.goals.map((goal, index) => (
-                        <li key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                            <span style={{ 
-                                color: 'var(--accent-primary)', 
-                                fontWeight: 900,
-                                marginTop: '-1px'
-                            }}>›</span>
-                            <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.4' }}>
-                                {goal}
-                            </span>
-                        </li>
-                    ))}
+                    {currentSprint.goals.map((goal, index) => {
+                        const isCompleted = goal.startsWith('[x] ');
+                        const displayGoal = isCompleted ? goal.substring(4) : goal;
+                        
+                        return (
+                            <li key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', opacity: isCompleted ? 0.6 : 1 }}>
+                                <span style={{ 
+                                    color: isCompleted ? 'var(--accent-primary)' : 'var(--accent-primary)', 
+                                    fontWeight: 900,
+                                    marginTop: '-1px'
+                                }}>{isCompleted ? '✓' : '›'}</span>
+                                <span style={{ 
+                                    color: 'var(--text-secondary)', 
+                                    fontSize: '0.95rem', 
+                                    lineHeight: '1.4',
+                                    textDecoration: isCompleted ? 'line-through' : 'none'
+                                }}>
+                                    {displayGoal}
+                                </span>
+                            </li>
+                        );
+                    })}
                 </ul>
             ) : (
                 <p style={{ color: 'var(--text-secondary)', fontStyle: 'italic', fontSize: '0.95rem' }}>

@@ -5,7 +5,7 @@
     "endDate": "2026-01-14",
     "goals": [
       "Finalize Project Northstar vision",
-      "Launch initial portfolio website",
+      "[x] Launch initial portfolio website",
       "Setup automated deployment to K8s"
     ],
     "changes": [
@@ -290,7 +290,7 @@
     "startDate": "2026-01-15",
     "endDate": "2026-01-28",
     "goals": [
-      "Begin 'Earn Your Beers' development",
+      "[x] Begin 'Earn Your Beers' development",
       "Improve performance charts on APEify",
       "Create video on Codemagic CI/CD"
     ],
@@ -540,9 +540,9 @@
     "startDate": "2026-01-29",
     "endDate": "2026-02-11",
     "goals": [
-      "begin earn your vices app store onboarding",
-      "begin to move earn your vides into beta testing",
-      "add new app idea video"
+      "Begin Earn Your Vices App Store onboarding",
+      "Begin to move Earn Your Vices into beta testing",
+      "Add new app idea video"
     ],
     "changes": [
       {
