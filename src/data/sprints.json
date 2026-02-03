@@ -418,26 +418,6 @@
         "board": "admin",
         "from": "Backlog",
         "to": "Done"
-      },
-      {
-        "itemId": "newsletter-launch",
-        "board": "admin",
-        "from": null,
-        "to": {
-          "status": "Backlog",
-          "title": "Initial Newsletter Launch",
-          "description": "Sending the first 'Hello World' update."
-        }
-      },
-      {
-        "itemId": "brand-assets",
-        "board": "admin",
-        "from": null,
-        "to": {
-          "status": "Backlog",
-          "title": "Ecosystem Brand Identity",
-          "description": "Defining logos and palettes for all sub-apps."
-        }
       }
     ],
     "boardSnapshots": {
@@ -597,18 +577,6 @@
           "status": "Backlog",
           "title": "Substack Presence",
           "description": "Setting up the official nursery handle."
-        },
-        {
-          "id": "newsletter-launch",
-          "status": "Backlog",
-          "title": "Initial Newsletter Launch",
-          "description": "Sending the first 'Hello World' update."
-        },
-        {
-          "id": "brand-assets",
-          "status": "Backlog",
-          "title": "Ecosystem Brand Identity",
-          "description": "Defining logos and palettes for all sub-apps."
         }
       ]
     }
@@ -899,18 +867,6 @@
           "status": "Backlog",
           "title": "Substack Presence",
           "description": "Setting up the official nursery handle."
-        },
-        {
-          "id": "newsletter-launch",
-          "status": "Backlog",
-          "title": "Initial Newsletter Launch",
-          "description": "Sending the first 'Hello World' update."
-        },
-        {
-          "id": "brand-assets",
-          "status": "Backlog",
-          "title": "Ecosystem Brand Identity",
-          "description": "Defining logos and palettes for all sub-apps."
         }
       ]
     }
@@ -1127,18 +1083,6 @@
           "status": "Backlog",
           "title": "Substack Presence",
           "description": "Setting up the official nursery handle."
-        },
-        {
-          "id": "newsletter-launch",
-          "status": "Backlog",
-          "title": "Initial Newsletter Launch",
-          "description": "Sending the first 'Hello World' update."
-        },
-        {
-          "id": "brand-assets",
-          "status": "Backlog",
-          "title": "Ecosystem Brand Identity",
-          "description": "Defining logos and palettes for all sub-apps."
         }
       ]
     }

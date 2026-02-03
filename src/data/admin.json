@@ -22,17 +22,5 @@
         "title": "Substack Presence",
         "description": "Setting up the official nursery handle.",
         "category": "Marketing"
-    },
-    {
-        "id": "newsletter-launch",
-        "title": "Initial Newsletter Launch",
-        "description": "Sending the first 'Hello World' update.",
-        "category": "Engagement"
-    },
-    {
-        "id": "brand-assets",
-        "title": "Ecosystem Brand Identity",
-        "description": "Defining logos and palettes for all sub-apps.",
-        "category": "Design"
     }
 ]
