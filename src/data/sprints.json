@@ -187,6 +187,46 @@
           "title": "Substack Presence",
           "description": "Create new account."
         }
+      },
+      {
+        "itemId": "oracle-k8s-setup",
+        "board": "youtube",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Building a Free K8s Cluster",
+          "description": "How I host the nursery on Oracle Cloud's free tier."
+        }
+      },
+      {
+        "itemId": "ten-beer-plan-logic",
+        "board": "youtube",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Why MVP Logic Matters",
+          "description": "Developing the core of Ten Beer Plan."
+        }
+      },
+      {
+        "itemId": "house-price-scrapers",
+        "board": "youtube",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Scraping Real Estate Data",
+          "description": "Legal and technical hurdles in housing data."
+        }
+      },
+      {
+        "itemId": "apeify-scaling",
+        "board": "youtube",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Scaling APEify with Firebase",
+          "description": "Handling real-time data for thousands of users."
+        }
       }
     ],
     "boardSnapshots": {
@@ -246,6 +286,30 @@
           "status": "Uploaded",
           "title": "Finally built my online portfolio!",
           "description": "Revealing the new roadmap and ecosystem."
+        },
+        {
+          "id": "oracle-k8s-setup",
+          "status": "Backlog",
+          "title": "Building a Free K8s Cluster",
+          "description": "How I host the nursery on Oracle Cloud's free tier."
+        },
+        {
+          "id": "ten-beer-plan-logic",
+          "status": "Backlog",
+          "title": "Why MVP Logic Matters",
+          "description": "Developing the core of Ten Beer Plan."
+        },
+        {
+          "id": "house-price-scrapers",
+          "status": "Backlog",
+          "title": "Scraping Real Estate Data",
+          "description": "Legal and technical hurdles in housing data."
+        },
+        {
+          "id": "apeify-scaling",
+          "status": "Backlog",
+          "title": "Scaling APEify with Firebase",
+          "description": "Handling real-time data for thousands of users."
         }
       ],
       "devops": [
@@ -497,6 +561,30 @@
           "status": "Backlog",
           "title": "Codemagic for Mobile CI/CD",
           "description": "Streamlining app deployments."
+        },
+        {
+          "id": "oracle-k8s-setup",
+          "status": "Backlog",
+          "title": "Building a Free K8s Cluster",
+          "description": "How I host the nursery on Oracle Cloud's free tier."
+        },
+        {
+          "id": "ten-beer-plan-logic",
+          "status": "Backlog",
+          "title": "Why MVP Logic Matters",
+          "description": "Developing the core of Ten Beer Plan."
+        },
+        {
+          "id": "house-price-scrapers",
+          "status": "Backlog",
+          "title": "Scraping Real Estate Data",
+          "description": "Legal and technical hurdles in housing data."
+        },
+        {
+          "id": "apeify-scaling",
+          "status": "Backlog",
+          "title": "Scaling APEify with Firebase",
+          "description": "Handling real-time data for thousands of users."
         }
       ],
       "devops": [
@@ -586,46 +674,6 @@
         "board": "project",
         "from": "Backlog",
         "to": "On Going - Active"
-      },
-      {
-        "itemId": "oracle-k8s-setup",
-        "board": "youtube",
-        "from": null,
-        "to": {
-          "status": "Backlog",
-          "title": "Building a Free K8s Cluster",
-          "description": "How I host the nursery on Oracle Cloud's free tier."
-        }
-      },
-      {
-        "itemId": "ten-beer-plan-logic",
-        "board": "youtube",
-        "from": null,
-        "to": {
-          "status": "Backlog",
-          "title": "Why MVP Logic Matters",
-          "description": "Developing the core of Ten Beer Plan."
-        }
-      },
-      {
-        "itemId": "house-price-scrapers",
-        "board": "youtube",
-        "from": null,
-        "to": {
-          "status": "Backlog",
-          "title": "Scraping Real Estate Data",
-          "description": "Legal and technical hurdles in housing data."
-        }
-      },
-      {
-        "itemId": "apeify-scaling",
-        "board": "youtube",
-        "from": null,
-        "to": {
-          "status": "Backlog",
-          "title": "Scaling APEify with Firebase",
-          "description": "Handling real-time data for thousands of users."
-        }
       },
       {
         "itemId": "eyb-eyv-pivot",
