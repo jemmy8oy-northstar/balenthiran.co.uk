@@ -29,7 +29,7 @@ const SprintNavigator: React.FC = () => {
     if (currentIndex === latestWithGoalsIndex) {
         headerLabel = 'Current Sprint';
     } else if (currentIndex > latestWithGoalsIndex) {
-        headerLabel = 'Next Sprint';
+        headerLabel = 'Next Sprint (Planning)';
     }
 
     const standupUrl = currentSprint?.standupUrl;
