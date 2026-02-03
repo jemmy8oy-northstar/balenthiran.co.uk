@@ -41,7 +41,7 @@ interface KanbanBoardProps {
 
 const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
-    const { currentSprint } = useSprint();
+    const { currentSprint, sprints } = useSprint();
 
     const columns = useMemo(() => {
         if (initialType === 'project') return PROJECT_COLUMNS;
@@ -59,37 +59,51 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
 
     const filteredItems = useMemo(() => {
         let displayData = rawData;
-        let snapshotMap: Record<string, string> = {};
-
-        // Now we ALWAYS pull from snapshots. Snapshot of latest = Live board.
-        if (currentSprint) {
-            const snapshot = currentSprint.boardSnapshots[initialType];
-            if (snapshot) {
-                snapshotMap = snapshot.reduce((acc, s: any) => {
-                    acc[s.id] = s.status;
-                    return acc;
-                }, {} as Record<string, string>);
-                
-                // Only include items that are in the snapshot for this sprint
-                displayData = rawData.filter(item => snapshotMap[item.id] !== undefined);
-            }
-        }
-
-        return displayData.reduce((acc, item: any) => {
+        
+        // 1. Group items by status from the current snapshot
+        const groups = displayData.reduce((acc, item: any) => {
             const snapshotItem = currentSprint?.boardSnapshots[initialType]?.find((s: any) => s.id === item.id);
             const status = snapshotItem?.status;
             if (status) {
                 if (!acc[status]) acc[status] = [];
-                // Merge snapshot data (title/description) into the item for "Time Travel"
                 acc[status].push({
                     ...item,
                     title: snapshotItem.title || item.title,
-                    description: snapshotItem.description || item.description
+                    description: snapshotItem.description || item.description,
+                    currentStatus: status 
                 });
             }
             return acc;
         }, {} as Record<string, any[]>);
-    }, [rawData, initialType, currentSprint]);
+
+        // 2. Sort items within each column based on latest movement
+        Object.keys(groups).forEach(status => {
+            groups[status].sort((a, b) => {
+                const getMovementScore = (item: any) => {
+                    let topSprintIdx = -1;
+                    let topChangeIdx = -1;
+
+                    sprints.forEach((s, sIdx) => {
+                        (s.changes || []).forEach((c: any, cIdx) => {
+                            if (c.itemId === item.id && c.board === initialType) {
+                                const toStatus = typeof c.to === 'object' ? c.to.status : c.to;
+                                if (toStatus === item.currentStatus) {
+                                    topSprintIdx = sIdx;
+                                    topChangeIdx = cIdx;
+                                }
+                            }
+                        });
+                    });
+
+                    return (topSprintIdx * 1000) + topChangeIdx;
+                };
+
+                return getMovementScore(b) - getMovementScore(a);
+            });
+        });
+
+        return groups;
+    }, [rawData, initialType, currentSprint, sprints]);
 
     return (
         <div style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)', overflow: 'hidden' }}>
@@ -145,7 +159,7 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
                             gap: '12px',
                             minHeight: '100px'
                         }}>
-                            {filteredItems[col]?.map(item => (
+                            {filteredItems[col]?.map((item: any) => (
                                 <div key={item.id}>
                                     {item.path ? (
                                         <Link to={item.path} style={{ textDecoration: 'none' }}>

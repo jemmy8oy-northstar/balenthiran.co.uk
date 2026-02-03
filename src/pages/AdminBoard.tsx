@@ -5,8 +5,11 @@ import BoardSwitcher from '../components/BoardSwitcher';
 import SprintGoals from '../components/SprintGoals';
 import SprintHistory from '../components/SprintHistory';
 import SprintNavigator from '../components/SprintNavigator';
+import { useSprint } from '../context/SprintContext';
 
 const AdminBoard: React.FC = () => {
+    const { activeSprintId } = useSprint();
+
     return (
         <div style={{ marginTop: '80px', width: '100%' }}>
             <header className="container" style={{ marginBottom: '48px' }}>
@@ -18,9 +21,9 @@ const AdminBoard: React.FC = () => {
 
                 <SprintGoals />
 
-                <SprintHistory />
-
                 <BoardSwitcher initialType="admin" />
+
+                <SprintHistory boardFilter="admin" sprintId={activeSprintId} />
 
                 <h1 style={{ fontSize: '3rem', color: 'var(--text-primary)' }}>Platform & Brand</h1>
                 <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', marginTop: '16px', marginBottom: '48px' }}>
