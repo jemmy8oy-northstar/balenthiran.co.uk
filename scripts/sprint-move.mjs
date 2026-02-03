@@ -1,18 +1,31 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const SPRINTS_PATH = path.join(__dirname, '../src/data/sprints.json');
+const VALIDATE_PATH = path.join(__dirname, 'validate-sprints.mjs');
 
 const taskId = process.argv[2];
 const newStatus = process.argv[3];
 
 if (!taskId || !newStatus) {
-    console.error('Usage: node scripts/sprint-move.js <taskId> <newStatus>');
+    console.error('Usage: node scripts/sprint-move.mjs <taskId> <newStatus>');
     process.exit(1);
 }
 
 function updateSprint() {
-    const sprints = JSON.parse(fs.readFileSync(SPRINTS_PATH, 'utf8'));
+    let sprints;
+    try {
+        sprints = JSON.parse(fs.readFileSync(SPRINTS_PATH, 'utf8'));
+    } catch (e) {
+        console.error('❌ Error: Could not read or parse sprints.json');
+        process.exit(1);
+    }
+
     const latestSprint = sprints[sprints.length - 1];
     
     let moved = false;
@@ -53,6 +66,15 @@ function updateSprint() {
     fs.writeFileSync(SPRINTS_PATH, JSON.stringify(sprints, null, 2));
     console.log(`✅ Moved "${taskId}" from "${fromStatus}" to "${newStatus}" on ${boardName} board.`);
     console.log(`📝 Logged to Sprint ${latestSprint.id} history.`);
+
+    // Auto-validate
+    console.log('\n🔍 Running auto-validation...');
+    try {
+        execSync(`node ${VALIDATE_PATH}`, { stdio: 'inherit' });
+    } catch (e) {
+        console.error('❌ Validation failed after move! Please check sprints.json.');
+        process.exit(1);
+    }
 }
 
 updateSprint();
