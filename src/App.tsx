@@ -5,14 +5,11 @@ import Home from './pages/Home'
 import GermyDetail from './pages/GermyDetail'
 import APEifyDetail from './pages/APEifyDetail'
 import TenBeerPlanDetail from './pages/TenBeerPlanDetail'
-import ProjectBoard from './pages/ProjectBoard'
-import DevOpsBoard from './pages/DevOpsBoard'
+import Board from './pages/Board'
 import ScrollToTop from './components/ScrollToTop'
 import { ThemeProvider } from './context/ThemeContext'
 import YouTubeDetail from './pages/YouTubeDetail'
 import HousePriceAlertsDetail from './pages/HousePriceAlertsDetail'
-import YouTubeBoard from './pages/YouTubeBoard'
-import AdminBoard from './pages/AdminBoard'
 import EarnYourDrinksDetail from './pages/EarnYourDrinksDetail'
 import { SprintProvider } from './context/SprintContext'
 
@@ -30,10 +27,7 @@ function App() {
                 <Route path="/projects/germy" element={<GermyDetail />} />
                 <Route path="/projects/apeify" element={<APEifyDetail />} />
                 <Route path="/projects/tenbeerplan" element={<TenBeerPlanDetail />} />
-                <Route path="/roadmap/projects" element={<ProjectBoard />} />
-                <Route path="/roadmap/devops" element={<DevOpsBoard />} />
-                <Route path="/roadmap/youtube" element={<YouTubeBoard />} />
-                <Route path="/roadmap/admin" element={<AdminBoard />} />
+                <Route path="/boards" element={<Board />} />
                 <Route path="/projects/house-price-alerts" element={<HousePriceAlertsDetail />} />
                 <Route path="/projects/earn-your-drinks" element={<EarnYourDrinksDetail />} />
                 <Route path="/youtube" element={<YouTubeDetail />} />

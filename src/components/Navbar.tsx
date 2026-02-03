@@ -6,8 +6,8 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  const getLinkStyle = (path: string) => {
-    const isActive = location.pathname === path || (path === '/roadmap/projects' && location.pathname.startsWith('/roadmap'));
+    const getLinkStyle = (path: string) => {
+    const isActive = location.pathname === path || (path === '/boards' && location.pathname.startsWith('/boards'));
     return {
       color: isActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
       fontWeight: isActive ? 700 : 500,
@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
     };
   };
 
-  const isActive = (path: string) => location.pathname === path || (path === '/roadmap/projects' && location.pathname.startsWith('/roadmap'));
+  const isActive = (path: string) => location.pathname === path || (path === '/boards' && location.pathname.startsWith('/boards'));
 
 
   const ActiveDot = () => (
@@ -67,9 +67,9 @@ const Navbar: React.FC = () => {
           Home
           {isActive('/') && <ActiveDot />}
         </Link>
-        <Link to="/roadmap/projects" onClick={() => setIsMenuOpen(false)} style={getLinkStyle('/roadmap/projects')}>
+        <Link to="/boards" onClick={() => setIsMenuOpen(false)} style={getLinkStyle('/boards')}>
           Boards
-          {isActive('/roadmap/projects') && <ActiveDot />}
+          {isActive('/boards') && <ActiveDot />}
         </Link>
         <Link to="/youtube" onClick={() => setIsMenuOpen(false)} style={getLinkStyle('/youtube')}>
           YouTube
