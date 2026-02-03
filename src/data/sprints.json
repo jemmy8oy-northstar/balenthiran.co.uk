@@ -8,27 +8,30 @@
       "Launch initial portfolio website",
       "Setup automated deployment to K8s"
     ],
-    "changes": [
-      { "itemId": "k8s-cluster", "board": "devops", "from": "Backlog", "to": "Done" },
-      { "itemId": "portfolio-reveal", "board": "youtube", "from": null, "to": "Uploaded" }
-    ],
+    "changes": [],
     "boardSnapshots": {
       "project": [
         { "id": "germy", "status": "Retired" },
-        { "id": "apeify", "status": "On Going - Passive" },
-        { "id": "tenbeerplan", "status": "Retired" }
+        { "id": "apeify", "status": "On Going - Active" },
+        { "id": "tenbeerplan", "status": "On Going - Passive" },
+        { "id": "house-price-alerts", "status": "On Hold" }
       ],
       "youtube": [
         { "id": "intro-video", "status": "Uploaded" },
-        { "id": "germy-video", "status": "Uploaded" },
-        { "id": "portfolio-reveal", "status": "Uploaded" }
+        { "id": "germy-video", "status": "Uploaded" }
       ],
       "devops": [
         { "id": "k8s-cluster", "status": "Done" },
-        { "id": "cd-pipeline", "status": "Backlog" }
+        { "id": "dotnet-migration", "status": "In Progress" },
+        { "id": "template-project", "status": "In Progress" },
+        { "id": "cd-pipeline", "status": "Backlog" },
+        { "id": "dev-env", "status": "Backlog" }
       ],
       "admin": [
-        { "id": "twitter-setup", "status": "Done" }
+        { "id": "setup-tiktok", "status": "Backlog" },
+        { "id": "setup-instagram", "status": "Backlog" },
+        { "id": "setup-x", "status": "Backlog" },
+        { "id": "setup-substack", "status": "Backlog" }
       ]
     }
   },
@@ -42,15 +45,20 @@
       "Create video on Codemagic CI/CD"
     ],
     "changes": [
-      { "itemId": "earn-your-drinks", "board": "project", "from": "Planning", "to": "On Going - Active" },
-      { "itemId": "codemagic-mobile-cicd", "board": "youtube", "from": "Backlog", "to": "Backlog" }
+      { "itemId": "apeify", "board": "project", "from": "On Going - Active", "to": "On Going - Passive" },
+      { "itemId": "tenbeerplan", "board": "project", "from": "On Going - Passive", "to": "Retired" },
+      { "itemId": "dotnet-migration", "board": "devops", "from": "In Progress", "to": "Backlog" },
+      { "itemId": "template-project", "board": "devops", "from": "In Progress", "to": "Backlog" }
     ],
     "boardSnapshots": {
       "project": [
         { "id": "germy", "status": "Retired" },
         { "id": "apeify", "status": "On Going - Passive" },
         { "id": "tenbeerplan", "status": "Retired" },
-        { "id": "earn-your-drinks", "status": "On Going - Active" }
+        { "id": "house-price-alerts", "status": "On Hold" },
+        { "id": "earn-your-drinks", "status": "Backlog" },
+        { "id": "habit-tracker", "status": "Backlog" },
+        { "id": "commuter-house-search", "status": "Backlog" }
       ],
       "youtube": [
         { "id": "intro-video", "status": "Uploaded" },
@@ -60,12 +68,17 @@
       ],
       "devops": [
         { "id": "k8s-cluster", "status": "Done" },
+        { "id": "dotnet-migration", "status": "Backlog" },
+        { "id": "template-project", "status": "Backlog" },
         { "id": "cd-pipeline", "status": "Backlog" },
-        { "id": "dotnet-migration", "status": "Backlog" }
+        { "id": "dev-env", "status": "Backlog" },
+        { "id": "newsletter-infrastructure", "status": "Backlog" },
+        { "id": "user-ideas-page", "status": "Backlog" }
       ],
       "admin": [
         { "id": "twitter-setup", "status": "Done" },
-        { "id": "newsletter-launch", "status": "Backlog" }
+        { "id": "newsletter-launch", "status": "Backlog" },
+        { "id": "brand-assets", "status": "Backlog" }
       ]
     }
   },
@@ -79,6 +92,7 @@
       "add new app idea video"
     ],
     "changes": [
+      { "itemId": "earn-your-drinks", "board": "project", "from": "Backlog", "to": "On Going - Active" },
       { "itemId": "eyb-eyv-pivot", "board": "youtube", "from": null, "to": "Backlog" },
       { "itemId": "newsletter-beta-onboarding", "board": "devops", "from": null, "to": "Backlog" }
     ],
