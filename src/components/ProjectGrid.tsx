@@ -54,7 +54,7 @@ const ProjectGrid: React.FC = () => {
                                     fontWeight: 600,
                                     textTransform: 'uppercase'
                                 }}>
-                                    {project.status}
+                                    {project.category}
                                 </span>
                             </div>
                             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
