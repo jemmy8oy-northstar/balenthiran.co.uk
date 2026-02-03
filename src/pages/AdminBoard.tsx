@@ -18,7 +18,7 @@ const AdminBoard: React.FC = () => {
 
                 <SprintGoals />
 
-                <SprintHistory boardFilter="admin" />
+                <SprintHistory />
 
                 <BoardSwitcher initialType="admin" />
 

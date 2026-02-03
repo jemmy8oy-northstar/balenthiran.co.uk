@@ -18,7 +18,7 @@ const DevOpsBoard: React.FC = () => {
 
                 <SprintGoals />
 
-                <SprintHistory boardFilter="devops" />
+                <SprintHistory />
 
                 <BoardSwitcher initialType="devops" />
 

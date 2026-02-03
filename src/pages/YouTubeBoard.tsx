@@ -18,7 +18,7 @@ const YouTubeBoard: React.FC = () => {
 
                 <SprintGoals />
 
-                <SprintHistory boardFilter="youtube" />
+                <SprintHistory />
 
                 <BoardSwitcher initialType="youtube" />
 

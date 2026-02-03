@@ -18,7 +18,7 @@ const ProjectBoard: React.FC = () => {
 
                 <SprintGoals />
 
-                <SprintHistory boardFilter="project" />
+                <SprintHistory />
 
                 <BoardSwitcher initialType="project" />
 

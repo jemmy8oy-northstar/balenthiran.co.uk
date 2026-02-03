@@ -46,13 +46,13 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter }) => {
                         if (changes.length === 0 && !boardFilter) return null; // Skip if no changes and no specific board
 
                         const isCurrent = sprint.id === latestWithGoals?.id;
-                        const isPlanning = !sprint.goals || sprint.goals.length === 0;
+                        if (!sprint.goals || sprint.goals.length === 0) return null;
 
                         return (
                             <div key={sprint.id} className="glass" style={{ padding: '20px' }}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
                                     <h3 style={{ fontSize: '1rem', color: 'var(--text-primary)', margin: 0 }}>
-                                        Sprint {sprint.id} {isCurrent ? '(current)' : isPlanning ? '(planning)' : ''}
+                                        Sprint {sprint.id} {isCurrent && '(current)'}
                                     </h3>
                                     <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
                                         {sprint.startDate} — {sprint.endDate}
@@ -64,7 +64,20 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter }) => {
                                         changes.map((change: any, idx: number) => (
                                             <div key={idx} style={{ fontSize: '0.85rem', display: 'flex', gap: '8px', alignItems: 'center' }}>
                                                 <span style={{ color: 'var(--accent-primary)', fontWeight: 600 }}>•</span>
-                                                <span style={{ color: 'var(--text-primary)' }}>{change.itemId}</span>
+                                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                                                    <span style={{ color: 'var(--text-primary)' }}>{change.itemId}</span>
+                                                    {!boardFilter && (
+                                                        <span style={{ 
+                                                            fontSize: '0.6rem', 
+                                                            color: 'var(--text-secondary)', 
+                                                            textTransform: 'uppercase',
+                                                            background: 'rgba(255,255,255,0.05)',
+                                                            padding: '1px 4px',
+                                                            borderRadius: '3px',
+                                                            letterSpacing: '0.05em'
+                                                        }}>{change.board}</span>
+                                                    )}
+                                                </div>
                                                 <span style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
                                                     {!change.from ? (
                                                         <span style={{ 
