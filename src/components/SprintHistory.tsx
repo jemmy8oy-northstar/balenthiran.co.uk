@@ -65,8 +65,21 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter }) => {
                                             <div key={idx} style={{ fontSize: '0.85rem', display: 'flex', gap: '8px', alignItems: 'center' }}>
                                                 <span style={{ color: 'var(--accent-primary)', fontWeight: 600 }}>•</span>
                                                 <span style={{ color: 'var(--text-primary)' }}>{change.itemId}</span>
-                                                <span style={{ color: 'var(--text-secondary)' }}>
-                                                    {change.from ? change.from : 'New'} → {change.to}
+                                                <span style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                                    {!change.from ? (
+                                                        <span style={{ 
+                                                            fontSize: '0.65rem', 
+                                                            background: 'rgba(52, 211, 153, 0.1)', 
+                                                            color: '#34d399', 
+                                                            padding: '2px 6px', 
+                                                            borderRadius: '4px',
+                                                            fontWeight: 800,
+                                                            border: '1px solid rgba(52, 211, 153, 0.2)'
+                                                        }}>NEW</span>
+                                                    ) : (
+                                                        <span>{change.from} →</span>
+                                                    )}
+                                                    <span>{change.to}</span>
                                                 </span>
                                             </div>
                                         ))

@@ -8,7 +8,23 @@
       "Launch initial portfolio website",
       "Setup automated deployment to K8s"
     ],
-    "changes": [],
+    "changes": [
+      { "itemId": "germy", "board": "project", "from": null, "to": "Retired" },
+      { "itemId": "apeify", "board": "project", "from": null, "to": "On Going - Active" },
+      { "itemId": "tenbeerplan", "board": "project", "from": null, "to": "On Going - Passive" },
+      { "itemId": "house-price-alerts", "board": "project", "from": null, "to": "On Hold" },
+      { "itemId": "intro-video", "board": "youtube", "from": null, "to": "Uploaded" },
+      { "itemId": "germy-video", "board": "youtube", "from": null, "to": "Uploaded" },
+      { "itemId": "k8s-cluster", "board": "devops", "from": null, "to": "Done" },
+      { "itemId": "dotnet-migration", "board": "devops", "from": null, "to": "In Progress" },
+      { "itemId": "template-project", "board": "devops", "from": null, "to": "In Progress" },
+      { "itemId": "cd-pipeline", "board": "devops", "from": null, "to": "Backlog" },
+      { "itemId": "dev-env", "board": "devops", "from": null, "to": "Backlog" },
+      { "itemId": "setup-tiktok", "board": "admin", "from": null, "to": "Backlog" },
+      { "itemId": "setup-instagram", "board": "admin", "from": null, "to": "Backlog" },
+      { "itemId": "setup-x", "board": "admin", "from": null, "to": "Backlog" },
+      { "itemId": "setup-substack", "board": "admin", "from": null, "to": "Backlog" }
+    ],
     "boardSnapshots": {
       "project": [
         { "id": "germy", "status": "Retired" },
@@ -47,8 +63,18 @@
     "changes": [
       { "itemId": "apeify", "board": "project", "from": "On Going - Active", "to": "On Going - Passive" },
       { "itemId": "tenbeerplan", "board": "project", "from": "On Going - Passive", "to": "Retired" },
+      { "itemId": "earn-your-drinks", "board": "project", "from": null, "to": "Backlog" },
+      { "itemId": "habit-tracker", "board": "project", "from": null, "to": "Backlog" },
+      { "itemId": "commuter-house-search", "board": "project", "from": null, "to": "Backlog" },
+      { "itemId": "portfolio-reveal", "board": "youtube", "from": null, "to": "Uploaded" },
+      { "itemId": "codemagic-mobile-cicd", "board": "youtube", "from": null, "to": "Backlog" },
       { "itemId": "dotnet-migration", "board": "devops", "from": "In Progress", "to": "Backlog" },
-      { "itemId": "template-project", "board": "devops", "from": "In Progress", "to": "Backlog" }
+      { "itemId": "template-project", "board": "devops", "from": "In Progress", "to": "Backlog" },
+      { "itemId": "newsletter-infrastructure", "board": "devops", "from": null, "to": "Backlog" },
+      { "itemId": "user-ideas-page", "board": "devops", "from": null, "to": "Backlog" },
+      { "itemId": "twitter-setup", "board": "admin", "from": null, "to": "Done" },
+      { "itemId": "newsletter-launch", "board": "admin", "from": null, "to": "Backlog" },
+      { "itemId": "brand-assets", "board": "admin", "from": null, "to": "Backlog" }
     ],
     "boardSnapshots": {
       "project": [
@@ -93,7 +119,13 @@
     ],
     "changes": [
       { "itemId": "earn-your-drinks", "board": "project", "from": "Backlog", "to": "On Going - Active" },
+      { "itemId": "oracle-k8s-setup", "board": "youtube", "from": null, "to": "Backlog" },
+      { "itemId": "ten-beer-plan-logic", "board": "youtube", "from": null, "to": "Backlog" },
+      { "itemId": "house-price-scrapers", "board": "youtube", "from": null, "to": "Backlog" },
+      { "itemId": "apeify-scaling", "board": "youtube", "from": null, "to": "Backlog" },
+      { "itemId": "earn-your-beers-reveal", "board": "youtube", "from": null, "to": "Uploaded" },
       { "itemId": "eyb-eyv-pivot", "board": "youtube", "from": null, "to": "Backlog" },
+      { "itemId": "sprint-status-history", "board": "devops", "from": null, "to": "Backlog" },
       { "itemId": "newsletter-beta-onboarding", "board": "devops", "from": null, "to": "Backlog" }
     ],
     "boardSnapshots": {
