@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import sprintsData from '../data/sprints.json';
+import projectsData from '../data/projects.json';
+import devopsData from '../data/devops.json';
+import youtubeData from '../data/youtube.json';
+import adminData from '../data/admin.json';
 
 interface SprintHistoryProps {
     boardFilter?: 'project' | 'devops' | 'youtube' | 'admin';
@@ -7,6 +11,15 @@ interface SprintHistoryProps {
 
 const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter }) => {
     const [isExpanded, setIsExpanded] = useState(false);
+
+    // Create a lookup for item titles
+    const itemMap = useMemo(() => {
+        const map: Record<string, string> = {};
+        [...projectsData, ...devopsData, ...youtubeData, ...adminData].forEach(item => {
+            map[item.id] = (item as any).title;
+        });
+        return map;
+    }, []);
 
     if (sprintsData.length === 0) return null;
 
@@ -65,7 +78,7 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter }) => {
                                             <div key={idx} style={{ fontSize: '0.85rem', display: 'flex', gap: '8px', alignItems: 'center' }}>
                                                 <span style={{ color: 'var(--accent-primary)', fontWeight: 600 }}>•</span>
                                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                                                    <span style={{ color: 'var(--text-primary)' }}>{change.itemId}</span>
+                                                    <span style={{ color: 'var(--text-primary)' }}>{itemMap[change.itemId] || change.itemId}</span>
                                                     {!boardFilter && (
                                                         <span style={{ 
                                                             fontSize: '0.6rem', 
