@@ -101,6 +101,10 @@
         { "id": "user-ideas-page", "status": "Backlog" }
       ],
       "admin": [
+        { "id": "setup-tiktok", "status": "Backlog" },
+        { "id": "setup-instagram", "status": "Backlog" },
+        { "id": "setup-x", "status": "Backlog" },
+        { "id": "setup-substack", "status": "Backlog" },
         { "id": "twitter-setup", "status": "Done" },
         { "id": "newsletter-launch", "status": "Backlog" },
         { "id": "brand-assets", "status": "Backlog" }
@@ -161,6 +165,10 @@
         { "id": "newsletter-beta-onboarding", "status": "Backlog" }
       ],
       "admin": [
+        { "id": "setup-tiktok", "status": "Backlog" },
+        { "id": "setup-instagram", "status": "Backlog" },
+        { "id": "setup-x", "status": "Backlog" },
+        { "id": "setup-substack", "status": "Backlog" },
         { "id": "twitter-setup", "status": "Done" },
         { "id": "newsletter-launch", "status": "Backlog" },
         { "id": "brand-assets", "status": "Backlog" }
@@ -172,7 +180,9 @@
     "startDate": "2026-02-12",
     "endDate": "2026-02-25",
     "goals": [],
-    "changes": [],
+    "changes": [
+      { "itemId": "sprint-status-history", "board": "devops", "from": "Backlog", "to": "Done" }
+    ],
     "boardSnapshots": {
       "project": [
         { "id": "germy", "status": "Retired" },
@@ -207,6 +217,10 @@
         { "id": "newsletter-beta-onboarding", "status": "Backlog" }
       ],
       "admin": [
+        { "id": "setup-tiktok", "status": "Backlog" },
+        { "id": "setup-instagram", "status": "Backlog" },
+        { "id": "setup-x", "status": "Backlog" },
+        { "id": "setup-substack", "status": "Backlog" },
         { "id": "twitter-setup", "status": "Done" },
         { "id": "newsletter-launch", "status": "Backlog" },
         { "id": "brand-assets", "status": "Backlog" }
