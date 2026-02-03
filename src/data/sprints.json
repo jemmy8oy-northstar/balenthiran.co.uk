@@ -11,7 +11,7 @@
     "changes": [
       { "itemId": "germy", "board": "project", "from": null, "to": "Retired" },
       { "itemId": "apeify", "board": "project", "from": null, "to": "On Going - Active" },
-      { "itemId": "tenbeerplan", "board": "project", "from": null, "to": "On Going - Passive" },
+      { "itemId": "tenbeerplan", "board": "project", "from": null, "to": "Retired" },
       { "itemId": "house-price-alerts", "board": "project", "from": null, "to": "On Hold" },
       { "itemId": "intro-video", "board": "youtube", "from": null, "to": "Uploaded" },
       { "itemId": "germy-video", "board": "youtube", "from": null, "to": "Uploaded" },
@@ -29,7 +29,7 @@
       "project": [
         { "id": "germy", "status": "Retired" },
         { "id": "apeify", "status": "On Going - Active" },
-        { "id": "tenbeerplan", "status": "On Going - Passive" },
+        { "id": "tenbeerplan", "status": "Retired" },
         { "id": "house-price-alerts", "status": "On Hold" }
       ],
       "youtube": [
@@ -62,7 +62,6 @@
     ],
     "changes": [
       { "itemId": "apeify", "board": "project", "from": "On Going - Active", "to": "On Going - Passive" },
-      { "itemId": "tenbeerplan", "board": "project", "from": "On Going - Passive", "to": "Retired" },
       { "itemId": "earn-your-drinks", "board": "project", "from": null, "to": "Backlog" },
       { "itemId": "habit-tracker", "board": "project", "from": null, "to": "Backlog" },
       { "itemId": "commuter-house-search", "board": "project", "from": null, "to": "Backlog" },
