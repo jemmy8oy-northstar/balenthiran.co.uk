@@ -2,25 +2,25 @@
     {
         "id": "setup-tiktok",
         "title": "TikTok Presence",
-        "description": "Setting up the official nursery handle.",
+        "description": "Create new account.",
         "category": "Marketing"
     },
     {
         "id": "setup-instagram",
         "title": "Instagram Presence",
-        "description": "Setting up the official nursery handle.",
+        "description": "Create new account.",
         "category": "Marketing"
     },
     {
         "id": "setup-x",
         "title": "Twitter Brand Presence",
-        "description": "Setting up the official nursery handle.",
+        "description": "Create new account.",
         "category": "Marketing"
     },
     {
         "id": "setup-substack",
         "title": "Substack Presence",
-        "description": "Setting up the official nursery handle.",
+        "description": "Create new account.",
         "category": "Marketing"
     }
 ]

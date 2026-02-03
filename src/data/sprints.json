@@ -158,46 +158,6 @@
           "title": "Dev Environment",
           "description": "Isolated staging and local development environments."
         }
-      },
-      {
-        "itemId": "setup-tiktok",
-        "board": "admin",
-        "from": null,
-        "to": {
-          "status": "Backlog",
-          "title": "TikTok Presence",
-          "description": "Setting up the official nursery handle."
-        }
-      },
-      {
-        "itemId": "setup-instagram",
-        "board": "admin",
-        "from": null,
-        "to": {
-          "status": "Backlog",
-          "title": "Instagram Presence",
-          "description": "Setting up the official nursery handle."
-        }
-      },
-      {
-        "itemId": "setup-x",
-        "board": "admin",
-        "from": null,
-        "to": {
-          "status": "Backlog",
-          "title": "Twitter Brand Presence",
-          "description": "Setting up the official nursery handle."
-        }
-      },
-      {
-        "itemId": "setup-substack",
-        "board": "admin",
-        "from": null,
-        "to": {
-          "status": "Backlog",
-          "title": "Substack Presence",
-          "description": "Setting up the official nursery handle."
-        }
       }
     ],
     "boardSnapshots": {
@@ -302,25 +262,25 @@
           "id": "setup-tiktok",
           "status": "Backlog",
           "title": "TikTok Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         },
         {
           "id": "setup-instagram",
           "status": "Backlog",
           "title": "Instagram Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         },
         {
           "id": "setup-x",
           "status": "Backlog",
           "title": "Twitter Brand Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         },
         {
           "id": "setup-substack",
           "status": "Backlog",
           "title": "Substack Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         }
       ]
     }
@@ -412,12 +372,6 @@
           "title": "User Idea Submission",
           "description": "A transparent board for users to post and vote on new app features or project ideas."
         }
-      },
-      {
-        "itemId": "setup-x",
-        "board": "admin",
-        "from": "Backlog",
-        "to": "Done"
       }
     ],
     "boardSnapshots": {
@@ -558,25 +512,25 @@
           "id": "setup-tiktok",
           "status": "Backlog",
           "title": "TikTok Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         },
         {
           "id": "setup-instagram",
           "status": "Backlog",
           "title": "Instagram Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         },
         {
           "id": "setup-x",
-          "status": "Done",
+          "status": "Backlog",
           "title": "Twitter Brand Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         },
         {
           "id": "setup-substack",
           "status": "Backlog",
           "title": "Substack Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         }
       ]
     }
@@ -848,25 +802,25 @@
           "id": "setup-tiktok",
           "status": "Backlog",
           "title": "TikTok Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         },
         {
           "id": "setup-instagram",
           "status": "Backlog",
           "title": "Instagram Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         },
         {
           "id": "setup-x",
-          "status": "Done",
+          "status": "Backlog",
           "title": "Twitter Brand Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         },
         {
           "id": "setup-substack",
           "status": "Backlog",
           "title": "Substack Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         }
       ]
     }
@@ -1064,25 +1018,25 @@
           "id": "setup-tiktok",
           "status": "Backlog",
           "title": "TikTok Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         },
         {
           "id": "setup-instagram",
           "status": "Backlog",
           "title": "Instagram Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         },
         {
           "id": "setup-x",
-          "status": "Done",
+          "status": "Backlog",
           "title": "Twitter Brand Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         },
         {
           "id": "setup-substack",
           "status": "Backlog",
           "title": "Substack Presence",
-          "description": "Setting up the official nursery handle."
+          "description": "Create new account."
         }
       ]
     }
