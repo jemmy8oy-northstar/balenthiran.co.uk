@@ -134,8 +134,8 @@
         "from": null,
         "to": {
           "status": "Backlog",
-          "title": "Continuous Deployment",
-          "description": "Automated pipelines for seamless updates."
+          "title": "Local Continuous Deployment",
+          "description": "Script-based deployments for rapid iterations."
         }
       },
       {
@@ -334,8 +334,8 @@
         {
           "id": "cd-pipeline",
           "status": "Backlog",
-          "title": "Continuous Deployment",
-          "description": "Automated pipelines for seamless updates."
+          "title": "Local Continuous Deployment",
+          "description": "Script-based deployments for rapid iterations."
         },
         {
           "id": "dev-env",
@@ -609,8 +609,8 @@
         {
           "id": "cd-pipeline",
           "status": "Backlog",
-          "title": "Continuous Deployment",
-          "description": "Automated pipelines for seamless updates."
+          "title": "Local Continuous Deployment",
+          "description": "Script-based deployments for rapid iterations."
         },
         {
           "id": "dev-env",
@@ -670,6 +670,12 @@
     ],
     "changes": [
       {
+        "itemId": "cd-pipeline",
+        "board": "devops",
+        "from": "Backlog",
+        "to": "Done"
+      },
+      {
         "itemId": "earn-your-drinks",
         "board": "project",
         "from": "Backlog",
@@ -704,8 +710,9 @@
       {
         "itemId": "cd-pipeline",
         "board": "devops",
-        "from": "Backlog",
-        "to": "Done"
+        "field": "title",
+        "from": "Continuous Deployment",
+        "to": "Local Continuous Deployment"
       }
     ],
     "boardSnapshots": {
