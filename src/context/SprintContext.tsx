@@ -23,7 +23,7 @@ const SprintContext = createContext<SprintContextType | undefined>(undefined);
 export const SprintProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const sprints = useMemo(() => sprintsData as Sprint[], []);
     
-    // Default to the latest sprint ID
+    // Default to the latest sprint ID (which is now the source of truth for "Live" status)
     const [activeSprintId, setActiveSprintId] = useState<string>(
         sprints.length > 0 ? sprints[sprints.length - 1].id : ''
     );
@@ -32,6 +32,7 @@ export const SprintProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         return sprints.find(s => s.id === activeSprintId) || null;
     }, [activeSprintId, sprints]);
 
+    // isLatest is true if we are viewing the very last sprint in the array
     const isLatest = activeSprintId === (sprints.length > 0 ? sprints[sprints.length - 1].id : '');
 
     return (

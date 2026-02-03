@@ -121,5 +121,51 @@
         { "id": "brand-assets", "status": "Backlog" }
       ]
     }
+  },
+  {
+    "id": "26Q1W7/8",
+    "startDate": "2026-02-12",
+    "endDate": "2026-02-25",
+    "goals": [],
+    "changes": [],
+    "boardSnapshots": {
+      "project": [
+        { "id": "germy", "status": "Retired" },
+        { "id": "apeify", "status": "On Going - Passive" },
+        { "id": "tenbeerplan", "status": "Retired" },
+        { "id": "house-price-alerts", "status": "On Hold" },
+        { "id": "earn-your-drinks", "status": "On Going - Active" },
+        { "id": "habit-tracker", "status": "Backlog" },
+        { "id": "commuter-house-search", "status": "Backlog" }
+      ],
+      "youtube": [
+        { "id": "intro-video", "status": "Uploaded" },
+        { "id": "germy-video", "status": "Uploaded" },
+        { "id": "oracle-k8s-setup", "status": "Backlog" },
+        { "id": "ten-beer-plan-logic", "status": "Backlog" },
+        { "id": "house-price-scrapers", "status": "Backlog" },
+        { "id": "apeify-scaling", "status": "Backlog" },
+        { "id": "portfolio-reveal", "status": "Uploaded" },
+        { "id": "earn-your-beers-reveal", "status": "Uploaded" },
+        { "id": "codemagic-mobile-cicd", "status": "Backlog" },
+        { "id": "eyb-eyv-pivot", "status": "Backlog" }
+      ],
+      "devops": [
+        { "id": "k8s-cluster", "status": "Done" },
+        { "id": "dotnet-migration", "status": "Backlog" },
+        { "id": "template-project", "status": "Backlog" },
+        { "id": "cd-pipeline", "status": "Backlog" },
+        { "id": "dev-env", "status": "Backlog" },
+        { "id": "newsletter-infrastructure", "status": "Backlog" },
+        { "id": "user-ideas-page", "status": "Backlog" },
+        { "id": "sprint-status-history", "status": "Done" },
+        { "id": "newsletter-beta-onboarding", "status": "Backlog" }
+      ],
+      "admin": [
+        { "id": "twitter-setup", "status": "Done" },
+        { "id": "newsletter-launch", "status": "Backlog" },
+        { "id": "brand-assets", "status": "Backlog" }
+      ]
+    }
   }
 ]

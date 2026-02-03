@@ -2,10 +2,8 @@
     {
         "id": "germy",
         "title": "Germy",
-        "status": "Success (Retired)",
         "category": "Flutter Debut",
         "path": "/projects/germy",
-        "kanbanStatus": "Retired",
         "description": "My first ever app—a Pandemic-era Tetris inspired experiment.",
         "longDescription": "Started in 2020, Germy was the project where I taught myself Flutter. Originally a pandemic-themed game, it faced multiple App Store rejections due to sensitivity policies and gameplay similarities. Despite not hitting Apple's store, it reached the Play Store and serves as the technical foundation for everything I build today.",
         "links": {
@@ -20,10 +18,8 @@
     {
         "id": "apeify",
         "title": "APEify",
-        "status": "Ongoing (App Store)",
         "category": "Social & Creative",
         "path": "/projects/apeify",
-        "kanbanStatus": "On Going - Passive",
         "description": "My first major success story. An avatar creator that grew to 70k+ organic downloads through viral social trends.",
         "longDescription": "APEify is a character tracking and progression app that allows users to manage their character data, save progress via Firebase, and interact with a premium UI. It remains one of the core active projects in the ecosystem.",
         "links": {
@@ -38,10 +34,8 @@
     {
         "id": "tenbeerplan",
         "title": "Ten Beer Plan",
-        "status": "Technical MVP",
         "category": "Main App",
         "path": "/projects/tenbeerplan",
-        "kanbanStatus": "Retired",
         "description": "My first custom backend journey—a social coordination MVP born from a meme.",
         "longDescription": "Ten Beer Plan was a technical milestone where I built my first personal backend using Python, Flask, and SQLAlchemy. It was an MVP tested by a small group of users, but ultimately hit a roadblock with Apple's sensitivity policies regarding alcohol content. It served as a massive learning experience for authentication, database management, and AWS deployment.",
         "links": {
@@ -56,10 +50,8 @@
     {
         "id": "house-price-alerts",
         "title": "House Price Alerts",
-        "status": "95% Complete",
         "category": "Pending Validation",
         "path": "/projects/house-price-alerts",
-        "kanbanStatus": "On Hold",
         "description": "Real-time alerts for property market shifts.",
         "longDescription": "Technically complete but strategically paused. Following the 'User-First' philosophy of Project Northstar, this app's release is pending proven user demand to ensure the development effort matches market interest.",
         "links": {
@@ -74,9 +66,7 @@
     {
         "id": "earn-your-drinks",
         "title": "Earn Your Beers",
-        "status": "In Development",
         "category": "Just for Fun",
-        "kanbanStatus": "On Going - Active",
         "description": "Log your drinks and earn them back through exercise (running or cycling).",
         "longDescription": "A simple offline app built for a friend. Log your drinks in real-time and commit to a corresponding run or cycle. Designed for iterative testing and community-driven feature ideas.",
         "links": {
@@ -92,9 +82,7 @@
     {
         "id": "habit-tracker",
         "title": "Personal Habit Tracker",
-        "status": "Idea",
         "category": "Just for Fun",
-        "kanbanStatus": "Backlog",
         "description": "A custom habit tracker built specifically for my own workflow.",
         "longDescription": "A personalized tool to manage daily rhythms and goals without the clutter of generic habit apps. Built for personal utility first, focusing on speed and specific goal tracking.",
         "links": {
@@ -109,9 +97,7 @@
     {
         "id": "commuter-house-search",
         "title": "Commuter House Search",
-        "status": "Idea",
         "category": "Real Estate",
-        "kanbanStatus": "Backlog",
         "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance.",
         "longDescription": "A potential disruption to traditional real estate searching. Instead of radius-based searches, users can find properties based on their actual commute duration to work or other key locations.",
         "links": {

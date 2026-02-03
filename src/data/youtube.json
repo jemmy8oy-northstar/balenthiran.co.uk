@@ -1,72 +1,62 @@
 [
     {
         "id": "intro-video",
-        "title": "Welcome To My Channel",
-        "status": "Uploaded",
-        "description": "An introduction to the jemmy8oy channel and the Project Northstar philosophy.",
+        "title": "Project Northstar Reveal",
+        "description": "The vision for a sustainable app nursery.",
         "category": "Strategy"
     },
     {
         "id": "germy-video",
-        "title": "Germy - My First Ever App!",
-        "status": "Uploaded",
-        "description": "Deep dive into the 2020 lockdown project and why it didn't make it to the App Store.",
-        "category": "Story"
+        "title": "Lessons from My First App",
+        "description": "What 70k downloads taught me about viral growth.",
+        "category": "Post-Mortem"
     },
     {
         "id": "oracle-k8s-setup",
-        "title": "Free K8s: Setting up Oracle Cloud Infrastructure",
-        "status": "Backlog",
-        "description": "Technical walkthrough of setting up a 4-node ARM cluster for free.",
+        "title": "Building a Free K8s Cluster",
+        "description": "How I host the nursery on Oracle Cloud's free tier.",
         "category": "Tutorial"
     },
     {
         "id": "ten-beer-plan-logic",
-        "title": "The Ten Beer Plan: Coding the Logic",
-        "status": "Backlog",
-        "description": "Behind the scenes of the drink logging and running conversion engine.",
-        "category": "Engineering"
+        "title": "Why MVP Logic Matters",
+        "description": "Developing the core of Ten Beer Plan.",
+        "category": "Case Study"
     },
     {
         "id": "house-price-scrapers",
-        "title": "Scraping the Property Market",
-        "status": "Backlog",
-        "description": "How I built the ingestion engine for House Price Alerts.",
-        "category": "Engineering"
+        "title": "Scraping Real Estate Data",
+        "description": "Legal and technical hurdles in housing data.",
+        "category": "Technical"
     },
     {
         "id": "apeify-scaling",
-        "title": "70k Users with Zero Backend",
-        "status": "Backlog",
-        "description": "Reflecting on the technical success of using Firebase for APEify.",
-        "category": "Story"
+        "title": "Scaling APEify with Firebase",
+        "description": "Handling real-time data for thousands of users.",
+        "category": "Engineering"
     },
     {
         "id": "portfolio-reveal",
-        "title": "I have created my website portfolio! - balenthiran.co.uk",
-        "status": "Uploaded",
-        "description": "Showcasing the new centralized home for all jemmy8oy projects and the Project Northstar roadmap.",
+        "title": "The Balenthiran Portfolio",
+        "description": "Revealing the new roadmap and ecosystem.",
         "category": "Announcement"
     },
     {
         "id": "earn-your-beers-reveal",
-        "title": "Announcing First Project of the Year - Earn Your Beers!",
-        "status": "Uploaded",
-        "description": "Revealing the concept for 'Earn Your Beers' and how it tracks fitness vs. social goals.",
-        "category": "Announcement"
+        "title": "Earn Your Beers Devlog",
+        "description": "Building the first utility app of 2026.",
+        "category": "Devlog"
     },
     {
         "id": "codemagic-mobile-cicd",
-        "title": "Using Codemagic for Mobile CICD",
-        "status": "Backlog",
-        "description": "Guide on how to use Codemagic for automating mobile app builds and deployments.",
+        "title": "Codemagic for Mobile CI/CD",
+        "description": "Streamlining app deployments.",
         "category": "Tutorial"
     },
     {
         "id": "eyb-eyv-pivot",
-        "title": "Earn Your Beers → Earn Your Vices: The Pivot",
-        "status": "Backlog",
-        "description": "Documenting the decision to expand the 'Earn Your Beers' concept into a broader vice-tracking ecosystem.",
-        "category": "Story"
+        "title": "Pivot: Earn Your Beers to Vices",
+        "description": "Why I'm broadening the scope of the app.",
+        "category": "Strategy"
     }
 ]

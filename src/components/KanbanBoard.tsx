@@ -41,7 +41,7 @@ interface KanbanBoardProps {
 
 const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
-    const { currentSprint, isLatest } = useSprint();
+    const { currentSprint } = useSprint();
 
     const columns = useMemo(() => {
         if (initialType === 'project') return PROJECT_COLUMNS;
@@ -58,31 +58,32 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
     }, [initialType]);
 
     const filteredItems = useMemo(() => {
-        const statusKey = initialType === 'project' ? 'kanbanStatus' : 'status';
-        
         let displayData = rawData;
         let snapshotMap: Record<string, string> = {};
 
-        if (!isLatest && currentSprint) {
+        // Now we ALWAYS pull from snapshots. Snapshot of latest = Live board.
+        if (currentSprint) {
             const snapshot = currentSprint.boardSnapshots[initialType];
             if (snapshot) {
-                if (typeof snapshot[0] === 'object') {
-                    snapshotMap = snapshot.reduce((acc, s: any) => {
-                        acc[s.id] = s.status;
-                        return acc;
-                    }, {} as Record<string, string>);
-                }
+                snapshotMap = snapshot.reduce((acc, s: any) => {
+                    acc[s.id] = s.status;
+                    return acc;
+                }, {} as Record<string, string>);
+                
+                // Only include items that are in the snapshot for this sprint
                 displayData = rawData.filter(item => snapshotMap[item.id] !== undefined);
             }
         }
 
         return displayData.reduce((acc, item: any) => {
-            const status = snapshotMap[item.id] || item[statusKey];
-            if (!acc[status]) acc[status] = [];
-            acc[status].push(item);
+            const status = snapshotMap[item.id];
+            if (status) {
+                if (!acc[status]) acc[status] = [];
+                acc[status].push(item);
+            }
             return acc;
         }, {} as Record<string, any[]>);
-    }, [rawData, initialType, isLatest, currentSprint]);
+    }, [rawData, initialType, currentSprint]);
 
     return (
         <div style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)', overflow: 'hidden' }}>

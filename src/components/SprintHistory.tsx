@@ -38,7 +38,7 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter }) => {
 
             {isExpanded && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                    {sprintsData.slice().reverse().map((sprint) => {
+                    {sprintsData.slice().reverse().map((sprint, idx) => {
                         const changes = getSprintChanges(sprint);
                         if (changes.length === 0 && !boardFilter) return null; // Skip if no changes and no specific board
 
@@ -46,7 +46,7 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter }) => {
                             <div key={sprint.id} className="glass" style={{ padding: '20px' }}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
                                     <h3 style={{ fontSize: '1rem', color: 'var(--text-primary)', margin: 0 }}>
-                                        Sprint {sprint.id} {idx === 0 && '(Live)'}
+                                        Sprint {sprint.id} {idx === 0 && '(current)'}
                                     </h3>
                                     <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
                                         {sprint.startDate} — {sprint.endDate}

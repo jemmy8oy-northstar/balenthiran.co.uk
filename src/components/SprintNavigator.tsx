@@ -19,13 +19,16 @@ const SprintNavigator: React.FC = () => {
         }
     };
 
+    const currentSprint = sprints.find(s => s.id === activeSprintId);
+    const hasGoals = currentSprint && currentSprint.goals && currentSprint.goals.length > 0;
+
     return (
         <div style={{
             display: 'flex',
             alignItems: 'center',
             gap: '16px',
             marginBottom: '48px',
-            justifyContent: 'center', // Centered since we removed the return button
+            justifyContent: 'center',
             padding: '0 8px'
         }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
@@ -56,14 +59,14 @@ const SprintNavigator: React.FC = () => {
                         fontWeight: 700,
                         marginBottom: '4px'
                     }}>
-                        {isLatest ? 'Current Sprint' : 'Previous Sprint'}
+                        {isLatest && !hasGoals ? 'Next Sprint (Planning)' : isLatest ? 'Current Sprint' : 'Previous Sprint'}
                     </div>
                     <div style={{ 
                         fontSize: '1.1rem', 
                         color: 'var(--accent-primary)', 
                         fontWeight: 800 
                     }}>
-                        Sprint {activeSprintId} {isLatest && '(Live)'}
+                        Sprint {activeSprintId} {isLatest && (hasGoals ? '(current)' : '')}
                     </div>
                 </div>
 

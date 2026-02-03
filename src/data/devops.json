@@ -2,7 +2,6 @@
     {
         "id": "k8s-cluster",
         "title": "Oracle K8s Cluster",
-        "status": "Done",
         "description": "Custom Kubernetes environment on Oracle Cloud Infrastructure.",
         "longDescription": "The foundation for the new ecosystem. A fully functional K8s cluster providing scalable and cost-effective hosting.",
         "category": "Infrastructure"
@@ -10,7 +9,6 @@
     {
         "id": "dotnet-migration",
         "title": "Move to .NET",
-        "status": "Backlog",
         "description": "Migrating core services to .NET for improved performance and scalability.",
         "longDescription": "Transitioning the backend architecture to .NET to leverage its robust ecosystem and performance benefits.",
         "category": "Backend"
@@ -18,7 +16,6 @@
     {
         "id": "template-project",
         "title": "Create Template Project",
-        "status": "Backlog",
         "description": "Standardizing project starts with a robust template.",
         "longDescription": "Building a reusable template that includes authentication, logging, and deployment configs to speed up new app development.",
         "category": "Engineering"
@@ -26,7 +23,6 @@
     {
         "id": "cd-pipeline",
         "title": "Continuous Deployment",
-        "status": "Backlog",
         "description": "Automated pipelines for seamless updates.",
         "longDescription": "Implementing CI/CD pipelines to automatically deploy changes to the K8s cluster upon code commit.",
         "category": "DevOps"
@@ -34,7 +30,6 @@
     {
         "id": "dev-env",
         "title": "Dev Environment",
-        "status": "Backlog",
         "description": "Isolated staging and local development environments.",
         "longDescription": "Setting up a mirrored dev environment to test features safely before production rollout.",
         "category": "DevOps"
@@ -42,7 +37,6 @@
     {
         "id": "newsletter-infrastructure",
         "title": "Per-App Newsletters",
-        "status": "Backlog",
         "description": "Targeted updates and subscription management for individual projects.",
         "longDescription": "Infrastructure to handle segmented email lists, allowing users to follow specific apps or the general ecosystem.",
         "category": "Engineering"
@@ -50,7 +44,6 @@
     {
         "id": "user-ideas-page",
         "title": "User Idea Submission",
-        "status": "Backlog",
         "description": "A transparent board for users to post and vote on new app features or project ideas.",
         "longDescription": "Closing the feedback loop by allowing the community to directly influence the nursery roadmap and prioritize new builds.",
         "category": "Product"
@@ -58,7 +51,6 @@
     {
         "id": "sprint-status-history",
         "title": "Sprint Status History",
-        "status": "Backlog",
         "description": "Indicate changes in task status between sprints on the website.",
         "longDescription": "Implement a feature on the website to visualize how tasks move between statuses across sprints, providing historical context and progress tracking.",
         "category": "DevOps"
@@ -66,7 +58,6 @@
     {
         "id": "newsletter-beta-onboarding",
         "title": "Newsletter-to-Beta Automation",
-        "status": "Backlog",
         "description": "Automated public beta onboarding via newsletter signup.",
         "longDescription": "Mechanism where users signing up to the newsletter are automatically added to iOS/Android beta groups via App Store Connect and Play Store APIs.",
         "category": "Engineering"
