@@ -19,8 +19,20 @@ const SprintNavigator: React.FC = () => {
         }
     };
 
+    // Derived flags for labeling
     const currentSprint = sprints.find(s => s.id === activeSprintId);
     const hasGoals = currentSprint && currentSprint.goals && currentSprint.goals.length > 0;
+    
+    // Find the latest sprint with goals
+    const latestWithGoals = [...sprints].reverse().find(s => s.goals && s.goals.length > 0);
+    const latestWithGoalsIndex = latestWithGoals ? allSprintIds.indexOf(latestWithGoals.id) : -1;
+
+    let headerLabel = 'Previous Sprint';
+    if (currentIndex === latestWithGoalsIndex) {
+        headerLabel = 'Current Sprint';
+    } else if (currentIndex > latestWithGoalsIndex) {
+        headerLabel = 'Next Sprint (Planning)';
+    }
 
     return (
         <div style={{
@@ -59,14 +71,14 @@ const SprintNavigator: React.FC = () => {
                         fontWeight: 700,
                         marginBottom: '4px'
                     }}>
-                        {isLatest && !hasGoals ? 'Next Sprint (Planning)' : isLatest ? 'Current Sprint' : 'Previous Sprint'}
+                        {headerLabel}
                     </div>
                     <div style={{ 
                         fontSize: '1.1rem', 
                         color: 'var(--accent-primary)', 
                         fontWeight: 800 
                     }}>
-                        Sprint {activeSprintId} {isLatest && (hasGoals ? '(current)' : '')}
+                        Sprint {activeSprintId} {isLatest && '(current)'}
                     </div>
                 </div>
 
