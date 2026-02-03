@@ -22,9 +22,9 @@
     },
     {
         "id": "cd-pipeline",
-        "title": "Continuous Deployment",
-        "description": "Automated pipelines for seamless updates.",
-        "longDescription": "Implementing CI/CD pipelines to automatically deploy changes to the K8s cluster upon code commit.",
+        "title": "Local Continuous Deployment",
+        "description": "Script-based deployments for rapid iterations.",
+        "longDescription": "I\u0027ve chosen to implement a local scripting approach for CD instead of complex CI pipelines. This allows for faster deployments and less overhead while working solo, while still providing automated and repeatable updates to the K8s cluster.",
         "category": "DevOps"
     },
     {

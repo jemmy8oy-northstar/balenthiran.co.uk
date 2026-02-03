@@ -700,6 +700,12 @@
         "board": "devops",
         "from": "Backlog",
         "to": "Done"
+      },
+      {
+        "itemId": "cd-pipeline",
+        "board": "devops",
+        "from": "Backlog",
+        "to": "Done"
       }
     ],
     "boardSnapshots": {
@@ -842,9 +848,9 @@
         },
         {
           "id": "cd-pipeline",
-          "status": "Backlog",
-          "title": "Continuous Deployment",
-          "description": "Automated pipelines for seamless updates."
+          "status": "Done",
+          "title": "Local Continuous Deployment",
+          "description": "Script-based deployments for rapid iterations."
         },
         {
           "id": "dev-env",
@@ -1051,9 +1057,9 @@
         },
         {
           "id": "cd-pipeline",
-          "status": "Backlog",
-          "title": "Continuous Deployment",
-          "description": "Automated pipelines for seamless updates."
+          "status": "Done",
+          "title": "Local Continuous Deployment",
+          "description": "Script-based deployments for rapid iterations."
         },
         {
           "id": "dev-env",
