@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
+import config from '../data/config.json';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
     const getLinkStyle = (path: string) => {
-    const isActive = location.pathname === path || (path === '/boards' && location.pathname.startsWith('/boards'));
+    const isActive = location.pathname === path || (path === config.navigation.boards && location.pathname.startsWith(config.navigation.boards));
     return {
       color: isActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
       fontWeight: isActive ? 700 : 500,
@@ -19,7 +20,7 @@ const Navbar: React.FC = () => {
     };
   };
 
-  const isActive = (path: string) => location.pathname === path || (path === '/boards' && location.pathname.startsWith('/boards'));
+  const isActive = (path: string) => location.pathname === path || (path === config.navigation.boards && location.pathname.startsWith(config.navigation.boards));
 
 
   const ActiveDot = () => (
@@ -63,17 +64,17 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className={`nav-links ${isMenuOpen ? 'open' : ''}`} style={{ display: 'flex', gap: '24px', fontSize: '0.85rem', alignItems: 'center' }}>
-        <Link to="/" onClick={() => setIsMenuOpen(false)} style={getLinkStyle('/')}>
+        <Link to={config.navigation.home} onClick={() => setIsMenuOpen(false)} style={getLinkStyle(config.navigation.home)}>
           Home
-          {isActive('/') && <ActiveDot />}
+          {isActive(config.navigation.home) && <ActiveDot />}
         </Link>
-        <Link to="/boards" onClick={() => setIsMenuOpen(false)} style={getLinkStyle('/boards')}>
+        <Link to={config.navigation.boards} onClick={() => setIsMenuOpen(false)} style={getLinkStyle(config.navigation.boards)}>
           Boards
-          {isActive('/boards') && <ActiveDot />}
+          {isActive(config.navigation.boards) && <ActiveDot />}
         </Link>
-        <Link to="/youtube" onClick={() => setIsMenuOpen(false)} style={getLinkStyle('/youtube')}>
+        <Link to={config.navigation.youtube} onClick={() => setIsMenuOpen(false)} style={getLinkStyle(config.navigation.youtube)}>
           YouTube
-          {isActive('/youtube') && <ActiveDot />}
+          {isActive(config.navigation.youtube) && <ActiveDot />}
         </Link>
         <ThemeToggle />
       </div>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import KanbanBoard from '../components/KanbanBoard';
 import BoardSwitcher from '../components/BoardSwitcher';
 import SprintGoals from '../components/SprintGoals';
@@ -29,8 +29,25 @@ const BOARD_METADATA: Record<InternalBoardType, { title: string; description: st
 };
 
 const Board: React.FC = () => {
-    const [boardType, setBoardType] = useState<InternalBoardType>('project');
+    const [searchParams, setSearchParams] = useSearchParams();
+    const initialType = (searchParams.get('type') as InternalBoardType) || 'project';
+    
+    const [boardType, setBoardType] = useState<InternalBoardType>(initialType);
     const { activeSprintId } = useSprint();
+
+    // Sync state with URL when switcher is used
+    const handleTypeChange = (type: InternalBoardType) => {
+        setBoardType(type);
+        setSearchParams({ type });
+    };
+
+    // Also sync if URL changes manually
+    useEffect(() => {
+        const type = searchParams.get('type') as InternalBoardType;
+        if (type && type !== boardType && ['project', 'devops', 'youtube', 'admin'].includes(type)) {
+            setBoardType(type);
+        }
+    }, [searchParams]);
 
     const metadata = BOARD_METADATA[boardType];
 
@@ -45,7 +62,7 @@ const Board: React.FC = () => {
 
                 <SprintGoals />
 
-                <BoardSwitcher currentType={boardType} onTypeChange={setBoardType} />
+                <BoardSwitcher currentType={boardType} onTypeChange={handleTypeChange} />
 
                 <div style={{ marginBottom: '48px' }}>
                     <h1 style={{ fontSize: '3.5rem', color: 'var(--text-primary)', marginBottom: '16px' }}>{metadata.title}</h1>

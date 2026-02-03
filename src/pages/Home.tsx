@@ -5,6 +5,7 @@ import Northstar from '../components/Northstar';
 import ProjectGrid from '../components/ProjectGrid';
 import InterestForm from '../components/InterestForm';
 import { Link } from 'react-router-dom';
+import config from '../data/config.json';
 
 const Home: React.FC = () => {
     return (
@@ -19,7 +20,7 @@ const Home: React.FC = () => {
                         <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Projects & Ideas</h2>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px' }}>
                             <p style={{ color: 'var(--text-secondary)' }}>Ongoing apps, retired projects, and experiments.</p>
-                            <Link to="/roadmap/projects" style={{ color: 'var(--accent-primary)', fontWeight: 600, fontSize: '0.9rem' }}>
+                            <Link to={config.roadmapPaths.project} style={{ color: 'var(--accent-primary)', fontWeight: 600, fontSize: '0.9rem' }}>
                                 View Full Roadmap →
                             </Link>
                         </div>
@@ -35,7 +36,7 @@ const Home: React.FC = () => {
                         The engine room of the ecosystem. Tracking technical infrastructure and jemmy8oy brand growth.
                     </p>
                     <div className="hero-actions" style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
-                        <Link to="/roadmap/devops" className="glass" style={{
+                        <Link to={config.roadmapPaths.devops} className="glass" style={{
                             padding: '16px 32px',
                             background: 'var(--accent-primary)',
                             color: '#fff',
@@ -45,7 +46,7 @@ const Home: React.FC = () => {
                         }}>
                             View Engineering Roadmap
                         </Link>
-                        <Link to="/roadmap/admin" className="glass" style={{
+                        <Link to={config.roadmapPaths.admin} className="glass" style={{
                             padding: '16px 32px',
                             background: 'rgba(255, 255, 255, 0.05)',
                             color: 'var(--text-primary)',
