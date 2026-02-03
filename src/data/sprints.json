@@ -1,0 +1,125 @@
+[
+  {
+    "id": "26Q1W1/2",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-14",
+    "goals": [
+      "Finalize Project Northstar vision",
+      "Launch initial portfolio website",
+      "Setup automated deployment to K8s"
+    ],
+    "changes": [
+      { "itemId": "k8s-cluster", "board": "devops", "from": "Backlog", "to": "Done" },
+      { "itemId": "portfolio-reveal", "board": "youtube", "from": null, "to": "Uploaded" }
+    ],
+    "boardSnapshots": {
+      "project": [
+        { "id": "germy", "status": "Retired" },
+        { "id": "apeify", "status": "On Going - Passive" },
+        { "id": "tenbeerplan", "status": "Retired" }
+      ],
+      "youtube": [
+        { "id": "intro-video", "status": "Uploaded" },
+        { "id": "germy-video", "status": "Uploaded" },
+        { "id": "portfolio-reveal", "status": "Uploaded" }
+      ],
+      "devops": [
+        { "id": "k8s-cluster", "status": "Done" },
+        { "id": "cd-pipeline", "status": "Backlog" }
+      ],
+      "admin": [
+        { "id": "twitter-setup", "status": "Done" }
+      ]
+    }
+  },
+  {
+    "id": "26Q1W3/4",
+    "startDate": "2026-01-15",
+    "endDate": "2026-01-28",
+    "goals": [
+      "Begin 'Earn Your Beers' development",
+      "Improve performance charts on APEify",
+      "Create video on Codemagic CI/CD"
+    ],
+    "changes": [
+      { "itemId": "earn-your-drinks", "board": "project", "from": "Planning", "to": "On Going - Active" },
+      { "itemId": "codemagic-mobile-cicd", "board": "youtube", "from": "Backlog", "to": "Backlog" }
+    ],
+    "boardSnapshots": {
+      "project": [
+        { "id": "germy", "status": "Retired" },
+        { "id": "apeify", "status": "On Going - Passive" },
+        { "id": "tenbeerplan", "status": "Retired" },
+        { "id": "earn-your-drinks", "status": "On Going - Active" }
+      ],
+      "youtube": [
+        { "id": "intro-video", "status": "Uploaded" },
+        { "id": "germy-video", "status": "Uploaded" },
+        { "id": "portfolio-reveal", "status": "Uploaded" },
+        { "id": "codemagic-mobile-cicd", "status": "Backlog" }
+      ],
+      "devops": [
+        { "id": "k8s-cluster", "status": "Done" },
+        { "id": "cd-pipeline", "status": "Backlog" },
+        { "id": "dotnet-migration", "status": "Backlog" }
+      ],
+      "admin": [
+        { "id": "twitter-setup", "status": "Done" },
+        { "id": "newsletter-launch", "status": "Backlog" }
+      ]
+    }
+  },
+  {
+    "id": "26Q1W5/6",
+    "startDate": "2026-01-29",
+    "endDate": "2026-02-11",
+    "goals": [
+      "begin earn your vices app store onboarding",
+      "begin to move earn your vides into beta testing",
+      "add new app idea video"
+    ],
+    "changes": [
+      { "itemId": "eyb-eyv-pivot", "board": "youtube", "from": null, "to": "Backlog" },
+      { "itemId": "newsletter-beta-onboarding", "board": "devops", "from": null, "to": "Backlog" }
+    ],
+    "boardSnapshots": {
+      "project": [
+        { "id": "germy", "status": "Retired" },
+        { "id": "apeify", "status": "On Going - Passive" },
+        { "id": "tenbeerplan", "status": "Retired" },
+        { "id": "house-price-alerts", "status": "On Hold" },
+        { "id": "earn-your-drinks", "status": "On Going - Active" },
+        { "id": "habit-tracker", "status": "Backlog" },
+        { "id": "commuter-house-search", "status": "Backlog" }
+      ],
+      "youtube": [
+        { "id": "intro-video", "status": "Uploaded" },
+        { "id": "germy-video", "status": "Uploaded" },
+        { "id": "oracle-k8s-setup", "status": "Backlog" },
+        { "id": "ten-beer-plan-logic", "status": "Backlog" },
+        { "id": "house-price-scrapers", "status": "Backlog" },
+        { "id": "apeify-scaling", "status": "Backlog" },
+        { "id": "portfolio-reveal", "status": "Uploaded" },
+        { "id": "earn-your-beers-reveal", "status": "Uploaded" },
+        { "id": "codemagic-mobile-cicd", "status": "Backlog" },
+        { "id": "eyb-eyv-pivot", "status": "Backlog" }
+      ],
+      "devops": [
+        { "id": "k8s-cluster", "status": "Done" },
+        { "id": "dotnet-migration", "status": "Backlog" },
+        { "id": "template-project", "status": "Backlog" },
+        { "id": "cd-pipeline", "status": "Backlog" },
+        { "id": "dev-env", "status": "Backlog" },
+        { "id": "newsletter-infrastructure", "status": "Backlog" },
+        { "id": "user-ideas-page", "status": "Backlog" },
+        { "id": "sprint-status-history", "status": "Backlog" },
+        { "id": "newsletter-beta-onboarding", "status": "Backlog" }
+      ],
+      "admin": [
+        { "id": "twitter-setup", "status": "Done" },
+        { "id": "newsletter-launch", "status": "Backlog" },
+        { "id": "brand-assets", "status": "Backlog" }
+      ]
+    }
+  }
+]

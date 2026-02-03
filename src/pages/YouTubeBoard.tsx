@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import KanbanBoard from '../components/KanbanBoard';
 import BoardSwitcher from '../components/BoardSwitcher';
 import SprintGoals from '../components/SprintGoals';
+import SprintHistory from '../components/SprintHistory';
+import SprintNavigator from '../components/SprintNavigator';
 
 const YouTubeBoard: React.FC = () => {
     return (
@@ -12,7 +14,11 @@ const YouTubeBoard: React.FC = () => {
                     ← Back to Portfolio
                 </Link>
 
+                <SprintNavigator />
+
                 <SprintGoals />
+
+                <SprintHistory boardFilter="youtube" />
 
                 <BoardSwitcher initialType="youtube" />
 

@@ -14,42 +14,45 @@ import HousePriceAlertsDetail from './pages/HousePriceAlertsDetail'
 import YouTubeBoard from './pages/YouTubeBoard'
 import AdminBoard from './pages/AdminBoard'
 import EarnYourDrinksDetail from './pages/EarnYourDrinksDetail'
+import { SprintProvider } from './context/SprintContext'
 
 function App() {
   return (
     <ThemeProvider>
-      <Router>
-        <ScrollToTop />
-        <div className="app-container">
-          <Navbar />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects/germy" element={<GermyDetail />} />
-              <Route path="/projects/apeify" element={<APEifyDetail />} />
-              <Route path="/projects/tenbeerplan" element={<TenBeerPlanDetail />} />
-              <Route path="/roadmap/projects" element={<ProjectBoard />} />
-              <Route path="/roadmap/devops" element={<DevOpsBoard />} />
-              <Route path="/roadmap/youtube" element={<YouTubeBoard />} />
-              <Route path="/roadmap/admin" element={<AdminBoard />} />
-              <Route path="/projects/house-price-alerts" element={<HousePriceAlertsDetail />} />
-              <Route path="/projects/earn-your-drinks" element={<EarnYourDrinksDetail />} />
-              <Route path="/youtube" element={<YouTubeDetail />} />
-            </Routes>
-          </main>
+      <SprintProvider>
+        <Router>
+          <ScrollToTop />
+          <div className="app-container">
+            <Navbar />
+            <main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects/germy" element={<GermyDetail />} />
+                <Route path="/projects/apeify" element={<APEifyDetail />} />
+                <Route path="/projects/tenbeerplan" element={<TenBeerPlanDetail />} />
+                <Route path="/roadmap/projects" element={<ProjectBoard />} />
+                <Route path="/roadmap/devops" element={<DevOpsBoard />} />
+                <Route path="/roadmap/youtube" element={<YouTubeBoard />} />
+                <Route path="/roadmap/admin" element={<AdminBoard />} />
+                <Route path="/projects/house-price-alerts" element={<HousePriceAlertsDetail />} />
+                <Route path="/projects/earn-your-drinks" element={<EarnYourDrinksDetail />} />
+                <Route path="/youtube" element={<YouTubeDetail />} />
+              </Routes>
+            </main>
 
-          <footer className="container" style={{
-            padding: '64px 0',
-            borderTop: '1px solid var(--glass-border)',
-            marginTop: '120px',
-            textAlign: 'center',
-            color: 'var(--text-secondary)',
-            fontSize: '0.9rem'
-          }}>
-            <p>© {new Date().getFullYear()} James Balenthiran.</p>
-          </footer>
-        </div>
-      </Router>
+            <footer className="container" style={{
+              padding: '64px 0',
+              borderTop: '1px solid var(--glass-border)',
+              marginTop: '120px',
+              textAlign: 'center',
+              color: 'var(--text-secondary)',
+              fontSize: '0.9rem'
+            }}>
+              <p>© {new Date().getFullYear()} James Balenthiran.</p>
+            </footer>
+          </div>
+        </Router>
+      </SprintProvider>
     </ThemeProvider>
   )
 }

@@ -4,6 +4,7 @@ import projectsData from '../data/projects.json';
 import devopsData from '../data/devops.json';
 import youtubeData from '../data/youtube.json';
 import adminData from '../data/admin.json';
+import { useSprint } from '../context/SprintContext';
 
 const PROJECT_COLUMNS = [
     'Backlog',
@@ -40,6 +41,7 @@ interface KanbanBoardProps {
 
 const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const { currentSprint, isLatest } = useSprint();
 
     const columns = useMemo(() => {
         if (initialType === 'project') return PROJECT_COLUMNS;
@@ -48,7 +50,7 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
         return YOUTUBE_COLUMNS;
     }, [initialType]);
 
-    const data = useMemo(() => {
+    const rawData = useMemo(() => {
         if (initialType === 'project') return projectsData;
         if (initialType === 'devops') return devopsData;
         if (initialType === 'admin') return adminData;
@@ -57,17 +59,33 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
 
     const filteredItems = useMemo(() => {
         const statusKey = initialType === 'project' ? 'kanbanStatus' : 'status';
-        return data.reduce((acc, item: any) => {
-            const status = item[statusKey];
+        
+        let displayData = rawData;
+        let snapshotMap: Record<string, string> = {};
+
+        if (!isLatest && currentSprint) {
+            const snapshot = currentSprint.boardSnapshots[initialType];
+            if (snapshot) {
+                if (typeof snapshot[0] === 'object') {
+                    snapshotMap = snapshot.reduce((acc, s: any) => {
+                        acc[s.id] = s.status;
+                        return acc;
+                    }, {} as Record<string, string>);
+                }
+                displayData = rawData.filter(item => snapshotMap[item.id] !== undefined);
+            }
+        }
+
+        return displayData.reduce((acc, item: any) => {
+            const status = snapshotMap[item.id] || item[statusKey];
             if (!acc[status]) acc[status] = [];
             acc[status].push(item);
             return acc;
         }, {} as Record<string, any[]>);
-    }, [data, initialType]);
+    }, [rawData, initialType, isLatest, currentSprint]);
 
     return (
         <div style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)', overflow: 'hidden' }}>
-
             <div
                 ref={scrollContainerRef}
                 style={{

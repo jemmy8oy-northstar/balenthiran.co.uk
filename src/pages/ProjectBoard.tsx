@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import KanbanBoard from '../components/KanbanBoard';
 import BoardSwitcher from '../components/BoardSwitcher';
 import SprintGoals from '../components/SprintGoals';
+import SprintHistory from '../components/SprintHistory';
+import SprintNavigator from '../components/SprintNavigator';
 
 const ProjectBoard: React.FC = () => {
     return (
@@ -12,7 +14,11 @@ const ProjectBoard: React.FC = () => {
                     ← Back to Portfolio
                 </Link>
                 
+                <SprintNavigator />
+
                 <SprintGoals />
+
+                <SprintHistory boardFilter="project" />
 
                 <BoardSwitcher initialType="project" />
 
