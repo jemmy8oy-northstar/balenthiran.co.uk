@@ -9,45 +9,56 @@
       "Setup automated deployment to K8s"
     ],
     "changes": [
-      { "itemId": "germy", "board": "project", "from": null, "to": "Retired" },
-      { "itemId": "apeify", "board": "project", "from": null, "to": "On Going - Active" },
-      { "itemId": "tenbeerplan", "board": "project", "from": null, "to": "Retired" },
-      { "itemId": "house-price-alerts", "board": "project", "from": null, "to": "On Hold" },
-      { "itemId": "intro-video", "board": "youtube", "from": null, "to": "Uploaded" },
-      { "itemId": "germy-video", "board": "youtube", "from": null, "to": "Uploaded" },
-      { "itemId": "k8s-cluster", "board": "devops", "from": null, "to": "Done" },
-      { "itemId": "dotnet-migration", "board": "devops", "from": null, "to": "In Progress" },
-      { "itemId": "template-project", "board": "devops", "from": null, "to": "In Progress" },
-      { "itemId": "cd-pipeline", "board": "devops", "from": null, "to": "Backlog" },
-      { "itemId": "dev-env", "board": "devops", "from": null, "to": "Backlog" },
-      { "itemId": "setup-tiktok", "board": "admin", "from": null, "to": "Backlog" },
-      { "itemId": "setup-instagram", "board": "admin", "from": null, "to": "Backlog" },
-      { "itemId": "setup-x", "board": "admin", "from": null, "to": "Backlog" },
-      { "itemId": "setup-substack", "board": "admin", "from": null, "to": "Backlog" }
+      { "itemId": "germy", "board": "project", "from": null, "to": { "status": "Retired", "title": "Germy", "description": "My first ever app—a Pandemic-era Tetris inspired experiment." } },
+      { "itemId": "apeify", "board": "project", "from": null, "to": { "status": "On Going - Active", "title": "APEify", "description": "My first major success story. An avatar creator that grew to 70k+ organic downloads through viral social trends." } },
+      { "itemId": "tenbeerplan", "board": "project", "from": null, "to": { "status": "Retired", "title": "Ten Beer Plan", "description": "My first custom backend journey—a social coordination MVP born from a meme." } },
+      { "itemId": "house-price-alerts", "board": "project", "from": null, "to": { "status": "On Hold", "title": "House Price Alerts", "description": "Real-time alerts for property market shifts." } },
+      { "itemId": "intro-video", "board": "youtube", "from": null, "to": { "status": "Uploaded", "title": "intro-video", "description": "The vision for a sustainable app nursery." } },
+      { "itemId": "intro-video", "board": "youtube", "from": "intro-video", "to": "James Balenthiran - Welcome To My Channel - April 6th 2025", "field": "title" },
+      { "itemId": "germy-video", "board": "youtube", "from": null, "to": { "status": "Uploaded", "title": "germy-video", "description": "What 70k downloads taught me about viral growth." } },
+      { "itemId": "germy-video", "board": "youtube", "from": "germy-video", "to": "Germy - My First Ever App!", "field": "title" },
+      { "itemId": "pivot-ramble-2025", "board": "youtube", "from": null, "to": { "status": "Uploaded", "title": "27/11/25 - 2026 Pivot / Ramble", "description": "Looking ahead to the next phase of development." } },
+      { "itemId": "new-year-2026", "board": "youtube", "from": null, "to": { "status": "Uploaded", "title": "Happy New Year! 2025 Resolution Reflection / 2026 Resolution Setting", "description": "Goals for the upcoming year." } },
+      { "itemId": "portfolio-reveal", "board": "youtube", "from": null, "to": { "status": "Uploaded", "title": "portfolio-reveal", "description": "Revealing the new roadmap and ecosystem." } },
+      { "itemId": "portfolio-reveal", "board": "youtube", "from": "portfolio-reveal", "to": "Finally built my online portfolio!", "field": "title" },
+      { "itemId": "earn-your-beers-reveal", "board": "youtube", "from": null, "to": { "status": "Uploaded", "title": "Announcing First Project of the Year - Earn Your Beers!", "description": "Building the first utility app of 2026." } },
+      { "itemId": "k8s-cluster", "board": "devops", "from": null, "to": { "status": "Done", "title": "Oracle K8s Cluster", "description": "Custom Kubernetes environment on Oracle Cloud Infrastructure." } },
+      { "itemId": "dotnet-migration", "board": "devops", "from": null, "to": { "status": "In Progress", "title": "Move to .NET", "description": "Migrating core services to .NET for improved performance and scalability." } },
+      { "itemId": "template-project", "board": "devops", "from": null, "to": { "status": "In Progress", "title": "Create Template Project", "description": "Standardizing project starts with a robust template." } },
+      { "itemId": "cd-pipeline", "board": "devops", "from": null, "to": { "status": "Backlog", "title": "Continuous Deployment", "description": "Automated pipelines for seamless updates." } },
+      { "itemId": "dev-env", "board": "devops", "from": null, "to": { "status": "Backlog", "title": "Dev Environment", "description": "Isolated staging and local development environments." } },
+      { "itemId": "setup-tiktok", "board": "admin", "from": null, "to": { "status": "Backlog", "title": "TikTok Presence", "description": "Setting up the official nursery handle." } },
+      { "itemId": "setup-instagram", "board": "admin", "from": null, "to": { "status": "Backlog", "title": "Instagram Presence", "description": "Setting up the official nursery handle." } },
+      { "itemId": "setup-x", "board": "admin", "from": null, "to": { "status": "Backlog", "title": "Twitter Brand Presence", "description": "Setting up the official nursery handle." } },
+      { "itemId": "setup-substack", "board": "admin", "from": null, "to": { "status": "Backlog", "title": "Substack Presence", "description": "Setting up the official nursery handle." } }
     ],
     "boardSnapshots": {
       "project": [
-        { "id": "germy", "status": "Retired" },
-        { "id": "apeify", "status": "On Going - Active" },
-        { "id": "tenbeerplan", "status": "Retired" },
-        { "id": "house-price-alerts", "status": "On Hold" }
+        { "id": "germy", "status": "Retired", "title": "Germy", "description": "My first ever app—a Pandemic-era Tetris inspired experiment." },
+        { "id": "apeify", "status": "On Going - Active", "title": "APEify", "description": "My first major success story. An avatar creator that grew to 70k+ organic downloads through viral social trends." },
+        { "id": "tenbeerplan", "status": "Retired", "title": "Ten Beer Plan", "description": "My first custom backend journey—a social coordination MVP born from a meme." },
+        { "id": "house-price-alerts", "status": "On Hold", "title": "House Price Alerts", "description": "Real-time alerts for property market shifts." }
       ],
       "youtube": [
-        { "id": "intro-video", "status": "Uploaded" },
-        { "id": "germy-video", "status": "Uploaded" }
+        { "id": "intro-video", "status": "Uploaded", "title": "James Balenthiran - Welcome To My Channel - April 6th 2025", "description": "The vision for a sustainable app nursery." },
+        { "id": "germy-video", "status": "Uploaded", "title": "Germy - My First Ever App!", "description": "What 70k downloads taught me about viral growth." },
+        { "id": "pivot-ramble-2025", "status": "Uploaded", "title": "27/11/25 - 2026 Pivot / Ramble", "description": "Looking ahead to the next phase of development." },
+        { "id": "new-year-2026", "status": "Uploaded", "title": "Happy New Year! 2025 Resolution Reflection / 2026 Resolution Setting", "description": "Goals for the upcoming year." },
+        { "id": "portfolio-reveal", "status": "Uploaded", "title": "Finally built my online portfolio!", "description": "Revealing the new roadmap and ecosystem." },
+        { "id": "earn-your-beers-reveal", "status": "Uploaded", "title": "Announcing First Project of the Year - Earn Your Beers!", "description": "Building the first utility app of 2026." }
       ],
       "devops": [
-        { "id": "k8s-cluster", "status": "Done" },
-        { "id": "dotnet-migration", "status": "In Progress" },
-        { "id": "template-project", "status": "In Progress" },
-        { "id": "cd-pipeline", "status": "Backlog" },
-        { "id": "dev-env", "status": "Backlog" }
+        { "id": "k8s-cluster", "status": "Done", "title": "Oracle K8s Cluster", "description": "Custom Kubernetes environment on Oracle Cloud Infrastructure." },
+        { "id": "dotnet-migration", "status": "In Progress", "title": "Move to .NET", "description": "Migrating core services to .NET for improved performance and scalability." },
+        { "id": "template-project", "status": "In Progress", "title": "Create Template Project", "description": "Standardizing project starts with a robust template." },
+        { "id": "cd-pipeline", "status": "Backlog", "title": "Continuous Deployment", "description": "Automated pipelines for seamless updates." },
+        { "id": "dev-env", "status": "Backlog", "title": "Dev Environment", "description": "Isolated staging and local development environments." }
       ],
       "admin": [
-        { "id": "setup-tiktok", "status": "Backlog" },
-        { "id": "setup-instagram", "status": "Backlog" },
-        { "id": "setup-x", "status": "Backlog" },
-        { "id": "setup-substack", "status": "Backlog" }
+        { "id": "setup-tiktok", "status": "Backlog", "title": "TikTok Presence", "description": "Setting up the official nursery handle." },
+        { "id": "setup-instagram", "status": "Backlog", "title": "Instagram Presence", "description": "Setting up the official nursery handle." },
+        { "id": "setup-x", "status": "Backlog", "title": "Twitter Brand Presence", "description": "Setting up the official nursery handle." },
+        { "id": "setup-substack", "status": "Backlog", "title": "Substack Presence", "description": "Setting up the official nursery handle." }
       ]
     }
   },
@@ -62,52 +73,54 @@
     ],
     "changes": [
       { "itemId": "apeify", "board": "project", "from": "On Going - Active", "to": "On Going - Passive" },
-      { "itemId": "earn-your-drinks", "board": "project", "from": null, "to": "Backlog" },
-      { "itemId": "habit-tracker", "board": "project", "from": null, "to": "Backlog" },
-      { "itemId": "commuter-house-search", "board": "project", "from": null, "to": "Backlog" },
-      { "itemId": "portfolio-reveal", "board": "youtube", "from": null, "to": "Uploaded" },
-      { "itemId": "codemagic-mobile-cicd", "board": "youtube", "from": null, "to": "Backlog" },
+      { "itemId": "earn-your-drinks", "board": "project", "from": null, "to": { "status": "Backlog", "title": "Earn Your Beers", "description": "Log your drinks and earn them back through exercise (running or cycling)." } },
+      { "itemId": "habit-tracker", "board": "project", "from": null, "to": { "status": "Backlog", "title": "Personal Habit Tracker", "description": "A custom habit tracker built specifically for my own workflow." } },
+      { "itemId": "commuter-house-search", "board": "project", "from": null, "to": { "status": "Backlog", "title": "Commuter House Search", "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance." } },
+      { "itemId": "codemagic-mobile-cicd", "board": "youtube", "from": null, "to": { "status": "Backlog", "title": "Codemagic for Mobile CI/CD", "description": "Streamlining app deployments." } },
       { "itemId": "dotnet-migration", "board": "devops", "from": "In Progress", "to": "Backlog" },
       { "itemId": "template-project", "board": "devops", "from": "In Progress", "to": "Backlog" },
-      { "itemId": "newsletter-infrastructure", "board": "devops", "from": null, "to": "Backlog" },
-      { "itemId": "user-ideas-page", "board": "devops", "from": null, "to": "Backlog" },
-      { "itemId": "twitter-setup", "board": "admin", "from": null, "to": "Done" },
-      { "itemId": "newsletter-launch", "board": "admin", "from": null, "to": "Backlog" },
-      { "itemId": "brand-assets", "board": "admin", "from": null, "to": "Backlog" }
+      { "itemId": "newsletter-infrastructure", "board": "devops", "from": null, "to": { "status": "Backlog", "title": "Per-App Newsletters", "description": "Targeted updates and subscription management for individual projects." } },
+      { "itemId": "user-ideas-page", "board": "devops", "from": null, "to": { "status": "Backlog", "title": "User Idea Submission", "description": "A transparent board for users to post and vote on new app features or project ideas." } },
+      { "itemId": "twitter-setup", "board": "admin", "from": null, "to": { "status": "Done", "title": "Twitter Brand Presence", "description": "Setting up the official nursery handle." } },
+      { "itemId": "newsletter-launch", "board": "admin", "from": null, "to": { "status": "Backlog", "title": "Initial Newsletter Launch", "description": "Sending the first 'Hello World' update." } },
+      { "itemId": "brand-assets", "board": "admin", "from": null, "to": { "status": "Backlog", "title": "Ecosystem Brand Identity", "description": "Defining logos and palettes for all sub-apps." } }
     ],
     "boardSnapshots": {
       "project": [
-        { "id": "germy", "status": "Retired" },
-        { "id": "apeify", "status": "On Going - Passive" },
-        { "id": "tenbeerplan", "status": "Retired" },
-        { "id": "house-price-alerts", "status": "On Hold" },
-        { "id": "earn-your-drinks", "status": "Backlog" },
-        { "id": "habit-tracker", "status": "Backlog" },
-        { "id": "commuter-house-search", "status": "Backlog" }
+        { "id": "germy", "status": "Retired", "title": "Germy", "description": "My first ever app—a Pandemic-era Tetris inspired experiment." },
+        { "id": "apeify", "status": "On Going - Passive", "title": "APEify", "description": "My first major success story. An avatar creator that grew to 70k+ organic downloads through viral social trends." },
+        { "id": "tenbeerplan", "status": "Retired", "title": "Ten Beer Plan", "description": "My first custom backend journey—a social coordination MVP born from a meme." },
+        { "id": "house-price-alerts", "status": "On Hold", "title": "House Price Alerts", "description": "Real-time alerts for property market shifts." },
+        { "id": "earn-your-drinks", "status": "Backlog", "title": "Earn Your Beers", "description": "Log your drinks and earn them back through exercise (running or cycling)." },
+        { "id": "habit-tracker", "status": "Backlog", "title": "Personal Habit Tracker", "description": "A custom habit tracker built specifically for my own workflow." },
+        { "id": "commuter-house-search", "status": "Backlog", "title": "Commuter House Search", "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance." }
       ],
       "youtube": [
-        { "id": "intro-video", "status": "Uploaded" },
-        { "id": "germy-video", "status": "Uploaded" },
-        { "id": "portfolio-reveal", "status": "Uploaded" },
-        { "id": "codemagic-mobile-cicd", "status": "Backlog" }
+        { "id": "intro-video", "status": "Uploaded", "title": "James Balenthiran - Welcome To My Channel - April 6th 2025", "description": "The vision for a sustainable app nursery." },
+        { "id": "germy-video", "status": "Uploaded", "title": "Germy - My First Ever App!", "description": "What 70k downloads taught me about viral growth." },
+        { "id": "pivot-ramble-2025", "status": "Uploaded", "title": "27/11/25 - 2026 Pivot / Ramble", "description": "Looking ahead to the next phase of development." },
+        { "id": "new-year-2026", "status": "Uploaded", "title": "Happy New Year! 2025 Resolution Reflection / 2026 Resolution Setting", "description": "Goals for the upcoming year." },
+        { "id": "portfolio-reveal", "status": "Uploaded", "title": "Finally built my online portfolio!", "description": "Revealing the new roadmap and ecosystem." },
+        { "id": "earn-your-beers-reveal", "status": "Uploaded", "title": "Announcing First Project of the Year - Earn Your Beers!", "description": "Building the first utility app of 2026." },
+        { "id": "codemagic-mobile-cicd", "status": "Backlog", "title": "Codemagic for Mobile CI/CD", "description": "Streamlining app deployments." }
       ],
       "devops": [
-        { "id": "k8s-cluster", "status": "Done" },
-        { "id": "dotnet-migration", "status": "Backlog" },
-        { "id": "template-project", "status": "Backlog" },
-        { "id": "cd-pipeline", "status": "Backlog" },
-        { "id": "dev-env", "status": "Backlog" },
-        { "id": "newsletter-infrastructure", "status": "Backlog" },
-        { "id": "user-ideas-page", "status": "Backlog" }
+        { "id": "k8s-cluster", "status": "Done", "title": "Oracle K8s Cluster", "description": "Custom Kubernetes environment on Oracle Cloud Infrastructure." },
+        { "id": "dotnet-migration", "status": "Backlog", "title": "Move to .NET", "description": "Migrating core services to .NET for improved performance and scalability." },
+        { "id": "template-project", "status": "Backlog", "title": "Create Template Project", "description": "Standardizing project starts with a robust template." },
+        { "id": "cd-pipeline", "status": "Backlog", "title": "Continuous Deployment", "description": "Automated pipelines for seamless updates." },
+        { "id": "dev-env", "status": "Backlog", "title": "Dev Environment", "description": "Isolated staging and local development environments." },
+        { "id": "newsletter-infrastructure", "status": "Backlog", "title": "Per-App Newsletters", "description": "Targeted updates and subscription management for individual projects." },
+        { "id": "user-ideas-page", "status": "Backlog", "title": "User Idea Submission", "description": "A transparent board for users to post and vote on new app features or project ideas." }
       ],
       "admin": [
-        { "id": "setup-tiktok", "status": "Backlog" },
-        { "id": "setup-instagram", "status": "Backlog" },
-        { "id": "setup-x", "status": "Backlog" },
-        { "id": "setup-substack", "status": "Backlog" },
-        { "id": "twitter-setup", "status": "Done" },
-        { "id": "newsletter-launch", "status": "Backlog" },
-        { "id": "brand-assets", "status": "Backlog" }
+        { "id": "setup-tiktok", "status": "Backlog", "title": "TikTok Presence", "description": "Setting up the official nursery handle." },
+        { "id": "setup-instagram", "status": "Backlog", "title": "Instagram Presence", "description": "Setting up the official nursery handle." },
+        { "id": "setup-x", "status": "Backlog", "title": "Twitter Brand Presence", "description": "Setting up the official nursery handle." },
+        { "id": "setup-substack", "status": "Backlog", "title": "Substack Presence", "description": "Setting up the official nursery handle." },
+        { "id": "twitter-setup", "status": "Done", "title": "Twitter Brand Presence", "description": "Setting up the official nursery handle." },
+        { "id": "newsletter-launch", "status": "Backlog", "title": "Initial Newsletter Launch", "description": "Sending the first 'Hello World' update." },
+        { "id": "brand-assets", "status": "Backlog", "title": "Ecosystem Brand Identity", "description": "Defining logos and palettes for all sub-apps." }
       ]
     }
   },
@@ -122,56 +135,57 @@
     ],
     "changes": [
       { "itemId": "earn-your-drinks", "board": "project", "from": "Backlog", "to": "On Going - Active" },
-      { "itemId": "oracle-k8s-setup", "board": "youtube", "from": null, "to": "Backlog" },
-      { "itemId": "ten-beer-plan-logic", "board": "youtube", "from": null, "to": "Backlog" },
-      { "itemId": "house-price-scrapers", "board": "youtube", "from": null, "to": "Backlog" },
-      { "itemId": "apeify-scaling", "board": "youtube", "from": null, "to": "Backlog" },
-      { "itemId": "earn-your-beers-reveal", "board": "youtube", "from": null, "to": "Uploaded" },
-      { "itemId": "eyb-eyv-pivot", "board": "youtube", "from": null, "to": "Backlog" },
-      { "itemId": "sprint-status-history", "board": "devops", "from": null, "to": "Backlog" },
-      { "itemId": "newsletter-beta-onboarding", "board": "devops", "from": null, "to": "Backlog" }
+      { "itemId": "oracle-k8s-setup", "board": "youtube", "from": null, "to": { "status": "Backlog", "title": "Building a Free K8s Cluster", "description": "How I host the nursery on Oracle Cloud's free tier." } },
+      { "itemId": "ten-beer-plan-logic", "board": "youtube", "from": null, "to": { "status": "Backlog", "title": "Why MVP Logic Matters", "description": "Developing the core of Ten Beer Plan." } },
+      { "itemId": "house-price-scrapers", "board": "youtube", "from": null, "to": { "status": "Backlog", "title": "Scraping Real Estate Data", "description": "Legal and technical hurdles in housing data." } },
+      { "itemId": "apeify-scaling", "board": "youtube", "from": null, "to": { "status": "Backlog", "title": "Scaling APEify with Firebase", "description": "Handling real-time data for thousands of users." } },
+      { "itemId": "eyb-eyv-pivot", "board": "youtube", "from": null, "to": { "status": "Backlog", "title": "Pivot: Earn Your Beers to Vices", "description": "Why I'm broadening the scope of the app." } },
+      { "itemId": "sprint-status-history", "board": "devops", "from": null, "to": { "status": "Backlog", "title": "Sprint Status History", "description": "Indicate changes in task status between sprints on the website." } },
+      { "itemId": "newsletter-beta-onboarding", "board": "devops", "from": null, "to": { "status": "Backlog", "title": "Newsletter-to-Beta Automation", "description": "Automated public beta onboarding via newsletter signup." } }
     ],
     "boardSnapshots": {
       "project": [
-        { "id": "germy", "status": "Retired" },
-        { "id": "apeify", "status": "On Going - Passive" },
-        { "id": "tenbeerplan", "status": "Retired" },
-        { "id": "house-price-alerts", "status": "On Hold" },
-        { "id": "earn-your-drinks", "status": "On Going - Active" },
-        { "id": "habit-tracker", "status": "Backlog" },
-        { "id": "commuter-house-search", "status": "Backlog" }
+        { "id": "germy", "status": "Retired", "title": "Germy", "description": "My first ever app—a Pandemic-era Tetris inspired experiment." },
+        { "id": "apeify", "status": "On Going - Passive", "title": "APEify", "description": "My first major success story. An avatar creator that grew to 70k+ organic downloads through viral social trends." },
+        { "id": "tenbeerplan", "status": "Retired", "title": "Ten Beer Plan", "description": "My first custom backend journey—a social coordination MVP born from a meme." },
+        { "id": "house-price-alerts", "status": "On Hold", "title": "House Price Alerts", "description": "Real-time alerts for property market shifts." },
+        { "id": "earn-your-drinks", "status": "On Going - Active", "title": "Earn Your Beers", "description": "Log your drinks and earn them back through exercise (running or cycling)." },
+        { "id": "habit-tracker", "status": "Backlog", "title": "Personal Habit Tracker", "description": "A custom habit tracker built specifically for my own workflow." },
+        { "id": "commuter-house-search", "status": "Backlog", "title": "Commuter House Search", "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance." }
       ],
       "youtube": [
-        { "id": "intro-video", "status": "Uploaded" },
-        { "id": "germy-video", "status": "Uploaded" },
-        { "id": "oracle-k8s-setup", "status": "Backlog" },
-        { "id": "ten-beer-plan-logic", "status": "Backlog" },
-        { "id": "house-price-scrapers", "status": "Backlog" },
-        { "id": "apeify-scaling", "status": "Backlog" },
-        { "id": "portfolio-reveal", "status": "Uploaded" },
-        { "id": "earn-your-beers-reveal", "status": "Uploaded" },
-        { "id": "codemagic-mobile-cicd", "status": "Backlog" },
-        { "id": "eyb-eyv-pivot", "status": "Backlog" }
+        { "id": "intro-video", "status": "Uploaded", "title": "James Balenthiran - Welcome To My Channel - April 6th 2025", "description": "The vision for a sustainable app nursery." },
+        { "id": "germy-video", "status": "Uploaded", "title": "Germy - My First Ever App!", "description": "What 70k downloads taught me about viral growth." },
+        { "id": "pivot-ramble-2025", "status": "Uploaded", "title": "27/11/25 - 2026 Pivot / Ramble", "description": "Looking ahead to the next phase of development." },
+        { "id": "new-year-2026", "status": "Uploaded", "title": "Happy New Year! 2025 Resolution Reflection / 2026 Resolution Setting", "description": "Goals for the upcoming year." },
+        { "id": "portfolio-reveal", "status": "Uploaded", "title": "Finally built my online portfolio!", "description": "Revealing the new roadmap and ecosystem." },
+        { "id": "earn-your-beers-reveal", "status": "Uploaded", "title": "Announcing First Project of the Year - Earn Your Beers!", "description": "Building the first utility app of 2026." },
+        { "id": "oracle-k8s-setup", "status": "Backlog", "title": "Building a Free K8s Cluster", "description": "How I host the nursery on Oracle Cloud's free tier." },
+        { "id": "ten-beer-plan-logic", "status": "Backlog", "title": "Why MVP Logic Matters", "description": "Developing the core of Ten Beer Plan." },
+        { "id": "house-price-scrapers", "status": "Backlog", "title": "Scraping Real Estate Data", "description": "Legal and technical hurdles in housing data." },
+        { "id": "apeify-scaling", "status": "Backlog", "title": "Scaling APEify with Firebase", "description": "Handling real-time data for thousands of users." },
+        { "id": "codemagic-mobile-cicd", "status": "Backlog", "title": "Codemagic for Mobile CI/CD", "description": "Streamlining app deployments." },
+        { "id": "eyb-eyv-pivot", "status": "Backlog", "title": "Pivot: Earn Your Beers to Vices", "description": "Why I'm broadening the scope of the app." }
       ],
       "devops": [
-        { "id": "k8s-cluster", "status": "Done" },
-        { "id": "dotnet-migration", "status": "Backlog" },
-        { "id": "template-project", "status": "Backlog" },
-        { "id": "cd-pipeline", "status": "Backlog" },
-        { "id": "dev-env", "status": "Backlog" },
-        { "id": "newsletter-infrastructure", "status": "Backlog" },
-        { "id": "user-ideas-page", "status": "Backlog" },
-        { "id": "sprint-status-history", "status": "Backlog" },
-        { "id": "newsletter-beta-onboarding", "status": "Backlog" }
+        { "id": "k8s-cluster", "status": "Done", "title": "Oracle K8s Cluster", "description": "Custom Kubernetes environment on Oracle Cloud Infrastructure." },
+        { "id": "dotnet-migration", "status": "Backlog", "title": "Move to .NET", "description": "Migrating core services to .NET for improved performance and scalability." },
+        { "id": "template-project", "status": "Backlog", "title": "Create Template Project", "description": "Standardizing project starts with a robust template." },
+        { "id": "cd-pipeline", "status": "Backlog", "title": "Continuous Deployment", "description": "Automated pipelines for seamless updates." },
+        { "id": "dev-env", "status": "Backlog", "title": "Dev Environment", "description": "Isolated staging and local development environments." },
+        { "id": "newsletter-infrastructure", "status": "Backlog", "title": "Per-App Newsletters", "description": "Targeted updates and subscription management for individual projects." },
+        { "id": "user-ideas-page", "status": "Backlog", "title": "User Idea Submission", "description": "A transparent board for users to post and vote on new app features or project ideas." },
+        { "id": "sprint-status-history", "status": "Backlog", "title": "Sprint Status History", "description": "Indicate changes in task status between sprints on the website." },
+        { "id": "newsletter-beta-onboarding", "status": "Backlog", "title": "Newsletter-to-Beta Automation", "description": "Automated public beta onboarding via newsletter signup." }
       ],
       "admin": [
-        { "id": "setup-tiktok", "status": "Backlog" },
-        { "id": "setup-instagram", "status": "Backlog" },
-        { "id": "setup-x", "status": "Backlog" },
-        { "id": "setup-substack", "status": "Backlog" },
-        { "id": "twitter-setup", "status": "Done" },
-        { "id": "newsletter-launch", "status": "Backlog" },
-        { "id": "brand-assets", "status": "Backlog" }
+        { "id": "setup-tiktok", "status": "Backlog", "title": "TikTok Presence", "description": "Setting up the official nursery handle." },
+        { "id": "setup-instagram", "status": "Backlog", "title": "Instagram Presence", "description": "Setting up the official nursery handle." },
+        { "id": "setup-x", "status": "Backlog", "title": "Twitter Brand Presence", "description": "Setting up the official nursery handle." },
+        { "id": "setup-substack", "status": "Backlog", "title": "Substack Presence", "description": "Setting up the official nursery handle." },
+        { "id": "twitter-setup", "status": "Done", "title": "Twitter Brand Presence", "description": "Setting up the official nursery handle." },
+        { "id": "newsletter-launch", "status": "Backlog", "title": "Initial Newsletter Launch", "description": "Sending the first 'Hello World' update." },
+        { "id": "brand-assets", "status": "Backlog", "title": "Ecosystem Brand Identity", "description": "Defining logos and palettes for all sub-apps." }
       ]
     }
   },
@@ -185,45 +199,47 @@
     ],
     "boardSnapshots": {
       "project": [
-        { "id": "germy", "status": "Retired" },
-        { "id": "apeify", "status": "On Going - Passive" },
-        { "id": "tenbeerplan", "status": "Retired" },
-        { "id": "house-price-alerts", "status": "On Hold" },
-        { "id": "earn-your-drinks", "status": "On Going - Active" },
-        { "id": "habit-tracker", "status": "Backlog" },
-        { "id": "commuter-house-search", "status": "Backlog" }
+        { "id": "germy", "status": "Retired", "title": "Germy", "description": "My first ever app—a Pandemic-era Tetris inspired experiment." },
+        { "id": "apeify", "status": "On Going - Passive", "title": "APEify", "description": "My first major success story. An avatar creator that grew to 70k+ organic downloads through viral social trends." },
+        { "id": "tenbeerplan", "status": "Retired", "title": "Ten Beer Plan", "description": "My first custom backend journey—a social coordination MVP born from a meme." },
+        { "id": "house-price-alerts", "status": "On Hold", "title": "House Price Alerts", "description": "Real-time alerts for property market shifts." },
+        { "id": "earn-your-drinks", "status": "On Going - Active", "title": "Earn Your Beers", "description": "Log your drinks and earn them back through exercise (running or cycling)." },
+        { "id": "habit-tracker", "status": "Backlog", "title": "Personal Habit Tracker", "description": "A custom habit tracker built specifically for my own workflow." },
+        { "id": "commuter-house-search", "status": "Backlog", "title": "Commuter House Search", "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance." }
       ],
       "youtube": [
-        { "id": "intro-video", "status": "Uploaded" },
-        { "id": "germy-video", "status": "Uploaded" },
-        { "id": "oracle-k8s-setup", "status": "Backlog" },
-        { "id": "ten-beer-plan-logic", "status": "Backlog" },
-        { "id": "house-price-scrapers", "status": "Backlog" },
-        { "id": "apeify-scaling", "status": "Backlog" },
-        { "id": "portfolio-reveal", "status": "Uploaded" },
-        { "id": "earn-your-beers-reveal", "status": "Uploaded" },
-        { "id": "codemagic-mobile-cicd", "status": "Backlog" },
-        { "id": "eyb-eyv-pivot", "status": "Backlog" }
+        { "id": "intro-video", "status": "Uploaded", "title": "James Balenthiran - Welcome To My Channel - April 6th 2025", "description": "The vision for a sustainable app nursery." },
+        { "id": "germy-video", "status": "Uploaded", "title": "Germy - My First Ever App!", "description": "What 70k downloads taught me about viral growth." },
+        { "id": "pivot-ramble-2025", "status": "Uploaded", "title": "27/11/25 - 2026 Pivot / Ramble", "description": "Looking ahead to the next phase of development." },
+        { "id": "new-year-2026", "status": "Uploaded", "title": "Happy New Year! 2025 Resolution Reflection / 2026 Resolution Setting", "description": "Goals for the upcoming year." },
+        { "id": "portfolio-reveal", "status": "Uploaded", "title": "Finally built my online portfolio!", "description": "Revealing the new roadmap and ecosystem." },
+        { "id": "earn-your-beers-reveal", "status": "Uploaded", "title": "Announcing First Project of the Year - Earn Your Beers!", "description": "Building the first utility app of 2026." },
+        { "id": "oracle-k8s-setup", "status": "Backlog", "title": "Building a Free K8s Cluster", "description": "How I host the nursery on Oracle Cloud's free tier." },
+        { "id": "ten-beer-plan-logic", "status": "Backlog", "title": "Why MVP Logic Matters", "description": "Developing the core of Ten Beer Plan." },
+        { "id": "house-price-scrapers", "status": "Backlog", "title": "Scraping Real Estate Data", "description": "Legal and technical hurdles in housing data." },
+        { "id": "apeify-scaling", "status": "Backlog", "title": "Scaling APEify with Firebase", "description": "Handling real-time data for thousands of users." },
+        { "id": "codemagic-mobile-cicd", "status": "Backlog", "title": "Codemagic for Mobile CI/CD", "description": "Streamlining app deployments." },
+        { "id": "eyb-eyv-pivot", "status": "Backlog", "title": "Pivot: Earn Your Beers to Vices", "description": "Why I'm broadening the scope of the app." }
       ],
       "devops": [
-        { "id": "k8s-cluster", "status": "Done" },
-        { "id": "dotnet-migration", "status": "Backlog" },
-        { "id": "template-project", "status": "Backlog" },
-        { "id": "cd-pipeline", "status": "Backlog" },
-        { "id": "dev-env", "status": "Backlog" },
-        { "id": "newsletter-infrastructure", "status": "Backlog" },
-        { "id": "user-ideas-page", "status": "Backlog" },
-        { "id": "sprint-status-history", "status": "Done" },
-        { "id": "newsletter-beta-onboarding", "status": "Backlog" }
+        { "id": "k8s-cluster", "status": "Done", "title": "Oracle K8s Cluster", "description": "Custom Kubernetes environment on Oracle Cloud Infrastructure." },
+        { "id": "dotnet-migration", "status": "Backlog", "title": "Move to .NET", "description": "Migrating core services to .NET for improved performance and scalability." },
+        { "id": "template-project", "status": "Backlog", "title": "Create Template Project", "description": "Standardizing project starts with a robust template." },
+        { "id": "cd-pipeline", "status": "Backlog", "title": "Continuous Deployment", "description": "Automated pipelines for seamless updates." },
+        { "id": "dev-env", "status": "Backlog", "title": "Dev Environment", "description": "Isolated staging and local development environments." },
+        { "id": "newsletter-infrastructure", "status": "Backlog", "title": "Per-App Newsletters", "description": "Targeted updates and subscription management for individual projects." },
+        { "id": "user-ideas-page", "status": "Backlog", "title": "User Idea Submission", "description": "A transparent board for users to post and vote on new app features or project ideas." },
+        { "id": "sprint-status-history", "status": "Done", "title": "Sprint Status History", "description": "Indicate changes in task status between sprints on the website." },
+        { "id": "newsletter-beta-onboarding", "status": "Backlog", "title": "Newsletter-to-Beta Automation", "description": "Automated public beta onboarding via newsletter signup." }
       ],
       "admin": [
-        { "id": "setup-tiktok", "status": "Backlog" },
-        { "id": "setup-instagram", "status": "Backlog" },
-        { "id": "setup-x", "status": "Backlog" },
-        { "id": "setup-substack", "status": "Backlog" },
-        { "id": "twitter-setup", "status": "Done" },
-        { "id": "newsletter-launch", "status": "Backlog" },
-        { "id": "brand-assets", "status": "Backlog" }
+        { "id": "setup-tiktok", "status": "Backlog", "title": "TikTok Presence", "description": "Setting up the official nursery handle." },
+        { "id": "setup-instagram", "status": "Backlog", "title": "Instagram Presence", "description": "Setting up the official nursery handle." },
+        { "id": "setup-x", "status": "Backlog", "title": "Twitter Brand Presence", "description": "Setting up the official nursery handle." },
+        { "id": "setup-substack", "status": "Backlog", "title": "Substack Presence", "description": "Setting up the official nursery handle." },
+        { "id": "twitter-setup", "status": "Done", "title": "Twitter Brand Presence", "description": "Setting up the official nursery handle." },
+        { "id": "newsletter-launch", "status": "Backlog", "title": "Initial Newsletter Launch", "description": "Sending the first 'Hello World' update." },
+        { "id": "brand-assets", "status": "Backlog", "title": "Ecosystem Brand Identity", "description": "Defining logos and palettes for all sub-apps." }
       ]
     }
   }

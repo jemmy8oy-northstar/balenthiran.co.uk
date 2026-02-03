@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const SPRINTS_PATH = path.join(__dirname, '../src/data/sprints.json');
 
 function validate() {
-    console.log('🚀 Starting Sprint Data Validation...\n');
+    console.log('🚀 Starting Deep Sprint Data Validation (Object-Based)...\n');
     
     let sprints;
     try {
@@ -18,7 +18,7 @@ function validate() {
         process.exit(1);
     }
 
-    // currentState[board][itemId] = status
+    // currentState[board][itemId] = { status, title, description }
     const currentState = {
         project: {},
         devops: {},
@@ -34,7 +34,7 @@ function validate() {
 
         // 1. Apply changes
         (sprint.changes || []).forEach((change, changeIdx) => {
-            const { itemId, board, from, to } = change;
+            const { itemId, board, from, to, field = 'status' } = change;
             
             if (!currentState[board]) {
                 console.error(`  [Change ${changeIdx}] ❌ Illegal board type: "${board}"`);
@@ -42,14 +42,31 @@ function validate() {
                 return;
             }
 
-            const actualFrom = currentState[board][itemId] || null;
-            if (actualFrom !== from) {
-                console.error(`  [Change ${changeIdx}] ❌ Item "${itemId}" mismatch: Log says from "${from}", but current state was "${actualFrom}"`);
-                errors++;
+            if (!currentState[board][itemId]) {
+                currentState[board][itemId] = { status: null, title: null, description: null };
             }
 
-            // Update state
-            currentState[board][itemId] = to;
+            const currentItem = currentState[board][itemId];
+            
+            // Handle both primitive and object updates
+            if (typeof to === 'object' && to !== null) {
+                // Bulk property update (usually initialization)
+                Object.keys(to).forEach(f => {
+                    const expectedFrom = (from && typeof from === 'object') ? from[f] : (f === 'status' ? from : currentItem[f]);
+                    if (currentItem[f] !== expectedFrom) {
+                        console.error(`  [Change ${changeIdx}] ❌ Item "${itemId}" ${f} mismatch: Log says from "${expectedFrom}", but current state was "${currentItem[f]}"`);
+                        errors++;
+                    }
+                    currentItem[f] = to[f];
+                });
+            } else {
+                // Targeted property update (using 'field', defaults to 'status')
+                if (currentItem[field] !== from) {
+                    console.error(`  [Change ${changeIdx}] ❌ Item "${itemId}" ${field} mismatch: Log says from "${from}", but current state was "${currentItem[field]}"`);
+                    errors++;
+                }
+                currentItem[field] = to;
+            }
         });
 
         // 2. Validate Snapshots
@@ -57,21 +74,23 @@ function validate() {
             const snapshot = sprint.boardSnapshots[board];
             const snapshotIds = new Set();
 
-            // Check if every item in snapshot matches our derived state
             snapshot.forEach(item => {
                 snapshotIds.add(item.id);
-                const derivedStatus = currentState[board][item.id];
+                const derived = currentState[board][item.id];
                 
-                if (derivedStatus === undefined) {
-                    console.error(`  [Snapshot ${board}] ❌ Item "${item.id}" is in snapshot but never appeared in a change log (or was missed).`);
+                if (!derived) {
+                    console.error(`  [Snapshot ${board}] ❌ Item "${item.id}" is in snapshot but never appeared in a change log.`);
                     errors++;
-                } else if (derivedStatus !== item.status) {
-                    console.error(`  [Snapshot ${board}] ❌ Item "${item.id}" status mismatch: Snapshot says "${item.status}", but derived state is "${derivedStatus}"`);
-                    errors++;
+                } else {
+                    ['status', 'title', 'description'].forEach(f => {
+                        if (derived[f] !== item[f]) {
+                            console.error(`  [Snapshot ${board}] ❌ Item "${item.id}" ${f} mismatch: Snapshot says "${item[f]}", but derived state is "${derived[f]}"`);
+                            errors++;
+                        }
+                    });
                 }
             });
 
-            // Check if every item in our derived state is in the snapshot
             Object.keys(currentState[board]).forEach(itemId => {
                 if (!snapshotIds.has(itemId)) {
                     console.error(`  [Snapshot ${board}] ❌ Item "${itemId}" is in our derived state but missing from this snapshot.`);
@@ -87,7 +106,7 @@ function validate() {
         console.log(`\n❌ Validation failed with ${errors} error(s).`);
         process.exit(1);
     } else {
-        console.log('✨ All snapshots are perfectly in sync with change logs!');
+        console.log('✨ All snapshots are perfectly in sync with evolutionary logs!');
     }
 }
 

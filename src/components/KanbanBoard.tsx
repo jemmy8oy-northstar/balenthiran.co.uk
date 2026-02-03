@@ -76,10 +76,16 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
         }
 
         return displayData.reduce((acc, item: any) => {
-            const status = snapshotMap[item.id];
+            const snapshotItem = currentSprint?.boardSnapshots[initialType]?.find((s: any) => s.id === item.id);
+            const status = snapshotItem?.status;
             if (status) {
                 if (!acc[status]) acc[status] = [];
-                acc[status].push(item);
+                // Merge snapshot data (title/description) into the item for "Time Travel"
+                acc[status].push({
+                    ...item,
+                    title: snapshotItem.title || item.title,
+                    description: snapshotItem.description || item.description
+                });
             }
             return acc;
         }, {} as Record<string, any[]>);
@@ -145,6 +151,10 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
                                         <Link to={item.path} style={{ textDecoration: 'none' }}>
                                             <KanbanCard item={item} />
                                         </Link>
+                                    ) : item.youtubeUrl ? (
+                                        <a href={item.youtubeUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                                            <KanbanCard item={item} />
+                                        </a>
                                     ) : (
                                         <KanbanCard item={item} />
                                     )}

@@ -12,11 +12,11 @@ interface SprintHistoryProps {
 const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
-    // Create a lookup for item titles
+    // Create a lookup for items
     const itemMap = useMemo(() => {
-        const map: Record<string, string> = {};
+        const map: Record<string, any> = {};
         [...projectsData, ...devopsData, ...youtubeData, ...adminData].forEach(item => {
-            map[item.id] = (item as any).title;
+            map[item.id] = item;
         });
         return map;
     }, []);
@@ -78,7 +78,26 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter }) => {
                                             <div key={idx} style={{ fontSize: '0.85rem', display: 'flex', gap: '8px', alignItems: 'center' }}>
                                                 <span style={{ color: 'var(--accent-primary)', fontWeight: 600 }}>•</span>
                                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                                                    <span style={{ color: 'var(--text-primary)' }}>{itemMap[change.itemId] || change.itemId}</span>
+                                                    {itemMap[change.itemId]?.youtubeUrl ? (
+                                                        <a 
+                                                            href={itemMap[change.itemId].youtubeUrl} 
+                                                            target="_blank" 
+                                                            rel="noopener noreferrer"
+                                                            style={{ 
+                                                                color: 'var(--accent-primary)', 
+                                                                textDecoration: 'none',
+                                                                fontWeight: 600,
+                                                                borderBottom: '1px solid transparent',
+                                                                transition: 'border-color 0.2s'
+                                                            }}
+                                                            onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--accent-primary)'}
+                                                            onMouseLeave={(e) => e.currentTarget.style.borderColor = 'transparent'}
+                                                        >
+                                                            {itemMap[change.itemId]?.title || change.itemId}
+                                                        </a>
+                                                    ) : (
+                                                        <span style={{ color: 'var(--text-primary)' }}>{itemMap[change.itemId]?.title || change.itemId}</span>
+                                                    )}
                                                     {!boardFilter && (
                                                         <span style={{ 
                                                             fontSize: '0.6rem', 
@@ -92,20 +111,51 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter }) => {
                                                     )}
                                                 </div>
                                                 <span style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                                    {!change.from ? (
-                                                        <span style={{ 
-                                                            fontSize: '0.65rem', 
-                                                            background: 'rgba(52, 211, 153, 0.1)', 
-                                                            color: '#34d399', 
-                                                            padding: '2px 6px', 
-                                                            borderRadius: '4px',
-                                                            fontWeight: 800,
-                                                            border: '1px solid rgba(52, 211, 153, 0.2)'
-                                                        }}>NEW</span>
+                                                    {typeof change.to === 'object' && change.to !== null ? (
+                                                        <>
+                                                            <span style={{ 
+                                                                fontSize: '0.65rem', 
+                                                                background: 'rgba(52, 211, 153, 0.1)', 
+                                                                color: '#34d399', 
+                                                                padding: '2px 6px', 
+                                                                borderRadius: '4px',
+                                                                fontWeight: 800,
+                                                                border: '1px solid rgba(52, 211, 153, 0.2)'
+                                                            }}>NEW Task</span>
+                                                            <span>— {change.to.status}</span>
+                                                        </>
+                                                    ) : change.field && change.field !== 'status' ? (
+                                                        <>
+                                                            <span style={{ 
+                                                                fontSize: '0.6rem', 
+                                                                color: 'var(--accent-primary)', 
+                                                                textTransform: 'uppercase',
+                                                                fontWeight: 700,
+                                                                background: 'rgba(var(--accent-primary-rgb), 0.1)',
+                                                                padding: '1px 4px',
+                                                                borderRadius: '3px'
+                                                            }}>{change.field} Changed</span>
+                                                            <span style={{ fontSize: '0.8rem', opacity: 0.8 }}>{change.from} →</span>
+                                                            <span style={{ fontWeight: 600 }}>{change.to}</span>
+                                                        </>
                                                     ) : (
-                                                        <span>{change.from} →</span>
+                                                        <>
+                                                            {!change.from ? (
+                                                                <span style={{ 
+                                                                    fontSize: '0.65rem', 
+                                                                    background: 'rgba(52, 211, 153, 0.1)', 
+                                                                    color: '#34d399', 
+                                                                    padding: '2px 6px', 
+                                                                    borderRadius: '4px',
+                                                                    fontWeight: 800,
+                                                                    border: '1px solid rgba(52, 211, 153, 0.2)'
+                                                                }}>NEW</span>
+                                                            ) : (
+                                                                <span>{change.from} →</span>
+                                                            )}
+                                                            <span>{change.to}</span>
+                                                        </>
                                                     )}
-                                                    <span>{change.to}</span>
                                                 </span>
                                             </div>
                                         ))
