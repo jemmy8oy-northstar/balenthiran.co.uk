@@ -1,0 +1,12 @@
+/Users/jamesbalenthiran/coding/balenthiran/backend/Balenthiran.Abstractions/bin/Debug/net10.0/Balenthiran.Abstractions.deps.json
+/Users/jamesbalenthiran/coding/balenthiran/backend/Balenthiran.Abstractions/bin/Debug/net10.0/Balenthiran.Abstractions.dll
+/Users/jamesbalenthiran/coding/balenthiran/backend/Balenthiran.Abstractions/bin/Debug/net10.0/Balenthiran.Abstractions.pdb
+/Users/jamesbalenthiran/coding/balenthiran/backend/Balenthiran.Abstractions/obj/Debug/net10.0/Balenthiran.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jamesbalenthiran/coding/balenthiran/backend/Balenthiran.Abstractions/obj/Debug/net10.0/Balenthiran.Abstractions.AssemblyInfoInputs.cache
+/Users/jamesbalenthiran/coding/balenthiran/backend/Balenthiran.Abstractions/obj/Debug/net10.0/Balenthiran.Abstractions.AssemblyInfo.cs
+/Users/jamesbalenthiran/coding/balenthiran/backend/Balenthiran.Abstractions/obj/Debug/net10.0/Balenthiran.Abstractions.csproj.CoreCompileInputs.cache
+/Users/jamesbalenthiran/coding/balenthiran/backend/Balenthiran.Abstractions/obj/Debug/net10.0/Balenthiran.Abstractions.sourcelink.json
+/Users/jamesbalenthiran/coding/balenthiran/backend/Balenthiran.Abstractions/obj/Debug/net10.0/Balenthiran.Abstractions.dll
+/Users/jamesbalenthiran/coding/balenthiran/backend/Balenthiran.Abstractions/obj/Debug/net10.0/refint/Balenthiran.Abstractions.dll
+/Users/jamesbalenthiran/coding/balenthiran/backend/Balenthiran.Abstractions/obj/Debug/net10.0/Balenthiran.Abstractions.pdb
+/Users/jamesbalenthiran/coding/balenthiran/backend/Balenthiran.Abstractions/obj/Debug/net10.0/ref/Balenthiran.Abstractions.dll

@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Balenthiran.Abstractions/Balenthiran.Abstractions.csproj" />
+  <Project Path="Balenthiran.Api/Balenthiran.Api.csproj" />
+  <Project Path="Balenthiran.Data/Balenthiran.Data.csproj" />
+  <Project Path="Balenthiran.Domain/Balenthiran.Domain.csproj" />
+  <Project Path="Balenthiran.Services/Balenthiran.Services.csproj" />
+</Solution>

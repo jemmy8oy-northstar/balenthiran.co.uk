@@ -1,0 +1,30 @@
+# Stage 1: Build .NET app
+FROM mcr.microsoft.com/dotnet/sdk:10.0-alpine AS build
+WORKDIR /source
+
+# Copy solution and project files
+COPY Balenthiran.sln .
+COPY Balenthiran.Api/*.csproj ./Balenthiran.Api/
+COPY Balenthiran.Abstractions/*.csproj ./Balenthiran.Abstractions/
+COPY Balenthiran.Data/*.csproj ./Balenthiran.Data/
+COPY Balenthiran.Domain/*.csproj ./Balenthiran.Domain/
+COPY Balenthiran.Services/*.csproj ./Balenthiran.Services/
+
+# Restore dependencies
+RUN dotnet restore
+
+# Copy all source files
+COPY . .
+
+# Build and publish
+RUN dotnet publish Balenthiran.Api/Balenthiran.Api.csproj -c Release -o /app/publish --no-restore
+
+# Stage 2: Runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:10.0-alpine
+WORKDIR /app
+COPY --from=build /app/publish .
+
+# Expose port (default ASP.NET Core port is 8080 in .NET 8+)
+EXPOSE 8080
+
+ENTRYPOINT ["dotnet", "Balenthiran.Api.dll"]

@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Balenthiran.Data/1.0.0": {
+        "dependencies": {
+          "Balenthiran.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "Balenthiran.Data.dll": {}
+        }
+      },
+      "Balenthiran.Abstractions/1.0.0": {
+        "runtime": {
+          "Balenthiran.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Balenthiran.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Balenthiran.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
