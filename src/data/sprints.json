@@ -134,8 +134,8 @@
         "from": null,
         "to": {
           "status": "Backlog",
-          "title": "Local Continuous Deployment",
-          "description": "Script-based deployments for rapid iterations."
+          "title": "Continuous Deployment",
+          "description": "Automated pipelines for seamless updates."
         }
       },
       {
@@ -334,8 +334,8 @@
         {
           "id": "cd-pipeline",
           "status": "Backlog",
-          "title": "Local Continuous Deployment",
-          "description": "Script-based deployments for rapid iterations."
+          "title": "Continuous Deployment",
+          "description": "Automated pipelines for seamless updates."
         },
         {
           "id": "dev-env",
@@ -609,8 +609,8 @@
         {
           "id": "cd-pipeline",
           "status": "Backlog",
-          "title": "Local Continuous Deployment",
-          "description": "Script-based deployments for rapid iterations."
+          "title": "Continuous Deployment",
+          "description": "Automated pipelines for seamless updates."
         },
         {
           "id": "dev-env",
@@ -629,6 +629,12 @@
           "status": "Backlog",
           "title": "User Idea Submission",
           "description": "A transparent board for users to post and vote on new app features or project ideas."
+        },
+        {
+          "id": "sprint-status-history",
+          "status": "Backlog",
+          "title": "Sprint Status History",
+          "description": "Indicate changes in task status between sprints on the website."
         }
       ],
       "admin": [
@@ -707,6 +713,14 @@
         "field": "title",
         "from": "Continuous Deployment",
         "to": "Local Continuous Deployment"
+      },
+      {
+        "itemId": "cd-pipeline",
+        "board": "devops",
+        "field": "description",
+        "from": "Automated pipelines for seamless updates.",
+        "to": "Script-based deployments for rapid iterations.",
+        "timestamp": "2026-02-03T20:13:00Z"
       },
       {
         "itemId": "cd-pipeline",
@@ -923,7 +937,15 @@
     "startDate": "2026-02-09",
     "endDate": "2026-02-22",
     "goals": [],
-    "changes": [],
+    "changes": [
+      {
+        "itemId": "dotnet-migration",
+        "board": "devops",
+        "from": "Backlog",
+        "to": "In Progress",
+        "timestamp": "2026-02-04T21:23:24.975Z"
+      }
+    ],
     "boardSnapshots": {
       "project": [
         {
@@ -1052,7 +1074,7 @@
         },
         {
           "id": "dotnet-migration",
-          "status": "Backlog",
+          "status": "In Progress",
           "title": "Move to .NET",
           "description": "Migrating core services to .NET for improved performance and scalability."
         },
