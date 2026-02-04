@@ -6,7 +6,7 @@ This workflow uses the `sprint-move.mjs` script to update a task's status in the
 
 // turbo
 1. Run the move command:
-   `node scripts/sprint-move.mjs <task-id> "<new-status>"`
+   `node frontend/scripts/sprint-move.mjs <task-id> "<new-status>"`
 
 ### Available Statuses
 - **Projects**: `Backlog`, `Planning`, `On Hold`, `On Going - Active`, `On Going - Passive`, `Complete`, `Retired`

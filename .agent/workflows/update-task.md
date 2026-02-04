@@ -13,7 +13,7 @@ This script handles all three automatically.
 
 // turbo
 1. Run the update command:
-   `node scripts/sprint-update.mjs <task-id> <field> "<new-value>"`
+   `node frontend/scripts/sprint-update.mjs <task-id> <field> "<new-value>"`
 
 ### Fields
 - `title` - The task's display name
@@ -22,10 +22,10 @@ This script handles all three automatically.
 ### Examples
 ```bash
 # Rename a task
-node scripts/sprint-update.mjs cd-pipeline title "Local Continuous Deployment"
+node frontend/scripts/sprint-update.mjs cd-pipeline title "Local Continuous Deployment"
 
 # Update a description
-node scripts/sprint-update.mjs cd-pipeline description "Script-based deployments for rapid iterations."
+node frontend/scripts/sprint-update.mjs cd-pipeline description "Script-based deployments for rapid iterations."
 ```
 
 **Note**: This script automatically runs validation after completion to ensure data integrity.

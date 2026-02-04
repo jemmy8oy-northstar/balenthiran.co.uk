@@ -22,7 +22,7 @@ balenthiran/
 │   ├── Balenthiran.Data/ # EFCore & Postgres
 │   └── Balenthiran.sln
 ├── docs/                 # Shared documentation
-└── docker-compose.yml    # Local development (Postgres)
+└── README.md             # Local setup instructions (Local Postgres)
 ```
 
 ## Migration Steps
@@ -37,7 +37,8 @@ balenthiran/
    - Configure Swashbuckle in `Program.cs`.
    - Setup `nswag` or `openapi-generator` in the `frontend` to watch the backend's `openapi.json` and rebuild the client services.
 4. **Local Dev Environment**:
-   - Create a `docker-compose.yml` in the root to spin up a local PostgreSQL instance.
+   - Use the existing local PostgreSQL instance on Mac.
+   - Configure connection strings in `appsettings.Development.json`.
 
 ## Deterministic Hallucination-Reduction
 - **Strict OpenAPI Contracts**: The backend serves as the source of truth for the API shape.

@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Monorepo
+frontend/node_modules/
+frontend/dist/
+backend/bin/
+backend/obj/
+backend/TestResults/

@@ -25,7 +25,7 @@ docker buildx build \
     --platform linux/arm64 \
     -t $REPO_URL:$TAG \
     -t $REPO_URL:latest \
-    --push .
+    --push frontend/
 
 # 4. Verify the upload and get the Timestamp
 echo "🔍 Verifying registry and fetching timestamp..."

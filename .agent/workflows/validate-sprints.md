@@ -6,6 +6,6 @@ This workflow runs the validation script to ensure that the `boardSnapshots` in 
 
 // turbo
 1. Run the validation:
-   `node scripts/validate-sprints.mjs`
+   `node frontend/scripts/validate-sprints.mjs`
 
 If errors are found, the script will point to the exact mismatch between logs and snapshots.
