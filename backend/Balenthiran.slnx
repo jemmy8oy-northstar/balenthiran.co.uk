@@ -1,7 +1,9 @@
 <Solution>
   <Project Path="Balenthiran.Abstractions/Balenthiran.Abstractions.csproj" />
   <Project Path="Balenthiran.Api/Balenthiran.Api.csproj" />
-  <Project Path="Balenthiran.Data/Balenthiran.Data.csproj" />
-  <Project Path="Balenthiran.Domain/Balenthiran.Domain.csproj" />
+  <Project Path="Balenthiran.DataModels/Balenthiran.DataModels.csproj" />
+  <Project Path="Balenthiran.Database/Balenthiran.Database.csproj" />
+  <Project Path="Balenthiran.DomainModels/Balenthiran.DomainModels.csproj" />
+  <Project Path="Balenthiran.Entities/Balenthiran.Entities.csproj" />
   <Project Path="Balenthiran.Services/Balenthiran.Services.csproj" />
 </Solution>

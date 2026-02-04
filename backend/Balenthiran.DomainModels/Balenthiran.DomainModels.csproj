@@ -1,12 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Balenthiran.DomainModels\Balenthiran.DomainModels.csproj" />
+    <ProjectReference Include="..\Balenthiran.DataModels\Balenthiran.DataModels.csproj" />
     <ProjectReference Include="..\Balenthiran.Abstractions\Balenthiran.Abstractions.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="16.0.0" />
   </ItemGroup>
 
   <PropertyGroup>

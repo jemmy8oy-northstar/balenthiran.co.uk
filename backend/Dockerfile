@@ -6,10 +6,11 @@ WORKDIR /source
 COPY Balenthiran.sln .
 COPY Balenthiran.Api/*.csproj ./Balenthiran.Api/
 COPY Balenthiran.Abstractions/*.csproj ./Balenthiran.Abstractions/
-COPY Balenthiran.Data/*.csproj ./Balenthiran.Data/
-COPY Balenthiran.Domain/*.csproj ./Balenthiran.Domain/
+COPY Balenthiran.DataModels/*.csproj ./Balenthiran.DataModels/
+COPY Balenthiran.DomainModels/*.csproj ./Balenthiran.DomainModels/
 COPY Balenthiran.Services/*.csproj ./Balenthiran.Services/
-
+COPY Balenthiran.Entities/*.csproj ./Balenthiran.Entities/ 
+COPY Balenthiran.Database/*.csproj ./Balenthiran.Database/
 # Restore dependencies
 RUN dotnet restore
 

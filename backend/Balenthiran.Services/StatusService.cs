@@ -1,15 +1,14 @@
 using Balenthiran.Abstractions.Models;
 using Balenthiran.Abstractions.Services;
-using Balenthiran.Domain.Models;
+using Balenthiran.DomainModels.Models;
 
 namespace Balenthiran.Services;
 
 public class StatusService : IStatusService
 {
-    public Task<IStatusDomainModel> GetSystemStatusAsync()
+    public Task<IDomainStatus> GetSystemStatusAsync()
     {
-        // In a real scenario, we might fetch from DB here
-        IStatusDomainModel model = new StatusDomainModel
+        IDomainStatus model = new DomainStatus
         {
             Version = "1.1.0-alpha",
             LastUpdated = DateTime.UtcNow

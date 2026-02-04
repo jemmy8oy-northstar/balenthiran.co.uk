@@ -1,12 +1,12 @@
 namespace Balenthiran.Abstractions.Models;
 
-public interface IStatusDataModel
+public interface IStatus
 {
     string Version { get; set; }
     DateTime LastUpdated { get; set; }
 }
 
-public interface IStatusDomainModel : IStatusDataModel
+public interface IDomainStatus : IStatus
 {
     string GetFriendlyStatus();
 }

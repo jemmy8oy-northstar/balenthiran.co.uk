@@ -29,3 +29,20 @@ frontend/dist/
 backend/bin/
 backend/obj/
 backend/TestResults/
+
+# .NET Specific
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+.idea/
+.DS_Store
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
