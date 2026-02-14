@@ -8,9 +8,10 @@ import adminData from '../data/admin.json';
 interface SprintHistoryProps {
     boardFilter?: 'project' | 'devops' | 'youtube' | 'admin';
     sprintId?: string; // Optional: Only show for this specific sprint
+    isTimelineView?: boolean;
 }
 
-const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter, sprintId }) => {
+const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter, sprintId, isTimelineView }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     // Create a lookup for items
@@ -32,6 +33,99 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter, sprintId }) 
         }
         return changes;
     };
+
+    if (isTimelineView) {
+        const today = new Date().toISOString().split('T')[0];
+        
+        return (
+            <div style={{ position: 'relative', paddingLeft: '32px', marginTop: '48px' }}>
+                {/* Vertical Timeline Line */}
+                <div style={{ 
+                    position: 'absolute', 
+                    left: '7px', 
+                    top: '0', 
+                    bottom: '0', 
+                    width: '2px', 
+                    background: 'linear-gradient(to bottom, var(--accent-primary), transparent)',
+                    opacity: 0.3
+                }} />
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '64px' }}>
+                    {sprintsData
+                        .slice()
+                        .reverse()
+                        .filter(s => s.startDate <= today)
+                        .map((sprint) => {
+                            const changes = sprint.changes || [];
+                            const goals = sprint.goals || [];
+                            
+                            return (
+                                <div key={sprint.id} style={{ position: 'relative' }}>
+                                    {/* Timeline Dot */}
+                                    <div style={{ 
+                                        position: 'absolute', 
+                                        left: '-32px', 
+                                        top: '8px', 
+                                        width: '16px', 
+                                        height: '16px', 
+                                        borderRadius: '50%', 
+                                        background: 'var(--bg-primary)',
+                                        border: '3px solid var(--accent-primary)',
+                                        zIndex: 2,
+                                        boxShadow: '0 0 10px rgba(var(--accent-primary-rgb), 0.5)'
+                                    }} />
+
+                                    <div style={{ marginBottom: '24px' }}>
+                                        <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '8px' }}>
+                                            <h2 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', margin: 0 }}>
+                                                Sprint {sprint.id}
+                                            </h2>
+                                            <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 500 }}>
+                                                {sprint.startDate} — {sprint.endDate}
+                                            </span>
+                                        </div>
+                                        
+                                        {goals.length > 0 && (
+                                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px' }}>
+                                                {goals.map((goal: string, idx: number) => (
+                                                    <div key={idx} className="glass" style={{ 
+                                                        padding: '6px 12px', 
+                                                        borderRadius: '20px', 
+                                                        fontSize: '0.85rem', 
+                                                        color: goal.startsWith('[x]') ? 'var(--accent-primary)' : 'var(--text-secondary)',
+                                                        border: goal.startsWith('[x]') ? '1px solid var(--accent-primary)' : '1px solid rgba(255,255,255,0.1)',
+                                                        background: goal.startsWith('[x]') ? 'rgba(var(--accent-primary-rgb), 0.1)' : 'rgba(255,255,255,0.05)'
+                                                    }}>
+                                                        {goal.replace('[x] ', '').replace('[ ] ', '')}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    <div className="glass" style={{ padding: '24px', position: 'relative' }}>
+                                        <h4 style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-secondary)', marginBottom: '16px', opacity: 0.6 }}>
+                                            Movement Log
+                                        </h4>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                            {changes.length > 0 ? (
+                                                changes.map((change: any, idx: number) => (
+                                                    <SprintChangeRow key={idx} change={change} itemMap={itemMap} />
+                                                ))
+                                            ) : (
+                                                <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontStyle: 'italic' }}>
+                                                    Quiet sprint. No movements recorded.
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                </div>
+            </div>
+        );
+    }
 
     // If sprintId is provided, we render a simplified "Sprint Log"
     if (sprintId) {
