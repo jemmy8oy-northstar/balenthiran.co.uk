@@ -748,6 +748,36 @@
         "from": "Backlog",
         "to": "In Progress",
         "timestamp": "2026-02-14T11:38:18.949Z"
+      },
+      {
+        "itemId": "user-verification",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "User Verification Flow",
+          "description": "Implement magic link or button verification flow for registered interest."
+        }
+      },
+      {
+        "itemId": "user-persistence",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "User Persistence (Cookies)",
+          "description": "Remember user emails via cookies to streamline interest registration."
+        }
+      },
+      {
+        "itemId": "sprint-data-migration",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Sprint Data Migration",
+          "description": "Migrate all sprint logs and goals from JSON to the PostgreSQL database."
+        }
       }
     ],
     "boardSnapshots": {
