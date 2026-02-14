@@ -1,6 +1,7 @@
 using Scalar.AspNetCore;
 using Balenthiran.WebApi;
 using Balenthiran.WebApi.Routes;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,11 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
     app.MapScalarApiReference("/scalar/v1");
+
+    // Apply migrations automatically in Dev
+    using var scope = app.Services.CreateScope();
+    var dbContext = scope.ServiceProvider.GetRequiredService<Balenthiran.Database.BalenthiranDbContext>();
+    dbContext.Database.Migrate();
 }
 
 app.UseHttpsRedirection();
