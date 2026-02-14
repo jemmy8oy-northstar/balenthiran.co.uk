@@ -4,6 +4,7 @@ import projectsData from '../data/projects.json';
 import devopsData from '../data/devops.json';
 import youtubeData from '../data/youtube.json';
 import adminData from '../data/admin.json';
+import GoalItem from './GoalItem';
 
 interface SprintHistoryProps {
     boardFilter?: 'project' | 'devops' | 'youtube' | 'admin';
@@ -88,18 +89,7 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter, sprintId, is
                                         {goals.length > 0 && (
                                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px' }}>
                                                 {goals.map((goal: string, idx: number) => (
-                                                    <div key={idx} className="glass" style={{ 
-                                                        padding: '6px 12px', 
-                                                        borderRadius: '20px', 
-                                                        fontSize: '0.85rem', 
-                                                        color: goal.startsWith('[x]') ? 'var(--accent-primary)' : goal.startsWith('[-]') ? '#ef4444' : 'var(--text-secondary)',
-                                                        border: goal.startsWith('[x]') ? '1px solid var(--accent-primary)' : goal.startsWith('[-]') ? '1px solid #ef4444' : '1px solid rgba(255,255,255,0.1)',
-                                                        background: goal.startsWith('[x]') ? 'rgba(var(--accent-primary-rgb), 0.1)' : goal.startsWith('[-]') ? 'rgba(239, 68, 68, 0.1)' : 'rgba(255,255,255,0.05)',
-                                                        textDecoration: goal.startsWith('[-]') ? 'line-through' : 'none',
-                                                        opacity: goal.startsWith('[-]') ? 0.8 : 1
-                                                    }}>
-                                                        {goal.replace('[x] ', '').replace('[ ] ', '').replace('[-] ', '')}
-                                                    </div>
+                                                    <GoalItem key={idx} goal={goal} />
                                                 ))}
                                             </div>
                                         )}
@@ -135,13 +125,23 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter, sprintId, is
         if (!specificSprint) return null;
 
         const changes = getSprintChanges(specificSprint);
-        if (changes.length === 0 && !boardFilter) return null;
+        const goals = specificSprint.goals || [];
+        if (changes.length === 0 && goals.length === 0 && !boardFilter) return null;
 
         return (
             <div className="glass" style={{ padding: '16px', marginBottom: '24px' }}>
                 <h3 style={{ fontSize: '0.9rem', color: 'var(--text-primary)', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <span style={{ opacity: 0.6 }}>📝</span> Sprint Log
                 </h3>
+                
+                {goals.length > 0 && (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '16px' }}>
+                        {goals.map((goal: string, idx: number) => (
+                            <GoalItem key={idx} goal={goal} isCompact />
+                        ))}
+                    </div>
+                )}
+
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                     {changes.length > 0 ? (
                         changes.map((change: any, idx: number) => (
@@ -182,8 +182,8 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter, sprintId, is
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
                     {sprintsData.slice().reverse().map((sprint) => {
                         const changes = getSprintChanges(sprint);
-                        if (changes.length === 0 && !boardFilter) return null;
-                        if (!sprint.goals || sprint.goals.length === 0) return null;
+                        const goals = sprint.goals || [];
+                        if (changes.length === 0 && goals.length === 0 && !boardFilter) return null;
 
                         return (
                             <div key={sprint.id} className="glass" style={{ padding: '20px' }}>
@@ -196,6 +196,14 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter, sprintId, is
                                     </span>
                                 </div>
                                 
+                                {goals.length > 0 && (
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '16px' }}>
+                                        {goals.map((goal: string, idx: number) => (
+                                            <GoalItem key={idx} goal={goal} isCompact />
+                                        ))}
+                                    </div>
+                                )}
+
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                                     {changes.map((change: any, idx: number) => (
                                         <SprintChangeRow key={idx} change={change} itemMap={itemMap} boardFilter={boardFilter} />
