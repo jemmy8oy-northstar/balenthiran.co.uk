@@ -1,16 +1,14 @@
-using Balenthiran.Abstractions.Services;
-using Balenthiran.Services;
-using Balenthiran.Abstractions.Models;
-using Microsoft.AspNetCore.Mvc;
+using Balenthiran.Api;
+using Balenthiran.Api.Routes;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container (Centralized DI)
+builder.Services.AddBackendServices(builder.Configuration);
+
+// Standard API setup
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-// DI Setup
-builder.Services.AddScoped<IStatusService, StatusService>();
 
 var app = builder.Build();
 
@@ -23,17 +21,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Routes
-app.MapGet("/api/status", async (IStatusService statusService) =>
-{
-    var status = await statusService.GetSystemStatusAsync();
-    return Results.Ok(new {
-        version = status.Version,
-        friendlyStatus = status.GetFriendlyStatus(),
-        timestamp = status.LastUpdated
-    });
-})
-.WithName("GetStatus")
-.WithOpenApi();
+// Register Route Groups
+app.MapStatusRoutes();
+app.MapNewsletterRoutes();
 
 app.Run();

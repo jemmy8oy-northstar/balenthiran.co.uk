@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Balenthiran.DomainModels\Balenthiran.DomainModels.csproj" />
     <ProjectReference Include="..\Balenthiran.Abstractions\Balenthiran.Abstractions.csproj" />
+    <ProjectReference Include="..\Balenthiran.Database\Balenthiran.Database.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -10,7 +11,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <EnableDefaultResourceItems>false</EnableDefaultResourceItems>    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
