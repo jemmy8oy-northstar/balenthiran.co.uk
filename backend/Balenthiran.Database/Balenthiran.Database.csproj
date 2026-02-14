@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Balenthiran.Entities\Balenthiran.Entities.csproj" />
+    <ProjectReference Include="..\Balenthiran.EntityModels\Balenthiran.EntityModels.csproj" />
     <ProjectReference Include="..\Balenthiran.Abstractions\Balenthiran.Abstractions.csproj" />
   </ItemGroup>
 

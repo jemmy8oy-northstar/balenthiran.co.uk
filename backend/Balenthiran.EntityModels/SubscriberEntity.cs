@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Balenthiran.Entities;
+namespace Balenthiran.EntityModels;
 
 public class SubscriberEntity
 {

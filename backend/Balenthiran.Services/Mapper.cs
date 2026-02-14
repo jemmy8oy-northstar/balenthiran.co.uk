@@ -1,6 +1,6 @@
 using AutoMapper;
 using Balenthiran.DomainModels.Models;
-using Balenthiran.Entities;
+using Balenthiran.EntityModels;
 
 namespace Balenthiran.Services;
 

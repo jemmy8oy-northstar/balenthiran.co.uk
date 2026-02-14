@@ -2,7 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Balenthiran.Abstractions\Balenthiran.Abstractions.csproj" />
-    <ProjectReference Include="..\Balenthiran.Entities\Balenthiran.Entities.csproj" />
+    <ProjectReference Include="..\Balenthiran.EntityModels\Balenthiran.EntityModels.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

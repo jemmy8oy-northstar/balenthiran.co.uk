@@ -2,7 +2,7 @@ using AutoMapper;
 using Balenthiran.DataModels.Models;
 using Balenthiran.DomainModels.Models;
 
-namespace Balenthiran.Api;
+namespace Balenthiran.WebApi;
 
 public class MappingProfile : Profile
 {

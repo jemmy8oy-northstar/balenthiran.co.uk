@@ -1,5 +1,5 @@
-using Balenthiran.Api;
-using Balenthiran.Api.Routes;
+using Balenthiran.WebApi;
+using Balenthiran.WebApi.Routes;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -2,7 +2,7 @@ using AutoMapper;
 using Balenthiran.Abstractions.Models;
 using Balenthiran.Abstractions.Services;
 using Balenthiran.Database;
-using Balenthiran.Entities;
+using Balenthiran.EntityModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace Balenthiran.Services;

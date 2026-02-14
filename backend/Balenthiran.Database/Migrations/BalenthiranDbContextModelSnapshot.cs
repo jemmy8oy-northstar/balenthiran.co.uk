@@ -22,7 +22,7 @@ namespace Balenthiran.Database.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Balenthiran.Entities.SubscriberEntity", b =>
+            modelBuilder.Entity("Balenthiran.EntityModels.SubscriberEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

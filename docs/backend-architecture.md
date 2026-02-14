@@ -6,16 +6,16 @@ This document outlines the architectural decisions for the Balenthiran .NET back
 
 ```text
 Balenthiran/
-├── Balenthiran.Api           # Entry point, Routes, Dependency Injection
+├── Balenthiran.WebApi        # Entry point, Routes, Dependency Injection
 │   ├── Routes/               # Grouped Minimal API route definitions
 │   ├── Mapper.cs             # Mappings: DataModels <-> DomainModels
 │   └── ServiceRegistration.cs # DI orchestration
 ├── Balenthiran.Services      # Business Logic implementations
-│   └── Mapper.cs             # Mappings: Entities <-> DomainModels
+│   └── Mapper.cs             # Mappings: EntityModels <-> DomainModels
 ├── Balenthiran.DomainModels  # Domain Logic, Model extensions (Rich Domain Model)
 ├── Balenthiran.Database      # DbContext, Migrations
 ├── Balenthiran.DataModels    # API DTOs / POCOs (Data Models)
-├── Balenthiran.Entities      # EFCore Database Entities (Anemic/POCO)
+├── Balenthiran.EntityModels  # EFCore Database Entities (Anemic/POCO)
 └── Balenthiran.Abstractions  # Interfaces for Services and Domain/Data Models
 ```
 

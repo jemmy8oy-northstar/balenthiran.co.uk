@@ -1,4 +1,4 @@
-using Balenthiran.Entities;
+using Balenthiran.EntityModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace Balenthiran.Database;

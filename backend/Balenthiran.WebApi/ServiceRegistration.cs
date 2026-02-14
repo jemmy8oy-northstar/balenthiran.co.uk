@@ -3,7 +3,7 @@ using Balenthiran.Services;
 using Balenthiran.Database;
 using Microsoft.EntityFrameworkCore;
 
-namespace Balenthiran.Api;
+namespace Balenthiran.WebApi;
 
 public static class ServiceRegistration
 {

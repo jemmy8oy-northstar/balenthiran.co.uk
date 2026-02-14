@@ -1,6 +1,6 @@
 using Balenthiran.Abstractions.Services;
 
-namespace Balenthiran.Api.Routes;
+namespace Balenthiran.WebApi.Routes;
 
 public static class StatusRoutes
 {

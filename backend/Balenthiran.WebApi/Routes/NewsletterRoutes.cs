@@ -3,7 +3,7 @@ using Balenthiran.DataModels.Models;
 using Balenthiran.DomainModels.Models;
 using AutoMapper;
 
-namespace Balenthiran.Api.Routes;
+namespace Balenthiran.WebApi.Routes;
 
 public static class NewsletterRoutes
 {
