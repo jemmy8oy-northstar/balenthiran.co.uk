@@ -92,11 +92,13 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter, sprintId, is
                                                         padding: '6px 12px', 
                                                         borderRadius: '20px', 
                                                         fontSize: '0.85rem', 
-                                                        color: goal.startsWith('[x]') ? 'var(--accent-primary)' : 'var(--text-secondary)',
-                                                        border: goal.startsWith('[x]') ? '1px solid var(--accent-primary)' : '1px solid rgba(255,255,255,0.1)',
-                                                        background: goal.startsWith('[x]') ? 'rgba(var(--accent-primary-rgb), 0.1)' : 'rgba(255,255,255,0.05)'
+                                                        color: goal.startsWith('[x]') ? 'var(--accent-primary)' : goal.startsWith('[-]') ? '#ef4444' : 'var(--text-secondary)',
+                                                        border: goal.startsWith('[x]') ? '1px solid var(--accent-primary)' : goal.startsWith('[-]') ? '1px solid #ef4444' : '1px solid rgba(255,255,255,0.1)',
+                                                        background: goal.startsWith('[x]') ? 'rgba(var(--accent-primary-rgb), 0.1)' : goal.startsWith('[-]') ? 'rgba(239, 68, 68, 0.1)' : 'rgba(255,255,255,0.05)',
+                                                        textDecoration: goal.startsWith('[-]') ? 'line-through' : 'none',
+                                                        opacity: goal.startsWith('[-]') ? 0.8 : 1
                                                     }}>
-                                                        {goal.replace('[x] ', '').replace('[ ] ', '')}
+                                                        {goal.replace('[x] ', '').replace('[ ] ', '').replace('[-] ', '')}
                                                     </div>
                                                 ))}
                                             </div>

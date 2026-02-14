@@ -670,9 +670,9 @@
     "startDate": "2026-02-02",
     "endDate": "2026-02-15",
     "goals": [
-      "Begin Earn Your Vices App Store onboarding",
-      "Begin to move Earn Your Vices into beta testing",
-      "Add new app idea video"
+      "[-] Begin Earn Your Vices App Store onboarding",
+      "[-] Begin to move Earn Your Vices into beta testing",
+      "[-] Add new app idea video"
     ],
     "changes": [
       {
@@ -987,7 +987,11 @@
     "id": "26Q1W7/8",
     "startDate": "2026-02-16",
     "endDate": "2026-03-01",
-    "goals": [],
+    "goals": [
+      "Move to .NET",
+      "Per-App Newsletters",
+      "Create Template Project"
+    ],
     "changes": [],
     "boardSnapshots": {
       "project": [
