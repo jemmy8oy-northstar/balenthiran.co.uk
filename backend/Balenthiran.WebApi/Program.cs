@@ -1,3 +1,4 @@
+using Scalar.AspNetCore;
 using Balenthiran.WebApi;
 using Balenthiran.WebApi.Routes;
 
@@ -8,7 +9,7 @@ builder.Services.AddBackendServices(builder.Configuration);
 
 // Standard API setup
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddOpenApi("openapi");
+builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
@@ -16,6 +17,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference("/scalar/v1");
 }
 
 app.UseHttpsRedirection();

@@ -5,13 +5,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <OpenApiDocumentsDirectory>./</OpenApiDocumentsDirectory>
-    <OpenApiDocumentName>openapi</OpenApiDocumentName>
   </PropertyGroup>
 
-  <Target Name="RenameOpenApiFile" AfterTargets="GenerateOpenApiDocuments" Condition="'$(Configuration)' == 'Debug'">
-    <Move SourceFiles="$(OpenApiDocumentsDirectory)$(AssemblyName)_$(OpenApiDocumentName).json" 
-          DestinationFiles="$(OpenApiDocumentsDirectory)openapi.json" 
-          OverwriteReadOnlyFiles="true" />
+  <Target Name="RenameOpenApiFile" AfterTargets="GenerateOpenApiDocuments" Condition="'$(Configuration)' == 'Debug' And Exists('$(OpenApiDocumentsDirectory)$(AssemblyName)_v1.json')">
+    <Move SourceFiles="$(OpenApiDocumentsDirectory)$(AssemblyName)_v1.json" DestinationFiles="$(OpenApiDocumentsDirectory)openapi.json" OverwriteReadOnlyFiles="true" />
   </Target>
 
   <ItemGroup>
@@ -27,6 +24,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.0" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.12.40" />
   </ItemGroup>
 
   <ItemGroup>
