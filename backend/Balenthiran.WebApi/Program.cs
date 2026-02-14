@@ -30,6 +30,6 @@ app.UseHttpsRedirection();
 
 // Register Route Groups
 app.MapStatusRoutes();
-app.MapNewsletterRoutes();
+app.MapInterestRoutes();
 
 app.Run();

@@ -10,5 +10,6 @@ public class MappingProfile : Profile
     {
         // Entity <-> DomainModel
         CreateMap<SubscriberEntity, DomainSubscriber>().ReverseMap();
+        // Project mapping will be added when we have a Project Domain model
     }
 }

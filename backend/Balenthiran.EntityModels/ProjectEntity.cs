@@ -2,18 +2,18 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Balenthiran.EntityModels;
 
-public class SubscriberEntity
+public class ProjectEntity
 {
     [Key]
     public int Id { get; set; }
-    
-    [Required]
-    [EmailAddress]
-    public string Email { get; set; } = string.Empty;
-    
-    public bool IsVerified { get; set; } = false;
 
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    [Required]
+    [MaxLength(100)]
+    public string Name { get; set; } = string.Empty;
+
+    [Required]
+    [MaxLength(100)]
+    public string Slug { get; set; } = string.Empty;
 
     // Navigation property
     public virtual ICollection<InterestEntity> Interests { get; set; } = new List<InterestEntity>();

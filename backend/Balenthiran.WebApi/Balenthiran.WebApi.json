@@ -18,12 +18,22 @@
         }
       }
     },
-    "/api/newsletter/subscribe": {
+    "/api/interest/register": {
       "post": {
         "tags": [
           "Balenthiran.WebApi"
         ],
-        "operationId": "SubscribeToNewsletter",
+        "operationId": "RegisterInterest",
+        "parameters": [
+          {
+            "name": "projectSlug",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -50,7 +60,10 @@
           "email": {
             "type": "string"
           },
-          "subscribedAt": {
+          "isVerified": {
+            "type": "boolean"
+          },
+          "createdAt": {
             "type": "string",
             "format": "date-time"
           }

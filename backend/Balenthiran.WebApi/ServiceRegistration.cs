@@ -19,6 +19,6 @@ public static class ServiceRegistration
 
         // Business Services
         services.AddScoped<IStatusService, StatusService>();
-        services.AddScoped<INewsletterService, NewsletterService>();
+        services.AddScoped<IInterestService, InterestService>();
     }
 }
