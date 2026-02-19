@@ -4,7 +4,7 @@
         "title": "Germy",
         "category": "Flutter Debut",
         "path": "/projects/germy",
-        "description": "My first ever app—a Pandemic-era Tetris inspired experiment.",
+        "description": "My first ever app\u2014a Pandemic-era Tetris inspired experiment.",
         "longDescription": "Started in 2020, Germy was the project where I taught myself Flutter. Originally a pandemic-themed game, it faced multiple App Store rejections due to sensitivity policies and gameplay similarities. Despite not hitting Apple's store, it reached the Play Store and serves as the technical foundation for everything I build today.",
         "links": {
             "appStore": null,
@@ -36,7 +36,7 @@
         "title": "Ten Beer Plan",
         "category": "Main App",
         "path": "/projects/tenbeerplan",
-        "description": "My first custom backend journey—a social coordination MVP born from a meme.",
+        "description": "My first custom backend journey\u2014a social coordination MVP born from a meme.",
         "longDescription": "Ten Beer Plan was a technical milestone where I built my first personal backend using Python, Flask, and SQLAlchemy. It was an MVP tested by a small group of users, but ultimately hit a roadblock with Apple's sensitivity policies regarding alcohol content. It served as a massive learning experience for authentication, database management, and AWS deployment.",
         "links": {
             "appStore": null,
@@ -98,11 +98,27 @@
         "id": "commuter-house-search",
         "title": "Commuter House Search",
         "category": "Real Estate",
-        "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance.",
+        "description": "The 'Skyscanner for Houses'\u2014search for your next home based on commute time, not just distance.",
         "longDescription": "A potential disruption to traditional real estate searching. Instead of radius-based searches, users can find properties based on their actual commute duration to work or other key locations.",
         "links": {
             "appStore": null,
             "playStore": null
+        },
+        "media": {
+            "icon": "/balenthiran.svg",
+            "youtube": null
+        }
+    },
+    {
+        "id": "portfolio-template",
+        "title": "Indie Dev Portfolio & Agile Management Template",
+        "category": "Open Source",
+        "description": "A reusable, shareable starter kit for indie developers to build their portfolio and manage their build-in-public journey with agile-style status tracking.",
+        "longDescription": "A shareable, open-source version of this portfolio and sprint management system. Designed for indie developers to clone and quickly set up their own build-in-public ecosystem with structured agile-style status tracking and sharing.",
+        "links": {
+            "appStore": null,
+            "playStore": null,
+            "github": "https://github.com/jemmy8oy/nursery-portfolio-template"
         },
         "media": {
             "icon": "/balenthiran.svg",

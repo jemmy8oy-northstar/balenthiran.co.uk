@@ -1025,6 +1025,17 @@
           "description": "The difference between simple auto-complete and multi-step agentic execution."
         },
         "timestamp": "2026-02-19T18:06:16.000Z"
+      },
+      {
+        "itemId": "portfolio-template",
+        "board": "project",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Indie Dev Portfolio & Agile Management Template",
+          "description": "A reusable, shareable starter kit for indie developers to build their portfolio and manage their build-in-public journey with agile-style status tracking."
+        },
+        "timestamp": "2026-02-19T18:10:57.000Z"
       }
     ],
     "boardSnapshots": {
@@ -1070,6 +1081,12 @@
           "status": "Backlog",
           "title": "Commuter House Search",
           "description": "The 'Skyscanner for Houses'\u2014search for your next home based on commute time, not just distance."
+        },
+        {
+          "id": "portfolio-template",
+          "status": "Backlog",
+          "title": "Indie Dev Portfolio & Agile Management Template",
+          "description": "A reusable, shareable starter kit for indie developers to build their portfolio and manage their build-in-public journey with agile-style status tracking."
         }
       ],
       "youtube": [
@@ -1297,6 +1314,12 @@
           "status": "Backlog",
           "title": "Commuter House Search",
           "description": "The 'Skyscanner for Houses'\u2014search for your next home based on commute time, not just distance."
+        },
+        {
+          "id": "portfolio-template",
+          "status": "Backlog",
+          "title": "Indie Dev Portfolio & Agile Management Template",
+          "description": "A reusable, shareable starter kit for indie developers to build their portfolio and manage their build-in-public journey with agile-style status tracking."
         }
       ],
       "youtube": [
