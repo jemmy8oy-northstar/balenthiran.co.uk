@@ -85,6 +85,7 @@
         "category": "Just for Fun",
         "description": "A bespoke habit tracker tailored to my exact rituals and growth goals.",
         "longDescription": "A custom tool built to track positive daily habits and rituals. Part of a 'habit of sharing' series on YouTube, this project focuses on personal utility first\u2014tracking everything from sleep and nutrition to push-ups and gift-giving.",
+        "path": "/projects/habit-tracker",
         "links": {
             "appStore": null,
             "playStore": null
