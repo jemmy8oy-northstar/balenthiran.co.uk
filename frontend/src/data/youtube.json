@@ -76,5 +76,23 @@
         "title": "Pivot: Earn Your Beers to Vices",
         "description": "Why I'm broadening the scope of the app.",
         "category": "Strategy"
+    },
+    {
+        "id": "ai-sprint-management",
+        "title": "The Antigravity Workflow: Self-Managing Your Backlog with AI",
+        "description": "The meta-experience of using an AI agent (Antigravity) to maintain a project board and sprints.json.",
+        "category": "Strategy"
+    },
+    {
+        "id": "obsidian-ideation-loop",
+        "title": "From Obsidian to IDE: My AI-Powered Ideation System",
+        "description": "The workflow between Obsidian notes and structured tasks in the IDE.",
+        "category": "Technical"
+    },
+    {
+        "id": "agentic-coding-workflows",
+        "title": "Beyond Copilot: Mastering Agentic AI Coding Workflows",
+        "description": "The difference between simple auto-complete and multi-step agentic execution.",
+        "category": "Engineering"
     }
 ]
