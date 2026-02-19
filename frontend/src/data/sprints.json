@@ -992,7 +992,41 @@
       "Per-App Newsletters",
       "Create Template Project"
     ],
-    "changes": [],
+    "changes": [
+      {
+        "itemId": "ai-sprint-management",
+        "board": "youtube",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "The Antigravity Workflow: Self-Managing Your Backlog with AI",
+          "description": "The meta-experience of using an AI agent (Antigravity) to maintain a project board and sprints.json."
+        },
+        "timestamp": "2026-02-19T18:06:16.000Z"
+      },
+      {
+        "itemId": "obsidian-ideation-loop",
+        "board": "youtube",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "From Obsidian to IDE: My AI-Powered Ideation System",
+          "description": "The workflow between Obsidian notes and structured tasks in the IDE."
+        },
+        "timestamp": "2026-02-19T18:06:16.000Z"
+      },
+      {
+        "itemId": "agentic-coding-workflows",
+        "board": "youtube",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Beyond Copilot: Mastering Agentic AI Coding Workflows",
+          "description": "The difference between simple auto-complete and multi-step agentic execution."
+        },
+        "timestamp": "2026-02-19T18:06:16.000Z"
+      }
+    ],
     "boardSnapshots": {
       "project": [
         {
@@ -1110,6 +1144,24 @@
           "status": "Backlog",
           "title": "Pivot: Earn Your Beers to Vices",
           "description": "Why I'm broadening the scope of the app."
+        },
+        {
+          "id": "ai-sprint-management",
+          "status": "Backlog",
+          "title": "The Antigravity Workflow: Self-Managing Your Backlog with AI",
+          "description": "The meta-experience of using an AI agent (Antigravity) to maintain a project board and sprints.json."
+        },
+        {
+          "id": "obsidian-ideation-loop",
+          "status": "Backlog",
+          "title": "From Obsidian to IDE: My AI-Powered Ideation System",
+          "description": "The workflow between Obsidian notes and structured tasks in the IDE."
+        },
+        {
+          "id": "agentic-coding-workflows",
+          "status": "Backlog",
+          "title": "Beyond Copilot: Mastering Agentic AI Coding Workflows",
+          "description": "The difference between simple auto-complete and multi-step agentic execution."
         }
       ],
       "devops": [
@@ -1319,6 +1371,24 @@
           "status": "Backlog",
           "title": "Pivot: Earn Your Beers to Vices",
           "description": "Why I'm broadening the scope of the app."
+        },
+        {
+          "id": "ai-sprint-management",
+          "status": "Backlog",
+          "title": "The Antigravity Workflow: Self-Managing Your Backlog with AI",
+          "description": "The meta-experience of using an AI agent (Antigravity) to maintain a project board and sprints.json."
+        },
+        {
+          "id": "obsidian-ideation-loop",
+          "status": "Backlog",
+          "title": "From Obsidian to IDE: My AI-Powered Ideation System",
+          "description": "The workflow between Obsidian notes and structured tasks in the IDE."
+        },
+        {
+          "id": "agentic-coding-workflows",
+          "status": "Backlog",
+          "title": "Beyond Copilot: Mastering Agentic AI Coding Workflows",
+          "description": "The difference between simple auto-complete and multi-step agentic execution."
         }
       ],
       "devops": [
