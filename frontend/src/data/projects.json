@@ -83,8 +83,8 @@
         "id": "habit-tracker",
         "title": "Personal Habit Tracker",
         "category": "Just for Fun",
-        "description": "A custom habit tracker built specifically for my own workflow.",
-        "longDescription": "A personalized tool to manage daily rhythms and goals without the clutter of generic habit apps. Built for personal utility first, focusing on speed and specific goal tracking.",
+        "description": "A bespoke habit tracker tailored to my exact rituals and growth goals.",
+        "longDescription": "A custom tool built to track positive daily habits and rituals. Part of a 'habit of sharing' series on YouTube, this project focuses on personal utility first\u2014tracking everything from sleep and nutrition to push-ups and gift-giving.",
         "links": {
             "appStore": null,
             "playStore": null
@@ -92,7 +92,22 @@
         "media": {
             "icon": "/balenthiran.svg",
             "youtube": null
-        }
+        },
+        "features": [
+            "Sleeping hours (Apple wheel inspiration)",
+            "Ate breakfast checkbox",
+            "Veg with lunch & dinner",
+            "Ate fruit today",
+            "Been outside / Ran / Exercised (linked)",
+            "Drinks drank Counter",
+            "Seen friend / Seen family",
+            "Side hustle time",
+            "Upper body workout / Press ups / Stretch",
+            "Drawing / Learning (Hobby)",
+            "Gift giving",
+            "Word of the month",
+            "Notes, Photos & Reminders"
+        ]
     },
     {
         "id": "commuter-house-search",

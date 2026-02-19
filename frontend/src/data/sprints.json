@@ -1036,6 +1036,24 @@
           "description": "A reusable, shareable starter kit for indie developers to build their portfolio and manage their build-in-public journey with agile-style status tracking."
         },
         "timestamp": "2026-02-19T18:10:57.000Z"
+      },
+      {
+        "itemId": "habit-tracker",
+        "board": "project",
+        "from": "Backlog",
+        "to": "Planning",
+        "timestamp": "2026-02-19T18:20:51.000Z"
+      },
+      {
+        "itemId": "habit-tracker-announcement",
+        "board": "youtube",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Building for Myself: Announcing My Personal Habit Tracker",
+          "description": "Sharing the 'why' behind building my own habit tracker and the light-hearted goals I'm starting with."
+        },
+        "timestamp": "2026-02-19T18:20:51.000Z"
       }
     ],
     "boardSnapshots": {
@@ -1072,7 +1090,7 @@
         },
         {
           "id": "habit-tracker",
-          "status": "Backlog",
+          "status": "Planning",
           "title": "Personal Habit Tracker",
           "description": "A custom habit tracker built specifically for my own workflow."
         },
@@ -1179,6 +1197,12 @@
           "status": "Backlog",
           "title": "Beyond Copilot: Mastering Agentic AI Coding Workflows",
           "description": "The difference between simple auto-complete and multi-step agentic execution."
+        },
+        {
+          "id": "habit-tracker-announcement",
+          "status": "Backlog",
+          "title": "Building for Myself: Announcing My Personal Habit Tracker",
+          "description": "Sharing the 'why' behind building my own habit tracker and the light-hearted goals I'm starting with."
         }
       ],
       "devops": [
@@ -1305,7 +1329,7 @@
         },
         {
           "id": "habit-tracker",
-          "status": "Backlog",
+          "status": "Planning",
           "title": "Personal Habit Tracker",
           "description": "A custom habit tracker built specifically for my own workflow."
         },
@@ -1412,6 +1436,12 @@
           "status": "Backlog",
           "title": "Beyond Copilot: Mastering Agentic AI Coding Workflows",
           "description": "The difference between simple auto-complete and multi-step agentic execution."
+        },
+        {
+          "id": "habit-tracker-announcement",
+          "status": "Backlog",
+          "title": "Building for Myself: Announcing My Personal Habit Tracker",
+          "description": "Sharing the 'why' behind building my own habit tracker and the light-hearted goals I'm starting with."
         }
       ],
       "devops": [

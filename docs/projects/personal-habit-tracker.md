@@ -1,21 +1,44 @@
 # Personal Habit Tracker
 
-**Status**: Idea (Backlog)
+**Status**: Planning
 **Category**: Just for Fun
 **Platform**: Web / Mobile
 
 ## Concept
-A bespoke, high-performance habit tracker designed specifically for a personal workflow. It focuses on speed and ritual rather than generic gamification or social sharing.
+A bespoke, high-performance habit tracker designed specifically for my own workflow. It focuses on speed and ritual rather than generic gamification or social sharing.
 
-## Context
-- **Problem**: Existing habit apps are often cluttered with subscription prompts, social features, or complex UIs that get in the way of the habit itself.
-- **User-First Logic**: Built for personal utility first. If it works for me, it might work for others, but the primary target is a 1-person user base.
+## Context (February 2026)
+As part of building the habit of posting to YouTube and getting comfortable sharing content, I am focusing on light-hearted projects. This tracker is tailored to my exact rituals, ensuring zero friction between the desire to track and the action itself.
 
-## Core Features
-1. **Ultra-Fast Entry**: Minimal taps to log a ritual or habit.
-2. **Daily Rhythms**: Focus on morning/evening routines rather than just a list of tasks.
-3. **Zero Friction**: No accounts (unless multi-device sync is needed), no ads, no subscriptions.
-4. **Custom Analytics**: Clean, data-driven insights into streaks and patterns.
+## Ideation & Features
+The core goal is to make tracking as easy as possible with custom presets and a personal touch (e.g., Photos, Notes, Calendar).
+
+### Positive Habits to Track:
+- **Sleep**: Track sleeping hours (inspired by the Apple Watch sleep wheel).
+- **Nutrition**:
+    - [ ] Ate breakfast
+    - [ ] Veg with lunch
+    - [ ] Veg with dinner
+    - [ ] Ate fruit today
+- **Activity**:
+    - [ ] Been outside
+    - [ ] Ran
+    - [ ] Exercised (auto-ticked if running is logged)
+    - [ ] Upper body workout / Press ups / Stretch
+- **Social & Personal**:
+    - [ ] Seen a friend / Seen family
+    - [ ] Gift giving
+    - [ ] Side hustle time
+    - [ ] Drawing / Learning (e.g., singing lesson)
+- **Metrics**:
+    - Drinks drank counter
+    - **Word of the Month**: (e.g., "Greatness", "Peace")
+
+### Technical Wishlist:
+- **Customization**: Allow users to add their own habits or use presets.
+- **Engagement**: Reminders, progress bars, "On Track" status indicators.
+- **Rich Data**: Add notes to activities, photos, and a calendar view.
+- **Open Source**: Potentially release the template for others to customize.
 
 ## Technical Goals
 - **Performance**: Near-instant load times.

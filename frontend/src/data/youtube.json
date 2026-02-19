@@ -94,5 +94,11 @@
         "title": "Beyond Copilot: Mastering Agentic AI Coding Workflows",
         "description": "The difference between simple auto-complete and multi-step agentic execution.",
         "category": "Engineering"
+    },
+    {
+        "id": "habit-tracker-announcement",
+        "title": "Building for Myself: Announcing My Personal Habit Tracker",
+        "description": "Sharing the 'why' behind building my own habit tracker and the light-hearted goals I'm starting with.",
+        "category": "Announcement"
     }
 ]
