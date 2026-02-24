@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
+import { useRegisterGeneralInterestMutation } from '../api/generatedApi';
 
 const InterestForm: React.FC = () => {
     const [email, setEmail] = useState('');
+    const [registerGeneralInterest, { isLoading, isError }] = useRegisterGeneralInterestMutation();
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (email) {
-            // Backend integration will happen later
-            console.log('Interest registered for:', email);
-            setSubmitted(true);
-            setEmail('');
+            try {
+                await registerGeneralInterest({
+                    registerInterestRequest: { email }
+                }).unwrap();
+                setSubmitted(true);
+                setEmail('');
+            } catch (err) {
+                console.error('Failed to register interest:', err);
+            }
         }
     };
 
@@ -28,39 +35,50 @@ const InterestForm: React.FC = () => {
                 </p>
 
                 {!submitted ? (
-                    <form onSubmit={handleSubmit} className="contact-form" style={{
-                        display: 'flex',
-                        gap: '12px',
-                        maxWidth: '500px',
-                        margin: '0 auto'
-                    }}>
-                        <input
-                            type="email"
-                            placeholder="Enter your email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                            style={{
-                                flex: 1,
-                                padding: '16px 24px',
-                                borderRadius: '50px',
-                                background: 'var(--bg-card)',
-                                border: '1px solid var(--glass-border)',
-                                color: 'var(--text-primary)',
-                                fontSize: '1rem',
-                                outline: 'none'
-                            }}
-                        />
-                        <button type="submit" className="glass" style={{
-                            padding: '16px 32px',
-                            background: 'var(--accent-primary)',
-                            color: '#fff',
-                            fontWeight: 600,
-                            borderRadius: '50px'
+                    <>
+                        <form onSubmit={handleSubmit} className="contact-form" style={{
+                            display: 'flex',
+                            gap: '12px',
+                            maxWidth: '500px',
+                            margin: '0 auto'
                         }}>
-                            Join Waitlist
-                        </button>
-                    </form>
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                                disabled={isLoading}
+                                style={{
+                                    flex: 1,
+                                    padding: '16px 24px',
+                                    borderRadius: '50px',
+                                    background: 'var(--bg-card)',
+                                    border: '1px solid var(--glass-border)',
+                                    color: 'var(--text-primary)',
+                                    fontSize: '1rem',
+                                    outline: 'none',
+                                    opacity: isLoading ? 0.7 : 1
+                                }}
+                            />
+                            <button type="submit" className="glass" disabled={isLoading} style={{
+                                padding: '16px 32px',
+                                background: 'var(--accent-primary)',
+                                color: '#fff',
+                                fontWeight: 600,
+                                borderRadius: '50px',
+                                opacity: isLoading ? 0.7 : 1,
+                                cursor: isLoading ? 'not-allowed' : 'pointer'
+                            }}>
+                                {isLoading ? 'Joining...' : 'Join Waitlist'}
+                            </button>
+                        </form>
+                        {isError && (
+                            <div style={{ color: '#ef4444', marginTop: '16px', fontSize: '0.9rem' }}>
+                                Something went wrong. Please try again.
+                            </div>
+                        )}
+                    </>
                 ) : (
                     <div style={{
                         fontSize: '1.2rem',

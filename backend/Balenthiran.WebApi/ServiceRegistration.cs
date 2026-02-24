@@ -15,7 +15,7 @@ public static class ServiceRegistration
             options.UseNpgsql(connectionString, b => b.MigrationsAssembly("Balenthiran.Database")));
 
         // AutoMapper
-        services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+        services.AddAutoMapper(cfg => cfg.AddMaps(AppDomain.CurrentDomain.GetAssemblies()));
 
         // Business Services
         services.AddScoped<IStatusService, StatusService>();

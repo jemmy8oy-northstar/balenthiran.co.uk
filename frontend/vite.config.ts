@@ -10,4 +10,18 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5257',
+        changeOrigin: true,
+        secure: false,
+      },
+      '/openapi': {
+        target: 'http://localhost:5257',
+        changeOrigin: true,
+        secure: false,
+      }
+    }
+  }
 })
