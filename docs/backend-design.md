@@ -64,3 +64,29 @@ balenthiran/
 - **Shared Libraries**: Extract common patterns into a `Northstar.Core` or similar if multiple projects emerge.
 - **CI/CD Integration**: Document the GitHub Actions / K8s deployment YAMLs for the .NET backend.
 - **Logging & Monitoring**: Consistent Serilog or industry standard setup.
+
+## Model Sovereignty: Requests vs. Data Models
+
+To maintain a secure and clean API, we distinguish between how data enters the system and how it is represented:
+
+### 1. Request DTOs (The "Question")
+- **Naming**: `*Request` (e.g., `RegisterInterestRequest`)
+- **Location**: `Balenthiran.DataModels/Models/`
+- **Purpose**: Minimal set of fields required from the client.
+- **Rules**: Never include server-generated fields (`Id`, `CreatedAt`) or security-sensitive fields (`IsVerified`).
+
+### 2. Data Models (The "Answer")
+- **Naming**: Simple noun (e.g., `Subscriber`)
+- **Location**: `Balenthiran.DataModels/Models/`
+- **Purpose**: Public representation of an entity, often returned by the API.
+- **Rules**: Can include all public fields. Used by the frontend to display data.
+
+### 3. Domain Models (The "Logic")
+- **Naming**: `Domain*` (e.g., `DomainSubscriber`)
+- **Location**: `Balenthiran.DomainModels/Models/`
+- **Purpose**: Internal rich models containing business logic and transformation helpers.
+
+### 4. Entity Models (The "Storage")
+- **Naming**: `*Entity` (e.g., `SubscriberEntity`)
+- **Location**: `Balenthiran.EntityModels/`
+- **Purpose**: Direct mapping to database tables via EFCore.

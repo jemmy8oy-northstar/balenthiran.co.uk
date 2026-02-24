@@ -46,3 +46,6 @@ The `Api` project only interacts with service **interfaces** defined in `Abstrac
 
 ### 6. Deterministic Codegen
 The `Api` project acts as the single source of truth for the frontend via OpenAPI generation.
+
+### 7. Dedicated Request DTOs
+Endpoints that accept data (POST/PUT) should use dedicated `*Request` DTOs rather than general Data Models. This prevents "over-posting" (clients setting server-managed fields like `IsVerified`) and keeps the API contract minimal and explicit.
