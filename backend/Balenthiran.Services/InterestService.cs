@@ -1,5 +1,5 @@
 using AutoMapper;
-using Balenthiran.Abstractions.Models;
+using Balenthiran.Abstractions.Models.DomainModels;
 using Balenthiran.Abstractions.Services;
 using Balenthiran.Database;
 using Balenthiran.EntityModels;

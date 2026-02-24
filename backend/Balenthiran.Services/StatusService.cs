@@ -1,4 +1,5 @@
-using Balenthiran.Abstractions.Models;
+using Balenthiran.Abstractions.Models.DataModels;
+using Balenthiran.Abstractions.Models.DomainModels;
 using Balenthiran.Abstractions.Services;
 using Balenthiran.DomainModels.Models;
 
