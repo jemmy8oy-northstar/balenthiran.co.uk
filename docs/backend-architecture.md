@@ -17,6 +17,9 @@ Balenthiran/
 ├── Balenthiran.DataModels    # API DTOs / POCOs (Data Models)
 ├── Balenthiran.EntityModels  # EFCore Database Entities (Anemic/POCO)
 └── Balenthiran.Abstractions  # Interfaces for Services and Domain/Data Models
+    ├── DataModels/           # IStatus, ISubscriber, etc.
+    ├── DomainModels/         # IDomainStatus, IDomainSubscriber, etc.
+    └── Services/             # IStatusService, IInterestService, etc.
 ```
 
 ## Core Architectural Principles

@@ -18,9 +18,13 @@ balenthiran/
 │   ├── public/
 │   └── package.json
 ├── backend/              # New .NET project
-│   ├── Balenthiran.Api/  # Minimal API
-│   ├── Balenthiran.Data/ # EFCore & Postgres
-│   └── Balenthiran.sln
+│   ├── Balenthiran.WebApi/  # Minimal API
+│   ├── Balenthiran.Database/ # EFCore & Postgres
+│   ├── Balenthiran.Abstractions/ # Service & Model interfaces
+│   │   ├── DataModels/
+│   │   ├── DomainModels/
+│   │   └── Services/
+│   └── Balenthiran.slnx
 ├── docs/                 # Shared documentation
 └── README.md             # Local setup instructions (Local Postgres)
 ```

@@ -1,4 +1,4 @@
-using Balenthiran.Abstractions.Models.DataModels;
+using Balenthiran.Abstractions.DataModels;
 
 namespace Balenthiran.DataModels.Models;
 

@@ -1,4 +1,4 @@
-namespace Balenthiran.Abstractions.Models.DataModels;
+namespace Balenthiran.Abstractions.DataModels;
 
 public interface IStatus
 {

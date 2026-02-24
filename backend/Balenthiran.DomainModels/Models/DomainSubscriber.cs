@@ -1,4 +1,4 @@
-using Balenthiran.Abstractions.Models.DomainModels;
+using Balenthiran.Abstractions.DomainModels;
 using Balenthiran.DataModels.Models;
 using System.Text.RegularExpressions;
 
