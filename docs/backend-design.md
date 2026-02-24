@@ -69,7 +69,7 @@ balenthiran/
 
 To maintain a secure and clean API, we distinguish between how data enters the system and how it is represented:
 
-### 1. Request DTOs (The "Question")
+### 1. Request Models (The "Question")
 - **Naming**: `*Request` (e.g., `RegisterInterestRequest`)
 - **Location**: `Balenthiran.DataModels/Models/`
 - **Purpose**: Minimal set of fields required from the client.

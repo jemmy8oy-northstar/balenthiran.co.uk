@@ -14,7 +14,7 @@ Balenthiran/
 │   └── Mapper.cs             # Mappings: EntityModels <-> DomainModels
 ├── Balenthiran.DomainModels  # Domain Logic, Model extensions (Rich Domain Model)
 ├── Balenthiran.Database      # DbContext, Migrations
-├── Balenthiran.DataModels    # API DTOs / POCOs (Data Models)
+├── Balenthiran.DataModels    # API Models / POCOs (Data Models)
 ├── Balenthiran.EntityModels  # EFCore Database Entities (Anemic/POCO)
 └── Balenthiran.Abstractions  # Interfaces for Services and Domain/Data Models
     ├── DataModels/           # IStatus, ISubscriber, etc.
@@ -47,5 +47,5 @@ The `Api` project only interacts with service **interfaces** defined in `Abstrac
 ### 6. Deterministic Codegen
 The `Api` project acts as the single source of truth for the frontend via OpenAPI generation.
 
-### 7. Dedicated Request DTOs
-Endpoints that accept data (POST/PUT) should use dedicated `*Request` DTOs rather than general Data Models. This prevents "over-posting" (clients setting server-managed fields like `IsVerified`) and keeps the API contract minimal and explicit.
+### 7. Dedicated Request Models
+Endpoints that accept data (POST/PUT) should use dedicated `*Request` models rather than general Data Models. This prevents "over-posting" (clients setting server-managed fields like `IsVerified`) and keeps the API contract minimal and explicit.
