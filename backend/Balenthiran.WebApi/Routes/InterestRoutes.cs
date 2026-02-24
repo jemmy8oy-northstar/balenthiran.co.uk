@@ -12,7 +12,7 @@ public static class InterestRoutes
 {
     public static void MapInterestRoutes(this IEndpointRouteBuilder app)
     {
-        app.MapPost("/api/interest/register", async (Subscriber subscriber, [FromQuery] string projectSlug, IInterestService interestService, IMapper mapper) =>
+        app.MapPost("/api/interest/register/{projectSlug}", async (string projectSlug, Subscriber subscriber, IInterestService interestService, IMapper mapper) =>
         {
             var domainSubscriber = mapper.Map<DomainSubscriber>(subscriber);
             
@@ -26,6 +26,22 @@ public static class InterestRoutes
             return Results.Ok(mapper.Map<Subscriber>(result));
         })
         .WithName("RegisterInterest")
+        .WithOpenApi();
+
+        app.MapPost("/api/interest/register-general", async (Subscriber subscriber, IInterestService interestService, IMapper mapper) =>
+        {
+            var domainSubscriber = mapper.Map<DomainSubscriber>(subscriber);
+            
+            var result = await interestService.RegisterInterestAsync(domainSubscriber, "general");
+            
+            if (result == null)
+            {
+                return Results.BadRequest("Invalid registration request.");
+            }
+            
+            return Results.Ok(mapper.Map<Subscriber>(result));
+        })
+        .WithName("RegisterGeneralInterest")
         .WithOpenApi();
     }
 }

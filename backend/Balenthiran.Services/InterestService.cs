@@ -33,33 +33,18 @@ public class InterestService(BalenthiranDbContext dbContext, IMapper mapper) : I
             await dbContext.SaveChangesAsync();
         }
 
-        // 2. Lookup Project
-        var project = await dbContext.Projects
-            .FirstOrDefaultAsync(p => p.Slug.ToLower() == projectSlug.ToLower());
-
-        if (project == null)
-        {
-            // If project doesn't exist, we might want to create it or fail.
-            // For now, let's create a "General" interest if project is not found OR fail.
-            // Let's go with "General" as a fallback if the slug is empty, otherwise fail.
-            if (string.IsNullOrEmpty(projectSlug))
-            {
-                 project = await dbContext.Projects.FirstOrDefaultAsync(p => p.Slug == "general");
-            }
-            
-            if (project == null) return null; // Or throw/handle
-        }
-
-        // 3. Link Interest (if not already linked)
+        // 2. Link Interest (if not already linked)
+        var finalSlug = string.IsNullOrEmpty(projectSlug) ? "general" : projectSlug;
+        
         var existingInterest = await dbContext.Interests
-            .AnyAsync(i => i.SubscriberId == subscriberEntity.Id && i.ProjectId == project.Id);
+            .AnyAsync(i => i.SubscriberId == subscriberEntity.Id && i.ProjectSlug.ToLower() == finalSlug.ToLower());
 
         if (!existingInterest)
         {
             var interest = new InterestEntity
             {
                 SubscriberId = subscriberEntity.Id,
-                ProjectId = project.Id,
+                ProjectSlug = finalSlug,
                 CreatedAt = DateTime.UtcNow
             };
             dbContext.Interests.Add(interest);
