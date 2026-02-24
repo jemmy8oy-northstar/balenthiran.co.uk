@@ -10,9 +10,11 @@ namespace Balenthiran.WebApi.Routes;
 
 public static class InterestRoutes
 {
-    public static void MapInterestRoutes(this IEndpointRouteBuilder app)
+    public static RouteGroupBuilder MapInterestRoutes(this RouteGroupBuilder parentGroup)
     {
-        app.MapPost("/api/interest/register/{projectSlug}", async (string projectSlug, RegisterInterestRequest request, IInterestService interestService, IMapper mapper) =>
+        var group = parentGroup.MapGroup("/interest");
+
+        group.MapPost("/register/{projectSlug}", async (string projectSlug, RegisterInterestRequest request, IInterestService interestService, IMapper mapper) =>
         {
             var domainSubscriber = new DomainSubscriber { Email = request.Email };
             
@@ -28,7 +30,7 @@ public static class InterestRoutes
         .WithName("RegisterInterest")
         .WithOpenApi();
 
-        app.MapPost("/api/interest/register-general", async (RegisterInterestRequest request, IInterestService interestService, IMapper mapper) =>
+        group.MapPost("/register-general", async (RegisterInterestRequest request, IInterestService interestService, IMapper mapper) =>
         {
             var domainSubscriber = new DomainSubscriber { Email = request.Email };
             
@@ -43,5 +45,7 @@ public static class InterestRoutes
         })
         .WithName("RegisterGeneralInterest")
         .WithOpenApi();
+
+        return parentGroup;
     }
 }

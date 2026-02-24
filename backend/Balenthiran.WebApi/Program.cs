@@ -29,7 +29,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 // Register Route Groups
-app.MapStatusRoutes();
-app.MapInterestRoutes();
+app.MapGroup("/api")
+    .MapStatusRoutes()
+    .MapInterestRoutes();
 
 app.Run();

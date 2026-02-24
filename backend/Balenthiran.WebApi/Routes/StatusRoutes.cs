@@ -6,9 +6,11 @@ namespace Balenthiran.WebApi.Routes;
 
 public static class StatusRoutes
 {
-    public static void MapStatusRoutes(this IEndpointRouteBuilder app)
+    public static RouteGroupBuilder MapStatusRoutes(this RouteGroupBuilder parentGroup)
     {
-        app.MapGet("/api/status", async (IStatusService statusService) =>
+        var group = parentGroup.MapGroup("/status");
+
+        group.MapGet("", async (IStatusService statusService) =>
         {
             var status = await statusService.GetSystemStatusAsync();
             return Results.Ok(new {
@@ -19,5 +21,7 @@ public static class StatusRoutes
         })
         .WithName("GetStatus")
         .WithOpenApi();
+
+        return parentGroup;
     }
 }
