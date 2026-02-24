@@ -19,8 +19,7 @@ public static class StatusRoutes
                 timestamp = status.LastUpdated
             });
         })
-        .WithName("GetStatus")
-        .WithOpenApi();
+        .WithName("GetStatus");
 
         return parentGroup;
     }

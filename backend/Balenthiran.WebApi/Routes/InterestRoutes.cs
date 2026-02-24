@@ -27,8 +27,7 @@ public static class InterestRoutes
             
             return Results.Ok(mapper.Map<Subscriber>(result));
         })
-        .WithName("RegisterInterest")
-        .WithOpenApi();
+        .WithName("RegisterInterest");
 
         group.MapPost("/register-general", async (RegisterInterestRequest request, IInterestService interestService, IMapper mapper) =>
         {
@@ -43,8 +42,7 @@ public static class InterestRoutes
             
             return Results.Ok(mapper.Map<Subscriber>(result));
         })
-        .WithName("RegisterGeneralInterest")
-        .WithOpenApi();
+        .WithName("RegisterGeneralInterest");
 
         return parentGroup;
     }

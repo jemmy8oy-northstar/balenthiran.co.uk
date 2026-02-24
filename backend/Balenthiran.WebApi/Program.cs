@@ -31,6 +31,7 @@ app.UseHttpsRedirection();
 // Register Route Groups
 app.MapGroup("/api")
     .MapStatusRoutes()
-    .MapInterestRoutes();
+    .MapInterestRoutes()
+    .WithOpenApi();
 
 app.Run();
