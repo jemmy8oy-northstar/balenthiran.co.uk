@@ -16,6 +16,8 @@ namespace Balenthiran.Database.Migrations
                 name: "IX_Interests_SubscriberId_ProjectSlug",
                 table: "Interests");
 
+            migrationBuilder.Sql("DELETE FROM \"Interests\"");
+
             migrationBuilder.DropColumn(
                 name: "ProjectSlug",
                 table: "Interests");
