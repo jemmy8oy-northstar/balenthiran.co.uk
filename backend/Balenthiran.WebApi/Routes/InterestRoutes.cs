@@ -17,30 +17,29 @@ public static class InterestRoutes
         group.MapPost("/register/{projectSlug}", async (string projectSlug, RegisterInterestRequest request, IInterestService interestService, IMapper mapper) =>
         {
             var domainSubscriber = new DomainSubscriber { Email = request.Email };
-            
             var result = await interestService.RegisterInterestAsync(domainSubscriber, projectSlug);
             
-            if (result == null)
+            return result.Status switch
             {
-                return Results.BadRequest("Invalid registration request.");
-            }
-            
-            return Results.Ok(mapper.Map<Subscriber>(result));
+                RegistrationStatus.Success => Results.Created($"/api/interest/{result.Subscriber?.Email}", mapper.Map<Subscriber>(result.Subscriber)),
+                RegistrationStatus.AlreadyRegistered => Results.Ok(new { message = "Already registered", subscriber = mapper.Map<Subscriber>(result.Subscriber) }),
+                RegistrationStatus.NotFound => Results.NotFound(new { message = "Project not found" }),
+                _ => Results.BadRequest(new { message = "Invalid registration request" })
+            };
         })
         .WithName("RegisterInterest");
 
         group.MapPost("/register-general", async (RegisterInterestRequest request, IInterestService interestService, IMapper mapper) =>
         {
             var domainSubscriber = new DomainSubscriber { Email = request.Email };
-            
             var result = await interestService.RegisterInterestAsync(domainSubscriber, "general");
             
-            if (result == null)
+            return result.Status switch
             {
-                return Results.BadRequest("Invalid registration request.");
-            }
-            
-            return Results.Ok(mapper.Map<Subscriber>(result));
+                RegistrationStatus.Success => Results.Created($"/api/interest/{result.Subscriber?.Email}", mapper.Map<Subscriber>(result.Subscriber)),
+                RegistrationStatus.AlreadyRegistered => Results.Ok(new { message = "Already registered", subscriber = mapper.Map<Subscriber>(result.Subscriber) }),
+                _ => Results.BadRequest(new { message = "Invalid registration request" })
+            };
         })
         .WithName("RegisterGeneralInterest");
 

@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import ProjectInterestForm from '../components/ProjectInterestForm';
 
 const HabitTrackerDetail: React.FC = () => {
     return (
@@ -93,6 +93,8 @@ const HabitTrackerDetail: React.FC = () => {
                                 By building my own, I can tailor it to the <strong>exact ways I like to do things</strong>. Whether it's the specific list of habits or the way I want to see my progress over time, this is about creating a tool that fits my life perfectly—and potentially open-sourcing the template for others to do the same.
                             </p>
                         </section>
+
+                        <ProjectInterestForm projectSlug="habit-tracker" projectTitle="Personal Habit Tracker" />
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>

@@ -5,6 +5,6 @@ namespace Balenthiran.Abstractions.Services;
 
 public interface IInterestService
 {
-    Task<IDomainSubscriber?> RegisterInterestAsync(IDomainSubscriber subscriber, string projectSlug);
+    Task<InterestRegistrationResult> RegisterInterestAsync(IDomainSubscriber subscriber, string projectSlug);
     Task<bool> IsVerifiedAsync(string email);
 }

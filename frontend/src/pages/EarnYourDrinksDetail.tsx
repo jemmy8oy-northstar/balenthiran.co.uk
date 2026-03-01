@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import ProjectInterestForm from '../components/ProjectInterestForm';
 
 const EarnYourDrinksDetail: React.FC = () => {
     return (
@@ -78,6 +78,7 @@ const EarnYourDrinksDetail: React.FC = () => {
                              </p>
                         </section>
 
+                        <ProjectInterestForm projectSlug="earn-your-drinks" projectTitle="Earn Your Beers" />
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>

@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import ProjectInterestForm from '../components/ProjectInterestForm';
 
 const TenBeerPlanDetail: React.FC = () => {
     return (
@@ -130,6 +130,8 @@ const TenBeerPlanDetail: React.FC = () => {
                                 </div>
                             </div>
                         </section>
+
+                        <ProjectInterestForm projectSlug="tenbeerplan" projectTitle="Ten Beer Plan" />
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>

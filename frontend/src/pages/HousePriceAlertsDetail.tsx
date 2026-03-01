@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import ProjectInterestForm from '../components/ProjectInterestForm';
 
 const HousePriceAlertsDetail: React.FC = () => {
     return (
@@ -109,6 +109,8 @@ const HousePriceAlertsDetail: React.FC = () => {
                                 </div>
                             </div>
                         </section>
+
+                        <ProjectInterestForm projectSlug="house-price-alerts" projectTitle="House Price Alerts" />
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>

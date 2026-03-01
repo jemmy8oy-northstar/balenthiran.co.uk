@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import ProjectInterestForm from '../components/ProjectInterestForm';
 
 const APEifyDetail: React.FC = () => {
     return (
@@ -84,6 +84,8 @@ const APEifyDetail: React.FC = () => {
                                 Maintaining a successful app alongside life—first University and now a full-time 9-5 job—is a skill in itself. While I've moved into a more passive maintenance phase, APEify is still used daily by people on their iPhones and remains available globally on the iOS App Store. It's a project that proved its resilience by continuing to find an audience long after the initial lockdown spark.
                             </p>
                         </section>
+
+                        <ProjectInterestForm projectSlug="apeify" projectTitle="APEify" />
                     </div>
 
                     <aside style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>

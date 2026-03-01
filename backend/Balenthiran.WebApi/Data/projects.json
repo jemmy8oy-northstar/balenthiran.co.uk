@@ -150,6 +150,24 @@
         }
     },
     {
+        "id": "youtube",
+        "guid": "A4C3A7A1-C1B5-4C3D-8D2A-E4F5A6B7C8D9",
+        "title": "YouTube Channel",
+        "category": "Content",
+        "description": "Documenting the journey of an indie builder.",
+        "longDescription": "The jemmy8oy YouTube channel is where I share the behind-the-scenes engineering, project pivots, and the reality of building in public.",
+        "path": "/projects/youtube",
+        "links": {
+            "appStore": null,
+            "playStore": null,
+            "youtube": "https://www.youtube.com/@jemmy8oy"
+        },
+        "media": {
+            "icon": "/balenthiran.svg",
+            "youtube": null
+        }
+    },
+    {
         "id": "general",
         "guid": "F8A77272-6F9C-403E-9862-1872AAC4E194",
         "title": "General",
