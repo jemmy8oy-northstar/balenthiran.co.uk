@@ -35,11 +35,10 @@ const GermyDetail: React.FC = () => {
                                 Unlike traditional Tetris, Germy features a 360-degree challenge. Walls are "broken down" by viruses from four different directions. The player must use Tetris pieces (originally toilet rolls in the lockdown version) to rebuild the defenses and stop the spread.
                             </p>
                         </section>
-
-                        <ProjectInterestForm projectSlug="germy" projectTitle="Germy" />
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                        <ProjectInterestForm projectSlug="germy" projectTitle="Germy" />
                         <section>
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The Rejection Saga</h2>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>

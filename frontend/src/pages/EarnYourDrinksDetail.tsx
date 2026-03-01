@@ -77,11 +77,10 @@ const EarnYourDrinksDetail: React.FC = () => {
                                 I'm building this out as a simple MVP. If it turns out other people want to "earn their beers" too, I might expand it with more features. For now, watch this space for updates.
                              </p>
                         </section>
-
-                        <ProjectInterestForm projectSlug="earn-your-drinks" projectTitle="Earn Your Beers" />
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                        <ProjectInterestForm projectSlug="earn-your-drinks" projectTitle="Earn Your Beers" />
                          <section className="glass" style={{ padding: '32px' }}>
                             <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Project Goals</h3>
                             <ul style={{ paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>

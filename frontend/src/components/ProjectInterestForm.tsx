@@ -35,16 +35,16 @@ const ProjectInterestForm: React.FC<ProjectInterestFormProps> = ({ projectSlug, 
 
     return (
         <div className="glass" style={{
-            padding: '40px',
-            marginTop: '48px',
+            padding: '24px',
             background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%)',
-            border: '1px solid var(--glass-border)'
+            border: '1px solid var(--glass-border)',
+            marginBottom: '32px'
         }}>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '12px', color: 'var(--text-primary)' }}>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '8px', color: 'var(--text-primary)' }}>
                 Interested in {projectTitle}?
             </h3>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '0.95rem' }}>
-                Sign up to get notified when {projectTitle} receives major updates or moves into its next phase.
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '20px', fontSize: '0.85rem', lineHeight: '1.5' }}>
+                Get notified when {projectTitle} receives major updates or moves into its next phase.
             </p>
 
             {status === 'idle' ? (
@@ -62,23 +62,25 @@ const ProjectInterestForm: React.FC<ProjectInterestFormProps> = ({ projectSlug, 
                             required
                             disabled={isLoading}
                             style={{
-                                flex: '1 1 250px',
-                                padding: '12px 20px',
+                                flex: '1 1 100%',
+                                padding: '10px 16px',
                                 borderRadius: '50px',
                                 background: 'var(--bg-card)',
                                 border: '1px solid var(--glass-border)',
                                 color: 'var(--text-primary)',
-                                fontSize: '0.9rem',
+                                fontSize: '0.85rem',
                                 outline: 'none'
                             }}
                         />
                         <button type="submit" className="glass" disabled={isLoading} style={{
-                            padding: '12px 24px',
+                            flex: '1 1 100%',
+                            padding: '10px 20px',
                             background: 'var(--accent-primary)',
                             color: '#fff',
                             fontWeight: 600,
                             borderRadius: '50px',
-                            cursor: isLoading ? 'not-allowed' : 'pointer'
+                            cursor: isLoading ? 'not-allowed' : 'pointer',
+                            fontSize: '0.85rem'
                         }}>
                             {isLoading ? 'Joining...' : 'Get Updates'}
                         </button>

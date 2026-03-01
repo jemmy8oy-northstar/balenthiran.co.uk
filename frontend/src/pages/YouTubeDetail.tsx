@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import ProjectInterestForm from '../components/ProjectInterestForm';
 
 const YouTubeDetail: React.FC = () => {
     return (
@@ -82,8 +81,6 @@ const YouTubeDetail: React.FC = () => {
                                 Visit jemmy8oy on YouTube
                             </a>
                         </section>
-
-                        <ProjectInterestForm projectSlug="youtube" projectTitle="YouTube Channel" />
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>

@@ -130,11 +130,10 @@ const TenBeerPlanDetail: React.FC = () => {
                                 </div>
                             </div>
                         </section>
-
-                        <ProjectInterestForm projectSlug="tenbeerplan" projectTitle="Ten Beer Plan" />
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                        <ProjectInterestForm projectSlug="tenbeerplan" projectTitle="Ten Beer Plan" />
                         <section className="glass" style={{ padding: '32px' }}>
                             <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Key Learnings</h3>
                             <ul style={{ paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>

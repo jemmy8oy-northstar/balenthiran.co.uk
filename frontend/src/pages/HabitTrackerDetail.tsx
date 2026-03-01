@@ -93,11 +93,10 @@ const HabitTrackerDetail: React.FC = () => {
                                 By building my own, I can tailor it to the <strong>exact ways I like to do things</strong>. Whether it's the specific list of habits or the way I want to see my progress over time, this is about creating a tool that fits my life perfectly—and potentially open-sourcing the template for others to do the same.
                             </p>
                         </section>
-
-                        <ProjectInterestForm projectSlug="habit-tracker" projectTitle="Personal Habit Tracker" />
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                        <ProjectInterestForm projectSlug="habit-tracker" projectTitle="Personal Habit Tracker" />
                         <section className="glass" style={{ padding: '32px' }}>
                             <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Planned Features</h3>
                             <ul style={{ paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>

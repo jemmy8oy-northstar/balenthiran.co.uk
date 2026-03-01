@@ -84,11 +84,10 @@ const APEifyDetail: React.FC = () => {
                                 Maintaining a successful app alongside life—first University and now a full-time 9-5 job—is a skill in itself. While I've moved into a more passive maintenance phase, APEify is still used daily by people on their iPhones and remains available globally on the iOS App Store. It's a project that proved its resilience by continuing to find an audience long after the initial lockdown spark.
                             </p>
                         </section>
-
-                        <ProjectInterestForm projectSlug="apeify" projectTitle="APEify" />
                     </div>
 
                     <aside style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                        <ProjectInterestForm projectSlug="apeify" projectTitle="APEify" />
                         <div className="glass" style={{ padding: '24px' }}>
                             <h3 style={{ fontSize: '1.1rem', marginBottom: '16px' }}>Project Stats</h3>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
