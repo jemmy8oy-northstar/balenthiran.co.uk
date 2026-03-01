@@ -19,9 +19,11 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
     app.MapScalarApiReference("/scalar/v1");
+}
 
-    // Apply migrations automatically in Dev
-    using var scope = app.Services.CreateScope();
+// Apply migrations automatically on startup
+using (var scope = app.Services.CreateScope())
+{
     var dbContext = scope.ServiceProvider.GetRequiredService<Balenthiran.Database.BalenthiranDbContext>();
     dbContext.Database.Migrate();
 }

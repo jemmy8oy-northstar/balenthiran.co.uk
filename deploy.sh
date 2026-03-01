@@ -20,12 +20,23 @@ TAG=$(git rev-parse --short HEAD)
 echo "🚀 Starting Deployment for version: $TAG"
 
 # 3. Build and Push
-echo "🏗️  Building ARM64 Docker image..."
+echo "🏗️  Building ARM64 Docker images..."
+
+# Frontend
+echo "🎨 Building Frontend..."
 docker buildx build \
     --platform linux/arm64 \
-    -t $REPO_URL:$TAG \
-    -t $REPO_URL:latest \
+    -t $REGION.ocir.io/$NAMESPACE/balenthiran:$TAG \
+    -t $REGION.ocir.io/$NAMESPACE/balenthiran:latest \
     --push frontend/
+
+# Backend
+echo "⚙️  Building Backend..."
+docker buildx build \
+    --platform linux/arm64 \
+    -t $REGION.ocir.io/$NAMESPACE/balenthiran-backend:$TAG \
+    -t $REGION.ocir.io/$NAMESPACE/balenthiran-backend:latest \
+    --push backend/
 
 # 4. Verify the upload and get the Timestamp
 echo "🔍 Verifying registry and fetching timestamp..."
@@ -67,5 +78,6 @@ else
 fi
 
 # 6. Done
-echo "✅ Success! Version $TAG is live. Restarting the deployment..."
+echo "✅ Success! Version $TAG is live. Restarting the deployments..."
 kubectl rollout restart deploy $KUBERNETES_DEPLOYMENT -n $KUBERNETES_NAMESPACE
+kubectl rollout restart deploy balenthiran-balenthiranhelm-backend -n $KUBERNETES_NAMESPACE
