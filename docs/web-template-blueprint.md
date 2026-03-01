@@ -16,7 +16,27 @@ A generic, high-performance monorepo template for .NET backends and React fronte
 - `backend/Company.Project.Database/`
 - `backend/Company.Project.WebApi/`
 
-## 2. Included Components
+## 2. Template Structure (`dotnet new`)
+
+To create the template, we will scaffold a clean version in `/Users/jamesbalenthiran/coding/web-template`.
+
+### Project Naming Variable Mapping
+We use the `.template.config/template.json` configuration to handle renaming:
+- **Variable**: `Company` (e.g., `Balenthiran`)
+- **Variable**: `Project` (e.g., `Apeify`)
+
+**Example Scaffold Path**:
+- `backend/Company.Project.Abstractions/Company.Project.Abstractions.csproj`
+
+### Exclusion Rules (`.template.config/template.json`)
+The following will be excluded from the generated project to ensure a "Clean" start:
+- `**/.git/**` (The template repository itself will have a .git, but the scaffolded output won't)
+- `**/bin/**`, `**/obj/**`
+- `**/node_modules/**`
+- `frontend/dist/**`
+- Local environment files (`.env`, `appsettings.Development.json`)
+
+## 3. Included Components
 
 ### Backend (Clean Architecture)
 - **WebApi**: Native OpenAPI (Swagger/Scalar), Health Checks, Route Grouping pattern.
@@ -32,22 +52,16 @@ A generic, high-performance monorepo template for .NET backends and React fronte
 
 ### DevOps (Scaleable Infrastructure)
 - **Docker**: Multi-stage Dockerfiles for both Frontend and Backend.
-- **Helm**: A genericized Helm chart in `helm/` using values for naming and scaling.
-- **Deploy**: Root `deploy.sh` (Pro path, targets K8s namespace).
+- **Helm**: A genericized Helm chart in `helm/` for scalable deployments.
+- **Deploy**: Root `deploy.sh` that targets K8s namespaces.
 
-## 3. Accessible Deployment Paths (For Substitutes/Beginners)
-While the "Pro" path is K8s, the template should support:
-- **Frontend**: One-click deployment to **Vercel** or **Netlify** (requires `frontend/` as root or build command adjustment).
-- **Backend**: Deployment to **Railway**, **Fly.io**, or **Render** (via the provided `backend/Dockerfile`).
-- **Database**: Managed Postgres on **Supabase** or **Neon**.
-
-## 3. Exclusion Rules (Strip to Generic)
+## 4. Exclusion Rules (Strip to Generic)
 - **REMOVE**: All `Interest` logic, entities, and routes.
 - **REMOVE**: All project-specific detail pages (`EarnYourDrinksDetail`, etc.).
 - **REMOVE**: Specific image assets and content in `public/`.
 - **RESET**: `README.md` to a generic "Getting Started" guide.
 
-## 4. Hybrid Onboarding Process
+## 5. Hybrid Onboarding Process
 
 ### Step 1: `dotnet new web-template`
 - Replaces namespaces and file names.
