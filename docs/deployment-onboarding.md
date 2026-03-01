@@ -12,6 +12,9 @@ The backend requires a connection to your PostgreSQL database. This is managed v
 - **Key:** `DATABASE_URL`
 - **Format:** `Host=my-db-host;Database=tenbeerplan;Username=my-user;Password=my-password`
 
+> [!NOTE]
+> .NET uses a semicolon-separated Key-Value format for connection strings, unlike the `postgres://user:pass@host/db` URI format common in Python or Node.js.
+
 **How to create it:**
 ```bash
 kubectl create secret generic balenthiran-secrets \

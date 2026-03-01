@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0-alpine AS build
 WORKDIR /source
 
 # Copy solution and project files
-COPY Balenthiran.sln .
+COPY Balenthiran.slnx .
 COPY Balenthiran.WebApi/*.csproj ./Balenthiran.WebApi/
 COPY Balenthiran.Abstractions/*.csproj ./Balenthiran.Abstractions/
 COPY Balenthiran.DataModels/*.csproj ./Balenthiran.DataModels/
@@ -18,7 +18,7 @@ RUN dotnet restore
 COPY . .
 
 # Build and publish
-RUN dotnet publish Balenthiran.WebApi/Balenthiran.WebApi.csproj -c Release -o /app/publish --no-restore
+RUN dotnet publish Balenthiran.WebApi/Balenthiran.WebApi.csproj -c Release -o /app/publish
 
 # Stage 2: Runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:10.0-alpine
