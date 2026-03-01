@@ -25,11 +25,12 @@ const SprintContext = createContext<SprintContextType | undefined>(undefined);
 export const SprintProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const { data: sprints = [], isLoading } = useGetSprintsQuery();
     
-    // Default to the latest sprint that has goals (Current Sprint)
+    // Default to the sprint whose date range contains today; fallback to the latest sprint.
     const defaultSprintId = useMemo(() => {
         if (sprints.length === 0) return '';
-        const withGoals = [...sprints].reverse().find(s => s.goals && s.goals.length > 0);
-        return withGoals ? withGoals.id : sprints[sprints.length - 1].id;
+        const today = new Date().toISOString().split('T')[0];
+        const activeSprint = sprints.find(s => s.startDate <= today && s.endDate >= today);
+        return activeSprint ? activeSprint.id : sprints[sprints.length - 1].id;
     }, [sprints]);
 
     const [activeSprintId, setActiveSprintId] = useState<string>('');
