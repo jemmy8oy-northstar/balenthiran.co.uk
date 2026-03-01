@@ -148,21 +148,5 @@
             "icon": "/balenthiran.svg",
             "youtube": null
         }
-    },
-    {
-        "id": "general",
-        "guid": "F8A77272-6F9C-403E-9862-1872AAC4E194",
-        "title": "General",
-        "category": "Newsletter",
-        "description": "General updates from James Balenthiran.",
-        "longDescription": "Subscribe to stay up to date with my latest projects, videos, and general news from the app nursery.",
-        "links": {
-            "appStore": null,
-            "playStore": null
-        },
-        "media": {
-            "icon": "/balenthiran.svg",
-            "youtube": null
-        }
     }
 ]

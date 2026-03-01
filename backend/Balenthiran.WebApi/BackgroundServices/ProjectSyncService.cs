@@ -23,12 +23,18 @@ public class ProjectSyncService(IServiceProvider serviceProvider, ILogger<Projec
 
         try
         {
+            var systemProjects = new List<ProjectJsonModel>
+            {
+                new() { Id = "general", Guid = "F8A77272-6F9C-403E-9862-1872AAC4E194", Title = "General" }
+            };
+
             var json = await File.ReadAllTextAsync(dataPath, cancellationToken);
-            var projects = JsonSerializer.Deserialize<List<ProjectJsonModel>>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            var projects = JsonSerializer.Deserialize<List<ProjectJsonModel>>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
 
-            if (projects == null) return;
+            // Merge system projects with JSON projects
+            var allProjects = systemProjects.Concat(projects).ToList();
 
-            foreach (var proj in projects)
+            foreach (var proj in allProjects)
             {
                 if (!Guid.TryParse(proj.Guid, out var projectGuid))
                 {
