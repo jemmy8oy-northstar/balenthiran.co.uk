@@ -21,14 +21,15 @@ const SprintNavigator: React.FC = () => {
 
     const currentSprint = sprints.find(s => s.id === activeSprintId);
     
-    // Find the latest sprint with goals
-    const latestWithGoals = [...sprints].reverse().find(s => s.goals && s.goals.length > 0);
-    const latestWithGoalsIndex = latestWithGoals ? allSprintIds.indexOf(latestWithGoals.id) : -1;
+    // Classify sprints by date
+    const today = new Date().toISOString().split('T')[0];
+    const activeSprintByDate = sprints.find(s => s.startDate <= today && s.endDate >= today);
+    const activeSprintByDateIndex = activeSprintByDate ? allSprintIds.indexOf(activeSprintByDate.id) : allSprintIds.length - 1;
 
     let headerLabel = 'Previous Sprint';
-    if (currentIndex === latestWithGoalsIndex) {
+    if (currentIndex === activeSprintByDateIndex) {
         headerLabel = 'Current Sprint';
-    } else if (currentIndex > latestWithGoalsIndex) {
+    } else if (currentIndex > activeSprintByDateIndex) {
         headerLabel = 'Next Sprint (Planning)';
     }
 

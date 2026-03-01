@@ -48,12 +48,14 @@ export const SprintProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
     // isLatest is true if we are viewing anything that isn't a historical frozen snapshot from the past
     // But for the sake of labeling, let's treat the latest one with goals as "current"
-    const latestWithGoalsId = useMemo(() => {
-        const withGoals = [...sprints].reverse().find(s => s.goals && s.goals.length > 0);
-        return withGoals ? withGoals.id : '';
+    // isLatest: true when viewing the sprint whose date range contains today
+    const currentSprintByDateId = useMemo(() => {
+        const today = new Date().toISOString().split('T')[0];
+        const active = sprints.find(s => s.startDate <= today && s.endDate >= today);
+        return active ? active.id : sprints[sprints.length - 1]?.id ?? '';
     }, [sprints]);
 
-    const isLatest = activeSprintId === latestWithGoalsId;
+    const isLatest = activeSprintId === currentSprintByDateId;
 
     return (
         <SprintContext.Provider value={{
