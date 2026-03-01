@@ -35,6 +35,12 @@ A generic, high-performance monorepo template for .NET backends and React fronte
 - **Helm**: A genericized Helm chart in `helm/` using values for naming and scaling.
 - **Deploy**: Root `deploy.sh` that targets a specific K8s namespace based on the project slug.
 
+## 3. Accessible Deployment Paths (For Substitutes/Beginners)
+While the "Pro" path is K8s, the template should support:
+- **Frontend**: One-click deployment to **Vercel** or **Netlify** (requires `frontend/` as root or build command adjustment).
+- **Backend**: Deployment to **Railway**, **Fly.io**, or **Render** (via the provided `backend/Dockerfile`).
+- **Database**: Managed Postgres on **Supabase** or **Neon**.
+
 ## 3. Exclusion Rules (Strip to Generic)
 - **REMOVE**: All `Interest` logic, entities, and routes.
 - **REMOVE**: All project-specific detail pages (`EarnYourDrinksDetail`, etc.).

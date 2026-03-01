@@ -2,8 +2,10 @@
 
 The "Build-in-Public" extension of the Web Template, specifically designed for managing an app nursery.
 
-## 1. Relationship to Web Template
-The Nursery Template **inherits** from the Web Template but adds the "Nursery" layer.
+## 1. Relationship to Web Template & Distribution
+The Nursery Template **inherits** from the Web Template but is distributed differently:
+- **Web Template**: Distributed as a `dotnet new` template for programmatic scaffold.
+- **Nursery Template**: Distributed as a **Template Repository on GitHub**. Users "Use this template" or clone it. This preserves the `.agent/` folder and git history which `dotnet new` often strips or complicates.
 
 ## 2. Additional Components
 
@@ -19,6 +21,13 @@ The Nursery Template **inherits** from the Web Template but adds the "Nursery" l
 ### Agentic AI Capabilities
 - **Skills**: `sprint-management` skill.
 - **Workflows**: `/move-task`, `/update-task`, `/plan-next-sprint`, `/validate-sprints`.
+
+## 3. Accessible Deployment & Hosting
+To ensure subscribers can get live quickly without a K8s cluster:
+- **Documentation**: Provide a `docs/deployment/easy-mode.md` guide.
+- **Vercel**: Pre-configured `vercel.json` for the frontend.
+- **Railway/Fly.io**: Instructions for deploying the .NET `backend/Dockerfile` as a standalone service.
+- **Database**: Guide for connecting a free-tier Supabase/Neon Postgres instance.
 
 ## 3. Nursery-Specific Onboarding (`scripts/init-nursery.mjs`)
 Extends the generic `init.mjs` with:
