@@ -1,6 +1,9 @@
 # Newsletter & User Feedback Strategy
 
-This document outlines the strategic plan for the project's communication and feedback ecosystem. It is intended for planning purposes and will not be implemented in the current execution phase.
+This document outlines the strategic plan for the project's communication and feedback ecosystem.
+
+> [!NOTE]
+> **Implementation Status**: Core segments and project-specific interest forms are currently implemented.
 
 ## 1. Newsletter Segmentation
 To ensure high engagement and relevance, the system will support localized and global subscription levels:
