@@ -6,7 +6,9 @@ import { execSync } from 'child_process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const SPRINTS_PATH = path.join(__dirname, '../src/data/sprints.json');
+// Paths relative to project root
+const ROOT = path.join(__dirname, '..');
+const SPRINTS_PATH = path.join(ROOT, 'backend/Balenthiran.WebApi/Data/sprints.json');
 const VALIDATE_PATH = path.join(__dirname, 'validate-sprints.mjs');
 
 const taskId = process.argv[2];
@@ -22,7 +24,7 @@ function updateSprint() {
     try {
         sprints = JSON.parse(fs.readFileSync(SPRINTS_PATH, 'utf8'));
     } catch (e) {
-        console.error('❌ Error: Could not read or parse sprints.json');
+        console.error('❌ Error: Could not read or parse sprints.json at ' + SPRINTS_PATH);
         process.exit(1);
     }
 
