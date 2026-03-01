@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 # Antigravity- **Never interact with build artifacts**: Strictly avoid adding, committing, or referencing files in `bin/`, `obj/`, `Debug/`, `Release/`, or `node_modules/` directories. Always ensure these are excluded from any file-moving or git operations.
 
 - **Do NOT use the browser tool**. I prefer to verify changes manually or have you explain them in detail.
