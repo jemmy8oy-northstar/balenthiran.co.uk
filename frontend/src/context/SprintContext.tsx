@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, useMemo } from 'react';
-import sprintsData from '../data/sprints.json';
+import React, { createContext, useContext, useState, useMemo, useEffect } from 'react';
+import { useGetSprintsQuery } from '../api/staticDataApi';
 
 interface Sprint {
     id: string;
@@ -17,12 +17,13 @@ interface SprintContextType {
     currentSprint: Sprint | null;
     isLatest: boolean;
     sprints: Sprint[];
+    isLoading: boolean;
 }
 
 const SprintContext = createContext<SprintContextType | undefined>(undefined);
 
 export const SprintProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const sprints = useMemo(() => sprintsData as Sprint[], []);
+    const { data: sprints = [], isLoading } = useGetSprintsQuery();
     
     // Default to the latest sprint that has goals (Current Sprint)
     const defaultSprintId = useMemo(() => {
@@ -31,7 +32,14 @@ export const SprintProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         return withGoals ? withGoals.id : sprints[sprints.length - 1].id;
     }, [sprints]);
 
-    const [activeSprintId, setActiveSprintId] = useState<string>(defaultSprintId);
+    const [activeSprintId, setActiveSprintId] = useState<string>('');
+
+    // Initialize activeSprintId once data is loaded
+    useEffect(() => {
+        if (sprints.length > 0 && !activeSprintId) {
+            setActiveSprintId(defaultSprintId);
+        }
+    }, [sprints, defaultSprintId, activeSprintId]);
 
     const currentSprint = useMemo(() => {
         return sprints.find(s => s.id === activeSprintId) || null;
@@ -52,7 +60,8 @@ export const SprintProvider: React.FC<{ children: React.ReactNode }> = ({ childr
             setActiveSprintId,
             currentSprint,
             isLatest,
-            sprints
+            sprints,
+            isLoading
         }}>
             {children}
         </SprintContext.Provider>

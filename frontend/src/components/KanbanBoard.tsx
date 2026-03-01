@@ -1,6 +1,6 @@
 import React, { useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import projectsData from '../data/projects.json';
+import { useGetProjectsQuery } from '../api/staticDataApi';
 import devopsData from '../data/devops.json';
 import youtubeData from '../data/youtube.json';
 import adminData from '../data/admin.json';
@@ -42,6 +42,7 @@ interface KanbanBoardProps {
 const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const { currentSprint, sprints } = useSprint();
+    const { data: projectsData = [] } = useGetProjectsQuery();
 
     const columns = useMemo(() => {
         if (initialType === 'project') return PROJECT_COLUMNS;
@@ -55,7 +56,7 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
         if (initialType === 'devops') return devopsData;
         if (initialType === 'admin') return adminData;
         return youtubeData;
-    }, [initialType]);
+    }, [initialType, projectsData]);
 
     const filteredItems = useMemo(() => {
         let displayData = rawData;

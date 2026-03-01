@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import sprintsData from '../data/sprints.json';
-import projectsData from '../data/projects.json';
+import { useGetSprintsQuery, useGetProjectsQuery } from '../api/staticDataApi';
 import devopsData from '../data/devops.json';
 import youtubeData from '../data/youtube.json';
 import adminData from '../data/admin.json';
@@ -14,6 +13,8 @@ interface SprintHistoryProps {
 
 const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter, sprintId, isTimelineView }) => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const { data: sprintsData = [], isLoading: isLoadingSprints } = useGetSprintsQuery();
+    const { data: projectsData = [], isLoading: isLoadingProjects } = useGetProjectsQuery();
 
     // Create a lookup for items
     const itemMap = useMemo(() => {
@@ -22,8 +23,9 @@ const SprintHistory: React.FC<SprintHistoryProps> = ({ boardFilter, sprintId, is
             map[item.id] = item;
         });
         return map;
-    }, []);
+    }, [projectsData]);
 
+    if (isLoadingSprints || isLoadingProjects) return <div style={{ color: 'var(--text-secondary)' }}>Loading history...</div>;
     if (sprintsData.length === 0) return null;
 
     // Filter changes based on sprintId or boardFilter

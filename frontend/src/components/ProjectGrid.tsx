@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import projects from '../data/projects.json';
+import { useGetProjectsQuery } from '../api/staticDataApi';
 
 const ProjectGrid: React.FC = () => {
+    const { data: projects, isLoading, error } = useGetProjectsQuery();
+
+    if (isLoading) return <div style={{ color: 'var(--text-secondary)' }}>Loading projects...</div>;
+    if (error || !projects) return <div style={{ color: 'var(--text-secondary)' }}>Error loading projects.</div>;
+
     return (
         <div style={{
             display: 'grid',

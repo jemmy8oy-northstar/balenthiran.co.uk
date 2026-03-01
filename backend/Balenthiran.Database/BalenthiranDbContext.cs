@@ -7,6 +7,7 @@ public class BalenthiranDbContext(DbContextOptions<BalenthiranDbContext> options
 {
     public DbSet<SubscriberEntity> Subscribers => Set<SubscriberEntity>();
     public DbSet<InterestEntity> Interests => Set<InterestEntity>();
+    public DbSet<ProjectEntity> Projects => Set<ProjectEntity>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -14,8 +15,16 @@ public class BalenthiranDbContext(DbContextOptions<BalenthiranDbContext> options
             .HasIndex(s => s.Email)
             .IsUnique();
 
+        modelBuilder.Entity<ProjectEntity>()
+            .HasIndex(p => p.Guid)
+            .IsUnique();
+
+        modelBuilder.Entity<ProjectEntity>()
+            .HasIndex(p => p.Slug)
+            .IsUnique();
+
         modelBuilder.Entity<InterestEntity>()
-            .HasIndex(i => new { i.SubscriberId, i.ProjectSlug })
+            .HasIndex(i => new { i.SubscriberId, i.ProjectId })
             .IsUnique();
     }
 }

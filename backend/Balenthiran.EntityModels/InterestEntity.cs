@@ -12,11 +12,14 @@ public class InterestEntity
     public int SubscriberId { get; set; }
 
     [Required]
-    public string ProjectSlug { get; set; } = string.Empty;
+    public int ProjectId { get; set; }
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-    // Navigation property
+    // Navigation properties
     [ForeignKey(nameof(SubscriberId))]
     public virtual SubscriberEntity Subscriber { get; set; } = null!;
+
+    [ForeignKey(nameof(ProjectId))]
+    public virtual ProjectEntity Project { get; set; } = null!;
 }

@@ -36,15 +36,25 @@ public class InterestService(BalenthiranDbContext dbContext, IMapper mapper) : I
         // 2. Link Interest (if not already linked)
         var finalSlug = string.IsNullOrEmpty(projectSlug) ? "general" : projectSlug;
         
+        var project = await dbContext.Projects
+            .FirstOrDefaultAsync(p => p.Slug.ToLower() == finalSlug.ToLower());
+
+        if (project == null)
+        {
+            // Fallback: If project not found (e.g. sync hasn't run), return error or handles as needed
+            // For now, let's return null to indicate failure
+            return null;
+        }
+
         var existingInterest = await dbContext.Interests
-            .AnyAsync(i => i.SubscriberId == subscriberEntity.Id && i.ProjectSlug.ToLower() == finalSlug.ToLower());
+            .AnyAsync(i => i.SubscriberId == subscriberEntity.Id && i.ProjectId == project.Id);
 
         if (!existingInterest)
         {
             var interest = new InterestEntity
             {
                 SubscriberId = subscriberEntity.Id,
-                ProjectSlug = finalSlug,
+                ProjectId = project.Id,
                 CreatedAt = DateTime.UtcNow
             };
             dbContext.Interests.Add(interest);

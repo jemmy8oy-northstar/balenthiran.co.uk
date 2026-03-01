@@ -12,6 +12,8 @@ builder.Services.AddBackendServices(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
+builder.Services.AddHostedService<Balenthiran.WebApi.BackgroundServices.ProjectSyncService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -34,6 +36,8 @@ app.UseHttpsRedirection();
 app.MapGroup("/api")
     .MapStatusRoutes()
     .MapInterestRoutes()
+    .MapProjectRoutes()
+    .MapSprintRoutes()
     .WithOpenApi();
 
 app.Run();

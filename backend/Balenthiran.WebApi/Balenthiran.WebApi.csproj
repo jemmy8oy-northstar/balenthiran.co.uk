@@ -27,5 +27,11 @@
     <ProjectReference Include="..\Balenthiran.DataModels\Balenthiran.DataModels.csproj" />
     <ProjectReference Include="..\Balenthiran.DomainModels\Balenthiran.DomainModels.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Content Update="Data\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
 </Project>
