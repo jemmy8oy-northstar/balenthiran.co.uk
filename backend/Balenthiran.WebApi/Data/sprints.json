@@ -1367,7 +1367,11 @@
     "id": "26Q1W9/10",
     "startDate": "2026-03-02",
     "endDate": "2026-03-15",
-    "goals": [],
+    "goals": [
+      "Add new app idea video",
+      "Begin to move Earn Your Vices into beta testing",
+      "Newsletter-to-Beta Automation"
+    ],
     "changes": [],
     "boardSnapshots": {
       "project": [
