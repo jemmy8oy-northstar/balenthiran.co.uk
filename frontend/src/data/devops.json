@@ -61,5 +61,26 @@
         "description": "Automated public beta onboarding via newsletter signup.",
         "longDescription": "Mechanism where users signing up to the newsletter are automatically added to iOS/Android beta groups via App Store Connect and Play Store APIs.",
         "category": "Engineering"
+    },
+    {
+        "id": "sprint-data-migration",
+        "title": "Sprint Data Migration",
+        "description": "Migrate all sprint logs and goals from JSON to the PostgreSQL database.",
+        "longDescription": "Move the sprints.json data model into a proper relational database schema for scalability, querying, and long-term maintainability.",
+        "category": "Backend"
+    },
+    {
+        "id": "user-persistence",
+        "title": "User Persistence (Cookies)",
+        "description": "Remember user emails via cookies to streamline interest registration.",
+        "longDescription": "Improve returning visitor experience by persisting email addresses via browser cookies, reducing friction for users who previously registered interest.",
+        "category": "Product"
+    },
+    {
+        "id": "user-verification",
+        "title": "User Verification Flow",
+        "description": "Implement magic link or button verification flow for registered interest.",
+        "longDescription": "A lightweight verification mechanism (magic link or email button) to confirm user intent when they register interest in an app, improving the quality of beta sign-ups.",
+        "category": "Product"
     }
 ]
