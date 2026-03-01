@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Balenthiran.DomainModels\Balenthiran.DomainModels.csproj" />
-    <ProjectReference Include="..\Balenthiran.Abstractions\Balenthiran.Abstractions.csproj" />
-    <ProjectReference Include="..\Balenthiran.Database\Balenthiran.Database.csproj" />
+    <ProjectReference Include="../Balenthiran.DomainModels/Balenthiran.DomainModels.csproj" />
+    <ProjectReference Include="../Balenthiran.Abstractions/Balenthiran.Abstractions.csproj" />
+    <ProjectReference Include="../Balenthiran.Database/Balenthiran.Database.csproj" />
   </ItemGroup>
 
   <ItemGroup>

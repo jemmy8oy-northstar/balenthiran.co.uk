@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Balenthiran.DataModels\Balenthiran.DataModels.csproj" />
-    <ProjectReference Include="..\Balenthiran.Abstractions\Balenthiran.Abstractions.csproj" />
+    <ProjectReference Include="../Balenthiran.DataModels/Balenthiran.DataModels.csproj" />
+    <ProjectReference Include="../Balenthiran.Abstractions/Balenthiran.Abstractions.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
