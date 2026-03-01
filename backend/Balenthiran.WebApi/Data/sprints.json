@@ -778,6 +778,18 @@
           "title": "Sprint Data Migration",
           "description": "Migrate all sprint logs and goals from JSON to the PostgreSQL database."
         }
+      },
+      {
+        "itemId": "dotnet-migration",
+        "board": "devops",
+        "from": "In Progress",
+        "to": "Done"
+      },
+      {
+        "itemId": "newsletter-infrastructure",
+        "board": "devops",
+        "from": "In Progress",
+        "to": "Done"
       }
     ],
     "boardSnapshots": {
@@ -988,8 +1000,8 @@
     "startDate": "2026-02-16",
     "endDate": "2026-03-01",
     "goals": [
-      "Move to .NET",
-      "Per-App Newsletters",
+      "[x] Move to .NET",
+      "[x] Per-App Newsletters",
       "Create Template Project"
     ],
     "changes": [
@@ -1054,6 +1066,18 @@
           "description": "Sharing the 'why' behind building my own habit tracker and the light-hearted goals I'm starting with."
         },
         "timestamp": "2026-02-19T18:20:51.000Z"
+      },
+      {
+        "itemId": "dotnet-migration",
+        "board": "devops",
+        "from": "In Progress",
+        "to": "Done"
+      },
+      {
+        "itemId": "newsletter-infrastructure",
+        "board": "devops",
+        "from": "In Progress",
+        "to": "Done"
       }
     ],
     "boardSnapshots": {
@@ -1214,7 +1238,7 @@
         },
         {
           "id": "dotnet-migration",
-          "status": "In Progress",
+          "status": "Done",
           "title": "Move to .NET",
           "description": "Migrating core services to .NET for improved performance and scalability."
         },
@@ -1238,7 +1262,7 @@
         },
         {
           "id": "newsletter-infrastructure",
-          "status": "In Progress",
+          "status": "Done",
           "title": "Per-App Newsletters",
           "description": "Targeted updates and subscription management for individual projects."
         },
@@ -1453,7 +1477,7 @@
         },
         {
           "id": "dotnet-migration",
-          "status": "In Progress",
+          "status": "Done",
           "title": "Move to .NET",
           "description": "Migrating core services to .NET for improved performance and scalability."
         },
@@ -1477,7 +1501,7 @@
         },
         {
           "id": "newsletter-infrastructure",
-          "status": "In Progress",
+          "status": "Done",
           "title": "Per-App Newsletters",
           "description": "Targeted updates and subscription management for individual projects."
         },
