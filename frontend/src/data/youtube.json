@@ -100,5 +100,17 @@
         "title": "Building for Myself: Announcing My Personal Habit Tracker",
         "description": "Sharing the 'why' behind building my own habit tracker and the light-hearted goals I'm starting with.",
         "category": "Announcement"
+    },
+    {
+        "id": "web-template-reveal",
+        "title": "Sharing My Personal Web Template: .NET + React Cleanup",
+        "description": "A deep dive into the boilerplate I use to launch new projects fast.",
+        "category": "Technical"
+    },
+    {
+        "id": "portfolio-system-reveal",
+        "title": "Open Sourcing My Portfolio & Sprint Boards",
+        "description": "How I track my progress in public and how you can use this system too.",
+        "category": "Announcement"
     }
 ]

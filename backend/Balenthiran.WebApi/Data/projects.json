@@ -131,22 +131,5 @@
             "icon": "/balenthiran.svg",
             "youtube": null
         }
-    },
-    {
-        "id": "portfolio-template",
-        "guid": "DFB4FEA1-D511-4213-84E6-338877354B2A",
-        "title": "Indie Dev Portfolio & Agile Management Template",
-        "category": "Open Source",
-        "description": "A reusable, shareable starter kit for indie developers to build their portfolio and manage their build-in-public journey with agile-style status tracking.",
-        "longDescription": "A shareable, open-source version of this portfolio and sprint management system. Designed for indie developers to clone and quickly set up their own build-in-public ecosystem with structured agile-style status tracking and sharing.",
-        "links": {
-            "appStore": null,
-            "playStore": null,
-            "github": "https://github.com/jemmy8oy/nursery-portfolio-template"
-        },
-        "media": {
-            "icon": "/balenthiran.svg",
-            "youtube": null
-        }
     }
 ]
