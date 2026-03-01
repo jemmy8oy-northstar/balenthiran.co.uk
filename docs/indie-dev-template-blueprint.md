@@ -1,11 +1,12 @@
-# Nursery Template Blueprint
+# Indie Dev Home & Sprint Boards Template
 
-The "Build-in-Public" extension of the Web Template, specifically designed for managing an app nursery.
+The "Build-in-Public" extension of the Web Template, specifically designed for managing an indie-dev portfolio and agile-style boards.
 
 ## 1. Relationship to Web Template & Distribution
-The Nursery Template **inherits** from the Web Template but is distributed differently:
-- **Web Template**: Distributed as a `dotnet new` template for programmatic scaffold.
-- **Nursery Template**: Distributed as a **Template Repository on GitHub**. Users "Use this template" or clone it. This preserves the `.agent/` folder and git history which `dotnet new` often strips or complicates.
+The Indie Dev Template is a **Superset** of the Web Template:
+- **Web Template (Base)**: Provides the 7-project .NET backend, React frontend, and infrastructure.
+- **Indie Dev Template (Extension)**: Adds the "Build-in-Public" engine, Kanban boards, and Agentic AI workflows.
+- **Distribution**: This is a **Template Repository on GitHub**. Users "Use this template" or clone it to get the full environment including the `.agent/` folder and git history.
 
 ## 2. Additional Components
 
@@ -14,7 +15,7 @@ The Nursery Template **inherits** from the Web Template but is distributed diffe
 - **Logic**: `ProjectRoutes` and `SprintRoutes`.
 - **Integrations**: `ProjectSyncService` (JSON -> DB synchronization).
 
-### Nursery UI
+### Indie Dev Home UI
 - **Components**: `KanbanBoard`, `SprintHistory`, `ProjectTile`, `InterestForm`.
 - **Pages**: Portfolio Home, Project Detail templates.
 
@@ -24,10 +25,13 @@ The Nursery Template **inherits** from the Web Template but is distributed diffe
 
 ## 3. Accessible Deployment & Hosting
 To ensure subscribers can get live quickly without a K8s cluster:
-- **Documentation**: Provide a `docs/deployment/easy-mode.md` guide.
+- **Easy Mode Guide**: Create `docs/deployment/easy-mode.md` covering Vercel/Railway.
 - **Vercel**: Pre-configured `vercel.json` for the frontend.
 - **Railway/Fly.io**: Instructions for deploying the .NET `backend/Dockerfile` as a standalone service.
 - **Database**: Guide for connecting a free-tier Supabase/Neon Postgres instance.
+
+## 4. Kubernetes (Pro Path)
+- **Note**: Kubernetes support and Helm charts are included but marked as **"Pro / Coming Soon"** for tutorial purposes. Beginners should stick to "Easy Mode".
 
 ## 3. Nursery-Specific Onboarding (`scripts/init-nursery.mjs`)
 Extends the generic `init.mjs` with:
