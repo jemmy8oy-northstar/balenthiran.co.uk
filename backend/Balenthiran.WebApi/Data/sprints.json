@@ -1378,14 +1378,14 @@
         "board": "project",
         "from": "Planning",
         "to": "On Going - Active",
-        "timestamp": "2026-03-08T16:51:59.334145Z"
+        "timestamp": "2026-03-08T17:45:31Z"
       },
       {
         "itemId": "habit-tracker-announcement",
         "board": "youtube",
         "from": "Backlog",
-        "to": "Needs Editing",
-        "timestamp": "2026-03-08T16:51:59.334145Z"
+        "to": "Uploaded",
+        "timestamp": "2026-03-08T17:45:31Z"
       }
     ],
     "boardSnapshots": {
@@ -1477,7 +1477,7 @@
           "id": "germy-video"
         },
         {
-          "status": "Needs Editing",
+          "status": "Uploaded",
           "title": "Building for Myself: Announcing My Personal Habit Tracker",
           "description": "Sharing the 'why' behind building my own habit tracker and the light-hearted goals I'm starting with.",
           "id": "habit-tracker-announcement"
@@ -1740,7 +1740,7 @@
           "id": "germy-video"
         },
         {
-          "status": "Needs Editing",
+          "status": "Uploaded",
           "title": "Building for Myself: Announcing My Personal Habit Tracker",
           "description": "Sharing the 'why' behind building my own habit tracker and the light-hearted goals I'm starting with.",
           "id": "habit-tracker-announcement"
