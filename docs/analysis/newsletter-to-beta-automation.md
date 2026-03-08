@@ -49,7 +49,6 @@ Automate the transition from interested newsletter subscribers to active beta te
 1. **Tester ID**: Does Apple require the tester's First/Last name? (Often not required, but API allows it).
 2. **Group Auto-Invite**: Verify that adding to a relationship automatically triggers the invite email (99% sure it does).
 3. **Tester Lifecycle**: Confirm if `POST /v1/betaTesters` is required for every app even if the user is already a tester for another app in the same developer account.
-4. **Verification Pre-requisite**: Ensure the system handles users who request alpha/beta access *during* their initial signup (Verification -> Interest -> Beta).
 
 ## Why this approach is powerful:
 - **Exclusivity**: "Only 10,000 spots" creates a genuine incentive for early signup.

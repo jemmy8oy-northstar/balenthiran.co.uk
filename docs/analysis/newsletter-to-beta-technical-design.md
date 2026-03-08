@@ -48,10 +48,10 @@ public class BetaInvitationEntity
     public int BetaGroupId { get; set; }
 
     [Required]
-    public string Status { get; set; } = "Requested"; // Requested, Invited, Accepted, Full
+    public string Status { get; set; } = "Requested"; // Requested, Verified, Added, Failed
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    public DateTime? InvitedAt { get; set; }
+    public DateTime? AddedAt { get; set; }
 
     // Navigation properties
     [ForeignKey(nameof(SubscriberId))]
@@ -82,16 +82,35 @@ Currently, the backend lacks a centralized email service. To support automated i
     - `Task<int> GetGroupTesterCount(string groupId)`
     - `Task AddTesterToGroup(string email, string groupId)`
 - **Tech**: Uses `HttpClient` with JWT authentication (Private Key .p8).
+- **JWT Signing**: 
+    - Requires `Microsoft.IdentityModel.Tokens` and `System.IdentityModel.Tokens.Jwt`.
+    - Token lifespan should be short (e.g., 20 mins) as per Apple's requirements.
+    - Payload must include `iss` (Issuer ID), `iat` (Issued at), `exp` (Expiration), `aud` (`appstoreconnect-v1`), and `bid` (Bundle ID - optional but good).
+- **Error Mapping**:
+    - `409 CONFLICT`: User already exists or is already in the group. (Action: Update local DB to "Invited").
+    - `422 UNPROCESSABLE_ENTITY`: Invalid email format at Apple's level. (Action: Log and notify Admin).
+    - `401 / 403`: JWT signing issues or permission shifts. (Action: Critical Alert).
 
 ### 2. `BetaManagementService` (New Service)
 - **Responsibility**: Business logic for beta recruitment.
 - **Methods**:
     - `RequestBetaAccess(int subscriberId, int projectId)`: Creates the `BetaInvitationEntity` and triggers the automation if slots are available.
-    - `SyncTesterStatus()`: (Optional) Background task to check if testers accepted invites.
+    - `ProcessPendingInvitations()`: A simple background worker that picks up `Verified` requests and pushes them to Apple.
 
 ### 3. Updated Routes
 - `POST /projects/{slug}/interest`: Update to accept an optional `includeBeta` boolean.
 - `GET /projects/{slug}/beta-status`: Returns the remaining spots for the active beta group.
+
+---
+
+## State Management (Simplified)
+
+We will adopt a **"Fire and Forget"** approach for the Apple integration:
+
+1. **Local State**: We track our *intent* and the *result* of the API call.
+2. **Success**: Once `AppStoreConnectService.AddTesterToGroup` returns success, we mark the local invitation as `Added`.
+3. **No Polling**: We will **not** poll Apple to see if the user opened the email or accepted the invite. We assume that if the API call succeeded, Apple's infrastructure will handle the rest.
+4. **Re-runs**: If an invitation is in `Failed` state, the Admin can manually trigger a retry.
 
 ---
 
