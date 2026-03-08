@@ -45,7 +45,7 @@ const HabitTrackerDetail: React.FC = () => {
                 <div className="detail-grid" style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr', gap: '64px', marginBottom: '80px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
                         <section>
-                            <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The "Habit of Sharing"</h2>
+                            <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', color: 'var(--text-primary)' }}>The Bigger Picture</h2>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
                                 This project is as much about the output as it is about the process. As I build the habit of posting to YouTube and getting comfortable sharing my technical journey, I'm sticking to light-hearted, personal utility projects.
                             </p>
