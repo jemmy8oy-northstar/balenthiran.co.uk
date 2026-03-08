@@ -1379,6 +1379,17 @@
         "from": "Backlog",
         "to": "Uploaded",
         "timestamp": "2026-03-08T17:45:31Z"
+      },
+      {
+        "itemId": "user-subscription-management",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "User Subscription Management",
+          "description": "Self-service portal for users to manage project interests and beta access."
+        },
+        "timestamp": "2026-03-08T18:50:08.968490Z"
       }
     ],
     "boardSnapshots": {
@@ -1608,6 +1619,12 @@
           "title": "User Verification Flow",
           "description": "Implement magic link or button verification flow for registered interest.",
           "id": "user-verification"
+        },
+        {
+          "status": "Backlog",
+          "title": "User Subscription Management",
+          "description": "Self-service portal for users to manage project interests and beta access.",
+          "id": "user-subscription-management"
         }
       ],
       "admin": [
@@ -1871,6 +1888,12 @@
           "title": "User Verification Flow",
           "description": "Implement magic link or button verification flow for registered interest.",
           "id": "user-verification"
+        },
+        {
+          "status": "Backlog",
+          "title": "User Subscription Management",
+          "description": "Self-service portal for users to manage project interests and beta access.",
+          "id": "user-subscription-management"
         }
       ],
       "admin": [

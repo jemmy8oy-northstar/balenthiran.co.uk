@@ -108,3 +108,13 @@ Currently, the backend lacks a centralized email service. To support automated i
     - Calls `AppStoreConnectService.AddTesterToGroup`.
     - Updates `BetaInvitation(Status: Invited, InvitedAt: Now)`.
 6. **Apple** sends email to user.
+
+---
+
+## Future Extension: User Self-Service (Backlog)
+
+To put the user in control, we will implement a **Subscriber Profile Page** where users can:
+- **View All Interests**: See which apps they are currently "Watching".
+- **Manage Beta Access**: Opt-in or out of specific TestFlight groups.
+- **Unsubscribe**: Centralized management for all project-specific newsletters.
+- **Security**: Access will be controlled via unique, single-use magic links sent to their verified email (leveraging the existing verification infrastructure).

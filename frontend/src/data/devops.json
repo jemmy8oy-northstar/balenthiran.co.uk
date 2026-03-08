@@ -82,5 +82,12 @@
         "description": "Implement magic link or button verification flow for registered interest.",
         "longDescription": "A lightweight verification mechanism (magic link or email button) to confirm user intent when they register interest in an app, improving the quality of beta sign-ups.",
         "category": "Product"
+    },
+    {
+        "id": "user-subscription-management",
+        "title": "User Subscription Management",
+        "description": "Self-service portal for users to manage project interests and beta access.",
+        "longDescription": "A platform feature allowing users to manage their own subscriptions, opt-in/out of project-specific newsletters, and claim or release beta testing spots via a secure, token-based management page.",
+        "category": "Platform"
     }
 ]
