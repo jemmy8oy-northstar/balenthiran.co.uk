@@ -1368,18 +1368,11 @@
     "startDate": "2026-03-02",
     "endDate": "2026-03-15",
     "goals": [
-      "Add new app idea video",
+      "[x] Add new app idea video",
       "Begin to move Earn Your Vices into beta testing",
       "Newsletter-to-Beta Automation"
     ],
     "changes": [
-      {
-        "itemId": "habit-tracker",
-        "board": "project",
-        "from": "Planning",
-        "to": "On Going - Active",
-        "timestamp": "2026-03-08T17:45:31Z"
-      },
       {
         "itemId": "habit-tracker-announcement",
         "board": "youtube",
@@ -1415,7 +1408,7 @@
           "id": "germy"
         },
         {
-          "status": "On Going - Active",
+          "status": "Planning",
           "title": "Personal Habit Tracker",
           "description": "A custom habit tracker built specifically for my own workflow.",
           "id": "habit-tracker"
@@ -1678,7 +1671,7 @@
           "id": "germy"
         },
         {
-          "status": "On Going - Active",
+          "status": "Planning",
           "title": "Personal Habit Tracker",
           "description": "A custom habit tracker built specifically for my own workflow.",
           "id": "habit-tracker"
