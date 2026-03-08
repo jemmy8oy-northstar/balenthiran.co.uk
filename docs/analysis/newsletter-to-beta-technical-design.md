@@ -130,6 +130,26 @@ We will adopt a **"Fire and Forget"** approach for the Apple integration:
 
 ---
 
+## Phased Implementation Plan
+
+To ensure the behavioral flow is solid before tackling external API complexities, we will follow a phased approach:
+
+### Phase 1: The Skeleton (Behavioral Flow)
+- **Goal**: Verify the entire orchestration from "Form Submit" to "Added" status without real external side effects.
+- **`MockEmailService`**: Logs the "Verification Link" and "Beta Invite Link" to the console.
+- **`MockAppStoreConnectService`**: Simulates the Apple handshake, always returning success after a 1-second delay.
+- **State Machine**: Implement the `BetaInvitationEntity` transitions (`Requested` -> `Verified` -> `Added`).
+
+### Phase 2: Authentic Plumbing
+- **`EmailService`**: Swap mock for a real implementation (SMTP or Provider).
+- **Security**: Implement the secure storage for Apple `.p8` keys and JWT signing logic.
+
+### Phase 3: Live Integration
+- **`AppStoreConnectService`**: Replace imitation logic with real `HttpClient` calls to Apple's sandbox/production endpoints.
+- **Admin Tools**: Simple ways to configure Group IDs without direct DB entry.
+
+---
+
 ## Future Extension: User Self-Service (Backlog)
 
 To put the user in control, we will implement a **Subscriber Profile Page** where users can:
