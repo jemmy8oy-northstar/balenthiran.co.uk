@@ -1372,7 +1372,22 @@
       "Begin to move Earn Your Vices into beta testing",
       "Newsletter-to-Beta Automation"
     ],
-    "changes": [],
+    "changes": [
+      {
+        "itemId": "habit-tracker",
+        "board": "project",
+        "from": "Planning",
+        "to": "On Going - Active",
+        "timestamp": "2026-03-08T16:51:59.334145Z"
+      },
+      {
+        "itemId": "habit-tracker-announcement",
+        "board": "youtube",
+        "from": "Backlog",
+        "to": "Needs Editing",
+        "timestamp": "2026-03-08T16:51:59.334145Z"
+      }
+    ],
     "boardSnapshots": {
       "project": [
         {
@@ -1400,7 +1415,7 @@
           "id": "germy"
         },
         {
-          "status": "Planning",
+          "status": "On Going - Active",
           "title": "Personal Habit Tracker",
           "description": "A custom habit tracker built specifically for my own workflow.",
           "id": "habit-tracker"
@@ -1462,7 +1477,7 @@
           "id": "germy-video"
         },
         {
-          "status": "Backlog",
+          "status": "Needs Editing",
           "title": "Building for Myself: Announcing My Personal Habit Tracker",
           "description": "Sharing the 'why' behind building my own habit tracker and the light-hearted goals I'm starting with.",
           "id": "habit-tracker-announcement"
@@ -1663,7 +1678,7 @@
           "id": "germy"
         },
         {
-          "status": "Planning",
+          "status": "On Going - Active",
           "title": "Personal Habit Tracker",
           "description": "A custom habit tracker built specifically for my own workflow.",
           "id": "habit-tracker"
@@ -1725,7 +1740,7 @@
           "id": "germy-video"
         },
         {
-          "status": "Backlog",
+          "status": "Needs Editing",
           "title": "Building for Myself: Announcing My Personal Habit Tracker",
           "description": "Sharing the 'why' behind building my own habit tracker and the light-hearted goals I'm starting with.",
           "id": "habit-tracker-announcement"

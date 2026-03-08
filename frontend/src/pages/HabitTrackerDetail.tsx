@@ -50,7 +50,7 @@ const HabitTrackerDetail: React.FC = () => {
                                 This project is as much about the output as it is about the process. As I build the habit of posting to YouTube and getting comfortable sharing my technical journey, I'm sticking to light-hearted, personal utility projects.
                             </p>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>
-                                The Personal Habit Tracker is the ultimate "eat your own dog food" project. I'm building a tool to track my growth, while sharing that growth with the world.
+                                The Personal Habit Tracker is about seeing the bigger picture. While individual habits can sometimes feel like a chore, this tool is designed to track the consistent progress that leads to long-term growth.
                             </p>
                         </section>
 
