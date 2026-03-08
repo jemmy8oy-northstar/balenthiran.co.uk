@@ -99,12 +99,12 @@ Currently, the backend lacks a centralized email service. To support automated i
 
 1. **User** submits Form -> `balenthiran.co.uk`
 2. **Web API** creates `Subscriber` & `Interest`.
-3. If `includeBeta` is checked:
-    - Web API looks up the active `BetaGroup` for the project.
-    - Checks `MaxTesters` vs current `BetaInvitation` count.
-    - If space: Creates `BetaInvitation(Status: Registered)`.
-    - Queues a background job to call `AppStoreConnectService`.
-4. **Background Service**:
+4. **Verification Guard**:
+    - Backend validates `Subscriber.IsVerified`.
+    - If `false`, sends a specialized verification email with CTA: *"Verify your email to secure your beta spot"*.
+    - The UI informs the user: *"Check your email to verify your account and proceed to the beta program."*
+    - Upon `IsVerified` update, resumes the beta invitation flow.
+5. **Background Service**:
     - Calls `AppStoreConnectService.AddTesterToGroup`.
     - Updates `BetaInvitation(Status: Invited, InvitedAt: Now)`.
-5. **Apple** sends email to user.
+6. **Apple** sends email to user.

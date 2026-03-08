@@ -10,7 +10,13 @@ Automate the transition from interested newsletter subscribers to active beta te
 2. **Invitation Campaign**:
    - System sends a targeted email to the `Newsletter` list for that project.
    - Email contains a link to a "Claim Beta Access" page on `balenthiran.co.uk`.
-3. **The "Handshake" (Web Page)**:
+3. **Mandatory Verification**:
+   - Backend checks `Subscriber.IsVerified`.
+   - **User Transparency**: Form shows a message: *"Note: You will need to verify your email before we can add you to the TestFlight beta."*
+   - If not verified, triggers the standard email verification flow.
+   - **Refined CTA**: The verification email subject/body specifically says: *"Verify your email to complete your Beta registration"*.
+   - Only once `IsVerified == true`, the "Join Beta" button becomes active or the automation proceeds.
+4. **The "Handshake" (Web Page)**:
    - User clicks "Join Beta".
    - Backend receives the request (email + project slug).
    - Backend calls the **App Store Connect API**.
@@ -42,7 +48,8 @@ Automate the transition from interested newsletter subscribers to active beta te
 ## Open Questions & Verification
 1. **Tester ID**: Does Apple require the tester's First/Last name? (Often not required, but API allows it).
 2. **Group Auto-Invite**: Verify that adding to a relationship automatically triggers the invite email (99% sure it does).
-3. **Terms**: Do we need to display Apple's tester terms, or does the TestFlight app handle that? (Usually Apple's app handles legal).
+3. **Tester Lifecycle**: Confirm if `POST /v1/betaTesters` is required for every app even if the user is already a tester for another app in the same developer account.
+4. **Verification Pre-requisite**: Ensure the system handles users who request alpha/beta access *during* their initial signup (Verification -> Interest -> Beta).
 
 ## Why this approach is powerful:
 - **Exclusivity**: "Only 10,000 spots" creates a genuine incentive for early signup.
