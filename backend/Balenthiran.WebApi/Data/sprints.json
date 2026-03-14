@@ -1369,8 +1369,8 @@
     "endDate": "2026-03-15",
     "goals": [
       "[x] Add new app idea video",
-      "Begin to move Earn Your Vices into beta testing",
-      "Newsletter-to-Beta Automation"
+      "[-] Begin to move Earn Your Vices into beta testing",
+      "[-] Newsletter-to-Beta Automation"
     ],
     "changes": [
       {
