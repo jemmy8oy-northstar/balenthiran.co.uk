@@ -1659,7 +1659,11 @@
     "id": "26Q1W11/12",
     "startDate": "2026-03-16",
     "endDate": "2026-03-29",
-    "goals": [],
+    "goals": [
+      "Setup Claude Code Telegram",
+      "Mobile Coding App Idea Video",
+      "Quarterly Retro"
+    ],
     "changes": [],
     "boardSnapshots": {
       "project": [
