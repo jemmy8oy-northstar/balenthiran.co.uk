@@ -76,6 +76,10 @@ const Navbar: React.FC = () => {
           YouTube
           {isActive(config.navigation.youtube) && <ActiveDot />}
         </Link>
+        <Link to={config.navigation.sdd} onClick={() => setIsMenuOpen(false)} style={getLinkStyle(config.navigation.sdd)}>
+          SDD
+          {isActive(config.navigation.sdd) && <ActiveDot />}
+        </Link>
         <ThemeToggle />
       </div>
     </nav>

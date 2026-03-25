@@ -2,7 +2,8 @@
     "navigation": {
         "home": "/",
         "boards": "/boards",
-        "youtube": "/youtube"
+        "youtube": "/youtube",
+        "sdd": "/sdd"
     },
     "roadmapPaths": {
         "project": "/boards?type=project",
