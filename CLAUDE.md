@@ -117,6 +117,27 @@ cd frontend && npm install && npm run dev
 cd backend && dotnet run --project Balenthiran.WebApi
 ```
 
+## Documentation Maintenance
+
+This project uses Claude Code as its primary AI assistant. **Keep all docs current as a first-class part of every task** — not as an afterthought.
+
+### What to update and when
+
+| Doc | Update when |
+|---|---|
+| `CLAUDE.md` (this file) | Any new pattern, convention, data file, script, or architectural decision is introduced |
+| `docs/ai-instructions.md` | Workflow or collaboration preferences change |
+| `docs/plan/*.md` | Implementation plan changes mid-execution |
+| `docs/specs/*.md` | A feature's scope or design is revised |
+| `docs/analysis/*.md` | A new technical decision is made that required analysis |
+
+### Rules
+
+- If you introduce a new data file, script, or system — add it to CLAUDE.md before the session ends.
+- If you discover a CLAUDE.md rule is wrong or incomplete (e.g. a gotcha not documented) — fix it in the same session it was found.
+- If a `docs/plan` or `docs/specs` file describes something that no longer matches reality, update or annotate it. Don't leave stale docs.
+- Do not create new doc files unless the content is genuinely reusable across sessions. One-off notes belong in commit messages, not docs.
+
 ## Coding Conventions
 
 - **Frontend**: Small, focused components. Vanilla CSS with glassmorphism aesthetic. No utility frameworks.
