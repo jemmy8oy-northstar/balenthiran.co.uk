@@ -2026,6 +2026,16 @@
           "title": "Webhook Deployment Server",
           "description": "Authenticated web server for triggering rollout restarts without exposing the control plane."
         }
+      },
+      {
+        "itemId": "k8s-node-memory-upgrade",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Upgrade Node Memory to 12GB",
+          "description": "Increase cluster node memory from 8GB to 12GB to fully leverage the free OKE tier."
+        }
       }
     ],
     "boardSnapshots": {
@@ -2243,6 +2253,12 @@
           "title": "Oracle K8s Cluster",
           "description": "Custom Kubernetes environment on Oracle Cloud Infrastructure.",
           "id": "k8s-cluster"
+        },
+        {
+          "id": "k8s-node-memory-upgrade",
+          "status": "Backlog",
+          "title": "Upgrade Node Memory to 12GB",
+          "description": "Increase cluster node memory from 8GB to 12GB to fully leverage the free OKE tier."
         },
         {
           "status": "Backlog",

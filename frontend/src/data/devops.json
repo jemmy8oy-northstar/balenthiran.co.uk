@@ -87,6 +87,13 @@
         "category": "DevOps"
     },
     {
+        "id": "k8s-node-memory-upgrade",
+        "title": "Upgrade Node Memory to 12GB",
+        "description": "Increase cluster node memory from 8GB to 12GB to fully leverage the free OKE tier.",
+        "longDescription": "Oracle's free OKE tier supports up to 12GB of memory per node. Upgrading from the current 8GB will give more headroom for running additional workloads and improve overall cluster stability.",
+        "category": "Infrastructure"
+    },
+    {
         "id": "newsletter-beta-onboarding",
         "title": "Newsletter-to-Beta Automation",
         "description": "Automated public beta onboarding via newsletter signup.",
