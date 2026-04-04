@@ -25,7 +25,7 @@
         "to": {
           "status": "Retired",
           "title": "Germy",
-          "description": "My first ever app\u2014a Pandemic-era Tetris inspired experiment."
+          "description": "My first ever app—a Pandemic-era Tetris inspired experiment."
         }
       },
       {
@@ -45,7 +45,7 @@
         "to": {
           "status": "Retired",
           "title": "Ten Beer Plan",
-          "description": "My first custom backend journey\u2014a social coordination MVP born from a meme."
+          "description": "My first custom backend journey—a social coordination MVP born from a meme."
         }
       },
       {
@@ -240,7 +240,7 @@
         {
           "status": "Retired",
           "title": "Germy",
-          "description": "My first ever app\u2014a Pandemic-era Tetris inspired experiment.",
+          "description": "My first ever app—a Pandemic-era Tetris inspired experiment.",
           "id": "germy"
         },
         {
@@ -252,7 +252,7 @@
         {
           "status": "Retired",
           "title": "Ten Beer Plan",
-          "description": "My first custom backend journey\u2014a social coordination MVP born from a meme.",
+          "description": "My first custom backend journey—a social coordination MVP born from a meme.",
           "id": "tenbeerplan"
         }
       ],
@@ -388,7 +388,7 @@
         "to": {
           "status": "Backlog",
           "title": "Commuter House Search",
-          "description": "The 'Skyscanner for Houses'\u2014search for your next home based on commute time, not just distance."
+          "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance."
         }
       },
       {
@@ -487,7 +487,7 @@
         {
           "status": "Backlog",
           "title": "Commuter House Search",
-          "description": "The 'Skyscanner for Houses'\u2014search for your next home based on commute time, not just distance.",
+          "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance.",
           "id": "commuter-house-search"
         },
         {
@@ -499,7 +499,7 @@
         {
           "status": "Retired",
           "title": "Germy",
-          "description": "My first ever app\u2014a Pandemic-era Tetris inspired experiment.",
+          "description": "My first ever app—a Pandemic-era Tetris inspired experiment.",
           "id": "germy"
         },
         {
@@ -517,7 +517,7 @@
         {
           "status": "Retired",
           "title": "Ten Beer Plan",
-          "description": "My first custom backend journey\u2014a social coordination MVP born from a meme.",
+          "description": "My first custom backend journey—a social coordination MVP born from a meme.",
           "id": "tenbeerplan"
         }
       ],
@@ -797,7 +797,7 @@
         {
           "status": "Backlog",
           "title": "Commuter House Search",
-          "description": "The 'Skyscanner for Houses'\u2014search for your next home based on commute time, not just distance.",
+          "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance.",
           "id": "commuter-house-search"
         },
         {
@@ -809,7 +809,7 @@
         {
           "status": "Retired",
           "title": "Germy",
-          "description": "My first ever app\u2014a Pandemic-era Tetris inspired experiment.",
+          "description": "My first ever app—a Pandemic-era Tetris inspired experiment.",
           "id": "germy"
         },
         {
@@ -827,7 +827,7 @@
         {
           "status": "Retired",
           "title": "Ten Beer Plan",
-          "description": "My first custom backend journey\u2014a social coordination MVP born from a meme.",
+          "description": "My first custom backend journey—a social coordination MVP born from a meme.",
           "id": "tenbeerplan"
         }
       ],
@@ -1117,7 +1117,7 @@
         {
           "status": "Backlog",
           "title": "Commuter House Search",
-          "description": "The 'Skyscanner for Houses'\u2014search for your next home based on commute time, not just distance.",
+          "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance.",
           "id": "commuter-house-search"
         },
         {
@@ -1129,7 +1129,7 @@
         {
           "status": "Retired",
           "title": "Germy",
-          "description": "My first ever app\u2014a Pandemic-era Tetris inspired experiment.",
+          "description": "My first ever app—a Pandemic-era Tetris inspired experiment.",
           "id": "germy"
         },
         {
@@ -1147,7 +1147,7 @@
         {
           "status": "Retired",
           "title": "Ten Beer Plan",
-          "description": "My first custom backend journey\u2014a social coordination MVP born from a meme.",
+          "description": "My first custom backend journey—a social coordination MVP born from a meme.",
           "id": "tenbeerplan"
         }
       ],
@@ -1369,8 +1369,8 @@
     "endDate": "2026-03-15",
     "goals": [
       "[x] Add new app idea video",
-      "Begin to move Earn Your Vices into beta testing",
-      "Newsletter-to-Beta Automation"
+      "[-] Begin to move Earn Your Vices into beta testing",
+      "[-] Newsletter-to-Beta Automation"
     ],
     "changes": [
       {
@@ -1379,6 +1379,17 @@
         "from": "Backlog",
         "to": "Uploaded",
         "timestamp": "2026-03-08T17:45:31Z"
+      },
+      {
+        "itemId": "user-subscription-management",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "User Subscription Management",
+          "description": "Self-service portal for users to manage project interests and beta access."
+        },
+        "timestamp": "2026-03-08T18:50:08.968490Z"
       }
     ],
     "boardSnapshots": {
@@ -1392,7 +1403,7 @@
         {
           "status": "Backlog",
           "title": "Commuter House Search",
-          "description": "The 'Skyscanner for Houses'\u2014search for your next home based on commute time, not just distance.",
+          "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance.",
           "id": "commuter-house-search"
         },
         {
@@ -1404,7 +1415,7 @@
         {
           "status": "Retired",
           "title": "Germy",
-          "description": "My first ever app\u2014a Pandemic-era Tetris inspired experiment.",
+          "description": "My first ever app—a Pandemic-era Tetris inspired experiment.",
           "id": "germy"
         },
         {
@@ -1422,7 +1433,7 @@
         {
           "status": "Retired",
           "title": "Ten Beer Plan",
-          "description": "My first custom backend journey\u2014a social coordination MVP born from a meme.",
+          "description": "My first custom backend journey—a social coordination MVP born from a meme.",
           "id": "tenbeerplan"
         }
       ],
@@ -1608,6 +1619,12 @@
           "title": "User Verification Flow",
           "description": "Implement magic link or button verification flow for registered interest.",
           "id": "user-verification"
+        },
+        {
+          "status": "Backlog",
+          "title": "User Subscription Management",
+          "description": "Self-service portal for users to manage project interests and beta access.",
+          "id": "user-subscription-management"
         }
       ],
       "admin": [
@@ -1642,8 +1659,43 @@
     "id": "26Q1W11/12",
     "startDate": "2026-03-16",
     "endDate": "2026-03-29",
-    "goals": [],
-    "changes": [],
+    "goals": [
+      "[x] Setup Claude Code Telegram",
+      "[x] New Project Idea Video",
+      "[x] Quarterly Retro"
+    ],
+    "changes": [
+      {
+        "itemId": "claude-code-telegram",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Done",
+          "title": "Claude Code Telegram k8s",
+          "description": "Claude Code integration with Telegram for sprint notifications and bot interactions."
+        }
+      },
+      {
+        "itemId": "q1-retro-2026",
+        "board": "youtube",
+        "from": null,
+        "to": {
+          "status": "Uploaded",
+          "title": "Q1 2026 Quarterly Retrospective",
+          "description": "End of quarter retrospective: reviewing goals, progress, and lessons learned."
+        }
+      },
+      {
+        "itemId": "transcription-video-editor",
+        "board": "youtube",
+        "from": null,
+        "to": {
+          "status": "Uploaded",
+          "title": "New Project Idea: Transcription Driven Video Editor",
+          "description": "Introducing a new app idea — a video editor driven entirely by transcription."
+        }
+      }
+    ],
     "boardSnapshots": {
       "project": [
         {
@@ -1655,7 +1707,7 @@
         {
           "status": "Backlog",
           "title": "Commuter House Search",
-          "description": "The 'Skyscanner for Houses'\u2014search for your next home based on commute time, not just distance.",
+          "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance.",
           "id": "commuter-house-search"
         },
         {
@@ -1667,7 +1719,7 @@
         {
           "status": "Retired",
           "title": "Germy",
-          "description": "My first ever app\u2014a Pandemic-era Tetris inspired experiment.",
+          "description": "My first ever app—a Pandemic-era Tetris inspired experiment.",
           "id": "germy"
         },
         {
@@ -1685,7 +1737,7 @@
         {
           "status": "Retired",
           "title": "Ten Beer Plan",
-          "description": "My first custom backend journey\u2014a social coordination MVP born from a meme.",
+          "description": "My first custom backend journey—a social coordination MVP born from a meme.",
           "id": "tenbeerplan"
         }
       ],
@@ -1781,10 +1833,22 @@
           "id": "portfolio-reveal"
         },
         {
+          "status": "Uploaded",
+          "title": "Q1 2026 Quarterly Retrospective",
+          "description": "End of quarter retrospective: reviewing goals, progress, and lessons learned.",
+          "id": "q1-retro-2026"
+        },
+        {
           "status": "Backlog",
           "title": "Why MVP Logic Matters",
           "description": "Developing the core of Ten Beer Plan.",
           "id": "ten-beer-plan-logic"
+        },
+        {
+          "status": "Uploaded",
+          "title": "New Project Idea: Transcription Driven Video Editor",
+          "description": "Introducing a new app idea — a video editor driven entirely by transcription.",
+          "id": "transcription-video-editor"
         },
         {
           "status": "Backlog",
@@ -1805,6 +1869,12 @@
           "title": "Local Continuous Deployment",
           "description": "Script-based deployments for rapid iterations.",
           "id": "cd-pipeline"
+        },
+        {
+          "status": "Done",
+          "title": "Claude Code Telegram k8s",
+          "description": "Claude Code integration with Telegram for sprint notifications and bot interactions.",
+          "id": "claude-code-telegram"
         },
         {
           "status": "Backlog",
@@ -1871,6 +1941,368 @@
           "title": "User Verification Flow",
           "description": "Implement magic link or button verification flow for registered interest.",
           "id": "user-verification"
+        },
+        {
+          "status": "Backlog",
+          "title": "User Subscription Management",
+          "description": "Self-service portal for users to manage project interests and beta access.",
+          "id": "user-subscription-management"
+        }
+      ],
+      "admin": [
+        {
+          "status": "Backlog",
+          "title": "Instagram Presence",
+          "description": "Create new account.",
+          "id": "setup-instagram"
+        },
+        {
+          "status": "Backlog",
+          "title": "Substack Presence",
+          "description": "Create new account.",
+          "id": "setup-substack"
+        },
+        {
+          "status": "Backlog",
+          "title": "TikTok Presence",
+          "description": "Create new account.",
+          "id": "setup-tiktok"
+        },
+        {
+          "status": "Backlog",
+          "title": "Twitter Brand Presence",
+          "description": "Create new account.",
+          "id": "setup-x"
+        }
+      ]
+    }
+  },
+  {
+    "id": "26Q2W1/2",
+    "startDate": "2026-03-30",
+    "endDate": "2026-04-12",
+    "goals": [
+      "Claude Telegram: Initial Rules",
+      "GitHub Actions: Docker Build & Push",
+      "Telegram Bot: Build-Ready Image"
+    ],
+    "changes": [
+      {
+        "itemId": "claude-code-telegram-deploy",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Telegram Bot: Build-Ready Image",
+          "description": "Publish a Docker image for the Telegram bot that includes .NET and React so Claude Code can build the portfolio project inside the cluster."
+        }
+      },
+      {
+        "itemId": "claude-code-telegram-rules",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Claude Telegram: Initial Rules",
+          "description": "Begin configuring Claude Code rules and behaviours on the k8s Telegram bot."
+        }
+      },
+      {
+        "itemId": "gh-actions-docker",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "GitHub Actions: Docker Build & Push",
+          "description": "GitHub Actions workflows for building and pushing Docker images on commit."
+        }
+      },
+      {
+        "itemId": "webhook-deploy-server",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Webhook Deployment Server",
+          "description": "Authenticated web server for triggering rollout restarts without exposing the control plane."
+        }
+      }
+    ],
+    "boardSnapshots": {
+      "project": [
+        {
+          "status": "On Going - Passive",
+          "title": "APEify",
+          "description": "My first major success story. An avatar creator that grew to 70k+ organic downloads through viral social trends.",
+          "id": "apeify"
+        },
+        {
+          "status": "Backlog",
+          "title": "Commuter House Search",
+          "description": "The 'Skyscanner for Houses'—search for your next home based on commute time, not just distance.",
+          "id": "commuter-house-search"
+        },
+        {
+          "status": "On Going - Active",
+          "title": "Earn Your Beers",
+          "description": "Log your drinks and earn them back through exercise (running or cycling).",
+          "id": "earn-your-drinks"
+        },
+        {
+          "status": "Retired",
+          "title": "Germy",
+          "description": "My first ever app—a Pandemic-era Tetris inspired experiment.",
+          "id": "germy"
+        },
+        {
+          "status": "Planning",
+          "title": "Personal Habit Tracker",
+          "description": "A custom habit tracker built specifically for my own workflow.",
+          "id": "habit-tracker"
+        },
+        {
+          "status": "On Hold",
+          "title": "House Price Alerts",
+          "description": "Real-time alerts for property market shifts.",
+          "id": "house-price-alerts"
+        },
+        {
+          "status": "Retired",
+          "title": "Ten Beer Plan",
+          "description": "My first custom backend journey—a social coordination MVP born from a meme.",
+          "id": "tenbeerplan"
+        }
+      ],
+      "youtube": [
+        {
+          "status": "Backlog",
+          "title": "Beyond Copilot: Mastering Agentic AI Coding Workflows",
+          "description": "The difference between simple auto-complete and multi-step agentic execution.",
+          "id": "agentic-coding-workflows"
+        },
+        {
+          "status": "Backlog",
+          "title": "The Antigravity Workflow: Self-Managing Your Backlog with AI",
+          "description": "The meta-experience of using an AI agent (Antigravity) to maintain a project board and sprints.json.",
+          "id": "ai-sprint-management"
+        },
+        {
+          "status": "Backlog",
+          "title": "Scaling APEify with Firebase",
+          "description": "Handling real-time data for thousands of users.",
+          "id": "apeify-scaling"
+        },
+        {
+          "status": "Backlog",
+          "title": "Codemagic for Mobile CI/CD",
+          "description": "Streamlining app deployments.",
+          "id": "codemagic-mobile-cicd"
+        },
+        {
+          "status": "Uploaded",
+          "title": "Announcing First Project of the Year - Earn Your Beers!",
+          "description": "Building the first utility app of 2026.",
+          "id": "earn-your-beers-reveal"
+        },
+        {
+          "status": "Backlog",
+          "title": "Pivot: Earn Your Beers to Vices",
+          "description": "Why I'm broadening the scope of the app.",
+          "id": "eyb-eyv-pivot"
+        },
+        {
+          "status": "Uploaded",
+          "title": "Germy - My First Ever App!",
+          "description": "What 70k downloads taught me about viral growth.",
+          "id": "germy-video"
+        },
+        {
+          "status": "Uploaded",
+          "title": "Building for Myself: Announcing My Personal Habit Tracker",
+          "description": "Sharing the 'why' behind building my own habit tracker and the light-hearted goals I'm starting with.",
+          "id": "habit-tracker-announcement"
+        },
+        {
+          "status": "Backlog",
+          "title": "Scraping Real Estate Data",
+          "description": "Legal and technical hurdles in housing data.",
+          "id": "house-price-scrapers"
+        },
+        {
+          "status": "Uploaded",
+          "title": "James Balenthiran - Welcome To My Channel - April 6th 2025",
+          "description": "The vision for a sustainable app nursery.",
+          "id": "intro-video"
+        },
+        {
+          "status": "Uploaded",
+          "title": "Happy New Year! 2025 Resolution Reflection / 2026 Resolution Setting",
+          "description": "Goals for the upcoming year.",
+          "id": "new-year-2026"
+        },
+        {
+          "status": "Backlog",
+          "title": "From Obsidian to IDE: My AI-Powered Ideation System",
+          "description": "The workflow between Obsidian notes and structured tasks in the IDE.",
+          "id": "obsidian-ideation-loop"
+        },
+        {
+          "status": "Backlog",
+          "title": "Building a Free K8s Cluster",
+          "description": "How I host the nursery on Oracle Cloud's free tier.",
+          "id": "oracle-k8s-setup"
+        },
+        {
+          "status": "Uploaded",
+          "title": "27/11/25 - 2026 Pivot / Ramble",
+          "description": "Looking ahead to the next phase of development.",
+          "id": "pivot-ramble-2025"
+        },
+        {
+          "status": "Uploaded",
+          "title": "Finally built my online portfolio!",
+          "description": "Revealing the new roadmap and ecosystem.",
+          "id": "portfolio-reveal"
+        },
+        {
+          "status": "Uploaded",
+          "title": "Q1 2026 Quarterly Retrospective",
+          "description": "End of quarter retrospective: reviewing goals, progress, and lessons learned.",
+          "id": "q1-retro-2026"
+        },
+        {
+          "status": "Backlog",
+          "title": "Why MVP Logic Matters",
+          "description": "Developing the core of Ten Beer Plan.",
+          "id": "ten-beer-plan-logic"
+        },
+        {
+          "status": "Uploaded",
+          "title": "New Project Idea: Transcription Driven Video Editor",
+          "description": "Introducing a new app idea — a video editor driven entirely by transcription.",
+          "id": "transcription-video-editor"
+        },
+        {
+          "status": "Backlog",
+          "title": "Sharing My Personal Web Template: .NET + React Cleanup",
+          "description": "A deep dive into the boilerplate I use to launch new projects fast.",
+          "id": "web-template-reveal"
+        },
+        {
+          "status": "Backlog",
+          "title": "Open Sourcing My Portfolio & Sprint Boards",
+          "description": "How I track my progress in public and how you can use this system too.",
+          "id": "portfolio-system-reveal"
+        }
+      ],
+      "devops": [
+        {
+          "status": "Done",
+          "title": "Local Continuous Deployment",
+          "description": "Script-based deployments for rapid iterations.",
+          "id": "cd-pipeline"
+        },
+        {
+          "status": "Done",
+          "title": "Claude Code Telegram k8s",
+          "description": "Claude Code integration with Telegram for sprint notifications and bot interactions.",
+          "id": "claude-code-telegram"
+        },
+        {
+          "id": "claude-code-telegram-deploy",
+          "status": "Backlog",
+          "title": "Telegram Bot: Build-Ready Image",
+          "description": "Publish a Docker image for the Telegram bot that includes .NET and React so Claude Code can build the portfolio project inside the cluster."
+        },
+        {
+          "id": "claude-code-telegram-rules",
+          "status": "Backlog",
+          "title": "Claude Telegram: Initial Rules",
+          "description": "Begin configuring Claude Code rules and behaviours on the k8s Telegram bot."
+        },
+        {
+          "status": "Backlog",
+          "title": "Dev Environment",
+          "description": "Isolated staging and local development environments.",
+          "id": "dev-env"
+        },
+        {
+          "status": "Done",
+          "title": "Move to .NET",
+          "description": "Migrating core services to .NET for improved performance and scalability.",
+          "id": "dotnet-migration"
+        },
+        {
+          "id": "gh-actions-docker",
+          "status": "Backlog",
+          "title": "GitHub Actions: Docker Build & Push",
+          "description": "GitHub Actions workflows for building and pushing Docker images on commit."
+        },
+        {
+          "status": "Done",
+          "title": "Oracle K8s Cluster",
+          "description": "Custom Kubernetes environment on Oracle Cloud Infrastructure.",
+          "id": "k8s-cluster"
+        },
+        {
+          "status": "Backlog",
+          "title": "Newsletter-to-Beta Automation",
+          "description": "Automated public beta onboarding via newsletter signup.",
+          "id": "newsletter-beta-onboarding"
+        },
+        {
+          "status": "Done",
+          "title": "Per-App Newsletters",
+          "description": "Targeted updates and subscription management for individual projects.",
+          "id": "newsletter-infrastructure"
+        },
+        {
+          "status": "Backlog",
+          "title": "Sprint Data Migration",
+          "description": "Migrate all sprint logs and goals from JSON to the PostgreSQL database.",
+          "id": "sprint-data-migration"
+        },
+        {
+          "status": "Done",
+          "title": "Sprint Status History",
+          "description": "Indicate changes in task status between sprints on the website.",
+          "id": "sprint-status-history"
+        },
+        {
+          "status": "Done",
+          "title": "Create Template Project",
+          "description": "Standardizing project starts with a robust template.",
+          "id": "template-project"
+        },
+        {
+          "status": "Backlog",
+          "title": "User Idea Submission",
+          "description": "A transparent board for users to post and vote on new app features or project ideas.",
+          "id": "user-ideas-page"
+        },
+        {
+          "status": "Backlog",
+          "title": "User Persistence (Cookies)",
+          "description": "Remember user emails via cookies to streamline interest registration.",
+          "id": "user-persistence"
+        },
+        {
+          "status": "Backlog",
+          "title": "User Verification Flow",
+          "description": "Implement magic link or button verification flow for registered interest.",
+          "id": "user-verification"
+        },
+        {
+          "status": "Backlog",
+          "title": "User Subscription Management",
+          "description": "Self-service portal for users to manage project interests and beta access.",
+          "id": "user-subscription-management"
+        },
+        {
+          "id": "webhook-deploy-server",
+          "status": "Backlog",
+          "title": "Webhook Deployment Server",
+          "description": "Authenticated web server for triggering rollout restarts without exposing the control plane."
         }
       ],
       "admin": [

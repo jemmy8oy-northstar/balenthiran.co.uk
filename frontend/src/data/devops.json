@@ -1,5 +1,36 @@
 [
     {
+        "id": "claude-code-telegram",
+        "title": "Claude Code Telegram k8s",
+        "description": "Claude Code integration with Telegram for sprint notifications and bot interactions.",
+        "longDescription": "Setup a Telegram bot connected to Claude Code for receiving sprint updates, notifications, and interacting with the development workflow directly from Telegram.",
+        "category": "DevOps",
+        "repos": ["claude-code-telegram-k8s"]
+    },
+    {
+        "id": "claude-code-telegram-deploy",
+        "title": "Telegram Bot: Build-Ready Image",
+        "description": "Publish a Docker image for the Telegram bot that includes .NET and React so Claude Code can build the portfolio project inside the cluster.",
+        "longDescription": "The Telegram bot is already deployed — this task is about shipping a new Docker image that has .NET and React pre-installed alongside Claude Code. This gives the bot everything it needs to build, test, and run the portfolio project directly from within the cluster without relying on external build agents.",
+        "category": "DevOps",
+        "repos": ["claude-code-telegram-k8s"]
+    },
+    {
+        "id": "claude-code-telegram-rules",
+        "title": "Claude Telegram: Initial Rules",
+        "description": "Begin configuring Claude Code rules and behaviours on the k8s Telegram bot.",
+        "longDescription": "Define the initial CLAUDE.md rules and agent configuration for the k8s-hosted Claude Code Telegram bot — covering what commands it can run, how it interacts with the repo, and any safety boundaries.",
+        "category": "DevOps",
+        "repos": ["claude-code-telegram-k8s"]
+    },
+    {
+        "id": "gh-actions-docker",
+        "title": "GitHub Actions: Docker Build & Push",
+        "description": "GitHub Actions workflows for building and pushing Docker images on commit.",
+        "longDescription": "CI workflows that build Docker images for the frontend and backend on push, and publish them to a container registry. Foundation for the full automated deploy pipeline.",
+        "category": "DevOps"
+    },
+    {
         "id": "k8s-cluster",
         "title": "Oracle K8s Cluster",
         "description": "Custom Kubernetes environment on Oracle Cloud Infrastructure.",
@@ -82,5 +113,19 @@
         "description": "Implement magic link or button verification flow for registered interest.",
         "longDescription": "A lightweight verification mechanism (magic link or email button) to confirm user intent when they register interest in an app, improving the quality of beta sign-ups.",
         "category": "Product"
+    },
+    {
+        "id": "user-subscription-management",
+        "title": "User Subscription Management",
+        "description": "Self-service portal for users to manage project interests and beta access.",
+        "longDescription": "A platform feature allowing users to manage their own subscriptions, opt-in/out of project-specific newsletters, and claim or release beta testing spots via a secure, token-based management page.",
+        "category": "Platform"
+    },
+    {
+        "id": "webhook-deploy-server",
+        "title": "Webhook Deployment Server",
+        "description": "Authenticated web server for triggering rollout restarts without exposing the control plane.",
+        "longDescription": "A lightweight authenticated web server running inside the cluster that accepts deploy webhook calls from GitHub Actions. Triggers rollout restarts on deployments and stateful sets — allowing a full build/publish/deploy pipeline without granting GitHub any direct access to the k8s control plane.",
+        "category": "DevOps"
     }
 ]

@@ -99,7 +99,8 @@
         "id": "habit-tracker-announcement",
         "title": "Building for Myself: Announcing My Personal Habit Tracker",
         "description": "Sharing the 'why' behind building my own habit tracker and the light-hearted goals I'm starting with.",
-        "category": "Announcement"
+        "category": "Announcement",
+        "youtubeUrl": "https://www.youtube.com/watch?v=a6ZFGYrOCoA"
     },
     {
         "id": "web-template-reveal",
@@ -112,5 +113,19 @@
         "title": "Open Sourcing My Portfolio & Sprint Boards",
         "description": "How I track my progress in public and how you can use this system too.",
         "category": "Announcement"
+    },
+    {
+        "id": "q1-retro-2026",
+        "title": "Q1 2026 Quarterly Retrospective",
+        "description": "End of quarter retrospective: reviewing goals, progress, and lessons learned.",
+        "category": "Strategy",
+        "youtubeUrl": "https://www.youtube.com/watch?v=0uuRx3SbOXo"
+    },
+    {
+        "id": "transcription-video-editor",
+        "title": "New Project Idea: Transcription Driven Video Editor",
+        "description": "Introducing a new app idea — a video editor driven entirely by transcription.",
+        "category": "Announcement",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Cn-ehgIPqcU"
     }
 ]

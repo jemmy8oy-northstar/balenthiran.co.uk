@@ -4,7 +4,10 @@ import { useGetProjectsQuery } from '../api/staticDataApi';
 import devopsData from '../data/devops.json';
 import youtubeData from '../data/youtube.json';
 import adminData from '../data/admin.json';
+import reposData from '../data/repos.json';
 import { useSprint } from '../context/SprintContext';
+
+type ReposData = Record<string, { url: string; displayName: string }>;
 
 const PROJECT_COLUMNS = [
     'Backlog',
@@ -160,21 +163,32 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
                             gap: '12px',
                             minHeight: '100px'
                         }}>
-                            {filteredItems[col]?.map((item: any) => (
-                                <div key={item.id}>
-                                    {item.path ? (
-                                        <Link to={item.path} style={{ textDecoration: 'none' }}>
-                                            <KanbanCard item={item} />
-                                        </Link>
-                                    ) : item.youtubeUrl ? (
-                                        <a href={item.youtubeUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                                            <KanbanCard item={item} />
-                                        </a>
-                                    ) : (
-                                        <KanbanCard item={item} />
-                                    )}
-                                </div>
-                            ))}
+                            {filteredItems[col]?.map((item: any) => {
+                                const isYoutube = initialType === 'youtube';
+                                const singleRepoUrl = !isYoutube && !item.path && !item.youtubeUrl && item.repos?.length === 1
+                                    ? (reposData as ReposData)[item.repos[0]]?.url
+                                    : null;
+                                const card = (
+                                    <KanbanCard
+                                        item={item}
+                                        reposData={reposData as ReposData}
+                                        showRepos={!isYoutube}
+                                    />
+                                );
+                                return (
+                                    <div key={item.id}>
+                                        {item.path ? (
+                                            <Link to={item.path} style={{ textDecoration: 'none' }}>{card}</Link>
+                                        ) : item.youtubeUrl ? (
+                                            <a href={item.youtubeUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>{card}</a>
+                                        ) : singleRepoUrl ? (
+                                            <a href={singleRepoUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>{card}</a>
+                                        ) : (
+                                            card
+                                        )}
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 ))}
@@ -183,7 +197,7 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ initialType }) => {
     );
 };
 
-const KanbanCard: React.FC<{ item: any }> = ({ item }) => (
+const KanbanCard: React.FC<{ item: any; reposData?: ReposData; showRepos?: boolean }> = ({ item, reposData = {}, showRepos = false }) => (
     <div className="glass glass-hover" style={{
         padding: '16px',
         display: 'flex',
@@ -205,7 +219,7 @@ const KanbanCard: React.FC<{ item: any }> = ({ item }) => (
         <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
             {item.description}
         </p>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2px', flexWrap: 'wrap', gap: '6px' }}>
             <span style={{
                 fontSize: '0.6rem',
                 color: 'var(--accent-primary)',
@@ -215,6 +229,36 @@ const KanbanCard: React.FC<{ item: any }> = ({ item }) => (
             }}>
                 {item.category}
             </span>
+            {showRepos && item.repos?.length > 0 && (
+                <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+                    {item.repos.map((slug: string) => {
+                        const repo = reposData[slug];
+                        if (!repo) return null;
+                        return (
+                            <a
+                                key={slug}
+                                href={repo.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={e => e.stopPropagation()}
+                                style={{
+                                    fontSize: '0.55rem',
+                                    color: 'var(--text-secondary)',
+                                    background: 'var(--bg-card)',
+                                    border: '1px solid var(--glass-border)',
+                                    borderRadius: '4px',
+                                    padding: '2px 6px',
+                                    textDecoration: 'none',
+                                    fontFamily: 'monospace',
+                                    lineHeight: '1.4'
+                                }}
+                            >
+                                {repo.displayName}
+                            </a>
+                        );
+                    })}
+                </div>
+            )}
         </div>
     </div>
 );
