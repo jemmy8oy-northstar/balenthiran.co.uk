@@ -1671,7 +1671,7 @@
         "from": null,
         "to": {
           "status": "Done",
-          "title": "Claude Code Telegram",
+          "title": "Claude Code Telegram k8s",
           "description": "Claude Code integration with Telegram for sprint notifications and bot interactions."
         }
       },
@@ -1833,10 +1833,22 @@
           "id": "portfolio-reveal"
         },
         {
+          "status": "Uploaded",
+          "title": "Q1 2026 Quarterly Retrospective",
+          "description": "End of quarter retrospective: reviewing goals, progress, and lessons learned.",
+          "id": "q1-retro-2026"
+        },
+        {
           "status": "Backlog",
           "title": "Why MVP Logic Matters",
           "description": "Developing the core of Ten Beer Plan.",
           "id": "ten-beer-plan-logic"
+        },
+        {
+          "status": "Uploaded",
+          "title": "New Project Idea: Transcription Driven Video Editor",
+          "description": "Introducing a new app idea — a video editor driven entirely by transcription.",
+          "id": "transcription-video-editor"
         },
         {
           "status": "Backlog",
@@ -1857,6 +1869,12 @@
           "title": "Local Continuous Deployment",
           "description": "Script-based deployments for rapid iterations.",
           "id": "cd-pipeline"
+        },
+        {
+          "status": "Done",
+          "title": "Claude Code Telegram k8s",
+          "description": "Claude Code integration with Telegram for sprint notifications and bot interactions.",
+          "id": "claude-code-telegram"
         },
         {
           "status": "Backlog",
@@ -2141,7 +2159,7 @@
         },
         {
           "status": "Done",
-          "title": "Claude Code Telegram",
+          "title": "Claude Code Telegram k8s",
           "description": "Claude Code integration with Telegram for sprint notifications and bot interactions.",
           "id": "claude-code-telegram"
         },

@@ -45,6 +45,7 @@ The site tracks app ideas through a lifecycle (Idea → Candidate → In Develop
 | `frontend/src/data/devops.json` | Engineering board item metadata |
 | `frontend/src/data/youtube.json` | Content board item metadata |
 | `frontend/src/data/admin.json` | Platform board item metadata |
+| `frontend/src/data/repos.json` | Repo slug → `{ url, displayName }` mapping for repo tags |
 
 The backend serves `sprints.json` raw via `GET /api/sprints`. The frontend `data/` JSON files are the item registry used by the Kanban board.
 
@@ -78,7 +79,7 @@ The backend serves `sprints.json` raw via `GET /api/sprints`. The frontend `data
 **Key rules:**
 - Board snapshots must be kept in sync with the changes log — run `node scripts/validate-sprints.mjs` after any edit.
 - Items in snapshots are sorted alphabetically by `id`.
-- When adding a new item, add it to both the relevant `frontend/src/data/*.json` file AND as a `from: null` change in the sprint's `changes` array.
+- When adding a new item, add it to: (1) the relevant `frontend/src/data/*.json` registry file, (2) as a `from: null` change in the sprint's `changes` array, AND (3) the same sprint's `boardSnapshots` — the snapshot must reflect the state *after* all changes for that sprint are applied.
 - New sprints inherit the previous sprint's board snapshots as their starting point.
 
 ### Boards
@@ -122,3 +123,4 @@ cd backend && dotnet run --project Balenthiran.WebApi
 - **Backend**: Minimal API style (route groups, no controllers). EF Core for DB access.
 - **Sprint data edits**: Always run `validate-sprints.mjs` after touching `sprints.json`. Use the scripts over hand-editing where possible.
 - **New board items**: Add to the `frontend/src/data/*.json` registry file first, then reference by id in sprint changes.
+- **Repo tags**: Add a `repos: ["slug"]` array to any board item (except youtube). Register the slug in `frontend/src/data/repos.json`. If an item has exactly one repo and no `path`/`youtubeUrl`, the whole card links to it; otherwise only the chips link out.

@@ -1,10 +1,11 @@
 [
     {
         "id": "claude-code-telegram",
-        "title": "Claude Code Telegram",
+        "title": "Claude Code Telegram k8s",
         "description": "Claude Code integration with Telegram for sprint notifications and bot interactions.",
         "longDescription": "Setup a Telegram bot connected to Claude Code for receiving sprint updates, notifications, and interacting with the development workflow directly from Telegram.",
-        "category": "DevOps"
+        "category": "DevOps",
+        "repos": ["claude-code-telegram-k8s"]
     },
     {
         "id": "k8s-cluster",
