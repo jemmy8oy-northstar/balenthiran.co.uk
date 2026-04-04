@@ -113,9 +113,13 @@ python3 scripts/new-sprint.py
 # Frontend
 cd frontend && npm install && npm run dev
 
-# Backend
+# Backend — first time setup
+cp backend/Balenthiran.WebApi/appsettings.Development.template.json backend/Balenthiran.WebApi/appsettings.Development.json
+# edit appsettings.Development.json with your local Postgres credentials
 cd backend && dotnet run --project Balenthiran.WebApi
 ```
+
+> `appsettings.Development.json` is gitignored — never commit it. The template file is the committed reference.
 
 ## Documentation Maintenance
 

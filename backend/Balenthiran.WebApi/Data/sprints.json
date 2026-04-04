@@ -2043,6 +2043,16 @@
         "from": "Backlog",
         "to": "Done",
         "timestamp": "2026-04-04T16:51:32.271Z"
+      },
+      {
+        "itemId": "web-template-claude-onboarding",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Web Template: Claude Onboarding",
+          "description": "Onboard Claude Code to the web template repo — CLAUDE.md, GitHub Actions CI/CD, and general cleanup."
+        }
       }
     ],
     "boardSnapshots": {
@@ -2320,6 +2330,12 @@
           "title": "User Subscription Management",
           "description": "Self-service portal for users to manage project interests and beta access.",
           "id": "user-subscription-management"
+        },
+        {
+          "id": "web-template-claude-onboarding",
+          "status": "Backlog",
+          "title": "Web Template: Claude Onboarding",
+          "description": "Onboard Claude Code to the web template repo — CLAUDE.md, GitHub Actions CI/CD, and general cleanup."
         },
         {
           "id": "webhook-deploy-server",
