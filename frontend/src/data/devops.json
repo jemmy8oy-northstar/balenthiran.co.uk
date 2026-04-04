@@ -24,6 +24,13 @@
         "repos": ["claude-code-telegram-k8s"]
     },
     {
+        "id": "claude-github-issue-agent",
+        "title": "Claude GitHub Issue Agent",
+        "description": "Scheduled Claude job that monitors new issues and comments, letting users iterate with AI directly via GitHub.",
+        "longDescription": "A scheduled agent that watches for new GitHub issues and issue comments. When triggered, Claude reads the thread, understands the context, and responds — allowing users to describe bugs, request features, or ask questions entirely through GitHub issues without ever touching the codebase. Closes the loop between public users and the AI-assisted development workflow.",
+        "category": "Engineering"
+    },
+    {
         "id": "gh-actions-docker",
         "title": "GitHub Actions: Docker Build & Push",
         "description": "GitHub Actions workflows for building and pushing Docker images on commit.",

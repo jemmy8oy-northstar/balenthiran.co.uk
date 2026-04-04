@@ -2053,6 +2053,16 @@
           "title": "Web Template: Claude Onboarding",
           "description": "Onboard Claude Code to the web template repo — CLAUDE.md, GitHub Actions CI/CD, and general cleanup."
         }
+      },
+      {
+        "itemId": "claude-github-issue-agent",
+        "board": "devops",
+        "from": null,
+        "to": {
+          "status": "Backlog",
+          "title": "Claude GitHub Issue Agent",
+          "description": "Scheduled Claude job that monitors new issues and comments, letting users iterate with AI directly via GitHub."
+        }
       }
     ],
     "boardSnapshots": {
@@ -2246,6 +2256,12 @@
           "status": "Backlog",
           "title": "Claude Telegram: Initial Rules",
           "description": "Begin configuring Claude Code rules and behaviours on the k8s Telegram bot."
+        },
+        {
+          "id": "claude-github-issue-agent",
+          "status": "Backlog",
+          "title": "Claude GitHub Issue Agent",
+          "description": "Scheduled Claude job that monitors new issues and comments, letting users iterate with AI directly via GitHub."
         },
         {
           "status": "Backlog",
