@@ -2036,6 +2036,13 @@
           "title": "Upgrade Node Memory to 12GB",
           "description": "Increase cluster node memory from 8GB to 12GB to fully leverage the free OKE tier."
         }
+      },
+      {
+        "itemId": "k8s-node-memory-upgrade",
+        "board": "devops",
+        "from": "Backlog",
+        "to": "Done",
+        "timestamp": "2026-04-04T16:51:32.271Z"
       }
     ],
     "boardSnapshots": {
@@ -2256,7 +2263,7 @@
         },
         {
           "id": "k8s-node-memory-upgrade",
-          "status": "Backlog",
+          "status": "Done",
           "title": "Upgrade Node Memory to 12GB",
           "description": "Increase cluster node memory from 8GB to 12GB to fully leverage the free OKE tier."
         },
