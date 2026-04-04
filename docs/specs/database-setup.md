@@ -7,7 +7,7 @@ The local development connection string is configured in `backend/Balenthiran.We
 
 ```json
 "ConnectionStrings": {
-  "DefaultConnection": "Host=localhost;Database=balenthiran;Username=tenbeerplan;Password=password"
+  "DefaultConnection": "Host=localhost;Database=balenthiran;Username=<your-user>;Password=<your-password>"
 }
 ```
 
@@ -26,7 +26,7 @@ dotnet ef database update --project backend/Balenthiran.Database --startup-proje
 ```
 
 ## Local Configuration Notes
-If you are using a different local user or password, update the `DefaultConnection` in `appsettings.Development.json`. This file is ignored by Git to prevent leaking local credentials, but a template is provided in `appsettings.json`.
+If you are using a different local user or password, update the `DefaultConnection` in `appsettings.Development.json`.
 
 ---
 > [!NOTE]

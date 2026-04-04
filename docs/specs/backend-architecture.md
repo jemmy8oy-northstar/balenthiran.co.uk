@@ -50,4 +50,4 @@ The `Api` project acts as the single source of truth for the frontend via OpenAP
 ### 7. Dedicated Request Models
 Endpoints that accept data (POST/PUT) should use dedicated `*Request` models rather than general Data Models. This prevents "over-posting" (clients setting server-managed fields like `IsVerified`) and keeps the API contract minimal and explicit.
 ### 8. Project Synchronization
-Metadata for projects is synced from the filesystem to the database on boot to ensure the frontend is fed by a centralized API while allowing for stable database relations (Interests/Sprints). See [Project Data Synchronization](file:///Users/jamesbalenthiran/coding/balenthiran/docs/project-data-sync.md) for details.
+Metadata for projects is synced from the filesystem to the database on boot to ensure the frontend is fed by a centralized API while allowing for stable database relations (Interests/Sprints). See [Project Data Synchronization](../specs/project-data-sync.md) for details.
