@@ -19,30 +19,56 @@ In-depth documentation and design decisions are stored in the `docs/` directory:
 - [AI Instructions](docs/ai-instructions.md): Specific guidelines for Antigravity AI interactions.
 - [Task Tracking](.gemini/antigravity/brain/6f6d2989-8706-4bdb-9db5-1086ddabf68b/task.md): Current development tasks and progress.
 
+## Deployment
+
+Merging to `main` triggers a GitHub Actions workflow that builds and pushes both Docker images to Oracle Container Image Registry (OCIR). Versioning is handled automatically by GitVersion in Mainline mode (patch bump per merge).
+
+### Required GitHub secrets & variables
+
+| Type | Name | Value |
+|---|---|---|
+| Secret | `OCIR_USERNAME` | OCI username (`<tenancy>/<user>`) |
+| Secret | `OCIR_AUTH_TOKEN` | OCI auth token |
+| Variable | `OCIR_REGISTRY` | `LHR.ocir.io` |
+| Variable | `OCIR_NAMESPACE` | OCI namespace |
+
+### After the action completes
+
+Rollout restarts are manual until the webhook deployment server is in place:
+
+```bash
+kubectl rollout restart deploy balenthiran-balenthiranhelm-main -n balenthiran
+kubectl rollout restart deploy balenthiran-balenthiranhelm-backend -n balenthiran
+```
+
 ## Installation & Running Locally
 
 ### Prerequisites
 - Node.js (Latest LTS recommended)
-- npm or yarn
+- .NET SDK (Latest LTS recommended)
 
 ### Setup
-1. Clone the repository.
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
+
+**Frontend**
+```bash
+cd frontend && npm install && npm run dev
+```
+
+**Backend**
+```bash
+cd backend && dotnet run --project Balenthiran.WebApi
+```
 
 ## File Structure
-- `src/`: Application source code.
+- `frontend/src/`: React application source.
   - `components/`: Reusable UI components.
   - `pages/`: Page-level components.
-  - `assets/`: Static assets (images, fonts).
+  - `data/`: Static board metadata (JSON).
+- `backend/`: .NET Web API.
 - `docs/`: In-depth documentation and design plans.
-- `public/`: Publicly accessible static files.
+- `helm/`: Kubernetes deployment manifests.
+- `scripts/`: Sprint board maintenance scripts.
+- `.github/workflows/`: CI/CD pipelines.
 
 ## High-Level Design Decisions
 - **Modern Aesthetic**: Focused on a premium feel with vibrant colors, glassmorphism, and smooth animations.
