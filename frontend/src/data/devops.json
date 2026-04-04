@@ -1,5 +1,12 @@
 [
     {
+        "id": "claude-code-telegram",
+        "title": "Claude Code Telegram",
+        "description": "Claude Code integration with Telegram for sprint notifications and bot interactions.",
+        "longDescription": "Setup a Telegram bot connected to Claude Code for receiving sprint updates, notifications, and interacting with the development workflow directly from Telegram.",
+        "category": "DevOps"
+    },
+    {
         "id": "k8s-cluster",
         "title": "Oracle K8s Cluster",
         "description": "Custom Kubernetes environment on Oracle Cloud Infrastructure.",
