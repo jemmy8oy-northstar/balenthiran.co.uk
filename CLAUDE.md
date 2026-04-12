@@ -82,6 +82,13 @@ The backend serves `sprints.json` raw via `GET /api/sprints`. The frontend `data
 - When adding a new item, add it to: (1) the relevant `frontend/src/data/*.json` registry file, (2) as a `from: null` change in the sprint's `changes` array, AND (3) the same sprint's `boardSnapshots` — the snapshot must reflect the state *after* all changes for that sprint are applied.
 - New sprints inherit the previous sprint's board snapshots as their starting point.
 
+**Current sprint vs next sprint — keeping them in sync:**
+- The Evolution Timeline (`/boards?view=evolution`) only renders sprints whose `startDate <= today`. Any changes logged in a future sprint are invisible until that sprint begins.
+- **All changes made during a working session must be logged in the currently active sprint** (the one whose date range contains today), not in an upcoming sprint — even if a next sprint has already been created.
+- When a next sprint already exists, its `boardSnapshots` must be kept in sync with the active sprint's updated snapshots. After making changes to the active sprint's snapshots, copy them into the next sprint's `boardSnapshots` so both reflect the same end state.
+- `sprint-move.mjs` always writes to the **latest sprint** (last entry in the array). If the latest sprint is a future sprint, its changes will be invisible. In that case, manually add the change to the active sprint's `changes` array and update both sprints' snapshots by hand, then validate.
+- Rule of thumb: **introduce items and log status changes in the sprint that is currently live**, and treat the next sprint's entry as a goals/planning container until it starts.
+
 ### Boards
 
 | Board key | Display name | Source file |

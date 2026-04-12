@@ -122,23 +122,25 @@ const HabitTrackerDetail: React.FC = () => {
                 <section className="glass" style={{ padding: '40px', textAlign: 'center' }}>
                     <h2 style={{ marginBottom: '32px', color: 'var(--text-primary)' }}>Building For Myself</h2>
                     <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto 32px auto' }}>
-                        Stay tuned for the announcement video where I'll dive deeper into the design philosophy and the first lines of code.
+                        Watch the announcement video where I dive into the design philosophy and why I'm building this for myself first.
                     </p>
                     <div style={{
                         maxWidth: '800px',
                         margin: '0 auto',
-                        background: 'rgba(255, 255, 255, 0.05)',
-                        aspectRatio: '16/9',
+                        position: 'relative',
+                        paddingBottom: '56.25%',
+                        height: 0,
+                        overflow: 'hidden',
                         borderRadius: '16px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        border: '1px dashed var(--glass-border)'
+                        background: '#000'
                     }}>
-                        <div style={{ textAlign: 'center' }}>
-                            <span style={{ fontSize: '3rem', display: 'block', marginBottom: '16px' }}>🎬</span>
-                            <span style={{ color: 'var(--text-secondary)', fontWeight: 600 }}>Video Announcement Coming Soon</span>
-                        </div>
+                        <iframe
+                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                            src="https://www.youtube.com/embed/KkMcVwLBrLU?si=viawUvVzxUJGyP8E"
+                            title="Building for Myself: Announcing My Personal Habit Tracker"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
                     </div>
                 </section>
             </div>
