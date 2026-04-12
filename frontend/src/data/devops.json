@@ -136,13 +136,6 @@
         "category": "Platform"
     },
     {
-        "id": "claude-webhook-setup",
-        "title": "Setup Webhooks with Claude",
-        "description": "Configure Claude Code hooks to automate build, deploy, and notification triggers across the portfolio project.",
-        "longDescription": "Wire up Claude Code's hooks system to fire on key events — post-commit, post-deploy, and issue creation. Enables automated sprint updates, Telegram notifications, and deployment triggers all driven by Claude Code without manual intervention.",
-        "category": "DevOps"
-    },
-    {
         "id": "webhook-deploy-server",
         "title": "Webhook Deployment Server",
         "description": "Authenticated web server for triggering rollout restarts without exposing the control plane.",

@@ -133,5 +133,11 @@
         "description": "Introducing a new app idea — a video editor driven entirely by transcription.",
         "category": "Announcement",
         "youtubeUrl": "https://www.youtube.com/watch?v=Cn-ehgIPqcU"
+    },
+    {
+        "id": "ai-dev-lifecycle",
+        "title": "The Full AI Development Lifecycle",
+        "description": "A complete walkthrough of how I use AI across every stage — from idea to shipped product.",
+        "category": "Engineering"
     }
 ]
