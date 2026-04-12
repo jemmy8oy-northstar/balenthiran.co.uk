@@ -154,6 +154,7 @@
         "title": "Web Template: Claude Onboarding",
         "description": "Onboard Claude Code to the web template repo — CLAUDE.md, GitHub Actions CI/CD, and general cleanup.",
         "longDescription": "Apply the same Claude Code setup used in this repo to the web template project: add CLAUDE.md with project conventions, wire up GitHub Actions for Docker build and push, clean up any stale docs or config, and ensure the template is in a clean state to serve as the starting point for future projects.",
-        "category": "Engineering"
+        "category": "Engineering",
+        "repos": ["web-template"]
     }
 ]

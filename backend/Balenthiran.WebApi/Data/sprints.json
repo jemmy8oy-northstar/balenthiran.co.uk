@@ -2131,6 +2131,13 @@
         "from": "On Going - Active",
         "to": "On Hold",
         "timestamp": "2026-04-12T14:19:50.829Z"
+      },
+      {
+        "itemId": "web-template-claude-onboarding",
+        "board": "devops",
+        "from": "Backlog",
+        "to": "Done",
+        "timestamp": "2026-04-12T14:55:50.224206+00:00"
       }
     ],
     "boardSnapshots": {
@@ -2441,7 +2448,7 @@
         },
         {
           "id": "web-template-claude-onboarding",
-          "status": "Backlog",
+          "status": "Done",
           "title": "Web Template: Claude Onboarding",
           "description": "Onboard Claude Code to the web template repo — CLAUDE.md, GitHub Actions CI/CD, and general cleanup."
         },
@@ -2798,7 +2805,7 @@
         },
         {
           "id": "web-template-claude-onboarding",
-          "status": "Backlog",
+          "status": "Done",
           "title": "Web Template: Claude Onboarding",
           "description": "Onboard Claude Code to the web template repo — CLAUDE.md, GitHub Actions CI/CD, and general cleanup."
         },
