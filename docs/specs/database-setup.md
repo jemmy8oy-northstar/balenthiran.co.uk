@@ -3,7 +3,14 @@
 This project uses **Entity Framework Core (EFCore)** with **PostgreSQL**.
 
 ## Connection String
-The local development connection string is configured in `backend/Balenthiran.WebApi/appsettings.Development.json`.
+
+`appsettings.Development.json` is gitignored. Copy the template and fill in your local credentials:
+
+```bash
+cp backend/Balenthiran.WebApi/appsettings.Development.template.json backend/Balenthiran.WebApi/appsettings.Development.json
+```
+
+The connection string format:
 
 ```json
 "ConnectionStrings": {

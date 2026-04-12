@@ -117,6 +117,39 @@
         ]
     },
     {
+        "id": "macro-metrics",
+        "guid": "A1B2C3D4-E5F6-7890-ABCD-EF1234567890",
+        "title": "Macro Metrics",
+        "category": "Analytics",
+        "description": "A personal dashboard for tracking macro-level growth metrics across the portfolio — MAU, subscriber counts, and channel performance.",
+        "longDescription": "A tool built to give a single view of top-level growth signals across all projects and channels. Tracks monthly active users, YouTube subscriber growth, newsletter signups, and other macro indicators to inform sprint priorities and long-term direction.",
+        "links": {
+            "appStore": null,
+            "playStore": null
+        },
+        "media": {
+            "icon": "/balenthiran.svg",
+            "youtube": null
+        }
+    },
+    {
+        "id": "transcription-editor",
+        "guid": "B3C4D5E6-F7A8-9012-BCDE-F12345678901",
+        "title": "Transcription Driven Video Editor",
+        "category": "Productivity",
+        "path": "/projects/transcription-video-editor",
+        "description": "An AI-powered tool that lets you edit video by editing text — cut footage by deleting words, not scrubbing timelines.",
+        "longDescription": "Video editing is a time-consuming chore. This tool transcribes your footage into text and lets you edit the video by interacting with the transcript — delete a sentence, cut the clip. Filler word removal, natural gap management, and a credit-based model if it proves useful to others.",
+        "links": {
+            "appStore": null,
+            "playStore": null
+        },
+        "media": {
+            "icon": "/balenthiran.svg",
+            "youtube": "https://www.youtube.com/watch?v=Cn-ehgIPqcU"
+        }
+    },
+    {
         "id": "commuter-house-search",
         "guid": "DA031016-E678-48BD-976F-7C7ECAEFB472",
         "title": "Commuter House Search",

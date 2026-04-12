@@ -55,6 +55,12 @@ cd frontend && npm install && npm run dev
 ```
 
 **Backend**
+
+`appsettings.Development.json` is gitignored — copy the template and fill in your local Postgres credentials:
+```bash
+cp backend/Balenthiran.WebApi/appsettings.Development.template.json backend/Balenthiran.WebApi/appsettings.Development.json
+```
+Then update `Username` and `Password` in the file, and run:
 ```bash
 cd backend && dotnet run --project Balenthiran.WebApi
 ```

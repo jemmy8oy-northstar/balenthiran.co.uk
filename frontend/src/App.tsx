@@ -12,6 +12,7 @@ import YouTubeDetail from './pages/YouTubeDetail'
 import HousePriceAlertsDetail from './pages/HousePriceAlertsDetail'
 import EarnYourDrinksDetail from './pages/EarnYourDrinksDetail'
 import HabitTrackerDetail from './pages/HabitTrackerDetail'
+import TranscriptionVideoEditorDetail from './pages/TranscriptionVideoEditorDetail'
 import { SprintProvider } from './context/SprintContext'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/projects/house-price-alerts" element={<HousePriceAlertsDetail />} />
                 <Route path="/projects/earn-your-drinks" element={<EarnYourDrinksDetail />} />
                 <Route path="/projects/habit-tracker" element={<HabitTrackerDetail />} />
+                <Route path="/projects/transcription-video-editor" element={<TranscriptionVideoEditorDetail />} />
                 <Route path="/youtube" element={<YouTubeDetail />} />
               </Routes>
             </main>
