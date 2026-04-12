@@ -122,10 +122,22 @@
         "youtubeUrl": "https://www.youtube.com/watch?v=0uuRx3SbOXo"
     },
     {
+        "id": "new-project-idea-q2w2",
+        "title": "New Project Idea Reveal - Q2W2 2026",
+        "description": "Announcing and exploring a new project idea in Q2W2 2026.",
+        "category": "Announcement"
+    },
+    {
         "id": "transcription-video-editor",
         "title": "New Project Idea: Transcription Driven Video Editor",
         "description": "Introducing a new app idea — a video editor driven entirely by transcription.",
         "category": "Announcement",
         "youtubeUrl": "https://www.youtube.com/watch?v=Cn-ehgIPqcU"
+    },
+    {
+        "id": "ai-dev-lifecycle",
+        "title": "The Full AI Development Lifecycle",
+        "description": "A complete walkthrough of how I use AI across every stage — from idea to shipped product.",
+        "category": "Engineering"
     }
 ]

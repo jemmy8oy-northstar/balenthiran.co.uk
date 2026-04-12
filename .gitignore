@@ -30,6 +30,9 @@ backend/bin/
 backend/obj/
 backend/TestResults/
 
+# Local dev secrets — never commit
+backend/**/appsettings.Development.json
+
 # .NET Specific
 [Bb]in/
 [Oo]bj/

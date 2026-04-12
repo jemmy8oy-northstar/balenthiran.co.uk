@@ -24,6 +24,13 @@
         "repos": ["claude-code-telegram-k8s"]
     },
     {
+        "id": "claude-github-issue-agent",
+        "title": "Claude GitHub Issue Agent",
+        "description": "Scheduled Claude job that monitors new issues and comments, letting users iterate with AI directly via GitHub.",
+        "longDescription": "A scheduled agent that watches for new GitHub issues and issue comments. When triggered, Claude reads the thread, understands the context, and responds — allowing users to describe bugs, request features, or ask questions entirely through GitHub issues without ever touching the codebase. Closes the loop between public users and the AI-assisted development workflow.",
+        "category": "Engineering"
+    },
+    {
         "id": "gh-actions-docker",
         "title": "GitHub Actions: Docker Build & Push",
         "description": "GitHub Actions workflows for building and pushing Docker images on commit.",
@@ -87,6 +94,13 @@
         "category": "DevOps"
     },
     {
+        "id": "k8s-node-memory-upgrade",
+        "title": "Upgrade Node Memory to 12GB",
+        "description": "Increase cluster node memory from 8GB to 12GB to fully leverage the free OKE tier.",
+        "longDescription": "Oracle's free OKE tier supports up to 12GB of memory per node. Upgrading from the current 8GB will give more headroom for running additional workloads and improve overall cluster stability.",
+        "category": "Infrastructure"
+    },
+    {
         "id": "newsletter-beta-onboarding",
         "title": "Newsletter-to-Beta Automation",
         "description": "Automated public beta onboarding via newsletter signup.",
@@ -127,5 +141,13 @@
         "description": "Authenticated web server for triggering rollout restarts without exposing the control plane.",
         "longDescription": "A lightweight authenticated web server running inside the cluster that accepts deploy webhook calls from GitHub Actions. Triggers rollout restarts on deployments and stateful sets — allowing a full build/publish/deploy pipeline without granting GitHub any direct access to the k8s control plane.",
         "category": "DevOps"
+    },
+    {
+        "id": "web-template-claude-onboarding",
+        "title": "Web Template: Claude Onboarding",
+        "description": "Onboard Claude Code to the web template repo — CLAUDE.md, GitHub Actions CI/CD, and general cleanup.",
+        "longDescription": "Apply the same Claude Code setup used in this repo to the web template project: add CLAUDE.md with project conventions, wire up GitHub Actions for Docker build and push, clean up any stale docs or config, and ensure the template is in a clean state to serve as the starting point for future projects.",
+        "category": "Engineering",
+        "repos": ["web-template"]
     }
 ]
