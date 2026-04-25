@@ -123,8 +123,15 @@
     },
     {
         "id": "new-project-idea-q2w2",
-        "title": "New Project Idea Reveal - Q2W2 2026",
+        "title": "New Project Idea! - Holiday Planning/ Discovery App",
         "description": "Announcing and exploring a new project idea in Q2W2 2026.",
+        "category": "Announcement",
+        "youtubeUrl": "https://www.youtube.com/watch?v=jicrVOjRmpo"
+    },
+    {
+        "id": "new-project-idea-q2w5",
+        "title": "New Project Idea Reveal - Q2W2 2026",
+        "description": "Announcing and exploring a new project idea in Q2W5 2026.",
         "category": "Announcement"
     },
     {
