@@ -1,0 +1,56 @@
+# Postgres instance in the `data` namespace, used by the balenthiran backend
+# via ConnectionStrings__DefaultConnection (see the backend app's secret
+# `balenthiran-secrets`, key DATABASE_URL).
+#
+# Not part of the rendered chart (lives outside templates/) — apply manually.
+# Create the password secret before applying (never commit the real value):
+#   kubectl create secret generic pg-postgresql -n data \
+#     --from-literal=postgres-password=<password>
+apiVersion: v1
+kind: Service
+metadata:
+  name: pg-postgresql
+  namespace: data
+spec:
+  ports:
+    - port: 5432
+      targetPort: 5432
+  selector:
+    app: pg-postgresql
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: pg-postgresql
+  namespace: data
+spec:
+  serviceName: pg-postgresql
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pg-postgresql
+  template:
+    metadata:
+      labels:
+        app: pg-postgresql
+    spec:
+      containers:
+        - name: postgresql
+          image: postgres:17
+          ports:
+            - containerPort: 5432
+          env:
+            - name: PGDATA
+              value: /bitnami/postgresql/data
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pg-postgresql
+                  key: postgres-password
+          volumeMounts:
+            - name: data
+              mountPath: /bitnami/postgresql
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: data-pg-postgresql-0
