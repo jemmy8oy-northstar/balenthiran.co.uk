@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15",
+  "updated": "2026-07-20",
   "intro": "A live, high-level view of what the autonomous engineering bot is working on across the Northstar projects. Bot-maintained and current-state only — git history is the changelog. Public-safe by design: titles, projects and status only, no secrets or internal detail.",
   "lanes": [
     {
@@ -7,7 +7,6 @@
       "title": "In progress",
       "hint": "Actively being built by the bot right now.",
       "items": [
-        { "title": "Status / visibility page", "project": "balenthiran.co.uk", "waiting": "review", "note": "This page — a bot-managed board so you can see what's blocked, stalled or in progress at a glance.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/issues/44" },
         { "title": "Habits app UI — History screen", "project": "james-habits-app", "waiting": "review", "note": "30-day completion grid + streaks. Stacked on the Today screen PR.", "link": "https://github.com/jemmy8oy-northstar/james-habits-app/pull/13" }
       ]
     },
@@ -16,6 +15,7 @@
       "title": "Awaiting you",
       "hint": "Done by the bot; needs your review, merge or a decision.",
       "items": [
+        { "title": "Status / visibility page (this page)", "project": "balenthiran.co.uk", "waiting": "merge", "note": "The board you're reading. Merge PR #10 and roll out balenthiran.co.uk to publish it live at /status.", "link": "https://github.com/jemmy8oy-northstar/balenthiran.co.uk/pull/10" },
         { "title": "Habits app UI — Today screen", "project": "james-habits-app", "waiting": "merge", "note": "Fixture-backed daily-loop UI. History PR stacks on this.", "link": "https://github.com/jemmy8oy-northstar/james-habits-app/pull/12" },
         { "title": "Trim landing page + retire public sprint board", "project": "balenthiran.co.uk", "waiting": "merge", "note": "Slice 1 of the projects-flow rework.", "link": "https://github.com/jemmy8oy-northstar/balenthiran.co.uk/pull/8" },
         { "title": "Playwright screenshot tests", "project": "balenthiran.co.uk", "waiting": "merge", "note": "Home + detail page, light/dark. Rendering needs CI or a local run (bot sandbox has no browser).", "link": "https://github.com/jemmy8oy-northstar/balenthiran.co.uk/pull/9" },
