@@ -1,0 +1,60 @@
+# Matches the old balenthiran-helm chart's naming (release "balenthiran" +
+# chart "balenthiranhelm") so this release replaces those resources in place
+# instead of creating differently-named ones alongside them — the latter is
+# what tripped the nginx admission webhook (duplicate host+path).
+fullnameOverride: "balenthiran-balenthiranhelm"
+
+ingress:
+  enabled: true
+  className: nginx
+  hosts:
+    - host: balenthiran.co.uk
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+  tls:
+    - hosts:
+        - balenthiran.co.uk
+      secretName: balenthiran-tls
+
+apps:
+  - name: backend
+    image:
+      repository: lhr.ocir.io/lr7uc6l49odc/balenthiran-backend
+      tag: latest
+      pullPolicy: Always
+    containerPort: 8080
+    replicas: 1
+    service:
+      port: 80
+      targetPort: 8080
+    ingress:
+      path: /api
+      pathType: Prefix
+    env:
+      - name: ConnectionStrings__DefaultConnection
+        valueFrom:
+          secretKeyRef:
+            name: balenthiran-secrets
+            key: DATABASE_URL
+    resources: {}
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}
+
+  - name: main
+    image:
+      repository: lhr.ocir.io/lr7uc6l49odc/balenthiran
+      tag: latest
+      pullPolicy: Always
+    containerPort: 80
+    replicas: 1
+    service:
+      port: 80
+      targetPort: 80
+    ingress:
+      path: /
+      pathType: Prefix
+    resources: {}
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}
