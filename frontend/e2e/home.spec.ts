@@ -24,6 +24,9 @@ test('home page renders hero and project grid', async ({ page }) => {
   await page.screenshot({
     path: 'e2e/screenshots/home-light.png',
     fullPage: true,
+    // Fast-forward the theme-transition so renders are deterministic rather
+    // than catching a half-faded frame right after the toggle click.
+    animations: 'disabled',
   });
 });
 
@@ -38,6 +41,23 @@ test('home page renders in dark mode', async ({ page }) => {
   await page.screenshot({
     path: 'e2e/screenshots/home-dark.png',
     fullPage: true,
+    // Fast-forward the theme-transition so renders are deterministic rather
+    // than catching a half-faded frame right after the toggle click.
+    animations: 'disabled',
+  });
+});
+
+test('status board renders its lanes', async ({ page }) => {
+  await page.goto('/status');
+
+  await expect(
+    page.getByRole('heading', { name: 'Status board', level: 1 }),
+  ).toBeVisible();
+
+  await page.screenshot({
+    path: 'e2e/screenshots/status-light.png',
+    fullPage: true,
+    animations: 'disabled',
   });
 });
 
@@ -50,5 +70,8 @@ test('project detail page renders', async ({ page }) => {
   await page.screenshot({
     path: 'e2e/screenshots/project-germy.png',
     fullPage: true,
+    // Fast-forward the theme-transition so renders are deterministic rather
+    // than catching a half-faded frame right after the toggle click.
+    animations: 'disabled',
   });
 });
