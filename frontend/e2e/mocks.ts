@@ -18,7 +18,10 @@ const projects = [
     description: 'A hygiene-tracking companion app.',
     longDescription: 'Germy helps you build better hygiene habits with gentle nudges.',
     links: { appStore: 'https://example.com', playStore: null, github: null },
-    media: { icon: '🦠', youtube: null },
+    // Icon paths mirror backend/Data/projects.json — an emoji here silently
+    // trips ProjectGrid's onError fallback, so every card renders the same
+    // brand mark and the screenshots stop representing the real site.
+    media: { icon: '/assets/images/germy/virus.svg', youtube: null },
     features: ['Reminders', 'Streaks'],
   },
   {
@@ -30,7 +33,7 @@ const projects = [
     description: 'Turn any workflow into a repeatable playbook.',
     longDescription: 'APEify captures the steps you take and replays them on demand.',
     links: { appStore: null, playStore: null, github: 'https://example.com' },
-    media: { icon: '🦍', youtube: null },
+    media: { icon: '/assets/images/apeify/apeify.png', youtube: null },
     features: ['Playbooks', 'Sharing'],
   },
   {
@@ -42,7 +45,7 @@ const projects = [
     description: 'Edit video by editing the transcript.',
     longDescription: 'Cut filler words and tighten pacing by editing text, not timelines.',
     links: { appStore: null, playStore: null, github: null },
-    media: { icon: '🎬', youtube: null },
+    media: { icon: '/balenthiran.svg', youtube: null },
     features: ['Word-level cuts', 'Filler removal'],
   },
 ];
