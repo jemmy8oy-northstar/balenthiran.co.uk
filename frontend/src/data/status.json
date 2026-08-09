@@ -1,0 +1,73 @@
+{
+  "updated": "2026-07-20",
+  "intro": "A live, high-level view of what the autonomous engineering bot is working on across the Northstar projects. Bot-maintained and current-state only — git history is the changelog. Public-safe by design: titles, projects and status only, no secrets or internal detail.",
+  "lanes": [
+    {
+      "id": "in-progress",
+      "title": "In progress",
+      "hint": "Actively being built by the bot right now.",
+      "items": [
+        { "title": "Habits app UI — History screen", "project": "james-habits-app", "waiting": "review", "note": "30-day completion grid + streaks. Stacked on the Today screen PR.", "link": "https://github.com/jemmy8oy-northstar/james-habits-app/pull/13" }
+      ]
+    },
+    {
+      "id": "awaiting-you",
+      "title": "Awaiting you",
+      "hint": "Done by the bot; needs your review, merge or a decision.",
+      "items": [
+        { "title": "Status / visibility page (this page)", "project": "balenthiran.co.uk", "waiting": "merge", "note": "The board you're reading. Merge PR #10 and roll out balenthiran.co.uk to publish it live at /status.", "link": "https://github.com/jemmy8oy-northstar/balenthiran.co.uk/pull/10" },
+        { "title": "Habits app UI — Today screen", "project": "james-habits-app", "waiting": "merge", "note": "Fixture-backed daily-loop UI. History PR stacks on this.", "link": "https://github.com/jemmy8oy-northstar/james-habits-app/pull/12" },
+        { "title": "Trim landing page + retire public sprint board", "project": "balenthiran.co.uk", "waiting": "merge", "note": "Slice 1 of the projects-flow rework.", "link": "https://github.com/jemmy8oy-northstar/balenthiran.co.uk/pull/8" },
+        { "title": "Playwright screenshot tests", "project": "balenthiran.co.uk", "waiting": "merge", "note": "Home + detail page, light/dark. Rendering needs CI or a local run (bot sandbox has no browser).", "link": "https://github.com/jemmy8oy-northstar/balenthiran.co.uk/pull/9" },
+        { "title": "Word-level transcript editor (v1)", "project": "snip-it", "waiting": "merge", "note": "Mock-driven frontend editor; backend pipeline already merged.", "link": "https://github.com/jemmy8oy-northstar/snip-it/pull/7" },
+        { "title": "Author-trust filter vs prompt injection", "project": "claude-code-bot", "waiting": "merge", "note": "Deterministic strip-untrusted-authors filter in the GitHub sync.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/pull/38" },
+        { "title": "Decision-room recommendation engine", "project": "holiday-planning", "waiting": "review", "note": "Group compromise engine + first implementation slice.", "link": "https://github.com/jemmy8oy-northstar/holiday-planning/pull/35" },
+        { "title": "Global exception-handling pattern", "project": "web-template", "waiting": "merge", "note": "Ported from the habits app into the source template.", "link": "https://github.com/jemmy8oy-northstar/web-template/pull/73" },
+        { "title": "CHANGELOG + GitVersion release docs", "project": "web-template", "waiting": "merge", "note": "Docs-only.", "link": "https://github.com/jemmy8oy-northstar/web-template/pull/75" },
+        { "title": "Concrete-from-interface source generator", "project": "web-template", "waiting": "review", "note": "Roslyn generator spike answering the cross-project codegen question.", "link": "https://github.com/jemmy8oy-northstar/web-template/pull/83" },
+        { "title": "Drill API rework", "project": "language-vocab", "waiting": "merge", "note": "PoolService via DI + idempotent seed.", "link": "https://github.com/jemmy8oy-northstar/language-vocab/pull/4" },
+        { "title": "DB-free backend boot", "project": "james-habits-app", "waiting": "merge", "note": "Backend boots without the DB; migrate + seed out of band.", "link": "https://github.com/jemmy8oy-northstar/james-habits-app/pull/10" },
+        { "title": "12-template creative library", "project": "video-templater", "waiting": "merge", "note": "Lint-clean; not render-verified in the sandbox.", "link": "https://github.com/jemmy8oy-northstar/video-templater/pull/2" },
+        { "title": "v1 scoring core", "project": "whos-accountable", "waiting": "merge", "note": "ScoreEngine + golden-file test.", "link": "https://github.com/jemmy8oy-northstar/whos-accountable/pull/12" },
+        { "title": "Design system — direction & first slice", "project": "claude-code-bot", "waiting": "decision", "note": "First slice built locally; needs you to create the empty org repo so the bot can push (it can't create repos).", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/issues/34" },
+        { "title": "Projects phase-flow (Slice 2)", "project": "balenthiran.co.uk", "waiting": "decision", "note": "Phase pills + archive page + manifest phase field. Awaiting sign-off on the plan.", "link": "https://github.com/jemmy8oy-northstar/balenthiran.co.uk/issues/41" }
+      ]
+    },
+    {
+      "id": "backlog",
+      "title": "Backlog",
+      "hint": "Next up when its turn comes — things the bot can pick up unaided.",
+      "items": [
+        { "title": "Habits app — Manage screen", "project": "james-habits-app", "note": "Last v1 screen (add / edit / archive habits). Backend routes exist; may wait for the Today + History PRs to merge first.", "link": "https://github.com/jemmy8oy-northstar/james-habits-app/issues/1" },
+        { "title": "Wire transcript editor to the real API", "project": "snip-it", "note": "Queued to follow once the editor + backend PRs merge.", "link": "https://github.com/jemmy8oy-northstar/snip-it/pull/7" },
+        { "title": "Source-generator rollout to real models", "project": "web-template", "note": "Apply the concrete generator to the Status service and org repos once the spike is approved.", "link": "https://github.com/jemmy8oy-northstar/web-template/pull/83" }
+      ]
+    },
+    {
+      "id": "desk",
+      "title": "Needs you at your desk",
+      "hint": "Can't be done from your phone or by the bot — needs your laptop / accounts.",
+      "items": [
+        { "title": "Deploy snip-it to OKE", "project": "snip-it", "desk": true, "note": "Needs the backend imaged + an oke-fleet deployment PR." },
+        { "title": "Habits app: real DB hookup + codegen re-run", "project": "james-habits-app", "desk": true, "note": "Blocked on running the backend / codegen locally (the bot sandbox can't)." },
+        { "title": "Grant data-source permissions for whos-accountable", "project": "whos-accountable", "desk": true, "note": "Three permission emails to send before those scoring pillars can be wired in." },
+        { "title": "Create the design-system org repo", "project": "claude-code-bot", "desk": true, "note": "The bot can't create org repos — create an empty public repo and it will push the built first slice.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/issues/34" }
+      ]
+    },
+    {
+      "id": "shipped",
+      "title": "Recently shipped",
+      "hint": "Merged recently — ages out over time; git keeps the full history.",
+      "items": [
+        { "title": "Test project + lint cleanup in the scaffold", "project": "web-template", "note": "Merged.", "link": "https://github.com/jemmy8oy-northstar/web-template/pull/81" },
+        { "title": "Transcription + cut backend pipeline", "project": "snip-it", "note": "Merged.", "link": "https://github.com/jemmy8oy-northstar/snip-it/pull/5" },
+        { "title": "Cost instrumentation (register + per-session log)", "project": "claude-code-bot", "note": "Shipped to dev." },
+        { "title": "Interfacify the abstractions kernel", "project": "whos-accountable", "note": "Merged." }
+      ]
+    }
+  ],
+  "youtubeBacklog": [
+    { "title": "Autonomous bot — the usage-limit death arc", "status": "idea", "note": "Build-in-public story of the bot working across sessions. Needs shaping once the full YouTube library context lands." },
+    { "title": "macro-metrics walkthrough", "status": "idea", "note": "Deployed proof-of-concept — the remaining value is a walkthrough video, not more code." }
+  ]
+}
