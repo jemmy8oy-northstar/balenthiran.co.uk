@@ -9,10 +9,19 @@ public static class ServiceRegistration
 {
     public static void AddBackendServices(this IServiceCollection services, IConfiguration configuration)
     {
-        // Database
+        // Database. Registered only when a connection string exists, so the host can boot
+        // without Postgres — that is what lets the test project exercise the real HTTP
+        // pipeline in-process. Same shape as web-template's ServiceRegistration.
         var connectionString = configuration.GetConnectionString("DefaultConnection");
-        services.AddDbContext<BalenthiranDbContext>(options =>
-            options.UseNpgsql(connectionString, b => b.MigrationsAssembly("Balenthiran.Database")));
+        if (string.IsNullOrWhiteSpace(connectionString))
+        {
+            Console.WriteLine("[WARNING] No database connection string configured — database features are disabled.");
+        }
+        else
+        {
+            services.AddDbContext<BalenthiranDbContext>(options =>
+                options.UseNpgsql(connectionString, b => b.MigrationsAssembly("Balenthiran.Database")));
+        }
 
         // AutoMapper
         services.AddAutoMapper(cfg => cfg.AddMaps(AppDomain.CurrentDomain.GetAssemblies()));

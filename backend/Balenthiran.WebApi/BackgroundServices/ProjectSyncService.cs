@@ -12,7 +12,12 @@ public class ProjectSyncService(IServiceProvider serviceProvider, ILogger<Projec
         logger.LogInformation("ProjectSyncService is starting...");
 
         using var scope = serviceProvider.CreateScope();
-        var dbContext = scope.ServiceProvider.GetRequiredService<BalenthiranDbContext>();
+        var dbContext = scope.ServiceProvider.GetService<BalenthiranDbContext>();
+        if (dbContext is null)
+        {
+            logger.LogWarning("Skipping project sync — no database configured.");
+            return;
+        }
 
         var dataPath = Path.Combine(AppContext.BaseDirectory, "Data", "projects.json");
         if (!File.Exists(dataPath))
