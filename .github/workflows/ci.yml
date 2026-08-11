@@ -1,0 +1,95 @@
+name: CI
+
+# Runs on every pull request, into any branch — so a feature -> dev merge is
+# gated by the same suite that gates a dev -> main promotion.
+#
+# Job ids double as the required status-check contexts named in the branch
+# ruleset — rename one and that required check hangs forever.
+on:
+  pull_request:
+    branches: ["**"]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore
+        run: dotnet restore ./backend
+
+      - name: Build
+        run: dotnet build ./backend --no-restore --configuration Release
+
+      # No `dotnet test` step: this solution has no test project. Running
+      # `dotnet test` anyway would exit 0 having asserted nothing, which is a
+      # green tick that means the opposite of what it looks like. Add the step
+      # in the same PR that adds the first test project.
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      # No lint step yet: `npm run lint` currently reports 24 errors on dev
+      # (mostly react-refresh/only-export-components). Gating on it today would
+      # make every pull request red. Clear those, then add the step.
+
+      - name: Build
+        run: npm run build
+
+  e2e:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      # Only Chromium — the suite pins that project, and pulling all three
+      # browsers roughly triples install time for no extra coverage.
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Run E2E
+        run: npm run test:e2e
+
+      - name: Upload report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: frontend/playwright-report/
+          retention-days: 7

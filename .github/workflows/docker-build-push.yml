@@ -15,10 +15,21 @@ jobs:
     runs-on: ubuntu-24.04-arm  # Native ARM64 runner — no QEMU emulation overhead
 
     steps:
+      # The default GITHUB_TOKEN cannot push to a protected branch, so the
+      # GitOps App's short-lived token is used for both checkout and the
+      # version-bump push at the end of this job.
+      - name: Generate GitOps Token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.GIT_OPS_APP_ID }} # Pulled from global Org variables
+          private-key: ${{ secrets.GITOPS_APP_PRIVATE_KEY }} # Pulled from global Org secrets
+
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Required for GitVersion to read full git history
+          token: ${{ steps.app-token.outputs.token }} # 🔑 Overrides the restricted default token
 
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v1
@@ -64,3 +75,40 @@ jobs:
             ${{ vars.OCIR_REGISTRY }}/${{ vars.OCIR_NAMESPACE }}/${{ env.BACKEND_IMAGE }}:${{ steps.gitversion.outputs.semVer }}
           cache-from: type=gha,scope=backend
           cache-to: type=gha,mode=max,scope=backend
+
+      # --- THE GITOPS AUTO-UPDATE LOOP ---
+      - name: Install yq (YAML Processor)
+        uses: mikefarah/yq@v4.44.1
+
+      # NOTE: the frontend app is called `main` in helm/values.yaml, not
+      # `frontend`. A selector that matches nothing is not an error in yq — it
+      # writes the file back unchanged and the step passes, so the release would
+      # silently keep deploying whatever tag was there before.
+      - name: Update Helm Chart Values File
+        run: |
+          NEW_VERSION="${{ steps.gitversion.outputs.semVer }}"
+          VALUES_FILE="helm/values.yaml"
+
+          echo "Patching array image tags in $VALUES_FILE to version: $NEW_VERSION"
+
+          yq -i '(.apps[] | select(.name == "backend") | .image.tag) = "'"$NEW_VERSION"'"' $VALUES_FILE
+          yq -i '(.apps[] | select(.name == "main") | .image.tag) = "'"$NEW_VERSION"'"' $VALUES_FILE
+
+          echo "Result:"
+          yq '.apps[] | .name + " -> " + .image.tag' $VALUES_FILE
+
+      - name: Commit and Push Image Tag Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add helm/values.yaml
+
+          if git diff --staged --quiet; then
+            echo "No manifest changes required. Version is already up to date."
+          else
+            git commit -m "chore(gitops): release version ${{ steps.gitversion.outputs.semVer }} [skip ci]"
+
+            # Cleanly pushes back using the App token set during checkout
+            git push origin HEAD
+          fi
