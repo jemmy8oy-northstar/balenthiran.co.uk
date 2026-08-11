@@ -14,8 +14,12 @@ const InterestForm: React.FC = () => {
                     registerInterestRequest: { email }
                 }).unwrap();
                 
-                // @ts-ignore - mapping the backend response
-                if (result.message === "Already registered") {
+                // The route returns an anonymous object, so it has no OpenAPI schema and
+                // the generated response type is `unknown`. Narrow it here rather than
+                // silencing the compiler; the real fix is a named response DTO in
+                // InterestRoutes.cs so codegen can type this.
+                const message = (result as { message?: string } | null)?.message;
+                if (message === "Already registered") {
                     setStatus('already_registered');
                 } else {
                     setStatus('success');
