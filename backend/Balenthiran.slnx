@@ -6,4 +6,5 @@
   <Project Path="Balenthiran.DomainModels/Balenthiran.DomainModels.csproj" />
   <Project Path="Balenthiran.EntityModels/Balenthiran.EntityModels.csproj" />
   <Project Path="Balenthiran.Services/Balenthiran.Services.csproj" />
+  <Project Path="Balenthiran.Tests/Balenthiran.Tests.csproj" />
 </Solution>

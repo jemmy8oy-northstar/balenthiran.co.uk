@@ -23,11 +23,15 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference("/scalar/v1");
 }
 
-// Apply migrations automatically on startup
+// Apply migrations automatically on startup — unless there is no database configured, in
+// which case the app still serves the routes that don't need one.
 using (var scope = app.Services.CreateScope())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<Balenthiran.Database.BalenthiranDbContext>();
-    dbContext.Database.Migrate();
+    var dbContext = scope.ServiceProvider.GetService<Balenthiran.Database.BalenthiranDbContext>();
+    if (dbContext is null)
+        app.Logger.LogWarning("Skipping database migration — no connection string configured.");
+    else
+        dbContext.Database.Migrate();
 }
 
 app.UseHttpsRedirection();
@@ -41,3 +45,7 @@ app.MapGroup("/api")
     .WithOpenApi();
 
 app.Run();
+
+// Exposed so the test project can boot the real host in-process via
+// WebApplicationFactory<Program> (top-level statements make Program internal by default).
+public partial class Program;
