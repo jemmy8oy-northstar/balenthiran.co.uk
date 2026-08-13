@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   const location = useLocation();
 
     const getLinkStyle = (path: string) => {
-    const isActive = location.pathname === path || (path === config.navigation.boards && location.pathname.startsWith(config.navigation.boards));
+    const isActive = location.pathname === path;
     return {
       color: isActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
       fontWeight: isActive ? 700 : 500,
@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     };
   };
 
-  const isActive = (path: string) => location.pathname === path || (path === config.navigation.boards && location.pathname.startsWith(config.navigation.boards));
+  const isActive = (path: string) => location.pathname === path;
 
 
   const ActiveDot = () => (
@@ -67,10 +67,6 @@ const Navbar: React.FC = () => {
         <Link to={config.navigation.home} onClick={() => setIsMenuOpen(false)} style={getLinkStyle(config.navigation.home)}>
           Home
           {isActive(config.navigation.home) && <ActiveDot />}
-        </Link>
-        <Link to={config.navigation.boards} onClick={() => setIsMenuOpen(false)} style={getLinkStyle(config.navigation.boards)}>
-          Boards
-          {isActive(config.navigation.boards) && <ActiveDot />}
         </Link>
         <Link to={config.navigation.youtube} onClick={() => setIsMenuOpen(false)} style={getLinkStyle(config.navigation.youtube)}>
           YouTube
