@@ -8,12 +8,27 @@ ingress:
   className: nginx
   hosts:
     - host: balenthiran.co.uk
+    # www.balenthiran.co.uk is a CNAME to the apex and lands on this same
+    # controller, but nothing ever served it: http returned the default-backend
+    # 404 and https presented nginx's self-signed "Kubernetes Ingress Controller
+    # Fake Certificate". The apex sends HSTS with includeSubDomains, so that
+    # warning is not click-through-able for anyone who has visited the site.
+    - host: www.balenthiran.co.uk
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
   tls:
     - hosts:
         - balenthiran.co.uk
       secretName: balenthiran-tls
+    # www gets its OWN certificate instead of joining the SAN list above.
+    # macro-metrics and holiday-planning each declare an Ingress for the same
+    # host with the same `balenthiran-tls` secret, so cert-manager's ingress-shim
+    # derives one Certificate from three Ingresses: they must agree on that
+    # entry. Adding a name to it here would make them disagree. A second entry
+    # is invisible to them.
+    - hosts:
+        - www.balenthiran.co.uk
+      secretName: balenthiran-www-tls
 apps:
   - name: backend
     image:
