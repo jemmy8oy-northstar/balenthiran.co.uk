@@ -5,13 +5,10 @@ export const staticDataApi = api.injectEndpoints({
     getProjects: build.query<Project[], void>({
       query: () => ({ url: `/api/projects` }),
     }),
-    getSprints: build.query<any[], void>({
-      query: () => ({ url: `/api/sprints` }),
-    }),
   }),
 });
 
-export const { useGetProjectsQuery, useGetSprintsQuery } = staticDataApi;
+export const { useGetProjectsQuery } = staticDataApi;
 
 export interface Project {
   id: string;
