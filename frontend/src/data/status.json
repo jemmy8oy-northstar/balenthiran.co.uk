@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12",
+  "updated": "2026-08-13",
   "intro": "A live, high-level view of what the autonomous engineering bot is working on across the Northstar projects. Bot-maintained and current-state only — git history is the changelog. Public-safe by design: titles, projects and status only, no secrets or internal detail.",
   "lanes": [
     {
@@ -8,7 +8,7 @@
       "hint": "Actively being built by the bot right now.",
       "items": [
         { "title": "Deliberate production freeze — finish, don't start", "project": "claude-code-bot", "note": "The bot is opening no new work while the review queue is long: depth on one project at a time, keep the existing pile mergeable, and hand over the decisions rather than inventing more code.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/pull/62" },
-        { "title": "Code-health tracking", "project": "claude-code-bot", "note": "Churn balance, template drift and duplicate mass are now measured every review cycle, so \"is this getting out of hand\" has a number instead of an opinion.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/issues/58" }
+        { "title": "Taking snip-it to production", "project": "snip-it", "note": "The one project in focus. It works end to end and is behind basic auth in the pending PR; what is left is the cluster secret, a promotion, and a deployment entry.", "link": "https://github.com/jemmy8oy-northstar/snip-it/pull/17" }
       ]
     },
     {
@@ -16,14 +16,12 @@
       "title": "Awaiting you",
       "hint": "Done by the bot; needs your review, merge or a decision.",
       "items": [
-        { "title": "Decision queue — every open question, with the default", "project": "claude-code-bot", "waiting": "decision", "note": "One ranked list of the 10 open questions, each stating what the bot will do if you say nothing and the date it acts. Silence becomes a decision instead of a blockage.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/issues/59" },
-        { "title": "Design system: which theme is which product's identity?", "project": "design-system", "waiting": "decision", "note": "Two themes are built and rendered side by side. This one call gates rolling the design system into every app — adopting before it is settled means retheming everything twice.", "link": "https://github.com/jemmy8oy-northstar/design-system/issues/4" },
-        { "title": "snip-it: public and unauthenticated, or gated?", "project": "snip-it", "waiting": "decision", "note": "The app works end to end and is ready to deploy. Last call before it goes live: put it behind auth, or accept anonymous uploads.", "link": "https://github.com/jemmy8oy-northstar/snip-it/issues/14" },
+        { "title": "Decision queue — every open question, with the default", "project": "claude-code-bot", "waiting": "decision", "note": "One ranked list of the 8 open questions, each stating what the bot will do if you say nothing and the date it acts. Silence becomes a decision instead of a blockage.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/issues/59" },
+        { "title": "There are now two design systems — which one is the identity?", "project": "design-system", "waiting": "decision", "note": "The design-system repo and the app template each carry their own tokens and the same four building blocks, with no colour in common. One call settles which is the source of truth and unblocks rolling it into every app.", "link": "https://github.com/jemmy8oy-northstar/design-system/issues/4" },
+        { "title": "Put snip-it behind a password before it goes live", "project": "snip-it", "waiting": "merge", "note": "Your call, built: the gate sits at the edge rather than in the app, because the thing being protected is an upload endpoint. First of three steps to taking it live.", "link": "https://github.com/jemmy8oy-northstar/snip-it/pull/17" },
         { "title": "Studio theme — dark-first identity for tool UIs", "project": "design-system", "waiting": "merge", "note": "Second theme option, rendered and screenshot-tested.", "link": "https://github.com/jemmy8oy-northstar/design-system/pull/3" },
         { "title": "Design-system consumer registry + tokens-only entry point", "project": "design-system", "waiting": "merge", "note": "Lets a project take just the tokens without the components.", "link": "https://github.com/jemmy8oy-northstar/design-system/pull/2" },
-        { "title": "Trim landing page + retire public sprint board", "project": "balenthiran.co.uk", "waiting": "merge", "note": "Net −1,500 lines. Green on backend, frontend and e2e.", "link": "https://github.com/jemmy8oy-northstar/balenthiran.co.uk/pull/8" },
-        { "title": "Promote the 12-template video library to main", "project": "video-templater", "waiting": "merge", "note": "5,394 lines merged into dev in July that never reached the default branch. Promotion only — no new code.", "link": "https://github.com/jemmy8oy-northstar/video-templater/pull/3" },
-        { "title": "Stop the template seeding portfolio screenshots into new repos", "project": "web-template", "waiting": "merge", "note": "1.9 MB of images from this site leaked into the app template and every repo generated from it — 87% of one repo by bytes, referenced nowhere but here.", "link": "https://github.com/jemmy8oy-northstar/web-template/pull/86" },
+        { "title": "Ship the trimmed landing page to the live site", "project": "balenthiran.co.uk", "waiting": "merge", "note": "You merged the trim this morning, which put it in the repo rather than on the site. This is the promotion that publishes it.", "link": "https://github.com/jemmy8oy-northstar/balenthiran.co.uk/pull/19" },
         { "title": "Make the bot's delegation rule actually deliverable", "project": "claude-code-bot", "waiting": "merge", "note": "Harness fix so the bot can hand cheap survey work to smaller models. Needs a merge and an image rebuild.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/pull/60" },
         { "title": "Operating rules: freeze, no new tools, hand over the action", "project": "claude-code-bot", "waiting": "merge", "note": "The three rules the last quarterly-style review concluded with.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/pull/62" }
       ]
@@ -34,7 +32,7 @@
       "hint": "Next up when its turn comes — things the bot can pick up unaided.",
       "items": [
         { "title": "Roll the design system into the apps, one repo at a time", "project": "design-system", "note": "Ordered programme: snip-it, then this site, then the template. Gated on the identity decision above.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/issues/53" },
-        { "title": "Purge the stray portfolio images from three more repos", "project": "claude-code-bot", "note": "Same images as the template PR above, copied forward into snip-it, macro-metrics and holiday-planning.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/issues/58" },
+        { "title": "Purge the stray portfolio images from three more repos", "project": "claude-code-bot", "note": "The template no longer seeds them, but the copies it already made are still sitting in snip-it, macro-metrics and holiday-planning.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/issues/58" },
         { "title": "One-command video build + a folder convention that holds", "project": "video-templater", "note": "The two existing videos each follow a different subset of the documented layout, so a wrapper built today would work for one of them.", "link": "https://github.com/jemmy8oy-northstar/video-templater/issues/1" },
         { "title": "Walkthrough videos for the deployed projects", "project": "macro-metrics", "note": "macro-metrics and holiday-planning are built; the remaining value is a walkthrough, not more code.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/issues/61" },
         { "title": "Habits app — Manage screen", "project": "james-habits-app", "note": "Last v1 screen (add / edit / archive). Waiting on the Today + History PRs, which have been open a month.", "link": "https://github.com/jemmy8oy-northstar/james-habits-app/issues/1" }
@@ -45,7 +43,7 @@
       "title": "Needs you at your desk",
       "hint": "Can't be done from your phone or by the bot — needs your laptop / accounts.",
       "items": [
-        { "title": "Take snip-it live", "project": "snip-it", "desk": true, "note": "Three steps once the auth call is made: cluster secrets, promote to the release branch, then a deployment PR." },
+        { "title": "Take snip-it live", "project": "snip-it", "desk": true, "note": "The auth call is made. What is left needs your laptop: create the login secret in the cluster, then a promotion and a deployment entry the bot can prepare.", "link": "https://github.com/jemmy8oy-northstar/snip-it/pull/17" },
         { "title": "Rebuild the bot image after merging its harness PR", "project": "claude-code-bot", "desk": true, "note": "Merging alone changes nothing — the image ships the harness, and it only builds from the release branch.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/pull/60" },
         { "title": "Permission emails for whos-accountable data sources", "project": "whos-accountable", "desk": true, "note": "Three emails to send and track before those scoring pillars can be wired in.", "link": "https://github.com/jemmy8oy-northstar/whos-accountable/issues/11" },
         { "title": "Decide the fate of eight stalled PRs", "project": "claude-code-bot", "desk": true, "note": "Open 28–67 days across five repos. The bot resurfaces them but never closes them — closing is yours." }
@@ -60,7 +58,8 @@
         { "title": "CI that actually runs the tests, in eleven repos", "project": "web-template", "note": "Most repos only ever compiled on a PR; three had no CI at all.", "link": "https://github.com/jemmy8oy-northstar/web-template/pull/85" },
         { "title": "Two high-severity advisories closed in three backends", "project": "macro-metrics", "note": "Fixed in the template months ago and never rippled outward.", "link": "https://github.com/jemmy8oy-northstar/macro-metrics/pull/113" },
         { "title": "Lint clean across the org — 33 errors to 0", "project": "claude-code-bot", "note": "The same two scaffold errors sat in four separate repos.", "link": "https://github.com/jemmy8oy-northstar/claude-code-bot/issues/58" },
-        { "title": "First backend test suite for this site", "project": "balenthiran.co.uk", "note": "12 tests covering the newsletter sign-up, no database needed.", "link": "https://github.com/jemmy8oy-northstar/balenthiran.co.uk/pull/13" },
+        { "title": "Twelve video templates, finally on the default branch", "project": "video-templater", "note": "5,394 lines had been merged in July and stopped one step short of where you would find them.", "link": "https://github.com/jemmy8oy-northstar/video-templater/pull/3" },
+        { "title": "The app template no longer seeds stray portfolio images", "project": "web-template", "note": "1.9 MB of images from this site had leaked into the template and every repo generated from it — 87% of one repo by bytes.", "link": "https://github.com/jemmy8oy-northstar/web-template/pull/86" },
         { "title": "Design system — first slice", "project": "design-system", "note": "Tokens, the casual theme, primitives and a live showcase.", "link": "https://github.com/jemmy8oy-northstar/design-system/pull/1" }
       ]
     }
