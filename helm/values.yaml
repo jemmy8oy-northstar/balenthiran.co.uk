@@ -3,7 +3,6 @@
 # instead of creating differently-named ones alongside them — the latter is
 # what tripped the nginx admission webhook (duplicate host+path).
 fullnameOverride: "balenthiran-balenthiranhelm"
-
 ingress:
   enabled: true
   className: nginx
@@ -15,12 +14,11 @@ ingress:
     - hosts:
         - balenthiran.co.uk
       secretName: balenthiran-tls
-
 apps:
   - name: backend
     image:
       repository: lhr.ocir.io/lr7uc6l49odc/balenthiran-backend
-      tag: latest
+      tag: 0.1.169
       pullPolicy: Always
     containerPort: 8080
     replicas: 1
@@ -40,11 +38,10 @@ apps:
     nodeSelector: {}
     tolerations: []
     affinity: {}
-
   - name: main
     image:
       repository: lhr.ocir.io/lr7uc6l49odc/balenthiran
-      tag: latest
+      tag: 0.1.169
       pullPolicy: Always
     containerPort: 80
     replicas: 1
