@@ -13,7 +13,12 @@ spec:
       targetPort: {{ .service.targetPort }}
       protocol: TCP
   selector:
+    # `app` alone matches every other chart deployed into this namespace — they are all
+    # generated from web-template and all label their pods `app: backend` / `app: frontend`.
+    # Without `release` this Service load-balances across macro-metrics' and
+    # holiday-planning's pods too, and 2 of every 3 /api requests 404.
     app: {{ .name }}
+    release: {{ include "balenthiran.fullname" $ }}
 ---
 {{- end }}
 {{- end }}
