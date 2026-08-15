@@ -11,7 +11,7 @@ Intended as a reusable pattern across the Northstar frontends.
 | `../playwright.config.ts` | Config — boots the Vite dev server, targets Chromium. |
 | `mocks.ts` | One place that fulfils every API call the app makes. Add a route here when the frontend starts calling a new endpoint. |
 | `home.spec.ts` | Smoke asserts + screenshots for the home page (light + dark) and a project detail page. |
-| `screenshots/` | Generated PNGs land here (git-ignored reports aside). |
+| `screenshots/` | Generated PNGs land here. **Gitignored** — see below. |
 
 ## Run locally
 
@@ -26,38 +26,36 @@ npm run test:e2e -- --ui          # interactive runner
 Screenshots are written to `frontend/e2e/screenshots/`. After a run,
 `npx playwright show-report` opens the HTML report.
 
-## CI (recommended — this is how screenshots get reviewed per-PR)
+## The screenshots are not committed, and they assert nothing
 
-The bot's sandbox has no browser libraries, so **it cannot render screenshots
-itself** — CI (or a local run) produces them. Add this workflow so every PR
-attaches the screenshots as a downloadable artifact:
+`page.screenshot()` is a plain **write**, not a comparison. There is no
+`toHaveScreenshot` here, so **no screenshot can ever fail a build** — they exist
+to be looked at. They were committed until snip-it#15, where James asked for
+them out: *"get rid of the committed pngs I think it wastes git storage."* They
+were 2.3 MB at HEAD here, the largest of the three repos, and nothing referenced
+them except the spec that writes them.
+
+`frontend/e2e/screenshots/` is now gitignored. Run the suite locally and they
+appear; they just never enter git.
+
+## Reviewing them on a PR
+
+`ci.yml`'s `e2e` job uploads `playwright-report/` and only `if: failure()`, so a
+green run publishes nothing to look at. To get the screenshots per-PR, add this
+step to that job:
 
 ```yaml
-# .github/workflows/frontend-e2e.yml
-name: frontend-e2e
-on:
-  pull_request:
-    paths: ['frontend/**']
-jobs:
-  e2e:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm ci
-      - run: npx playwright install --with-deps chromium
-      - run: npm run test:e2e
-      - uses: actions/upload-artifact@v4
+      - name: Upload e2e screenshots
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: e2e-screenshots
           path: frontend/e2e/screenshots/
+          retention-days: 7
 ```
 
-GitHub runners ship all the browser deps, so `--with-deps` just works there.
-Download the `e2e-screenshots` artifact from the PR's checks to review.
+<!-- Corrections, 2026-08-15: this section previously described a
+     frontend-e2e.yml workflow that was never added — ci.yml has the e2e job —
+     and claimed the bot's sandbox has no browser libraries. Playwright has run
+     in-pod since 2026-08-09. Check before repeating either claim. -->
+

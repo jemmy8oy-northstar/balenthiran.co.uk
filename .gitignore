@@ -55,3 +55,7 @@ backend/**/appsettings.Development.json
 _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
+
+# Playwright screenshots — write-only artefacts of a test run, not fixtures.
+# They assert nothing (no toHaveScreenshot anywhere), and nothing reads them.
+frontend/e2e/screenshots/
