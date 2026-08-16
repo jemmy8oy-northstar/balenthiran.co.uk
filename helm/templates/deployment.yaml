@@ -8,12 +8,17 @@ metadata:
 spec:
   replicas: {{ .replicas }}
   selector:
+    # NOTE: deliberately NOT adding `release` here. spec.selector is immutable, so
+    # changing it would make ArgoCD fail to sync until the Deployment is deleted by
+    # hand. `app` alone is safe at this level because the ReplicaSet adds
+    # pod-template-hash, so Deployments never adopt each other's pods.
     matchLabels:
       app: {{ .name }}
   template:
     metadata:
       labels:
         app: {{ .name }}
+        release: {{ include "balenthiran.fullname" $ }}
     spec:
       containers:
         - name: {{ .name }}
