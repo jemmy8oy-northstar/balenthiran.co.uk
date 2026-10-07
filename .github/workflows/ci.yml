@@ -30,10 +30,15 @@ jobs:
       - name: Build
         run: dotnet build ./backend --no-restore --configuration Release
 
-      # No `dotnet test` step: this solution has no test project. Running
-      # `dotnet test` anyway would exit 0 having asserted nothing, which is a
-      # green tick that means the opposite of what it looks like. Add the step
-      # in the same PR that adds the first test project.
+      # Drop this step only if the solution genuinely has no test project.
+      # `dotnet test` over a solution containing none exits 0 having asserted
+      # nothing — a green tick that means the opposite of what it looks like.
+      - name: Test
+        run: >
+          dotnet test ./backend
+          --no-build
+          --configuration Release
+          --verbosity normal
 
   frontend:
     runs-on: ubuntu-latest
