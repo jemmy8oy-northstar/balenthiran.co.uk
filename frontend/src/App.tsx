@@ -13,6 +13,7 @@ import EarnYourDrinksDetail from './pages/EarnYourDrinksDetail'
 import HabitTrackerDetail from './pages/HabitTrackerDetail'
 import TranscriptionVideoEditorDetail from './pages/TranscriptionVideoEditorDetail'
 import Status from './pages/Status'
+import Apps from './pages/Apps'
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
               <Route path="/projects/transcription-video-editor" element={<TranscriptionVideoEditorDetail />} />
               <Route path="/youtube" element={<YouTubeDetail />} />
               <Route path="/status" element={<Status />} />
+              <Route path="/apps" element={<Apps />} />
             </Routes>
           </main>
 

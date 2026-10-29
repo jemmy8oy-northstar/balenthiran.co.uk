@@ -1,0 +1,40 @@
+{
+  "apps": [
+    {
+      "id": "kit",
+      "name": "Kit",
+      "description": "Where each app's spec is written, and an agent builds what it says.",
+      "path": "/kit/"
+    },
+    {
+      "id": "tracks",
+      "name": "Tracks",
+      "description": "Your runs, with the songs you ran them to.",
+      "path": "/tracks/"
+    },
+    {
+      "id": "earnyourbeers",
+      "name": "Earn Your Beers",
+      "description": "Earn your drinks with exercise, and settle up with friends each week.",
+      "path": "/earnyourbeers/"
+    },
+    {
+      "id": "language-vocab",
+      "name": "Language Vocab",
+      "description": "Drill Chinese vocabulary: characters, pinyin and English.",
+      "path": "/language-vocab/"
+    },
+    {
+      "id": "snip-it",
+      "name": "Snip-it",
+      "description": "Cut a video by editing its transcript.",
+      "path": "/snipit/"
+    },
+    {
+      "id": "macro-metrics",
+      "name": "Macro Metrics",
+      "description": "Compare economic indicators against each other over time.",
+      "path": "/macro-metrics/"
+    }
+  ]
+}
