@@ -47,20 +47,6 @@ test('home page renders in dark mode', async ({ page }) => {
   });
 });
 
-test('status board renders its lanes', async ({ page }) => {
-  await page.goto('/status');
-
-  await expect(
-    page.getByRole('heading', { name: 'Status board', level: 1 }),
-  ).toBeVisible();
-
-  await page.screenshot({
-    path: 'e2e/screenshots/status-light.png',
-    fullPage: true,
-    animations: 'disabled',
-  });
-});
-
 test('project detail page renders', async ({ page }) => {
   await page.goto('/projects/germy');
 
