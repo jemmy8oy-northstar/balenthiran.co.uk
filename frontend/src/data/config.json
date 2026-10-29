@@ -1,6 +1,7 @@
 {
     "navigation": {
         "home": "/",
-        "youtube": "/youtube"
+        "youtube": "/youtube",
+        "apps": "/apps"
     }
 }
