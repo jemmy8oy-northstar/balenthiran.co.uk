@@ -75,3 +75,15 @@ test('project detail page renders', async ({ page }) => {
     animations: 'disabled',
   });
 });
+
+test('youtube page presents the channel', async ({ page }) => {
+  await page.goto('/youtube');
+
+  await expect(page.getByRole('heading', { name: 'jemmy8oy', level: 1 })).toBeVisible();
+  await expect(
+    page.getByRole('link', { name: 'Visit jemmy8oy on YouTube' }),
+  ).toHaveAttribute('href', 'https://www.youtube.com/@jemmy8oy');
+
+  await page.getByRole('link', { name: '← Back to Portfolio' }).click();
+  await expect(page).toHaveURL(/\/$/);
+});
