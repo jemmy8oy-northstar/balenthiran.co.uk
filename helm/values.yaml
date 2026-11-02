@@ -14,6 +14,12 @@ ingress:
     # Fake Certificate". The apex sends HSTS with includeSubDomains, so that
     # warning is not click-through-able for anyone who has visited the site.
     - host: www.balenthiran.co.uk
+    # Kit's future home. Same pods: the frontend sees this hostname and renders
+    # the Kit splash instead of the portfolio, and its register-interest form
+    # posts to this backend's /api (kit BEH-SPLASH-1, his 2026-11-02 23:50Z note).
+    # DNS is a proxied Cloudflare record at Full (strict), so the origin needs
+    # a real certificate, which is why it gets its own TLS entry below.
+    - host: kitstudio.dev
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
   tls:
@@ -29,6 +35,9 @@ ingress:
     - hosts:
         - www.balenthiran.co.uk
       secretName: balenthiran-www-tls
+    - hosts:
+        - kitstudio.dev
+      secretName: kitstudio-tls
 apps:
   - name: backend
     image:
