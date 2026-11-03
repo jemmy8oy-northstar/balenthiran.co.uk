@@ -30,7 +30,9 @@ public class ProjectSyncService(IServiceProvider serviceProvider, ILogger<Projec
         {
             var systemProjects = new List<ProjectJsonModel>
             {
-                new() { Id = "general", Guid = "F8A77272-6F9C-403E-9862-1872AAC4E194", Title = "General" }
+                new() { Id = "general", Guid = "F8A77272-6F9C-403E-9862-1872AAC4E194", Title = "General" },
+                // Kit takes sign-ups from the kitstudio.dev splash but must not appear in the portfolio grid (projects.json).
+                new() { Id = "kit", Guid = "C037E837-E829-456C-A6F3-61527DD5EB8E", Title = "Kit" }
             };
 
             var json = await File.ReadAllTextAsync(dataPath, cancellationToken);
