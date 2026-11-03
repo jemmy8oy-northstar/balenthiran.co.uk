@@ -42,7 +42,7 @@ apps:
   - name: backend
     image:
       repository: lhr.ocir.io/lr7uc6l49odc/balenthiran-backend
-      tag: 0.1.169
+      tag: 0.1.176
       pullPolicy: Always
     containerPort: 8080
     replicas: 1
@@ -65,7 +65,7 @@ apps:
   - name: main
     image:
       repository: lhr.ocir.io/lr7uc6l49odc/balenthiran
-      tag: 0.1.169
+      tag: 0.1.176
       pullPolicy: Always
     containerPort: 80
     replicas: 1
