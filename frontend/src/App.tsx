@@ -13,8 +13,22 @@ import EarnYourDrinksDetail from './pages/EarnYourDrinksDetail'
 import HabitTrackerDetail from './pages/HabitTrackerDetail'
 import TranscriptionVideoEditorDetail from './pages/TranscriptionVideoEditorDetail'
 import Apps from './pages/Apps'
+import KitStudioSplash from './pages/KitStudioSplash'
+import { isKitStudioHost } from './kitStudioHost'
 
 function App() {
+  // /kitstudio previews the splash on any host, without the portfolio chrome.
+  if (isKitStudioHost(window.location.hostname) || window.location.pathname === '/kitstudio') {
+    return (
+      <ThemeProvider>
+        <Router>
+          <ScrollToTop />
+          <KitStudioSplash />
+        </Router>
+      </ThemeProvider>
+    );
+  }
+
   return (
     <ThemeProvider>
       <Router>
