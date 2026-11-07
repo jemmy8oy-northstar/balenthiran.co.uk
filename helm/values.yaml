@@ -20,6 +20,10 @@ ingress:
     # DNS is a proxied Cloudflare record at Full (strict), so the origin needs
     # a real certificate, which is why it gets its own TLS entry below.
     - host: kitstudio.dev
+    # Cloudflare proxies www too, and the frontend already treats it as the Kit
+    # host (kitStudioHost.ts), but without a host here nginx answered with its
+    # fake certificate and Full (strict) turned that into a 526.
+    - host: www.kitstudio.dev
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
   tls:
@@ -38,6 +42,11 @@ ingress:
     - hosts:
         - kitstudio.dev
       secretName: kitstudio-tls
+    # Its own certificate, as www.balenthiran.co.uk has, so the apex
+    # certificate that serves today is not reissued by this change.
+    - hosts:
+        - www.kitstudio.dev
+      secretName: kitstudio-www-tls
 apps:
   - name: backend
     image:
